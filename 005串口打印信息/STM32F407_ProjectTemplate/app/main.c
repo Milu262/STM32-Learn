@@ -20,6 +20,8 @@ int main(void)
 {
 	//float t = 0.0;
 	//int count = 0;
+
+	//uint8_t recive[4]={0};
 	
 	board_init();
 	
@@ -29,9 +31,13 @@ int main(void)
 	
 	while(1)
 	{
-		//printf("count = %d, t = %.2f\r\n",++count,t += 0.11);
-		//delay_ms(1000);
-	}
+
+		if(test_data.flag == 1)
+		{			
+			do_process(&test_data);		
+            
+		}
+		}
 	
 
 }
