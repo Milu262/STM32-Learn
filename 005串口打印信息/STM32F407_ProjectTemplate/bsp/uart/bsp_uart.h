@@ -30,7 +30,22 @@
 #define BSP_USART_AF            GPIO_AF_USART1
 #define BSP_USART_TX_AF_PIN		GPIO_PinSource9
 #define BSP_USART_RX_AF_PIN		GPIO_PinSource10
- 
+
+#define data_size 100
+typedef struct
+{
+	unsigned int flag;
+	unsigned int len;
+	uint8_t data[data_size];
+
+}usart_data_typed;
+
+
+
+extern usart_data_typed test_data;
+
+
+void do_process(usart_data_typed* udata);	
  
  
  
@@ -39,7 +54,7 @@
 void uart1_init(uint32_t __Baud);
 void usart_send_data(uint8_t ucch);
 void usart_send_String(uint8_t *ucstr);
-
+static void NVIC_Configuration(void);
 
 
 

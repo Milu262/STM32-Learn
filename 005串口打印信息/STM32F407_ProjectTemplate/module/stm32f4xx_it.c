@@ -22,6 +22,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
+#include "bsp_uart.h"
+#include <stdint.h>
 
 /** @addtogroup Template_Project
   * @{
@@ -131,6 +133,32 @@ void PendSV_Handler(void)
   * @param  None
   * @retval None
   */
+
+void USART1_IRQHandler(void)
+{
+	
+    
+    if(USART_GetITStatus(BSP_USART,USART_IT_RXNE)!=RESET)
+	{		
+		test_data.data[test_data.len] = USART_ReceiveData(BSP_USART);
+	
+		if(++test_data.len > data_size - 2) 
+		{
+			test_data.len = 0;                
+		}	  
+	}	 
+	
+
+	if(USART_GetITStatus(BSP_USART,USART_IT_IDLE)!=RESET)
+	{	
+
+    USART_ReceiveData(BSP_USART);	        
+		test_data.data[test_data.len] = '\0';    
+		test_data.flag = 1;			                  
+	}	 
+}
+
+
 void SysTick_Handler(void)
 {
 
@@ -153,6 +181,10 @@ void SysTick_Handler(void)
 }*/
 
 /**
+
+
+
+
   * @}
   */ 
 

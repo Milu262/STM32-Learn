@@ -35,3 +35,4 @@
 .\objects\stm32f4xx_it.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
 .\objects\stm32f4xx_it.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 .\objects\stm32f4xx_it.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
+.\objects\stm32f4xx_it.o: ..\..\bsp\uart\bsp_uart.h
