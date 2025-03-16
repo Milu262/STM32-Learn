@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F40_41xxx,</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\app;..\..\board;..\..\bsp;..\..\libraries\CMSIS\Include;..\..\libraries\CMSIS\Device\ST\STM32F4xx\Include;..\..\libraries\STM32F4xx_StdPeriph_Driver\inc;..\..\module;..\..\bsp\uart</IncludePath>
+              <IncludePath>..\..\app;..\..\board;..\..\bsp;..\..\libraries\CMSIS\Include;..\..\libraries\CMSIS\Device\ST\STM32F4xx\Include;..\..\libraries\STM32F4xx_StdPeriph_Driver\inc;..\..\module;..\..\bsp\uart;..\..\bsp\I2C</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -657,6 +657,16 @@
               <FileName>README.md</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\README.md</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>I2C</GroupName>
+          <Files>
+            <File>
+              <FileName>i2c_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\I2C\i2c_init.c</FilePath>
             </File>
           </Files>
         </Group>

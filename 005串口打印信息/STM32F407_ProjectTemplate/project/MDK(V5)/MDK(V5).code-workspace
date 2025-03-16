@@ -4,6 +4,10 @@
             "path": "."
         }
     ],
-    "settings": {},
+    "settings": {
+        "files.associations": {
+            "i2c_init.h": "c"
+        }
+    },
     "extensions": {}
 }

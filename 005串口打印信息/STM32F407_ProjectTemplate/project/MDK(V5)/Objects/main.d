@@ -37,3 +37,4 @@
 .\objects\main.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
 .\objects\main.o: ..\..\bsp\uart\bsp_uart.h
 .\objects\main.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\stdio.h
+.\objects\main.o: ..\..\bsp\I2C\i2c_init.h
