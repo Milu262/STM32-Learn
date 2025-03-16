@@ -152,7 +152,7 @@ void USART1_IRQHandler(void)
 	if(USART_GetITStatus(BSP_USART,USART_IT_IDLE)!=RESET)
 	{	
 
-    USART_ReceiveData(BSP_USART);	        
+    USART_ReceiveData(BSP_USART);    
 		test_data.data[test_data.len] = '\0';    
 		test_data.flag = 1;			                  
 	}	 

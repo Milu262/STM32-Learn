@@ -144,6 +144,13 @@ void do_process(usart_data_typed *udata)
 {
 	usart_send_String(udata->data);
 
+
+	if(udata->data[0] == 0x55&&udata->data[3] == 0x80)
+
+	{
+	    //printf("\n 0x%x \r\n 0X%x",udata->data[1],udata->data[2]);
+	}
+
 	udata->flag = 0;
 	udata->len = 0;
 }

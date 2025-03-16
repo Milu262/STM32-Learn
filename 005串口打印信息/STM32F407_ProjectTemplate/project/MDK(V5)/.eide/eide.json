@@ -190,6 +190,15 @@
         "name": "DOC",
         "files": [],
         "folders": []
+      },
+      {
+        "name": "I2C",
+        "files": [
+          {
+            "path": "../../bsp/I2C/i2c_init.c"
+          }
+        ],
+        "folders": []
       }
     ]
   },
@@ -352,6 +361,7 @@
           "../../libraries/STM32F4xx_StdPeriph_Driver/inc",
           "../../module",
           "../../bsp/uart",
+          "../../bsp/I2C",
           "RTE/_Project"
         ],
         "libList": [],

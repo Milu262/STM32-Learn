@@ -1,10 +1,10 @@
 /*
- * Á¢´´¿ª·¢°åÈíÓ²¼þ×ÊÁÏÓëÏà¹ØÀ©Õ¹°åÈíÓ²¼þ×ÊÁÏ¹ÙÍøÈ«²¿¿ªÔ´
- * ¿ª·¢°å¹ÙÍø£ºwww.lckfb.com
- * ¼¼ÊõÖ§³Ö³£×¤ÂÛÌ³£¬ÈÎºÎ¼¼ÊõÎÊÌâ»¶Ó­ËæÊ±½»Á÷Ñ§Ï°
- * Á¢´´ÂÛÌ³£ºclub.szlcsc.com
- * ¹Ø×¢bilibiliÕËºÅ£º¡¾Á¢´´¿ª·¢°å¡¿£¬ÕÆÎÕÎÒÃÇµÄ×îÐÂ¶¯Ì¬£¡
- * ²»¿¿Âô°å×¬Ç®£¬ÒÔÅàÑøÖÐ¹ú¹¤³ÌÊ¦Îª¼ºÈÎ
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½Ó²ï¿½ï¿½ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½Ô´
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½www.lckfb.com
+ * ï¿½ï¿½ï¿½ï¿½Ö§ï¿½Ö³ï¿½×¤ï¿½ï¿½Ì³ï¿½ï¿½ï¿½ÎºÎ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â»¶Ó­ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ñ§Ï°
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½ï¿½club.szlcsc.com
+ * ï¿½ï¿½×¢bilibiliï¿½ËºÅ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å¡¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½Â¶ï¿½Ì¬ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¬Ç®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦Îªï¿½ï¿½ï¿½ï¿½
  * 
  
  Change Logs:
@@ -14,7 +14,7 @@
 #include "board.h"
 #include "bsp_uart.h"
 #include <stdio.h>
-
+#include "i2c_init.h"
 
 int main(void)
 {
@@ -26,7 +26,7 @@ int main(void)
 	board_init();
 	
 	uart1_init(115200U);
-	
+	User_I2C_Init();
 	printf("USART Init!!\r\n");
 	
 	while(1)
