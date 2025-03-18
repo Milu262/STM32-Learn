@@ -1,27 +1,17 @@
-/*
- * ������������Ӳ�������������չ����Ӳ�����Ϲ���ȫ����Դ
- * �����������www.lckfb.com
- * ����֧�ֳ�פ��̳���κμ������⻶ӭ��ʱ����ѧϰ
- * ������̳��club.szlcsc.com
- * ��עbilibili�˺ţ������������塿���������ǵ����¶�̬��
- * ��������׬Ǯ���������й�����ʦΪ����
- * 
- 
- Change Logs:
- * Date           Author       Notes
- * 2024-03-07     LCKFB-LP    first version
- */
+
 #include "board.h"
 #include "bsp_uart.h"
 #include <stdio.h>
 #include "i2c_init.h"
+#include "i2c_handle.h"
 
+#define SHT30_SENSOR_ADDR 0x44 /*!< Slave address of the SHT30 sensor */
 int main(void)
 {
 	//float t = 0.0;
 	//int count = 0;
 
-	//uint8_t recive[4]={0};
+	// uint8_t recive[4]={0};
 	
 	board_init();
 	
@@ -29,6 +19,12 @@ int main(void)
 	User_I2C_Init();
 	printf("USART Init!!\r\n");
 	
+if (I2C_ByteWrite(SHT30_SENSOR_ADDR,I2C1 ,0x00,0x00))
+{
+	/* code */
+}
+
+
 	while(1)
 	{
 

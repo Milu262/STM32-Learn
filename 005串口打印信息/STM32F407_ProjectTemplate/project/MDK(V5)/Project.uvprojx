@@ -668,6 +668,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\bsp\I2C\i2c_init.c</FilePath>
             </File>
+            <File>
+              <FileName>i2c_handle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\I2C\i2c_handle.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
