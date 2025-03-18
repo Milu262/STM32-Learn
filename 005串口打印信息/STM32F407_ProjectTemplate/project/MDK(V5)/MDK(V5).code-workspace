@@ -6,7 +6,9 @@
     ],
     "settings": {
         "files.associations": {
-            "i2c_init.h": "c"
+            "i2c_init.h": "c",
+            "i2c_handle.h": "c",
+            "stm32f4xx.h": "c"
         }
     },
     "extensions": {}
