@@ -8,8 +8,12 @@
         "files.associations": {
             "i2c_init.h": "c",
             "i2c_handle.h": "c",
-            "stm32f4xx.h": "c"
-        }
+            "stm32f4xx.h": "c",
+            "response.h": "c",
+            "stdio.h": "c",
+            "board.h": "c"
+        },
+        "Codegeex.RepoIndex": true
     },
     "extensions": {}
 }
