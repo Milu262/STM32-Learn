@@ -20,8 +20,8 @@ int main(void)
 	User_I2C_Init();
 
 
-	error = I2C_ByteWrite(0x34, 0x32, 0x30);
-	//Find_i2c_device();
+	//error = I2C_ByteWrite(0x34, 0x32, 0x30);
+	Find_i2c_device();
 	while (1)
 	{
 

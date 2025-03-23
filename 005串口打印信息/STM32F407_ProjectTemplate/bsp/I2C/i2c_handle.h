@@ -95,3 +95,5 @@ uint32_t I2C_Read16addr(uint8_t slave_adress, u16 ReadAddr,u8 *pBuffer);
 
 // 定义一个函数，用于查找I2C设备
 void Find_i2c_device(void);
+
+static uint8_t i2c_device_adress_find(uint8_t slave_adress);

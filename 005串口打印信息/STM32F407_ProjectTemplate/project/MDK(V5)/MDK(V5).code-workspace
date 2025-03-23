@@ -11,7 +11,8 @@
             "stm32f4xx.h": "c",
             "response.h": "c",
             "stdio.h": "c",
-            "board.h": "c"
+            "board.h": "c",
+            "bsp_uart.h": "c"
         },
         "Codegeex.RepoIndex": true
     },

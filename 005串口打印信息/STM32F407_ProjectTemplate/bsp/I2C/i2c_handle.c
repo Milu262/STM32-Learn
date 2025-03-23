@@ -464,22 +464,50 @@ uint32_t I2C_Read16addr(uint8_t slave_adress, u16 ReadAddr, u8 *pBuffer)
     return 1;
 }
 
-
 void Find_i2c_device(void)
 {
     uint32_t i2c_device = 0;
 
-    for (u8 i = 0x00; i < 0x80; i++)
+    for (u8 i = 0x01; i < 0x80; i++)
     {
-        if (I2C_ByteWrite(i << 1, 0xff, 0xff))
+        if (i2c_device_adress_find(i << 1))
         {
             printf("find i2c device address: 0x%x\r\n", i);
             i2c_device++;
         }
     }
-    if ( !i2c_device)
+    if (!i2c_device)
     {
         printf("No device is connected to the I2C bus!\r\n");
     }
-    
+}
+
+static uint8_t i2c_device_adress_find(uint8_t slave_adress)
+{
+    uint32_t I2CTimeout;
+    /* 产生 I2C 起始信号 */
+    I2C_GenerateSTART(I2C1, ENABLE);
+    I2CTimeout = I2CT_FLAG_TIMEOUT;
+    /* 检测 EV5 事件并清除标志 */
+    while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+    {
+        if ((I2CTimeout--) == 0)
+            return I2C_TIMEOUT_UserCallback(0);
+    }
+
+    /* 发送设备地址 */
+    I2C_Send7bitAddress(I2C1, slave_adress, I2C_Direction_Transmitter);
+
+    I2CTimeout = I2CT_FLAG_TIMEOUT;
+    /* 检测 EV6 事件并清除标志 */
+    while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+    {
+        if ((I2CTimeout--) == 0)
+        {
+            I2C_GenerateSTOP(I2C1, ENABLE);
+            return 0;
+        }
+    }
+    I2C_GenerateSTOP(I2C1, ENABLE);
+    return 1;
 }
