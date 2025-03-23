@@ -38,3 +38,6 @@
 .\objects\main.o: ..\..\bsp\uart\bsp_uart.h
 .\objects\main.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\stdio.h
 .\objects\main.o: ..\..\bsp\I2C\i2c_init.h
+.\objects\main.o: ..\..\bsp\I2C\i2c_handle.h
+.\objects\main.o: ..\..\bsp\Response\response.h
+.\objects\main.o: ..\..\bsp\.\i2c\i2c_handle.h

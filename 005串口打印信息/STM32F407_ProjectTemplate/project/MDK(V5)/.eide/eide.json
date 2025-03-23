@@ -38,7 +38,29 @@
             "path": "../../bsp/uart/bsp_uart.c"
           }
         ],
-        "folders": []
+        "folders": [
+          {
+            "name": "I2C",
+            "files": [
+              {
+                "path": "../../bsp/I2C/i2c_init.c"
+              },
+              {
+                "path": "../../bsp/I2C/i2c_handle.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "Response",
+            "files": [
+              {
+                "path": "../../bsp/Response/response.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
       },
       {
         "name": "Board",
@@ -189,18 +211,6 @@
       {
         "name": "DOC",
         "files": [],
-        "folders": []
-      },
-      {
-        "name": "I2C",
-        "files": [
-          {
-            "path": "../../bsp/I2C/i2c_init.c"
-          },
-          {
-            "path": "../../bsp/I2C/i2c_handle.c"
-          }
-        ],
         "folders": []
       }
     ]
@@ -365,7 +375,8 @@
           "../../module",
           "../../bsp/uart",
           "../../bsp/I2C",
-          "RTE/_Project"
+          "RTE/_Project",
+          "../../bsp/Response"
         ],
         "libList": [],
         "defineList": [
