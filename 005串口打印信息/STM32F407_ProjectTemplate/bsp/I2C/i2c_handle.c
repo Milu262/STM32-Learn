@@ -230,8 +230,12 @@ uint32_t I2C_byteRead(uint8_t slave_adress, u8 ReadAddr, u8 *pBuffer)
     while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
     {
         if ((I2CTimeout--) == 0)
+        {
+            printf("I2C1 EV6\n");
             return I2C_TIMEOUT_UserCallback(13);
+        }
     }
+    //printf("I2C1 EV6\n");
     /* Clear EV6 by setting again the PE bit */
     I2C_Cmd(I2C1, ENABLE);
 
@@ -510,4 +514,24 @@ static uint8_t i2c_device_adress_find(uint8_t slave_adress)
     }
     I2C_GenerateSTOP(I2C1, ENABLE);
     return 1;
+}
+
+void I2C_EE_WaitEepromStandbyState(uint8_t EEPROM_ADDRESS)      
+{
+  vu16 SR1_Tmp = 0;
+
+  do
+  {
+    /* Send START condition */
+    I2C_GenerateSTART(I2C1, ENABLE);
+    /* Read EEPROM_I2C SR1 register */
+    SR1_Tmp = I2C_ReadRegister(I2C1, I2C_Register_SR1);
+    /* Send EEPROM address for write */
+    I2C_Send7bitAddress(I2C1, EEPROM_ADDRESS, I2C_Direction_Transmitter);
+  }while(!(I2C_ReadRegister(I2C1, I2C_Register_SR1) & 0x0002));
+  
+  /* Clear AF flag */
+  I2C_ClearFlag(I2C1, I2C_FLAG_AF);
+  /* STOP condition */    
+  I2C_GenerateSTOP(I2C1, ENABLE); 
 }
