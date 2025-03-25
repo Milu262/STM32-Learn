@@ -4,7 +4,7 @@
 #include "board.h"
 
 /* 通讯等待超时时间 */
-#define I2CT_FLAG_TIMEOUT ((uint32_t)0x1000)
+#define I2CT_FLAG_TIMEOUT ((uint32_t)0x100)
 #define I2CT_LONG_TIMEOUT ((uint32_t)(10 * I2CT_FLAG_TIMEOUT))
 
 /**
@@ -97,3 +97,5 @@ uint32_t I2C_Read16addr(uint8_t slave_adress, u16 ReadAddr,u8 *pBuffer);
 void Find_i2c_device(void);
 
 static uint8_t i2c_device_adress_find(uint8_t slave_adress);
+
+void I2C_EE_WaitEepromStandbyState(uint8_t EEPROM_ADDRESS);
