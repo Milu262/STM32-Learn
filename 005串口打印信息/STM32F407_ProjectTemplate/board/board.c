@@ -1,20 +1,7 @@
-/*
- * Á¢´´¿ª·¢°åÈíÓ²¼ş×ÊÁÏÓëÏà¹ØÀ©Õ¹°åÈíÓ²¼ş×ÊÁÏ¹ÙÍøÈ«²¿¿ªÔ´
- * ¿ª·¢°å¹ÙÍø£ºwww.lckfb.com
- * ¼¼ÊõÖ§³Ö³£×¤ÂÛÌ³£¬ÈÎºÎ¼¼ÊõÎÊÌâ»¶Ó­ËæÊ±½»Á÷Ñ§Ï°
- * Á¢´´ÂÛÌ³£ºclub.szlcsc.com
- * ¹Ø×¢bilibiliÕËºÅ£º¡¾Á¢´´¿ª·¢°å¡¿£¬ÕÆÎÕÎÒÃÇµÄ×îĞÂ¶¯Ì¬£¡
- * ²»¿¿Âô°å×¬Ç®£¬ÒÔÅàÑøÖĞ¹ú¹¤³ÌÊ¦Îª¼ºÈÎ
- * 
- 
- Change Logs:
- * Date           Author       Notes
- * 2024-03-07     LCKFB-LP    first version
- */
+
 #include <board.h>
 
 static __IO uint32_t g_system_tick = 0;
-
 
 /**
  * This function will initial stm32 board.
@@ -22,28 +9,27 @@ static __IO uint32_t g_system_tick = 0;
 void board_init(void)
 {
     /* NVIC Configuration */
-#define NVIC_VTOR_MASK              0x3FFFFF80
-#ifdef  VECT_TAB_RAM
+#define NVIC_VTOR_MASK 0x3FFFFF80
+#ifdef VECT_TAB_RAM
     /* Set the Vector Table base location at 0x10000000 */
-    SCB->VTOR  = (0x10000000 & NVIC_VTOR_MASK);
-#else  /* VECT_TAB_FLASH  */
+    SCB->VTOR = (0x10000000 & NVIC_VTOR_MASK);
+#else /* VECT_TAB_FLASH  */
     /* Set the Vector Table base location at 0x08000000 */
-    SCB->VTOR  = (0x08000000 & NVIC_VTOR_MASK);
+    SCB->VTOR = (0x08000000 & NVIC_VTOR_MASK);
 #endif
 
-	SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK);
-		SysTick->LOAD=0xFFFF; // Çå¿Õ¼ÆÊıÆ÷
-	SysTick->CTRL|=SysTick_CTRL_ENABLE_Msk; // ¿ªÊ¼¼ÆÊı
-	
-//	RCC_ClocksTypeDef rcc;
-//	RCC_GetClocksFreq(&rcc);//¶ÁÈ¡ÏµÍ³Ê±ÖÓÆµÂÊ
+    SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK);
+    SysTick->LOAD = 0xFFFF;                   // ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½
+    SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk; // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
 
+    //	RCC_ClocksTypeDef rcc;
+    //	RCC_GetClocksFreq(&rcc);//ï¿½ï¿½È¡ÏµÍ³Ê±ï¿½ï¿½Æµï¿½ï¿½
 }
 
 /**
- -  @brief  ÓÃÄÚºËµÄ systick ÊµÏÖµÄÎ¢ÃîÑÓÊ±
+ -  @brief  ï¿½ï¿½ï¿½ÚºËµï¿½ systick Êµï¿½Öµï¿½Î¢ï¿½ï¿½ï¿½ï¿½Ê±
  -  @note   None
- -  @param  _us:ÒªÑÓÊ±µÄusÊı
+ -  @param  _us:Òªï¿½ï¿½Ê±ï¿½ï¿½usï¿½ï¿½
  -  @retval None
 */
 void delay_us(uint32_t _us)
@@ -51,15 +37,15 @@ void delay_us(uint32_t _us)
     uint32_t ticks;
     uint32_t told, tnow, tcnt = 0;
 
-    // ¼ÆËãĞèÒªµÄÊ±ÖÓÊı = ÑÓ³ÙÎ¢ÃëÊı * Ã¿Î¢ÃëµÄÊ±ÖÓÊı
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ = ï¿½Ó³ï¿½Î¢ï¿½ï¿½ï¿½ï¿½ * Ã¿Î¢ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
     ticks = _us * (SystemCoreClock / 1000000);
 
-    // »ñÈ¡µ±Ç°µÄSysTickÖµ
+    // ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½ï¿½SysTickÖµ
     told = SysTick->VAL;
 
     while (1)
     {
-        // ÖØ¸´Ë¢ĞÂ»ñÈ¡µ±Ç°µÄSysTickÖµ
+        // ï¿½Ø¸ï¿½Ë¢ï¿½Â»ï¿½È¡ï¿½ï¿½Ç°ï¿½ï¿½SysTickÖµ
         tnow = SysTick->VAL;
 
         if (tnow != told)
@@ -71,7 +57,7 @@ void delay_us(uint32_t _us)
 
             told = tnow;
 
-            // Èç¹û´ïµ½ÁËĞèÒªµÄÊ±ÖÓÊı£¬¾ÍÍË³öÑ­»·
+            // ï¿½ï¿½ï¿½ï¿½ïµ½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½Ñ­ï¿½ï¿½
             if (tcnt >= ticks)
                 break;
         }
@@ -79,9 +65,9 @@ void delay_us(uint32_t _us)
 }
 
 /**
- -  @brief  µ÷ÓÃÓÃÄÚºËµÄ systick ÊµÏÖµÄºÁÃëÑÓÊ±
+ -  @brief  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÚºËµï¿½ systick Êµï¿½ÖµÄºï¿½ï¿½ï¿½ï¿½ï¿½Ê±
  -  @note   None
- -  @param  _ms:ÒªÑÓÊ±µÄmsÊı
+ -  @param  _ms:Òªï¿½ï¿½Ê±ï¿½ï¿½msï¿½ï¿½
  -  @retval None
 */
 void delay_ms(uint32_t _ms) { delay_us(_ms * 1000); }

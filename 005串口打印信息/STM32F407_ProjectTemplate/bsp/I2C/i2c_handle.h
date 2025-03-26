@@ -28,7 +28,7 @@ static uint32_t I2C_TIMEOUT_UserCallback(uint8_t errorCode);
  * @param pBuffer The byte to be written.
  * @return 1 if the write operation was successful, 0 otherwise.
  */
-uint32_t I2C_ByteWrite(u8 slave_adress, u8 WriteAddr,u8 pBuffer);
+uint32_t I2C_ByteWrite(uint8_t slave_adress, uint8_t WriteAddr,uint8_t pBuffer);
 
 //多字节写，每次写完一字节寄存器地址自动加一
 /**
@@ -42,7 +42,7 @@ uint32_t I2C_ByteWrite(u8 slave_adress, u8 WriteAddr,u8 pBuffer);
  * @param NumByteToWrite The number of bytes to write.
  * @return 1 if the write operation was successful, 0 otherwise.
  */
-uint8_t I2C_ByetsWrite(uint8_t slave_adress, uint8_t WriteAddr,uint8_t *pBuffer,uint16_t NumByteToWrite);
+uint32_t I2C_BufferWrite(uint8_t slave_adress, uint8_t WriteAddr,uint8_t *pBuffer,uint16_t NumByteToWrite);
 
 /**
  * @brief Read a byte from a specified address in an I2C device.
@@ -54,7 +54,7 @@ uint8_t I2C_ByetsWrite(uint8_t slave_adress, uint8_t WriteAddr,uint8_t *pBuffer,
  * @param pBuffer A pointer to the buffer where the read data will be stored.
  * @return 1 if the read operation was successful, 0 otherwise.
  */
-uint32_t I2C_byteRead(uint8_t slave_adress, u8 ReadAddr, u8 *pBuffer);
+uint32_t I2C_byteRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer);
 
 /**
  * @brief Read multiple bytes from a specified address in an I2C device.
@@ -67,7 +67,7 @@ uint32_t I2C_byteRead(uint8_t slave_adress, u8 ReadAddr, u8 *pBuffer);
  * @param NumByteToRead The number of bytes to read.
  * @return 1 if the read operation was successful, 0 otherwise.
  */
-uint32_t I2C_BufferRead(uint8_t slave_adress , u8 ReadAddr,u8* pBuffer, u16 NumByteToRead);
+uint32_t I2C_BufferRead(uint8_t slave_adress , uint8_t ReadAddr,uint8_t* pBuffer, uint16_t NumByteToRead);
 
 /**
  * @brief Write a byte to a 16-bit Register address in an I2C device.
@@ -79,7 +79,7 @@ uint32_t I2C_BufferRead(uint8_t slave_adress , u8 ReadAddr,u8* pBuffer, u16 NumB
  * @param pBuffer The byte to be written.
  * @return 1 if the write operation was successful, 0 otherwise.
  */
-uint32_t I2C_Write_16addr(u8 slave_adress, u16 WriteAddr, u8 pBuffer);
+uint32_t I2C_Write_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t pBuffer);
 
 /**
  * @brief Read a byte from a 16-bit Register address in an I2C device.
@@ -91,9 +91,37 @@ uint32_t I2C_Write_16addr(u8 slave_adress, u16 WriteAddr, u8 pBuffer);
  * @param pBuffer A pointer to the buffer where the read data will be stored.
  * @return 1 if the read operation was successful, 0 otherwise.
  */
-uint32_t I2C_Read16addr(uint8_t slave_adress, u16 ReadAddr,u8 *pBuffer);
+uint32_t I2C_Read16addr(uint8_t slave_adress, uint16_t ReadAddr,uint8_t *pBuffer);
 
-// 定义一个函数，用于查找I2C设备
+/**
+ * @brief Write multiple bytes to a specified 16-bit register address in an I2C device.
+ *
+ * This function writes multiple bytes to a specified 16-bit register address in an I2C device.
+ *
+ * @param slave_adress The 7-bit I2C address of the slave device.
+ * @param WriteAddr The 16-bit register address to write to in the slave device.
+ * @param pBuffer A pointer to the buffer containing the data to be written.
+ * @param NumByteToWrite The number of bytes to write.
+ * @return 1 if the write operation was successful, 0 otherwise.
+ */
+uint32_t I2C_BufferWrite_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
+
+/**
+ * @brief Read multiple bytes from a specified 16-bit register address in an I2C device.
+ *
+ * This function reads multiple bytes from a specified 16-bit register address in an I2C device.
+ *
+ * @param slave_adress The 7-bit I2C address of the slave device.
+ * @param ReadAddr The 16-bit register address to read from in the slave device.
+ * @param pBuffer A pointer to the buffer where the read data will be stored.
+ * @param NumByteToRead The number of bytes to read.
+ * @return 1 if the read operation was successful, 0 otherwise.
+ */
+uint32_t I2C_BufferRead_16addr(uint8_t slave_adress, uint16_t ReadAddr, uint8_t *pBuffer, uint16_t NumByteToRead);
+
+
+
+// 定义一个函数，用于查找I2C总线上的设备
 void Find_i2c_device(void);
 
 static uint8_t i2c_device_adress_find(uint8_t slave_adress);
