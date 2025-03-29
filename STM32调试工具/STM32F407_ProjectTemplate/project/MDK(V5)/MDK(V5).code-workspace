@@ -12,7 +12,8 @@
             "response.h": "c",
             "stdio.h": "c",
             "board.h": "c",
-            "bsp_uart.h": "c"
+            "bsp_uart.h": "c",
+            "bsp_spi_flash.h": "c"
         },
         "Codegeex.RepoIndex": true
     },

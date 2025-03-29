@@ -7,8 +7,14 @@ int do_process(usart_data_typed *udata)
     // usart_send_String(udata->data);
     uint8_t Header = udata->data[0];
     uint8_t mode_sel = udata->data[1];
+    // // 帧尾
+    // uint8_t *last_data = udata->data;
+    // while (last_data && *last_data)
+    // {
+    //     last_data++;
+    // }
+    // last_data--;
     if (Header != 0x55)
-
     {
         udata->flag = 0;
         udata->len = 0;
@@ -44,7 +50,12 @@ static void do_i2c_8RegisterAddr(uint8_t *data)
 {
     uint8_t i2c_mode_sel = data[2];
     uint8_t slave_adress = data[3];
-    uint8_t NumByteToProsess = data[4];
+    uint16_t NumByteToProsess = data[4];
+    if (NumByteToProsess == 0xff)
+    {
+        NumByteToProsess++;
+    }
+
     uint8_t RegisterAddr = data[5];
     uint8_t *Value = &data[6];
     switch (i2c_mode_sel)

@@ -59,6 +59,15 @@
               }
             ],
             "folders": []
+          },
+          {
+            "name": "SPI",
+            "files": [
+              {
+                "path": "../../bsp/SPI/bsp_spi_flash.c"
+              }
+            ],
+            "folders": []
           }
         ]
       },
@@ -376,7 +385,8 @@
           "../../bsp/uart",
           "../../bsp/I2C",
           "RTE/_Project",
-          "../../bsp/Response"
+          "../../bsp/Response",
+          "../../bsp/SPI"
         ],
         "libList": [],
         "defineList": [
