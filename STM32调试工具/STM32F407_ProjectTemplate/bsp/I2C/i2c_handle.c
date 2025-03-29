@@ -175,8 +175,10 @@ uint32_t I2C_BufferRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer
             return I2C_TIMEOUT_UserCallback(1);
     }
     /* While there is data to be read */
+    
     while (NumByteToRead)
     {
+        
         if (NumByteToRead == 1)
         {
             /* Disable Acknowledgement */
@@ -620,7 +622,7 @@ void Find_i2c_device(void)
     {
         if (i2c_device_adress_find(i << 1))
         {
-            printf("find i2c device address: 0x%x\r\n", i);
+            printf("find i2c device address: 0x%x(Write address 8bit)\r\n", i<<1);
             i2c_device++;
         }
     }
