@@ -33,11 +33,7 @@
       },
       {
         "name": "BSP",
-        "files": [
-          {
-            "path": "../../bsp/uart/bsp_uart.c"
-          }
-        ],
+        "files": [],
         "folders": [
           {
             "name": "I2C",
@@ -64,7 +60,19 @@
             "name": "SPI",
             "files": [
               {
-                "path": "../../bsp/SPI/bsp_spi_flash.c"
+                "path": "../../bsp/SPI/SPI_Control.c"
+              },
+              {
+                "path": "../../bsp/SPI/spi_init.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "Uart",
+            "files": [
+              {
+                "path": "../../bsp/uart/bsp_uart.c"
               }
             ],
             "folders": []
@@ -232,7 +240,9 @@
   },
   "targets": {
     "Project": {
-      "excludeList": [],
+      "excludeList": [
+        "<virtual_root>/BSP/SPI/bsp_spi_flash.c"
+      ],
       "toolchain": "AC5",
       "compileConfig": {
         "cpuType": "Cortex-M4",

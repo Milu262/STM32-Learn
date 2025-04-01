@@ -14,15 +14,15 @@
 
 // SCK 引脚
 #define SPI_SCK_PIN GPIO_Pin_5
-#define SPI_SCK_PINSOURCE GPIO_PinSource3
+#define SPI_SCK_PINSOURCE GPIO_PinSource5
 
 // MISO 引脚
 #define SPI_MISO_PIN GPIO_Pin_6
-#define SPI_MISO_PINSOURCE GPIO_PinSource4
+#define SPI_MISO_PINSOURCE GPIO_PinSource6
 
 // MOSI 引脚
 #define SPI_MOSI_PIN GPIO_Pin_7
-#define SPI_MOSI_PINSOURCE GPIO_PinSource5
+#define SPI_MOSI_PINSOURCE GPIO_PinSource7
 
 #define SPI_CS_ON(x) GPIO_WriteBit(GPIO_PORT, CS_PIN, x ? Bit_SET : Bit_RESET)
 

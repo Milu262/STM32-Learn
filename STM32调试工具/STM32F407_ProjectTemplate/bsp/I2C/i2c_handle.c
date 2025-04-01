@@ -616,7 +616,7 @@ uint32_t I2C_BufferRead_16addr(uint8_t slave_adress, uint16_t ReadAddr, uint8_t 
 
 void Find_i2c_device(void)
 {
-    uint32_t i2c_device = 0;
+    uint8_t i2c_device = 0;
 
     for (uint8_t i = 0x01; i < 0x80; i++)
     {
