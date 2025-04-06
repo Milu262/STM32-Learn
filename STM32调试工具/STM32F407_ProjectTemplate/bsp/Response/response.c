@@ -48,16 +48,19 @@ static void do_uart(uint8_t *data)
 
 static void do_i2c_8RegisterAddr(uint8_t *data)
 {
+    uint32_t err = 0;
+
     uint8_t i2c_mode_sel = data[2];
     uint8_t slave_adress = data[3];
     uint16_t NumByteToProsess = data[4];
+    uint8_t RegisterAddr = data[5];
+    uint8_t *Value = &data[6];
+
     if (NumByteToProsess == 0xff)
     {
         NumByteToProsess++;
     }
 
-    uint8_t RegisterAddr = data[5];
-    uint8_t *Value = &data[6];
     switch (i2c_mode_sel)
     {
     case 0x01: // 写一个字节寄存器
@@ -67,14 +70,18 @@ static void do_i2c_8RegisterAddr(uint8_t *data)
         I2C_BufferWrite(slave_adress, RegisterAddr, Value, NumByteToProsess);
         break;
     case 0x03: // 读一个字节寄存器
-        I2C_byteRead(slave_adress, RegisterAddr, Value);
-        printf("RegisterAddr : 0x%02x Return Value = 0x%02x \r\n", RegisterAddr, *Value);
+        err = I2C_byteRead(slave_adress, RegisterAddr, Value);
+        if (err)
+            printf("RegisterAddr : 0x%02x Return Value = 0x%02x \r\n", RegisterAddr, *Value);
         break;
     case 0x04: // 读多个字节寄存器
-        I2C_BufferRead(slave_adress, RegisterAddr, Value, NumByteToProsess);
-        for (size_t i = 0; i < NumByteToProsess; i++)
+        err = I2C_BufferRead(slave_adress, RegisterAddr, Value, NumByteToProsess);
+        if (err)
         {
-            printf("RegisterAddr : 0x%02x Return Value : 0x%02x \r\n", RegisterAddr + i, Value[i]);
+            for (size_t i = 0; i < NumByteToProsess; i++)
+            {
+                printf("RegisterAddr : 0x%02x Return Value : 0x%02x \r\n", RegisterAddr + i, Value[i]);
+            }
         }
         break;
     case 0x05:
@@ -88,6 +95,8 @@ static void do_i2c_8RegisterAddr(uint8_t *data)
 
 static void do_i2c_16RegisterAddr(uint8_t *data)
 {
+    uint32_t err = 0;
+
     uint8_t i2c_mode_sel = data[2];
     uint8_t slave_adress = data[3];
     uint8_t NumByteToProsess = data[4];
@@ -104,14 +113,18 @@ static void do_i2c_16RegisterAddr(uint8_t *data)
         I2C_BufferWrite_16addr(slave_adress, RegisterAddr, Value, NumByteToProsess);
         break;
     case 0x03: // 读一个字节寄存器
-        I2C_Read16addr(slave_adress, RegisterAddr, Value);
-        printf("RegisterAddr : 0x%04x Return Value = 0x%02x \r\n", RegisterAddr, *Value);
+        err = I2C_Read16addr(slave_adress, RegisterAddr, Value);
+        if (err)
+            printf("RegisterAddr : 0x%04x Return Value = 0x%02x \r\n", RegisterAddr, *Value);
         break;
     case 0x04: // 读多个字节寄存器
-        I2C_BufferRead_16addr(slave_adress, RegisterAddr, Value, NumByteToProsess);
-        for (size_t i = 0; i < NumByteToProsess; i++)
+        err = I2C_BufferRead_16addr(slave_adress, RegisterAddr, Value, NumByteToProsess);
+        if (err)
         {
-            printf("RegisterAddr : 0x%04x Return Value : 0x%02x \r\n", RegisterAddr + i, Value[i]);
+            for (size_t i = 0; i < NumByteToProsess; i++)
+            {
+                printf("RegisterAddr : 0x%04x Return Value : 0x%02x \r\n", RegisterAddr + i, Value[i]);
+            }
         }
         break;
     case 0x05:
