@@ -6,7 +6,7 @@
 #define Dummy_Byte 0xFF
 #define SPIT_FLAG_TIMEOUT 0x1000
 #define FLASH_SPI SPI1
-
+#define SPI_FLASH_PerWritePageSize      256
 /*FLASH 常用命令 */
 /**
  * @brief  W25X_WriteEnable 命令，用于写使能
@@ -105,9 +105,9 @@
 #define W25X_JedecDeviceID 0x9F
 
 /**
-  * @brief  定义 Flash 芯片的 ID
-  * @note   此 ID 用于识别 Flash 芯片的型号
-  */
+ * @brief  定义 Flash 芯片的 ID
+ * @note   此 ID 用于识别 Flash 芯片的型号
+ */
 #define sFLASH_ID 0XEF4018
 
 /**
@@ -118,4 +118,37 @@
  */
 uint8_t SPI_Send_receive_Byte(uint8_t send_data, uint8_t *receive_data);
 
+/**
+ * @brief  读取SPI Flash的ID
+ * @param  无
+ * @retval SPI Flash的ID
+ */
 uint32_t SPI_FLASH_ReadID(void);
+
+/**
+ * @brief  使能SPI Flash的写操作
+ * @param  无
+ * @retval 无
+ */
+void SPI_FLASH_WriteEnable(void);
+
+/**
+ * @brief  等待SPI Flash写入结束
+ * @param  无
+ * @retval 无
+ */
+void SPI_FLASH_WaitForWriteEnd(void);
+/**
+ * @brief  擦除SPI Flash的一个扇区
+ * @param  SectorAddr: 要擦除的扇区地址
+ * @retval 无
+ */
+void SPI_FLASH_SectorErase(uint32_t SectorAddr);
+/**
+ * @brief  向SPI Flash的一个页写入数据
+ * @param  pBuffer: 指向要写入数据的指针
+ * @param  WriteAddr: 要写入的地址
+ * @param  NumByteToWrite: 要写入的字节数（不能大于256）
+ * @retval 无
+ */
+void SPI_FLASH_PageWrite(uint8_t *pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
