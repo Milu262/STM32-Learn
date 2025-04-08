@@ -19,14 +19,18 @@ int main(void)
 	printf("USART Init!!\r\n");
 	User_I2C_Init();
 	SPI_BUS_Init();
-	// uint32_t spi_flash_id = SPI_FLASH_ReadID();
-	// printf("SPI FLASH ID: 0X%04x\r\n", spi_flash_id);
+	uint32_t spi_flash_id = SPI_FLASH_ReadID();
+	printf("SPI FLASH ID: 0x%04x\r\n", spi_flash_id);
+
+
 	// error = I2C_ByteWrite(0x34, 0x32, 0x30);
 	// Find_i2c_device();
 	// error = I2C_ByteWrite(eeprom_adress << 1, 0xf1, 0xff);
 	// //写一个字节大概需要4ms，保险使用5ms
 	// delay_1ms(5);
 	// //I2C_EE_WaitEepromStandbyState(eeprom_adress<<1);
+
+
 	while (1)
 	{
 
