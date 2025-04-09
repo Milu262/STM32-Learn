@@ -13,7 +13,7 @@ typedef struct
 
 extern usart_data_typed test_data;
 
-int do_process(usart_data_typed* udata);
+uint8_t do_process(usart_data_typed* udata);
 static void do_uart(uint8_t *data);
 static void do_i2c_8RegisterAddr(uint8_t *data);
 static void do_i2c_16RegisterAddr(uint8_t *data);

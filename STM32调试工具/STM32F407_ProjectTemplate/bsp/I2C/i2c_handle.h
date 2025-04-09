@@ -1,11 +1,15 @@
 
-#include "stm32f4xx.h"
 #include <stdio.h>
 #include "board.h"
 
 /* 通讯等待超时时间 */
 #define I2CT_FLAG_TIMEOUT ((uint32_t)0x100)
 #define I2CT_LONG_TIMEOUT ((uint32_t)(10 * I2CT_FLAG_TIMEOUT))
+
+// 初始化错误信息数组
+
+
+
 
 /**
  * @brief User callback function for I2C timeout.
@@ -28,9 +32,9 @@ static uint32_t I2C_TIMEOUT_UserCallback(uint8_t errorCode);
  * @param pBuffer The byte to be written.
  * @return 1 if the write operation was successful, 0 otherwise.
  */
-uint32_t I2C_ByteWrite(uint8_t slave_adress, uint8_t WriteAddr,uint8_t pBuffer);
+uint32_t I2C_ByteWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t pBuffer);
 
-//多字节写，每次写完一字节寄存器地址自动加一
+// 多字节写，每次写完一字节寄存器地址自动加一
 /**
  * @brief Write multiple bytes to a specified address in an I2C device.
  *
@@ -42,7 +46,7 @@ uint32_t I2C_ByteWrite(uint8_t slave_adress, uint8_t WriteAddr,uint8_t pBuffer);
  * @param NumByteToWrite The number of bytes to write.
  * @return 1 if the write operation was successful, 0 otherwise.
  */
-uint32_t I2C_BufferWrite(uint8_t slave_adress, uint8_t WriteAddr,uint8_t *pBuffer,uint16_t NumByteToWrite);
+uint32_t I2C_BufferWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
 
 /**
  * @brief Read a byte from a specified address in an I2C device.
@@ -67,7 +71,7 @@ uint32_t I2C_byteRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer);
  * @param NumByteToRead The number of bytes to read.
  * @return 1 if the read operation was successful, 0 otherwise.
  */
-uint32_t I2C_BufferRead(uint8_t slave_adress , uint8_t ReadAddr,uint8_t* pBuffer, uint16_t NumByteToRead);
+uint32_t I2C_BufferRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer, uint16_t NumByteToRead);
 
 /**
  * @brief Write a byte to a 16-bit Register address in an I2C device.
@@ -91,7 +95,7 @@ uint32_t I2C_Write_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t pBuf
  * @param pBuffer A pointer to the buffer where the read data will be stored.
  * @return 1 if the read operation was successful, 0 otherwise.
  */
-uint32_t I2C_Read16addr(uint8_t slave_adress, uint16_t ReadAddr,uint8_t *pBuffer);
+uint32_t I2C_Read16addr(uint8_t slave_adress, uint16_t ReadAddr, uint8_t *pBuffer);
 
 /**
  * @brief Write multiple bytes to a specified 16-bit register address in an I2C device.
@@ -118,8 +122,6 @@ uint32_t I2C_BufferWrite_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_
  * @return 1 if the read operation was successful, 0 otherwise.
  */
 uint32_t I2C_BufferRead_16addr(uint8_t slave_adress, uint16_t ReadAddr, uint8_t *pBuffer, uint16_t NumByteToRead);
-
-
 
 // 定义一个函数，用于查找I2C总线上的设备
 void Find_i2c_device(void);

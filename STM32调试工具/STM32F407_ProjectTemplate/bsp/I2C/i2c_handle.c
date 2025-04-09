@@ -1,36 +1,37 @@
 #include "i2c_handle.h"
 
+static const Error_Code i2c_Errors[] = {
+    {0, "I2C start signal transmission failed!\r\n"},
+    {1, "I2C Device address No response!\r\n"},
+    {2, "I2C Write the wrong register address!\r\n"},
+    {3, "I2C Write data error!\r\n"},
+    {4, "I2C send read register address error!\r\n"},
+    {5, "I2C read data error!\r\n"},
+    {10, "I2C bus is busy!\r\n"}
+    // 可以根据需要添加更多错误信息
+};
+// 定义错误信息数组的大小
+#define I2C_ERROR_COUNT (sizeof(i2c_Errors) / sizeof(i2c_Errors[0]))
+
+
 static uint32_t I2C_TIMEOUT_UserCallback(uint8_t errorCode)
 {
     /* 使用串口 printf 输出错误信息，方便调试 */
-    // EEPROM_ERROR("I2C 等待超时!errorCode = %d", errorCode);
-    switch (errorCode)
+    // 遍历错误信息数组，查找并打印对应的错误信息
+    for (size_t i = 0; i < I2C_ERROR_COUNT; i++)
     {
-    case 0:
-        printf("I2C start signal transmission failed!\r\n");
-        break;
-    case 1:
-        printf("I2C Device address No response!\r\n");
-        break;
-    case 2:
-        printf("I2C Write the wrong register address!\r\n");
-        break;
-    case 3:
-        printf("I2C Write data error!\r\n");
-        break;
-    case 4:
-        printf("I2C send read register address error!\r\n");
-        break;
-    case 5:
-        printf("I2C read data error!\r\n");
-        break;
-    case 10:
-        printf("I2C bus is busy!\r\n");
-        break;
-    default:
-        break;
+        if (i2c_Errors[i].errorCode == errorCode)
+        {
+            printf("%s", i2c_Errors[i].errorMessage);
+            break;
+        }
     }
+
+    // 如果没有找到对应的错误信息，则不打印任何内容（或者可以打印一个默认的错误信息）
+
+    // 生成停止条件
     I2C_GenerateSTOP(I2C1, ENABLE);
+
     return 0;
 }
 
@@ -175,10 +176,10 @@ uint32_t I2C_BufferRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer
             return I2C_TIMEOUT_UserCallback(1);
     }
     /* While there is data to be read */
-    
+
     while (NumByteToRead)
     {
-        
+
         if (NumByteToRead == 1)
         {
             /* Disable Acknowledgement */
@@ -622,7 +623,7 @@ void Find_i2c_device(void)
     {
         if (i2c_device_adress_find(i << 1))
         {
-            printf("find i2c device address: 0x%x(Write address 8bit)\r\n", i<<1);
+            printf("find i2c device address: 0x%x(Write address 8bit)\r\n", i << 1);
             i2c_device++;
         }
     }
