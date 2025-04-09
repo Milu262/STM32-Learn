@@ -64,6 +64,9 @@
               },
               {
                 "path": "../../bsp/SPI/spi_init.c"
+              },
+              {
+                "path": "../../bsp/SPI/Test_code.c"
               }
             ],
             "folders": []
@@ -241,7 +244,9 @@
   "targets": {
     "Project": {
       "excludeList": [
-        "<virtual_root>/BSP/SPI/bsp_spi_flash.c"
+        "<virtual_root>/BSP/SPI/bsp_spi_flash.c",
+        "<virtual_root>/Test_code.c",
+        "<virtual_root>/APP/Test_code.c"
       ],
       "toolchain": "AC5",
       "compileConfig": {

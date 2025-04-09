@@ -2,7 +2,7 @@
 
 usart_data_typed test_data;
 
-int do_process(usart_data_typed *udata)
+uint8_t do_process(usart_data_typed *udata)
 {
     // usart_send_String(udata->data);
     uint8_t Header = udata->data[0];
@@ -18,7 +18,7 @@ int do_process(usart_data_typed *udata)
     {
         udata->flag = 0;
         udata->len = 0;
-        return 1;
+        return 0;
     }
     switch (mode_sel)
     {
@@ -39,7 +39,7 @@ int do_process(usart_data_typed *udata)
     }
     udata->flag = 0;
     udata->len = 0;
-    return 0;
+    return 1;
 }
 
 static void do_uart(uint8_t *data)
