@@ -6,11 +6,6 @@
 #define I2CT_FLAG_TIMEOUT ((uint32_t)0x100)
 #define I2CT_LONG_TIMEOUT ((uint32_t)(10 * I2CT_FLAG_TIMEOUT))
 
-// 初始化错误信息数组
-
-
-
-
 /**
  * @brief User callback function for I2C timeout.
  *

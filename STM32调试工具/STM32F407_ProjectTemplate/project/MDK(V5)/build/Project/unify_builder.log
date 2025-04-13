@@ -1,0 +1,898 @@
+[2025-04-12 20:12:12]	[info] incremental build: 55 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\board\board.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_handle.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_init.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\SPI_Control.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\Test_code.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\spi_init.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f40xx.s': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\misc.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': object (.o) file not exist
+
+[2025-04-12 20:12:14]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol DMA_SendBuff multiply defined (by DMA_Init.o and main.o).
+Error: L6200E: Symbol DMA_SendBuff multiply defined (by bsp_uart.o and main.o).
+Error: L6200E: Symbol DMA_SendBuff multiply defined (by stm32f4xx_it.o and main.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 3 error messages.
+
+
+[2025-04-12 20:13:03]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+
+[2025-04-12 20:13:04]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol DMA_Uart_SendBuff multiply defined (by DMA_Init.o and main.o).
+Error: L6200E: Symbol DMA_Uart_SendBuff multiply defined (by bsp_uart.o and main.o).
+Error: L6200E: Symbol DMA_Uart_SendBuff multiply defined (by stm32f4xx_it.o and main.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 3 error messages.
+
+
+[2025-04-12 20:14:02]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+
+[2025-04-12 20:14:04]	[done]
+	build successfully !
+
+[2025-04-12 20:14:51]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-12 20:14:51]	[done]
+	build successfully !
+
+[2025-04-12 20:15:22]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-12 20:15:22]	[done]
+	build successfully !
+
+[2025-04-12 20:19:42]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-12 20:19:43]	[done]
+	build successfully !
+
+[2025-04-12 20:22:22]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-12 20:22:23]	[done]
+	build successfully !
+
+[2025-04-12 20:24:58]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-12 20:24:59]	[done]
+	build successfully !
+
+[2025-04-12 20:25:11]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-12 20:25:12]	[done]
+	build successfully !
+
+[2025-04-12 20:27:12]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-12 20:27:12]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\bsp\uart\bsp_uart.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\bsp\uart\bsp_uart.d .\..\..\bsp\uart\bsp_uart.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\bsp\uart\bsp_uart.c", line 102: Error:  #142: expression must have pointer-to-object type
+  	DMA_Uart_SendBuff[0] = (uint8_t)ch;
+  	                  ^
+.\..\..\bsp\uart\bsp_uart.c: 0 warnings, 1 error
+
+[2025-04-12 20:27:52]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+
+[2025-04-12 20:27:53]	[done]
+	build successfully !
+
+[2025-04-12 20:29:11]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+
+[2025-04-12 20:29:12]	[done]
+	build successfully !
+
+[2025-04-12 20:34:07]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+
+[2025-04-12 20:34:09]	[done]
+	build successfully !
+
+[2025-04-12 20:35:13]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+
+[2025-04-12 20:35:14]	[done]
+	build successfully !
+
+[2025-04-12 20:37:14]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-12 20:37:14]	[done]
+	build successfully !
+
+[2025-04-12 20:37:46]	[done]
+	build successfully !
+
+[2025-04-12 20:39:43]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+
+[2025-04-12 20:39:44]	[done]
+	build successfully !
+
+[2025-04-12 20:40:10]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+
+[2025-04-12 20:40:12]	[done]
+	build successfully !
+
+[2025-04-12 20:42:45]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-12 20:42:46]	[done]
+	build successfully !
+
+[2025-04-12 20:43:47]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-12 20:43:48]	[done]
+	build successfully !
+
+[2025-04-12 20:44:28]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-12 20:44:29]	[done]
+	build successfully !
+
+[2025-04-12 20:45:03]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-12 20:45:04]	[done]
+	build successfully !
+
+[2025-04-12 20:46:10]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-12 20:46:11]	[done]
+	build successfully !
+
+[2025-04-12 20:48:02]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-12 20:48:02]	[done]
+	build successfully !
+
+[2025-04-12 20:48:58]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-12 20:48:59]	[done]
+	build successfully !
+
+[2025-04-12 20:50:22]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-12 20:50:23]	[done]
+	build successfully !
+
+[2025-04-12 22:44:19]	[info] incremental build: 5 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\SPI_Control.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\Test_code.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-12 22:44:21]	[done]
+	build successfully !
+
+[2025-04-12 22:46:14]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-12 22:46:15]	[done]
+	build successfully !
+
+[2025-04-12 23:07:22]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-12 23:07:22]	[done]
+	build successfully !
+
+[2025-04-12 23:12:39]	[info] incremental build: 56 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\board\board.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_handle.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\NVIC\NVIC_Init.c': object (.o) file not exist
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\SPI_Control.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\Test_code.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\spi_init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f40xx.s': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\misc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': compiler options has been changed.
+
+[2025-04-12 23:12:42]	[done]
+	build successfully !
+
+[2025-04-12 23:12:54]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+
+[2025-04-12 23:12:55]	[done]
+	build successfully !
+
+[2025-04-13 17:57:42]	[info] incremental build: 5 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\NVIC\NVIC_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 17:57:42]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\bsp\DMA\DMA_Init.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\bsp\DMA\DMA_Init.d .\..\..\bsp\DMA\DMA_Init.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\bsp\DMA\DMA_Init.c", line 49: Error:  #101: "DMA_InitStructure" has already been declared in the current scope
+          DMA_InitTypeDef DMA_InitStructure =
+                          ^
+.\..\..\bsp\DMA\DMA_Init.c: 0 warnings, 1 error
+
+[2025-04-13 17:58:18]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\NVIC\NVIC_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 17:58:18]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\bsp\DMA\DMA_Init.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\bsp\DMA\DMA_Init.d .\..\..\bsp\DMA\DMA_Init.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\bsp\DMA\DMA_Init.c", line 50: Error:  #29: expected an expression
+              {
+              ^
+".\..\..\bsp\DMA\DMA_Init.c", line 65: Warning:  #12-D: parsing restarts here after previous syntax error
+                  .DMA_PeripheralBurst = DMA_PeripheralBurst_Single};
+                                                                    ^
+.\..\..\bsp\DMA\DMA_Init.c: 1 warning, 1 error
+
+[2025-04-13 17:59:41]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\NVIC\NVIC_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 17:59:42]	[done]
+	build successfully !
+
+[2025-04-13 18:32:14]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 18:32:15]	[done]
+	build successfully !
+
+[2025-04-13 18:34:50]	[done]
+	build successfully !
+
+[2025-04-13 20:44:21]	[info] incremental build: 55 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\board\board.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_handle.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\NVIC\NVIC_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\spi_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\misc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 20:44:22]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\app\main.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\app\main.d .\..\..\app\main.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+"../../bsp/Response/response.h", line 16: Error:  #256: invalid redeclaration of type name "usart_data_typed"  (declared at line 16)
+  } usart_data_typed;
+    ^
+"../../bsp/Response/response.h", line 18: Error:  #147: declaration is incompatible with "usart_data_typed test_data"  (declared at line 18)
+  extern usart_data_typed test_data;
+                          ^
+"../../bsp/Response/response.h", line 20: Error:  #147-D: declaration is incompatible with "uint8_t do_process(usart_data_typed *)"  (declared at line 20)
+  uint8_t do_process(usart_data_typed *udata);
+          ^
+".\..\..\app\main.c", line 40: Warning:  #167-D: argument of type "usart_data_typed *" is incompatible with parameter of type "usart_data_typed *"
+  				error = do_process(&test_data);
+  				                   ^
+.\..\..\app\main.c: 1 warning, 3 errors
+
+[2025-04-13 20:46:01]	[info] incremental build: 36 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 20:46:02]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\bsp\uart\bsp_uart.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\bsp\uart\bsp_uart.d .\..\..\bsp\uart\bsp_uart.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\bsp\uart\bsp_uart.c", line 58: Warning:  #223-D: function "memcpy" declared implicitly
+  	memcpy(test_data.DMA_USART1_TX_BUF, ucstr, len); // 灏嗘暟鎹嫹璐濆埌DMA鍙戦�佺紦鍐插尯
+  	^
+".\..\..\bsp\uart\bsp_uart.c", line 58: Error:  #20: identifier "test_data" is undefined
+  	memcpy(test_data.DMA_USART1_TX_BUF, ucstr, len); // 灏嗘暟鎹嫹璐濆埌DMA鍙戦�佺紦鍐插尯
+  	       ^
+.\..\..\bsp\uart\bsp_uart.c: 1 warning, 1 error
+
+[2025-04-13 20:48:51]	[info] incremental build: 14 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 20:48:53]	[done]
+	build successfully !
+
+[2025-04-13 20:49:38]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+
+[2025-04-13 20:49:39]	[done]
+	build successfully !
+
+[2025-04-13 20:52:14]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-13 20:52:15]	[done]
+	build successfully !
+
+[2025-04-13 20:53:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-13 20:53:23]	[done]
+	build successfully !
+
+[2025-04-13 21:02:08]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+
+[2025-04-13 21:02:09]	[done]
+	build successfully !
+
+[2025-04-13 21:02:51]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-13 21:02:52]	[done]
+	build successfully !
+
+[2025-04-13 21:05:28]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\SPI\spi_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-13 21:05:29]	[done]
+	build successfully !
+
+[2025-04-13 21:15:54]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\NVIC\NVIC_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-13 21:15:55]	[done]
+	build successfully !
+
+[2025-04-13 21:18:54]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 21:18:55]	[done]
+	build successfully !
+
+[2025-04-13 21:25:40]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 21:25:41]	[done]
+	build successfully !
+
+[2025-04-13 22:03:52]	[info] incremental build: 5 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 22:03:53]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol DMA_USART1_RX_BUF multiply defined (by DMA_Init.o and main.o).
+Error: L6200E: Symbol DMA_USART1_RX_BUF multiply defined (by bsp_uart.o and main.o).
+Error: L6200E: Symbol DMA_USART1_RX_BUF multiply defined (by stm32f4xx_it.o and main.o).
+Error: L6200E: Symbol DMA_USART1_TX_BUF multiply defined (by DMA_Init.o and main.o).
+Error: L6200E: Symbol DMA_USART1_TX_BUF multiply defined (by bsp_uart.o and main.o).
+Error: L6200E: Symbol DMA_USART1_TX_BUF multiply defined (by stm32f4xx_it.o and main.o).
+Error: L6200E: Symbol usart1_rx_len multiply defined (by DMA_Init.o and main.o).
+Error: L6200E: Symbol usart1_rx_len multiply defined (by bsp_uart.o and main.o).
+Error: L6200E: Symbol usart1_rx_len multiply defined (by stm32f4xx_it.o and main.o).
+Error: L6200E: Symbol usart1_tx_len multiply defined (by DMA_Init.o and main.o).
+Error: L6200E: Symbol usart1_tx_len multiply defined (by bsp_uart.o and main.o).
+Error: L6200E: Symbol usart1_tx_len multiply defined (by stm32f4xx_it.o and main.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 12 error messages.
+
+
+[2025-04-13 22:05:22]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+
+[2025-04-13 22:05:23]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol DMA_USART1_RX_BUF multiply defined (by DMA_Init.o and main.o).
+Error: L6200E: Symbol DMA_USART1_RX_BUF multiply defined (by bsp_uart.o and main.o).
+Error: L6200E: Symbol DMA_USART1_RX_BUF multiply defined (by stm32f4xx_it.o and main.o).
+Error: L6200E: Symbol DMA_USART1_TX_BUF multiply defined (by DMA_Init.o and main.o).
+Error: L6200E: Symbol DMA_USART1_TX_BUF multiply defined (by bsp_uart.o and main.o).
+Error: L6200E: Symbol DMA_USART1_TX_BUF multiply defined (by stm32f4xx_it.o and main.o).
+Error: L6200E: Symbol usart1_rx_len multiply defined (by DMA_Init.o and main.o).
+Error: L6200E: Symbol usart1_rx_len multiply defined (by bsp_uart.o and main.o).
+Error: L6200E: Symbol usart1_rx_len multiply defined (by stm32f4xx_it.o and main.o).
+Error: L6200E: Symbol usart1_tx_len multiply defined (by DMA_Init.o and main.o).
+Error: L6200E: Symbol usart1_tx_len multiply defined (by bsp_uart.o and main.o).
+Error: L6200E: Symbol usart1_tx_len multiply defined (by stm32f4xx_it.o and main.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 12 error messages.
+
+
+[2025-04-13 22:12:19]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 22:12:21]	[done]
+	build successfully !
+
+[2025-04-13 22:12:42]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+
+[2025-04-13 22:12:43]	[done]
+	build successfully !
+
+[2025-04-13 22:20:02]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 22:20:03]	[done]
+	build successfully !
+
+[2025-04-13 22:25:26]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-13 22:25:27]	[done]
+	build successfully !
+
+[2025-04-13 22:25:52]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-13 22:25:53]	[done]
+	build successfully !
+
+[2025-04-13 22:28:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-13 22:28:23]	[done]
+	build successfully !
+
+[2025-04-13 22:30:20]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-13 22:30:21]	[done]
+	build successfully !
+
+[2025-04-13 22:30:58]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-13 22:30:59]	[done]
+	build successfully !
+
+[2025-04-13 22:36:53]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\uart\bsp_uart.h' has been changed.
+
+[2025-04-13 22:36:54]	[done]
+	build successfully !
+
+[2025-04-13 22:38:06]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-13 22:38:06]	[done]
+	build successfully !
+
+[2025-04-13 22:39:44]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-13 22:39:44]	[done]
+	build successfully !
+
+[2025-04-13 22:40:59]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-13 22:41:00]	[done]
+	build successfully !
+
+[2025-04-13 22:41:30]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-13 22:41:31]	[done]
+	build successfully !
+
+[2025-04-13 22:42:44]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-13 22:42:45]	[done]
+	build successfully !
+
+[2025-04-13 22:49:39]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-13 22:49:40]	[done]
+	build successfully !
+

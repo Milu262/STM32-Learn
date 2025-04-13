@@ -434,49 +434,94 @@ typedef struct
   */ 
 
 
-/** @defgroup DMA_interrupts_definitions 
-  * @{
-  */ 
-#define DMA_IT_FEIF0                      ((uint32_t)0x90000001)
-#define DMA_IT_DMEIF0                     ((uint32_t)0x10001004)
-#define DMA_IT_TEIF0                      ((uint32_t)0x10002008)
-#define DMA_IT_HTIF0                      ((uint32_t)0x10004010)
-#define DMA_IT_TCIF0                      ((uint32_t)0x10008020)
-#define DMA_IT_FEIF1                      ((uint32_t)0x90000040)
-#define DMA_IT_DMEIF1                     ((uint32_t)0x10001100)
-#define DMA_IT_TEIF1                      ((uint32_t)0x10002200)
-#define DMA_IT_HTIF1                      ((uint32_t)0x10004400)
-#define DMA_IT_TCIF1                      ((uint32_t)0x10008800)
-#define DMA_IT_FEIF2                      ((uint32_t)0x90010000)
-#define DMA_IT_DMEIF2                     ((uint32_t)0x10041000)
-#define DMA_IT_TEIF2                      ((uint32_t)0x10082000)
-#define DMA_IT_HTIF2                      ((uint32_t)0x10104000)
-#define DMA_IT_TCIF2                      ((uint32_t)0x10208000)
-#define DMA_IT_FEIF3                      ((uint32_t)0x90400000)
-#define DMA_IT_DMEIF3                     ((uint32_t)0x11001000)
-#define DMA_IT_TEIF3                      ((uint32_t)0x12002000)
-#define DMA_IT_HTIF3                      ((uint32_t)0x14004000)
-#define DMA_IT_TCIF3                      ((uint32_t)0x18008000)
-#define DMA_IT_FEIF4                      ((uint32_t)0xA0000001)
-#define DMA_IT_DMEIF4                     ((uint32_t)0x20001004)
-#define DMA_IT_TEIF4                      ((uint32_t)0x20002008)
-#define DMA_IT_HTIF4                      ((uint32_t)0x20004010)
-#define DMA_IT_TCIF4                      ((uint32_t)0x20008020)
-#define DMA_IT_FEIF5                      ((uint32_t)0xA0000040)
-#define DMA_IT_DMEIF5                     ((uint32_t)0x20001100)
-#define DMA_IT_TEIF5                      ((uint32_t)0x20002200)
-#define DMA_IT_HTIF5                      ((uint32_t)0x20004400)
-#define DMA_IT_TCIF5                      ((uint32_t)0x20008800)
-#define DMA_IT_FEIF6                      ((uint32_t)0xA0010000)
-#define DMA_IT_DMEIF6                     ((uint32_t)0x20041000)
-#define DMA_IT_TEIF6                      ((uint32_t)0x20082000)
-#define DMA_IT_HTIF6                      ((uint32_t)0x20104000)
-#define DMA_IT_TCIF6                      ((uint32_t)0x20208000)
-#define DMA_IT_FEIF7                      ((uint32_t)0xA0400000)
-#define DMA_IT_DMEIF7                     ((uint32_t)0x21001000)
-#define DMA_IT_TEIF7                      ((uint32_t)0x22002000)
-#define DMA_IT_HTIF7                      ((uint32_t)0x24004000)
-#define DMA_IT_TCIF7                      ((uint32_t)0x28008000)
+// /** @defgroup DMA_interrupts_definitions 
+//   * @{
+//   */ 
+// #define DMA_IT_FEIF0                      ((uint32_t)0x90000001)
+// #define DMA_IT_DMEIF0                     ((uint32_t)0x10001004)
+// #define DMA_IT_TEIF0                      ((uint32_t)0x10002008)
+// #define DMA_IT_HTIF0                      ((uint32_t)0x10004010)
+// #define DMA_IT_TCIF0                      ((uint32_t)0x10008020)
+// #define DMA_IT_FEIF1                      ((uint32_t)0x90000040)
+// #define DMA_IT_DMEIF1                     ((uint32_t)0x10001100)
+// #define DMA_IT_TEIF1                      ((uint32_t)0x10002200)
+// #define DMA_IT_HTIF1                      ((uint32_t)0x10004400)
+// #define DMA_IT_TCIF1                      ((uint32_t)0x10008800)
+// #define DMA_IT_FEIF2                      ((uint32_t)0x90010000)
+// #define DMA_IT_DMEIF2                     ((uint32_t)0x10041000)
+// #define DMA_IT_TEIF2                      ((uint32_t)0x10082000)
+// #define DMA_IT_HTIF2                      ((uint32_t)0x10104000)
+// #define DMA_IT_TCIF2                      ((uint32_t)0x10208000)
+// #define DMA_IT_FEIF3                      ((uint32_t)0x90400000)
+// #define DMA_IT_DMEIF3                     ((uint32_t)0x11001000)
+// #define DMA_IT_TEIF3                      ((uint32_t)0x12002000)
+// #define DMA_IT_HTIF3                      ((uint32_t)0x14004000)
+// #define DMA_IT_TCIF3                      ((uint32_t)0x18008000)
+// #define DMA_IT_FEIF4                      ((uint32_t)0xA0000001)
+// #define DMA_IT_DMEIF4                     ((uint32_t)0x20001004)
+// #define DMA_IT_TEIF4                      ((uint32_t)0x20002008)
+// #define DMA_IT_HTIF4                      ((uint32_t)0x20004010)
+// #define DMA_IT_TCIF4                      ((uint32_t)0x20008020)
+// #define DMA_IT_FEIF5                      ((uint32_t)0xA0000040)
+// #define DMA_IT_DMEIF5                     ((uint32_t)0x20001100)
+// #define DMA_IT_TEIF5                      ((uint32_t)0x20002200)
+// #define DMA_IT_HTIF5                      ((uint32_t)0x20004400)
+// #define DMA_IT_TCIF5                      ((uint32_t)0x20008800)
+// #define DMA_IT_FEIF6                      ((uint32_t)0xA0010000)
+// #define DMA_IT_DMEIF6                     ((uint32_t)0x20041000)
+// #define DMA_IT_TEIF6                      ((uint32_t)0x20082000)
+// #define DMA_IT_HTIF6                      ((uint32_t)0x20104000)
+// #define DMA_IT_TCIF6                      ((uint32_t)0x20208000)
+// #define DMA_IT_FEIF7                      ((uint32_t)0xA0400000)
+// #define DMA_IT_DMEIF7                     ((uint32_t)0x21001000)
+// #define DMA_IT_TEIF7                      ((uint32_t)0x22002000)
+// #define DMA_IT_HTIF7                      ((uint32_t)0x24004000)
+// #define DMA_IT_TCIF7                      ((uint32_t)0x28008000)  
+
+/**
+ * @brief  DMA中断标志定义
+ */
+#define DMA_IT_FEIF0                      ((uint32_t)0x90000001) /*!< DMA Stream0 FIFO错误中断标志 */
+#define DMA_IT_DMEIF0                     ((uint32_t)0x10001004) /*!< DMA Stream0 直接模式错误中断标志 */
+#define DMA_IT_TEIF0                      ((uint32_t)0x10002008) /*!< DMA Stream0 传输错误中断标志 */
+#define DMA_IT_HTIF0                      ((uint32_t)0x10004010) /*!< DMA Stream0 半传输完成中断标志 */
+#define DMA_IT_TCIF0                      ((uint32_t)0x10008020) /*!< DMA Stream0 传输完成中断标志 */
+#define DMA_IT_FEIF1                      ((uint32_t)0x90000040) /*!< DMA Stream1 FIFO错误中断标志 */
+#define DMA_IT_DMEIF1                     ((uint32_t)0x10001100) /*!< DMA Stream1 直接模式错误中断标志 */
+#define DMA_IT_TEIF1                      ((uint32_t)0x10002200) /*!< DMA Stream1 传输错误中断标志 */
+#define DMA_IT_HTIF1                      ((uint32_t)0x10004400) /*!< DMA Stream1 半传输完成中断标志 */
+#define DMA_IT_TCIF1                      ((uint32_t)0x10008800) /*!< DMA Stream1 传输完成中断标志 */
+#define DMA_IT_FEIF2                      ((uint32_t)0x90010000) /*!< DMA Stream2 FIFO错误中断标志 */
+#define DMA_IT_DMEIF2                     ((uint32_t)0x10041000) /*!< DMA Stream2 直接模式错误中断标志 */
+#define DMA_IT_TEIF2                      ((uint32_t)0x10082000) /*!< DMA Stream2 传输错误中断标志 */
+#define DMA_IT_HTIF2                      ((uint32_t)0x10104000) /*!< DMA Stream2 半传输完成中断标志 */
+#define DMA_IT_TCIF2                      ((uint32_t)0x10208000) /*!< DMA Stream2 传输完成中断标志 */
+#define DMA_IT_FEIF3                      ((uint32_t)0x90400000) /*!< DMA Stream3 FIFO错误中断标志 */
+#define DMA_IT_DMEIF3                     ((uint32_t)0x11001000) /*!< DMA Stream3 直接模式错误中断标志 */
+#define DMA_IT_TEIF3                      ((uint32_t)0x12002000) /*!< DMA Stream3 传输错误中断标志 */
+#define DMA_IT_HTIF3                      ((uint32_t)0x14004000) /*!< DMA Stream3 半传输完成中断标志 */
+#define DMA_IT_TCIF3                      ((uint32_t)0x18008000) /*!< DMA Stream3 传输完成中断标志 */
+#define DMA_IT_FEIF4                      ((uint32_t)0xA0000001) /*!< DMA Stream4 FIFO错误中断标志 */
+#define DMA_IT_DMEIF4                     ((uint32_t)0x20001004) /*!< DMA Stream4 直接模式错误中断标志 */
+#define DMA_IT_TEIF4                      ((uint32_t)0x20002008) /*!< DMA Stream4 传输错误中断标志 */
+#define DMA_IT_HTIF4                      ((uint32_t)0x20004010) /*!< DMA Stream4 半传输完成中断标志 */
+#define DMA_IT_TCIF4                      ((uint32_t)0x20008020) /*!< DMA Stream4 传输完成中断标志 */
+#define DMA_IT_FEIF5                      ((uint32_t)0xA0000040) /*!< DMA Stream5 FIFO错误中断标志 */
+#define DMA_IT_DMEIF5                     ((uint32_t)0x20001100) /*!< DMA Stream5 直接模式错误中断标志 */
+#define DMA_IT_TEIF5                      ((uint32_t)0x20002200) /*!< DMA Stream5 传输错误中断标志 */
+#define DMA_IT_HTIF5                      ((uint32_t)0x20004400) /*!< DMA Stream5 半传输完成中断标志 */
+#define DMA_IT_TCIF5                      ((uint32_t)0x20008800) /*!< DMA Stream5 传输完成中断标志 */
+#define DMA_IT_FEIF6                      ((uint32_t)0xA0010000) /*!< DMA Stream6 FIFO错误中断标志 */
+#define DMA_IT_DMEIF6                     ((uint32_t)0x20041000) /*!< DMA Stream6 直接模式错误中断标志 */
+#define DMA_IT_TEIF6                      ((uint32_t)0x20082000) /*!< DMA Stream6 传输错误中断标志 */
+#define DMA_IT_HTIF6                      ((uint32_t)0x20104000) /*!< DMA Stream6 半传输完成中断标志 */
+#define DMA_IT_TCIF6                      ((uint32_t)0x20208000) /*!< DMA Stream6 传输完成中断标志 */
+#define DMA_IT_FEIF7                      ((uint32_t)0xA0400000) /*!< DMA Stream7 FIFO错误中断标志 */
+#define DMA_IT_DMEIF7                     ((uint32_t)0x21001000) /*!< DMA Stream7 直接模式错误中断标志 */
+#define DMA_IT_TEIF7                      ((uint32_t)0x22002000) /*!< DMA Stream7 传输错误中断标志 */
+#define DMA_IT_HTIF7                      ((uint32_t)0x24004000) /*!< DMA Stream7 半传输完成中断标志 */
+#define DMA_IT_TCIF7                      ((uint32_t)0x28008000) /*!< DMA Stream7 传输完成中断标志 */
+
 
 #define IS_DMA_CLEAR_IT(IT) ((((IT) & 0x30000000) != 0x30000000) && \
                              (((IT) & 0x30000000) != 0) && ((IT) != 0x00) && \

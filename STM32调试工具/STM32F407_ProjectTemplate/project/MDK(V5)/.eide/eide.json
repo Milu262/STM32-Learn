@@ -79,6 +79,24 @@
               }
             ],
             "folders": []
+          },
+          {
+            "name": "DMA",
+            "files": [
+              {
+                "path": "../../bsp/DMA/DMA_Init.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "NVIC",
+            "files": [
+              {
+                "path": "../../bsp/NVIC/NVIC_Init.c"
+              }
+            ],
+            "folders": []
           }
         ]
       },
@@ -401,7 +419,9 @@
           "../../bsp/I2C",
           "RTE/_Project",
           "../../bsp/Response",
-          "../../bsp/SPI"
+          "../../bsp/SPI",
+          "../../bsp/DMA",
+          "../../bsp/NVIC"
         ],
         "libList": [],
         "defineList": [

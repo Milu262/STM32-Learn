@@ -1,5 +1,7 @@
 .\objects\i2c_handle.o: ..\..\bsp\I2C\i2c_handle.c
 .\objects\i2c_handle.o: ..\..\bsp\I2C\i2c_handle.h
+.\objects\i2c_handle.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\stdio.h
+.\objects\i2c_handle.o: ..\..\board\board.h
 .\objects\i2c_handle.o: ..\..\libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 .\objects\i2c_handle.o: ..\..\libraries\CMSIS\Include\core_cm4.h
 .\objects\i2c_handle.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\stdint.h
@@ -35,4 +37,3 @@
 .\objects\i2c_handle.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
 .\objects\i2c_handle.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 .\objects\i2c_handle.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
-.\objects\i2c_handle.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\stdio.h

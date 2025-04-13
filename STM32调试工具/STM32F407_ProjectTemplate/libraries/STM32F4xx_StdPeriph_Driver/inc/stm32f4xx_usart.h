@@ -233,22 +233,39 @@ typedef struct
   * @}
   */ 
 
-/** @defgroup USART_Interrupt_definition 
-  * @{
-  */
+// /** @defgroup USART_Interrupt_definition 
+//   * @{
+//   */
   
-#define USART_IT_PE                          ((uint16_t)0x0028)
-#define USART_IT_TXE                         ((uint16_t)0x0727)
-#define USART_IT_TC                          ((uint16_t)0x0626)
-#define USART_IT_RXNE                        ((uint16_t)0x0525)
-#define USART_IT_ORE_RX                      ((uint16_t)0x0325) /* In case interrupt is generated if the RXNEIE bit is set */
-#define USART_IT_IDLE                        ((uint16_t)0x0424)
-#define USART_IT_LBD                         ((uint16_t)0x0846)
-#define USART_IT_CTS                         ((uint16_t)0x096A)
-#define USART_IT_ERR                         ((uint16_t)0x0060)
-#define USART_IT_ORE_ER                      ((uint16_t)0x0360) /* In case interrupt is generated if the EIE bit is set */
-#define USART_IT_NE                          ((uint16_t)0x0260)
-#define USART_IT_FE                          ((uint16_t)0x0160)
+// #define USART_IT_PE                          ((uint16_t)0x0028)
+// #define USART_IT_TXE                         ((uint16_t)0x0727)
+// #define USART_IT_TC                          ((uint16_t)0x0626)
+// #define USART_IT_RXNE                        ((uint16_t)0x0525)
+// #define USART_IT_ORE_RX                      ((uint16_t)0x0325) /* In case interrupt is generated if the RXNEIE bit is set */
+// #define USART_IT_IDLE                        ((uint16_t)0x0424)
+// #define USART_IT_LBD                         ((uint16_t)0x0846)
+// #define USART_IT_CTS                         ((uint16_t)0x096A)
+// #define USART_IT_ERR                         ((uint16_t)0x0060)
+// #define USART_IT_ORE_ER                      ((uint16_t)0x0360) /* In case interrupt is generated if the EIE bit is set */
+// #define USART_IT_NE                          ((uint16_t)0x0260)
+// #define USART_IT_FE                          ((uint16_t)0x0160)
+
+/**
+ * @brief  USART中断定义
+ */
+#define USART_IT_PE                          ((uint16_t)0x0028) /*!< 奇偶校验错误中断 */
+#define USART_IT_TXE                         ((uint16_t)0x0727) /*!< 发送数据寄存器为空中断 */
+#define USART_IT_TC                          ((uint16_t)0x0626) /*!< 传输完成中断 */
+#define USART_IT_RXNE                        ((uint16_t)0x0525) /*!< 接收数据寄存器非空中断 */
+#define USART_IT_ORE_RX                      ((uint16_t)0x0325) /*!< 接收溢出错误中断（当RXNEIE位设置时） */
+#define USART_IT_IDLE                        ((uint16_t)0x0424) /*!< 空闲中断 */
+#define USART_IT_LBD                         ((uint16_t)0x0846) /*!< LIN断开检测中断 */
+#define USART_IT_CTS                         ((uint16_t)0x096A) /*!< 清除发送中断 */
+#define USART_IT_ERR                         ((uint16_t)0x0060) /*!< 错误中断 */
+#define USART_IT_ORE_ER                      ((uint16_t)0x0360) /*!< 接收溢出错误中断（当EIE位设置时） */
+#define USART_IT_NE                          ((uint16_t)0x0260) /*!< 噪声错误中断 */
+#define USART_IT_FE                          ((uint16_t)0x0160) /*!< 帧错误中断 */
+
 
 /** @defgroup USART_Legacy 
   * @{
