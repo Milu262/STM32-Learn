@@ -26,26 +26,17 @@ void board_init(void)
     //	RCC_GetClocksFreq(&rcc);//��ȡϵͳʱ��Ƶ��
 }
 
-/**
- -  @brief  ���ں˵� systick ʵ�ֵ�΢����ʱ
- -  @note   None
- -  @param  _us:Ҫ��ʱ��us��
- -  @retval None
-*/
 void delay_us(uint32_t _us)
 {
     uint32_t ticks;
     uint32_t told, tnow, tcnt = 0;
 
-    // ������Ҫ��ʱ���� = �ӳ�΢���� * ÿ΢���ʱ����
     ticks = _us * (SystemCoreClock / 1000000);
 
-    // ��ȡ��ǰ��SysTickֵ
     told = SysTick->VAL;
 
     while (1)
     {
-        // �ظ�ˢ�»�ȡ��ǰ��SysTickֵ
         tnow = SysTick->VAL;
 
         if (tnow != told)
@@ -57,19 +48,13 @@ void delay_us(uint32_t _us)
 
             told = tnow;
 
-            // ����ﵽ����Ҫ��ʱ���������˳�ѭ��
             if (tcnt >= ticks)
                 break;
         }
     }
 }
 
-/**
- -  @brief  �������ں˵� systick ʵ�ֵĺ�����ʱ
- -  @note   None
- -  @param  _ms:Ҫ��ʱ��ms��
- -  @retval None
-*/
+
 void delay_ms(uint32_t _ms) { delay_us(_ms * 1000); }
 
 void delay_1ms(uint32_t ms) { delay_us(ms * 1000); }

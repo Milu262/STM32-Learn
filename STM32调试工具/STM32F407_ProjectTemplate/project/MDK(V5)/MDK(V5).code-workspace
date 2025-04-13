@@ -15,7 +15,10 @@
             "bsp_uart.h": "c",
             "bsp_spi_flash.h": "c",
             "spi_init.h": "c",
-            "spi_control.h": "c"
+            "spi_control.h": "c",
+            "dma_init.h": "c",
+            "nvic_init.h": "c",
+            "stm32f4xx_usart.h": "c"
         },
         "Codegeex.RepoIndex": true
     },

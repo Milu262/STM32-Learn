@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F40_41xxx,</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\app;..\..\board;..\..\bsp;..\..\libraries\CMSIS\Include;..\..\libraries\CMSIS\Device\ST\STM32F4xx\Include;..\..\libraries\STM32F4xx_StdPeriph_Driver\inc;..\..\module;..\..\bsp\uart;..\..\bsp\I2C;..\..\bsp\Response</IncludePath>
+              <IncludePath>..\..\app;..\..\board;..\..\bsp;..\..\libraries\CMSIS\Include;..\..\libraries\CMSIS\Device\ST\STM32F4xx\Include;..\..\libraries\STM32F4xx_StdPeriph_Driver\inc;..\..\module;..\..\bsp\uart;..\..\bsp\I2C;..\..\bsp\Response;..\..\bsp\DMA;..\..\bsp\SPI;..\..\bsp\NVIC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -682,6 +682,46 @@
               <FileName>response.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\bsp\Response\response.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SPI</GroupName>
+          <Files>
+            <File>
+              <FileName>SPI_Control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\SPI\SPI_Control.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\SPI\spi_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>Test_code.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\SPI\Test_code.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DMA</GroupName>
+          <Files>
+            <File>
+              <FileName>DMA_Init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\DMA\DMA_Init.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>NVIC</GroupName>
+          <Files>
+            <File>
+              <FileName>NVIC_Init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\NVIC\NVIC_Init.c</FilePath>
             </File>
           </Files>
         </Group>

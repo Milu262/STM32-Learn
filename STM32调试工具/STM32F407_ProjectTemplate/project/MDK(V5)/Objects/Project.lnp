@@ -50,6 +50,11 @@
 ".\objects\i2c_init.o"
 ".\objects\i2c_handle.o"
 ".\objects\response.o"
+".\objects\spi_control.o"
+".\objects\spi_init.o"
+".\objects\test_code.o"
+".\objects\dma_init.o"
+".\objects\nvic_init.o"
 --library_type=microlib --strict --scatter ".\Objects\Project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

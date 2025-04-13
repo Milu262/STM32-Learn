@@ -1,6 +1,8 @@
 .\objects\response.o: ..\..\bsp\Response\response.c
 .\objects\response.o: ..\..\bsp\Response\response.h
 .\objects\response.o: ..\..\bsp\.\i2c\i2c_handle.h
+.\objects\response.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\stdio.h
+.\objects\response.o: ..\..\board\board.h
 .\objects\response.o: ..\..\libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 .\objects\response.o: ..\..\libraries\CMSIS\Include\core_cm4.h
 .\objects\response.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\stdint.h
