@@ -14,7 +14,7 @@ uint8_t do_process(usart_data_typed *udata)
     //     last_data++;
     // }
     // last_data--;
-    if (Header != 0x55)
+    if (Header != Frame_header)
     {
         udata->flag = 0;
         udata->len = 0;

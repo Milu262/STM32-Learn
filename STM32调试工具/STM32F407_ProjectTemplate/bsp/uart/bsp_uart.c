@@ -78,22 +78,21 @@ void _sys_exit(int x)
 /* retarget the C library printf function to the USART */
 int fputc(int ch, FILE *f)
 {
-	USART_SendData(BSP_USART, (uint8_t)ch);
+	// USART_SendData(BSP_USART, (uint8_t)ch);
 
-	while (RESET == USART_GetFlagStatus(BSP_USART, USART_FLAG_TXE))
-	{
-	}
+	// while (RESET == USART_GetFlagStatus(BSP_USART, USART_FLAG_TXE))
+	// {
+	// }
 
 	// 以下为使用DMA传输
+	DMA_USART1_TX_BUF[0] =(uint8_t) ch;
+    while (DMA_GetCmdStatus(DEBUG_USART1_TX_DMA_STREAM) != DISABLE)
+        ;                                                    // 等待DMA可以被设置
+	//设置DMA传输模式
+	
+    DMA_SetCurrDataCounter(DEBUG_USART1_TX_DMA_STREAM, 1); // 设置当前DMA的传输数据量
 
-	// DMA_Uart_SendBuff[0] = (uint8_t)ch;
-	// USART_DMACmd(BSP_USART, USART_DMAReq_Tx, ENABLE);
-	// //检查执行是否完成
-	// while (DMA_GetFlagStatus(DEBUG_USART_DMA_STREAM, DMA_FLAG_TCIF7) == RESET)
-	// 	;
-	// //清除传输完成标志
-	// DMA_ClearFlag(DEBUG_USART_DMA_STREAM, DMA_FLAG_TCIF7);
-	// // USART_DMACmd(BSP_USART, USART_DMAReq_Tx, DISABLE);
+    DMA_Cmd(DEBUG_USART1_TX_DMA_STREAM, ENABLE); // 使能DMA传输
 
 	return ch;
 }

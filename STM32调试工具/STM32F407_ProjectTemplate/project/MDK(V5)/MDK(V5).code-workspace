@@ -18,7 +18,9 @@
             "spi_control.h": "c",
             "dma_init.h": "c",
             "nvic_init.h": "c",
-            "stm32f4xx_usart.h": "c"
+            "stm32f4xx_usart.h": "c",
+            "test_code.h": "c",
+            "stm32f4xx_it.h": "c"
         },
         "Codegeex.RepoIndex": true
     },

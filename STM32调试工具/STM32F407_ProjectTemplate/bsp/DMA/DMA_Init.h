@@ -5,8 +5,8 @@
 // DMA
 //  定义调试串口数据寄存器基地址，USART1_BASE是USART1的基地址，0x04是数据寄存器相对于基地址的偏移量
 #define DEBUG_USART_DR_BASE (USART1_BASE + 0x04)
-// 定义发送缓冲区大小，用于DMA传输时缓冲数据的最大字节数
-#define SENDBUFF_SIZE 4
+// // 定义发送缓冲区大小，用于DMA传输时缓冲数据的最大字节数
+// #define SENDBUFF_SIZE 4
 // 定义调试串口DMA时钟，DMA2是STM32的DMA控制器2，用于管理DMA传输
 #define DEBUG_USART_DMA_CLK RCC_AHB1Periph_DMA2
 // 定义调试串口DMA通道，DMA_Channel_4是DMA控制器中的一个通道，用于特定的DMA传输

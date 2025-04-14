@@ -24,7 +24,7 @@
 #include "stm32f4xx_it.h"
 #include "bsp_uart.h"
 #include "DMA_Init.h"
-// #include "response.h"
+#include "response.h"
 #include <stdint.h>
 
 /** @addtogroup Template_Project
@@ -159,21 +159,28 @@ void USART1_IRQHandler(void)
   // 以下是DMA的方式
   if (USART_GetITStatus(BSP_USART, USART_IT_IDLE) != RESET) // 触发空闲中断
   {
-    // test_data.flag = 1;                                                                           // 接收完成标志
+    test_data.flag = 1;                                                                 // 接收完成标志
     DMA_Cmd(DEBUG_USART1_RX_DMA_STREAM, DISABLE);                                       // 暂时关闭接收串口的DMA，数据待处理
     usart1_rx_len = USART_MAX_LEN - DMA_GetCurrDataCounter(DEBUG_USART1_RX_DMA_STREAM); // 计算接收到的数据长度
     DMA_ClearFlag(DEBUG_USART1_RX_DMA_STREAM, DMA_FLAG_TCIF5);                          // 清除接收完成标志
-    printf("%d\r\n", usart1_rx_len);
     // 做自己的事,例如将接收到的数据回显
-    usart_send_String_DMA(DMA_USART1_RX_BUF, usart1_rx_len); // 回显
+    // usart_send_String_DMA(DMA_USART1_RX_BUF, usart1_rx_len); // 回显
+    if (usart1_rx_len > data_size - 2)
+    {
+      test_data.err = 1;
+    }
+    else
+    {
+      memcpy(test_data.data, DMA_USART1_RX_BUF, usart1_rx_len); // 将接收到的数据复制到test_data.data
+      test_data.data[usart1_rx_len] = '\0';
+    }
 
     DMA_SetCurrDataCounter(DEBUG_USART1_RX_DMA_STREAM, USART_MAX_LEN); // 重新设置DMA的缓冲区大小
     DMA_Cmd(DEBUG_USART1_RX_DMA_STREAM, ENABLE);                       // 重新开启接收串口的DMA
     USART_ReceiveData(BSP_USART);                                      // 清除接收中断标志
-
   }
 
-  if (USART_GetFlagStatus(BSP_USART, USART_IT_TXE) == RESET) // 串口发送完成
+  if (USART_GetFlagStatus(BSP_USART, USART_IT_TXE) == RESET) // 串口发送寄存器为空
   {
     USART_ITConfig(USART1, USART_IT_TC, DISABLE); // 关闭发送完成中断
     usart1_rx_len = 0;                            // 清空接收数据长度
