@@ -917,22 +917,17 @@ uint32_t DMA_GetCurrentMemoryTarget(DMA_Stream_TypeDef* DMAy_Streamx)
   */
 
 /**
-  * @brief  Returns the status of EN bit for the specified DMAy Streamx.
-  * @param  DMAy_Streamx: where y can be 1 or 2 to select the DMA and x can be 0
-  *          to 7 to select the DMA Stream.
-  *   
-  * @note    After configuring the DMA Stream (DMA_Init() function) and enabling
-  *          the stream, it is recommended to check (or wait until) the DMA Stream
-  *          is effectively enabled. A Stream may remain disabled if a configuration
-  *          parameter is wrong.
-  *          After disabling a DMA Stream, it is also recommended to check (or wait 
-  *          until) the DMA Stream is effectively disabled. If a Stream is disabled
-  *          while a data transfer is ongoing, the current data will be transferred
-  *          and the Stream will be effectively disabled only after the transfer
-  *          of this single data is finished.  
-  *      
-  * @retval Current state of the DMAy Streamx (ENABLE or DISABLE).
-  */
+ * @brief  返回指定DMAy Streamx的EN位状态。
+ * @param  DMAy_Streamx: 选择DMA和DMA Stream，y可以是1或2，x可以是0到7。
+ *   
+ * @note    配置DMA Stream（DMA_Init()函数）并启用流后，建议检查（或等待直到）DMA Stream
+ *          实际启用。如果配置参数错误，流可能会保持禁用状态。
+ *          禁用DMA Stream后，也建议检查（或等待直到）DMA Stream实际禁用。
+ *          如果在数据传输过程中禁用流，当前数据将被传输，并且流将在传输此单个数据后
+ *          才会实际禁用。
+ *      
+ * @retval DMAy Streamx的当前状态（ENABLE或DISABLE）。
+ */
 FunctionalState DMA_GetCmdStatus(DMA_Stream_TypeDef* DMAy_Streamx)
 {
   FunctionalState state = DISABLE;

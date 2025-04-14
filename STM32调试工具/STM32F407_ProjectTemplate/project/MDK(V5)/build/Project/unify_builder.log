@@ -896,3 +896,90 @@ These source files will be recompiled
 [2025-04-13 22:49:40]	[done]
 	build successfully !
 
+[2025-04-13 23:01:18]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 23:01:19]	[done]
+	build successfully !
+
+[2025-04-13 23:24:25]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-13 23:24:27]	[done]
+	build successfully !
+
+[2025-04-13 23:24:40]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-13 23:24:40]	[done]
+	build successfully !
+
+[2025-04-14 19:32:20]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-14 19:32:21]	[done]
+	build successfully !
+
+[2025-04-14 19:32:55]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+
+[2025-04-14 19:32:55]	[done]
+	build successfully !
+
+[2025-04-14 19:50:03]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-14 19:50:05]	[done]
+	build successfully !
+
+[2025-04-14 19:58:12]	[info] incremental build: 5 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\NVIC\NVIC_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+
+[2025-04-14 19:58:13]	[done]
+	build successfully !
+
+[2025-04-14 19:59:02]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-14 19:59:02]	[done]
+	build successfully !
+
+[2025-04-14 20:21:41]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\module\stm32f4xx_it.h' has been changed.
+
+[2025-04-14 20:21:42]	[done]
+	build successfully !
+

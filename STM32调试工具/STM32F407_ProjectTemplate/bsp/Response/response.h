@@ -1,11 +1,12 @@
 // #include "stm32f4xx.h"
 #include ".\i2c\i2c_handle.h"
 #define data_size 100
-
+#define Frame_header 0x55
 
 typedef struct
 {
 	unsigned int flag;//标志位
+	unsigned int err;//数据类型
 	unsigned int len;
 	uint8_t data[data_size];
 
