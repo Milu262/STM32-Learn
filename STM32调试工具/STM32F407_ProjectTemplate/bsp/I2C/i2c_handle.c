@@ -13,7 +13,6 @@ static const Error_Code i2c_Errors[] = {
 // 定义错误信息数组的大小
 #define I2C_ERROR_COUNT (sizeof(i2c_Errors) / sizeof(i2c_Errors[0]))
 
-
 static uint32_t I2C_TIMEOUT_UserCallback(uint8_t errorCode)
 {
     /* 使用串口 printf 输出错误信息，方便调试 */
@@ -663,7 +662,7 @@ static uint8_t i2c_device_adress_find(uint8_t slave_adress)
     return 1;
 }
 
-void I2C_EE_WaitEepromStandbyState(uint8_t EEPROM_ADDRESS)
+static void I2C_EE_WaitEepromStandbyState(uint8_t EEPROM_ADDRESS)
 {
     vu16 SR1_Tmp = 0;
 
@@ -681,4 +680,50 @@ void I2C_EE_WaitEepromStandbyState(uint8_t EEPROM_ADDRESS)
     I2C_ClearFlag(I2C1, I2C_FLAG_AF);
     /* STOP condition */
     I2C_GenerateSTOP(I2C1, ENABLE);
+}
+
+uint8_t I2C_EE_PageWrite(uint8_t EEPROM_ADDRESS, uint16_t WriteAddr, uint8_t *Data, uint8_t NumByteToWrite)
+{
+    uint16_t I2CTimeout = I2CT_LONG_TIMEOUT;
+    while (I2C_GetFlagStatus(I2C_Channel, I2C_FLAG_BUSY))
+    {
+        if ((I2CTimeout--) == 0)
+            return I2C_TIMEOUT_UserCallback(10);
+    }
+    I2C_GenerateSTART(I2C_Channel, ENABLE);
+    I2CTimeout = I2CT_LONG_TIMEOUT;
+    while (!I2C_CheckEvent(I2C_Channel, I2C_EVENT_MASTER_MODE_SELECT))
+    {
+        if ((I2CTimeout--) == 0)
+            return I2C_TIMEOUT_UserCallback(0);
+    }
+    I2C_Send7bitAddress(I2C_Channel, EEPROM_ADDRESS, I2C_Direction_Transmitter);
+    I2CTimeout = I2CT_LONG_TIMEOUT;
+    while (!I2C_CheckEvent(I2C_Channel, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+    {
+        if ((I2CTimeout--) == 0)
+            return I2C_TIMEOUT_UserCallback(1);
+    }
+    I2C_SendData(I2C_Channel, WriteAddr);
+    I2CTimeout = I2CT_LONG_TIMEOUT;
+    while (!I2C_CheckEvent(I2C_Channel, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+    {
+        if ((I2CTimeout--) == 0)
+            return I2C_TIMEOUT_UserCallback(2);
+    }
+    while (NumByteToWrite--)
+    {
+        I2C_SendData(I2C_Channel, *Data);
+        Data++;
+        I2CTimeout = I2CT_LONG_TIMEOUT;
+        while (!I2C_CheckEvent(I2C_Channel, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+        {
+            if ((I2CTimeout--) == 0)
+                return I2C_TIMEOUT_UserCallback(3);
+        }
+    }
+    I2C_GenerateSTOP(I2C_Channel, ENABLE);
+    //等待EEPROM内部写操作完成
+    I2C_EE_WaitEepromStandbyState(EEPROM_ADDRESS);
+    return 1;
 }

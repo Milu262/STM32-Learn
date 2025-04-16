@@ -43,6 +43,12 @@ void SVC_Handler(void);
 void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
+/**
+ * @brief  处理DMA2 Stream7全局中断请求。
+ *
+ * 当DMA2 Stream7传输完成时，会触发此中断。
+ * 该函数清除中断标志并在传输完成后禁用DMA流。
+ */
 void DMA2_Stream7_IRQHandler(void);
 
 #ifdef __cplusplus
