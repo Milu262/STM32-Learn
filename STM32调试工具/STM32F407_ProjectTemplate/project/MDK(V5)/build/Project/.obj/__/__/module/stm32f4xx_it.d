@@ -41,3 +41,4 @@
 .\build\Project\.obj\__\__\module\stm32f4xx_it.o: ../../bsp/Response/response.h
 .\build\Project\.obj\__\__\module\stm32f4xx_it.o: ../../bsp/.\i2c\i2c_handle.h
 .\build\Project\.obj\__\__\module\stm32f4xx_it.o: ../../board/board.h
+.\build\Project\.obj\__\__\module\stm32f4xx_it.o: ../../bsp/.\i2c\i2c_init.h

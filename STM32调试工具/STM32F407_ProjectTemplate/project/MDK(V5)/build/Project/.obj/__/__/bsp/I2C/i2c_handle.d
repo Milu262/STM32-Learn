@@ -35,3 +35,4 @@
 .\build\Project\.obj\__\__\bsp\I2C\i2c_handle.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h
 .\build\Project\.obj\__\__\bsp\I2C\i2c_handle.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h
 .\build\Project\.obj\__\__\bsp\I2C\i2c_handle.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h
+.\build\Project\.obj\__\__\bsp\I2C\i2c_handle.o: .\..\..\bsp\I2C\i2c_init.h

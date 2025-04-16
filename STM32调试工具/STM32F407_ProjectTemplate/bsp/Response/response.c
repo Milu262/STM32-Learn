@@ -87,6 +87,10 @@ static void do_i2c_8RegisterAddr(uint8_t *data)
     case 0x05:
         Find_i2c_device();
         break;
+    case 0x06: // EEPROM按页写入
+        if (I2C_EE_PageWrite(slave_adress, RegisterAddr, Value, NumByteToProsess))
+            printf("EEPROM Page Write Success! \r\n");
+        break;
     default:
         printf("Use 8bit RegisterAddr mode Error! \r\n");
         break;
