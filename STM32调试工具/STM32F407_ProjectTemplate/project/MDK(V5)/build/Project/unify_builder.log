@@ -1050,3 +1050,73 @@ These source files will be recompiled
 [2025-04-16 20:30:48]	[done]
 	build successfully !
 
+[2025-04-20 00:35:25]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': source file has been changed.
+
+[2025-04-20 00:35:26]	[done]
+	build successfully !
+
+[2025-04-20 13:45:32]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_handle.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\i2c\i2c_handle.h' has been changed.
+
+[2025-04-20 13:45:33]	[done]
+	build successfully !
+
+[2025-04-20 13:46:05]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_handle.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\i2c\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\project\MDK(V5)\..\..\bsp\i2c\i2c_handle.h' has been changed.
+
+[2025-04-20 13:46:06]	[done]
+	build successfully !
+
+[2025-04-20 14:11:52]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_handle.c': source file has been changed.
+
+[2025-04-20 14:11:52]	[done]
+	build successfully !
+
+[2025-04-20 14:12:08]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_handle.c': source file has been changed.
+
+[2025-04-20 14:12:08]	[done]
+	build successfully !
+
+[2025-04-20 14:13:22]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_handle.c': source file has been changed.
+
+[2025-04-20 14:13:22]	[done]
+	build successfully !
+
+[2025-04-20 14:14:27]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_handle.c': source file has been changed.
+
+[2025-04-20 14:14:28]	[done]
+	build successfully !
+
+[2025-04-20 14:20:49]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32调试工具\STM32F407_ProjectTemplate\bsp\I2C\i2c_handle.c': source file has been changed.
+
+[2025-04-20 14:20:49]	[done]
+	build successfully !
+
