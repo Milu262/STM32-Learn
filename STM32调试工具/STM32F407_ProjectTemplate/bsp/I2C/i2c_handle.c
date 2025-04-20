@@ -676,13 +676,15 @@ static void I2C_EE_WaitEepromStandbyState(uint8_t EEPROM_ADDRESS)
         I2C_Send7bitAddress(I2C1, EEPROM_ADDRESS, I2C_Direction_Transmitter);
     } while (!(I2C_ReadRegister(I2C1, I2C_Register_SR1) & 0x0002));
 
+
+
     /* Clear AF flag */
     I2C_ClearFlag(I2C1, I2C_FLAG_AF);
     /* STOP condition */
     I2C_GenerateSTOP(I2C1, ENABLE);
 }
 
-uint8_t I2C_EE_PageWrite(uint8_t EEPROM_ADDRESS, uint16_t WriteAddr, uint8_t *Data, uint8_t NumByteToWrite)
+uint8_t I2C_EE_8Addr_PageWrite(uint8_t EEPROM_ADDRESS, uint8_t WriteAddr, uint8_t *Data, uint8_t NumByteToWrite)
 {
     uint16_t I2CTimeout = I2CT_LONG_TIMEOUT;
     while (I2C_GetFlagStatus(I2C_Channel, I2C_FLAG_BUSY))
@@ -723,7 +725,74 @@ uint8_t I2C_EE_PageWrite(uint8_t EEPROM_ADDRESS, uint16_t WriteAddr, uint8_t *Da
         }
     }
     I2C_GenerateSTOP(I2C_Channel, ENABLE);
-    //等待EEPROM内部写操作完成
+    // 等待EEPROM内部写操作完成
     I2C_EE_WaitEepromStandbyState(EEPROM_ADDRESS);
+    return 1;
+}
+
+uint8_t I2C_EE_16Addr_PageWrite(uint8_t EEPROM_ADDRESS, uint16_t WriteAddr, uint8_t *Data, uint8_t NumByteToWrite)
+{
+    uint32_t I2CTimeout;
+    /* 产生 I2C 起始信号 */
+    I2C_GenerateSTART(I2C1, ENABLE);
+    I2CTimeout = I2CT_FLAG_TIMEOUT;
+    /* 检测 EV5 事件并清除标志 */
+    while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+    {
+        if ((I2CTimeout--) == 0)
+            return I2C_TIMEOUT_UserCallback(0);
+    }
+
+    /* 发送设备地址 */
+    I2C_Send7bitAddress(I2C1, EEPROM_ADDRESS, I2C_Direction_Transmitter);
+
+    I2CTimeout = I2CT_FLAG_TIMEOUT;
+    /* 检测 EV6 事件并清除标志 */
+    while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+    {
+        if ((I2CTimeout--) == 0)
+            return I2C_TIMEOUT_UserCallback(1);
+    }
+
+    /* 发送要写入的寄存器地址*/
+    I2C_SendData(I2C1, WriteAddr >> 8);
+
+    I2CTimeout = I2CT_FLAG_TIMEOUT;
+    /* 检测 EV8 事件并清除标志 */
+    while (!I2C_CheckEvent(I2C1,
+                           I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+    {
+        if ((I2CTimeout--) == 0)
+            return I2C_TIMEOUT_UserCallback(2);
+    }
+
+    I2C_SendData(I2C1, WriteAddr);
+
+    I2CTimeout = I2CT_FLAG_TIMEOUT;
+    /* 检测 EV8 事件并清除标志 */
+    while (!I2C_CheckEvent(I2C1,
+                           I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+    {
+        if ((I2CTimeout--) == 0)
+            return I2C_TIMEOUT_UserCallback(2);
+    }
+    /* 发送一字节要写入的数据 */
+
+    while (NumByteToWrite--)
+    {
+        I2C_SendData(I2C_Channel, *Data);
+        Data++;
+        I2CTimeout = I2CT_LONG_TIMEOUT;
+        while (!I2C_CheckEvent(I2C_Channel, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+        {
+            if ((I2CTimeout--) == 0)
+                return I2C_TIMEOUT_UserCallback(3);
+        }
+    }
+
+    /* 发送停止信号 */
+    I2C_GenerateSTOP(I2C1, ENABLE);
+    // 等待EEPROM内部写操作完成
+    // I2C_EE_WaitEepromStandbyState(EEPROM_ADDRESS);
     return 1;
 }

@@ -88,7 +88,7 @@ static void do_i2c_8RegisterAddr(uint8_t *data)
         Find_i2c_device();
         break;
     case 0x06: // EEPROM按页写入
-        if (I2C_EE_PageWrite(slave_adress, RegisterAddr, Value, NumByteToProsess))
+        if (I2C_EE_8Addr_PageWrite(slave_adress, RegisterAddr, Value, NumByteToProsess))
             printf("EEPROM Page Write Success! \r\n");
         break;
     default:
@@ -133,6 +133,11 @@ static void do_i2c_16RegisterAddr(uint8_t *data)
         break;
     case 0x05:
         Find_i2c_device();
+        break;
+    case 0x06: // EEPROM按页写入
+        err = I2C_EE_16Addr_PageWrite(slave_adress, RegisterAddr, Value, NumByteToProsess);
+        if (err)
+            printf("EEPROM Page Write Success! \r\n");
         break;
     default:
         printf("Use 16bit RegisterAddr mode Error! \r\n");

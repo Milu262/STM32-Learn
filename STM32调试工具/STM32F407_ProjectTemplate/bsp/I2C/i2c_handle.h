@@ -141,4 +141,13 @@ static void I2C_EE_WaitEepromStandbyState(uint8_t EEPROM_ADDRESS);
  * @param  NumByteToWrite: 要写入的字节数
  * @retval 1: 写入成功; 0: 写入失败
  */
-uint8_t I2C_EE_PageWrite(uint8_t EEPROM_ADDRESS, uint16_t WriteAddr, uint8_t *Data, uint8_t NumByteToWrite);
+uint8_t I2C_EE_8Addr_PageWrite(uint8_t EEPROM_ADDRESS, uint8_t WriteAddr, uint8_t *Data, uint8_t NumByteToWrite);
+/**
+ * @brief  向EEPROM的指定页面写入数据
+ * @param  EEPROM_ADDRESS: EEPROM设备的地址
+ * @param  WriteAddr: 要写入的EEPROM内部地址
+ * @param  Data: 指向要写入数据的指针
+ * @param  NumByteToWrite: 要写入的字节数
+ * @retval 1: 写入成功; 0: 写入失败
+ */
+uint8_t I2C_EE_16Addr_PageWrite(uint8_t EEPROM_ADDRESS, uint16_t WriteAddr, uint8_t *Data, uint8_t NumByteToWrite);
