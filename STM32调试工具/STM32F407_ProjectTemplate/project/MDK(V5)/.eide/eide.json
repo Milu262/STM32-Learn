@@ -97,6 +97,15 @@
               }
             ],
             "folders": []
+          },
+          {
+            "name": "DCMI",
+            "files": [
+              {
+                "path": "../../bsp/DCMI/DCMI.c"
+              }
+            ],
+            "folders": []
           }
         ]
       },
@@ -421,7 +430,8 @@
           "../../bsp/Response",
           "../../bsp/SPI",
           "../../bsp/DMA",
-          "../../bsp/NVIC"
+          "../../bsp/NVIC",
+          "../../bsp/DCMI"
         ],
         "libList": [],
         "defineList": [

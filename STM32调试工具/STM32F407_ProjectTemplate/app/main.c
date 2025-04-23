@@ -28,13 +28,15 @@ int main(void)
 
 		if (test_data.flag == 1)
 		{
-			if (test_data.err == 1)
+			if (test_data.DataOverflow == 1)
 			{
 				printf("Recive Data Too Much!\r\n");
-				test_data.err = 0;	// 清空错误标志位
+				test_data.DataOverflow = 0;	// 清空数据溢出标志位
 				test_data.flag = 0; // 清空接收标志位
 				continue;
 			}
+			memcpy(test_data.data, DMA_USART1_RX_BUF, usart1_rx_len); // 将接收到的数据复制到test_data.data
+			test_data.data[usart1_rx_len] = '\0';
 			error = do_process(&test_data);
 			if (!error)
 			{

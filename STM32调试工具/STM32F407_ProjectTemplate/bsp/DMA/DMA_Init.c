@@ -1,10 +1,11 @@
 #include "DMA_Init.h"
 
-volatile uint16_t usart1_rx_len = 0;            // 接收数据长度
-volatile uint16_t usart1_tx_len = 0;            // 发送数据长度
+volatile uint16_t usart1_rx_len = 0; // 接收数据长度
+// volatile uint16_t usart1_tx_len = 0;            // 发送数据长度
 uint8_t DMA_USART1_RX_BUF[USART_MAX_LEN] = {0}; // DMA接收数据缓冲区
 uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN] = {0}; // DMA发送数据缓冲区
 
+uint8_t DCMI_DMA_Rx_Buf[DCMI_RX_BUF_SIZE] = {0}; // DCMI接收数据缓冲区
 void DMA_Uart1_Init_Config(void)
 {
     DMA_InitTypeDef DMA_InitStructure;
@@ -54,6 +55,38 @@ void DMA_Uart1_Init_Config(void)
     // 禁用DEBUG_USART_DMA_STREAM的DMA传输
     DMA_Cmd(DEBUG_USART1_TX_DMA_STREAM, DISABLE);
     DMA_ITConfig(DEBUG_USART1_TX_DMA_STREAM, DMA_IT_TC, ENABLE); // 使能uart发送DMA传输完成中断
+}
+
+void DMA_DCMI_Init_Config(void)
+{
+    DMA_InitTypeDef DMA_InitStructure;
+    // 使能DMA时钟
+    RCC_AHB1PeriphClockCmd(DCMI_DMA_CLK, ENABLE); // DMA时钟使能
+    DMA_DeInit(DCMI_DMA_STREAM);
+    while (DMA_GetCmdStatus(DCMI_DMA_STREAM) != DISABLE)
+    {
+    }
+    DMA_InitStructure.DMA_Channel = DCMI_DMA_CHANNEL;                       // DMA通道
+    DMA_InitStructure.DMA_PeripheralBaseAddr = DCMI_DR_ADDRESS;             // 外设基地址
+    DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t)DCMI_DMA_Rx_Buf;      // 内存基地址
+    DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;                 // 数据传输方向：外设到内存    ！！！一定注意方向！！！
+    DMA_InitStructure.DMA_BufferSize = DCMI_RX_BUF_SIZE;                    // DMA缓冲区大小
+    DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;        // 外设地址不递增
+    DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;                 // 内存地址递增
+    DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Word; // 外设数据宽度：字(32位)
+    DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;         // 内存数据宽度：字节(8位)  能否这样使用？
+    DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;                           // DMA模式：正常模式
+    DMA_InitStructure.DMA_Priority = DMA_Priority_High;                     // DMA优先级：高
+    DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Enable;                   // FIFO模式使用
+    DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;           // FIFO阈值：满
+    DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_Single;             // 内存突发传输：单次
+    // DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_INC8;      //为什么使用这个？
+    DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single; // 外设突发传输：单次
+    DMA_Init(DCMI_DMA_STREAM, &DMA_InitStructure);
+    DMA_Cmd(DCMI_DMA_STREAM, ENABLE);
+    while (DMA_GetCmdStatus(DCMI_DMA_STREAM) != ENABLE)
+    {
+    } // 等待DMA可以被设置
 }
 
 void usart_send_String_DMA(uint8_t *ucstr, uint16_t len)

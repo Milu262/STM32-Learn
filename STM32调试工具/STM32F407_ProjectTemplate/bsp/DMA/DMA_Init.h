@@ -2,13 +2,14 @@
 #include <stdio.h>
 #include "string.h"
 #define USART_MAX_LEN 400
+#define DCMI_RX_BUF_SIZE 240*480
 // DMA
 //  定义调试串口数据寄存器基地址，USART1_BASE是USART1的基地址，0x04是数据寄存器相对于基地址的偏移量
 #define DEBUG_USART_DR_BASE (USART1_BASE + 0x04)
-// // 定义发送缓冲区大小，用于DMA传输时缓冲数据的最大字节数
-// #define SENDBUFF_SIZE 4
+
 // 定义调试串口DMA时钟，DMA2是STM32的DMA控制器2，用于管理DMA传输
 #define DEBUG_USART_DMA_CLK RCC_AHB1Periph_DMA2
+
 // 定义调试串口DMA通道，DMA_Channel_4是DMA控制器中的一个通道，用于特定的DMA传输
 #define DEBUG_USART1_DMA_CHANNEL DMA_Channel_4
 
@@ -17,6 +18,19 @@
 
 // 定义USART1的接收数据使用的DMA流为DMA2的Stream5
 #define DEBUG_USART1_RX_DMA_STREAM DMA2_Stream5
+
+// 定义DCMI使用的DMA时钟，DMA2是STM32的DMA控制器2，用于管理DMA传输
+#define DCMI_DMA_CLK RCC_AHB1Periph_DMA2
+
+// 定义DCMI使用的DMA通道，DMA_Channel_1是DMA控制器中的一个通道，用于特定的DMA传输
+#define DCMI_DMA_CHANNEL DMA_Channel_1
+
+// 定义DCMI使用的DMA流，DMA2_Stream1是DMA控制器中的一个流，用于特定的DMA传输
+#define DCMI_DMA_STREAM DMA2_Stream1
+
+// DCMI数据寄存器地址
+#define DCMI_DR_ADDRESS (uint32_t)&DCMI->DR 
+
 
 extern volatile uint16_t usart1_rx_len;
 extern volatile uint16_t usart1_tx_len;

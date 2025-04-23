@@ -167,13 +167,13 @@ void USART1_IRQHandler(void)
     // usart_send_String_DMA(DMA_USART1_RX_BUF, usart1_rx_len); // 回显
     if (usart1_rx_len > data_size - 2)
     {
-      test_data.err = 1;
+      test_data.DataOverflow = 1;//接收数据溢出
     }
-    else
-    {
-      memcpy(test_data.data, DMA_USART1_RX_BUF, usart1_rx_len); // 将接收到的数据复制到test_data.data
-      test_data.data[usart1_rx_len] = '\0';
-    }
+    // else
+    // {
+    //   memcpy(test_data.data, DMA_USART1_RX_BUF, usart1_rx_len); // 将接收到的数据复制到test_data.data
+    //   test_data.data[usart1_rx_len] = '\0';
+    // }
 
     DMA_SetCurrDataCounter(DEBUG_USART1_RX_DMA_STREAM, USART_MAX_LEN); // 重新设置DMA的缓冲区大小
     DMA_Cmd(DEBUG_USART1_RX_DMA_STREAM, ENABLE);                       // 重新开启接收串口的DMA
@@ -183,7 +183,7 @@ void USART1_IRQHandler(void)
   if (USART_GetFlagStatus(BSP_USART, USART_IT_TXE) == RESET) // 串口发送寄存器为空
   {
     USART_ITConfig(USART1, USART_IT_TC, DISABLE); // 关闭发送完成中断
-    usart1_rx_len = 0;                            // 清空接收数据长度
+    //usart1_rx_len = 0;                            // 清空接收数据长度
     // printf("send ok\r\n");
   }
 }

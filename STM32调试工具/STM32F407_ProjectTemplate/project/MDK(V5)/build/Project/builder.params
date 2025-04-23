@@ -26,7 +26,8 @@
         "../../bsp/Response",
         "../../bsp/SPI",
         "../../bsp/DMA",
-        "../../bsp/NVIC"
+        "../../bsp/NVIC",
+        "../../bsp/DCMI"
     ],
     "libDirs": [],
     "defines": [
@@ -36,6 +37,7 @@
     "sourceList": [
         "../../app/main.c",
         "../../board/board.c",
+        "../../bsp/DCMI/DCMI.c",
         "../../bsp/DMA/DMA_Init.c",
         "../../bsp/I2C/i2c_handle.c",
         "../../bsp/I2C/i2c_init.c",
