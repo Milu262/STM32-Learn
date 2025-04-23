@@ -602,25 +602,20 @@ void DMA_FlowControllerConfig(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_Flo
   */
 
 /**
-  * @brief  Writes the number of data units to be transferred on the DMAy Streamx.
-  * @param  DMAy_Streamx: where y can be 1 or 2 to select the DMA and x can be 0
-  *          to 7 to select the DMA Stream.
-  * @param  Counter: Number of data units to be transferred (from 0 to 65535) 
-  *          Number of data items depends only on the Peripheral data format.
+  * @brief  设置DMAy Streamx要传输的数据单元数量。
+  * @param  DMAy_Streamx: 选择DMA和DMA Stream，y可以是1或2，x可以是0到7。
+  * @param  Counter: 要传输的数据单元数量（从0到65535）。
+  *          数据单元数量仅取决于外设数据格式。
   *            
-  * @note   If Peripheral data format is Bytes: number of data units is equal 
-  *         to total number of bytes to be transferred.
+  * @note   如果外设数据格式为字节：数据单元数量等于要传输的总字节数。
   *           
-  * @note   If Peripheral data format is Half-Word: number of data units is  
-  *         equal to total number of bytes to be transferred / 2.
+  * @note   如果外设数据格式为半字：数据单元数量等于要传输的总字节数 / 2。
   *           
-  * @note   If Peripheral data format is Word: number of data units is equal 
-  *         to total  number of bytes to be transferred / 4.
+  * @note   如果外设数据格式为字：数据单元数量等于要传输的总字节数 / 4。
   *      
-  * @note   In Memory-to-Memory transfer mode, the memory buffer pointed by 
-  *         DMAy_SxPAR register is considered as Peripheral.
+  * @note   在内存到内存传输模式下，由DMAy_SxPAR寄存器指向的内存缓冲区被视为外设。
   *      
-  * @retval The number of remaining data units in the current DMAy Streamx transfer.
+  * @retval 当前DMAy Streamx传输中剩余的数据单元数量。
   */
 void DMA_SetCurrDataCounter(DMA_Stream_TypeDef* DMAy_Streamx, uint16_t Counter)
 {

@@ -7,13 +7,8 @@ uint8_t do_process(usart_data_typed *udata)
     // usart_send_String(udata->data);
     uint8_t Header = udata->data[0];
     uint8_t mode_sel = udata->data[1];
-    // // 帧尾
-    // uint8_t *last_data = udata->data;
-    // while (last_data && *last_data)
-    // {
-    //     last_data++;
-    // }
-    // last_data--;
+    //待添加帧尾的CRC校验
+
     if (Header != Frame_header)
     {
         udata->flag = 0;
