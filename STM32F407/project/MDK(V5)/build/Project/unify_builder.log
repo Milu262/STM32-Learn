@@ -1656,3 +1656,156 @@ These source files will be recompiled
 [2025-04-26 20:14:09]	[done]
 	build successfully !
 
+[2025-04-26 22:36:47]	[info] incremental build: 57 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\board\board.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\NVIC\NVIC_Init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f40xx.s': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\misc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': compiler options has been changed.
+
+[2025-04-26 22:36:50]	[done]
+	build successfully !
+
+[2025-04-26 22:42:49]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+
+[2025-04-26 22:42:50]	[done]
+	build successfully !
+
+[2025-04-26 23:06:11]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': source file has been changed.
+
+[2025-04-26 23:06:12]	[done]
+	build successfully !
+
+[2025-04-26 23:06:30]	[done]
+	build successfully !
+
+[2025-04-26 23:07:49]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\SPI_Control.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\SPI_Control.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\SPI_Control.h' has been changed.
+
+[2025-04-26 23:07:50]	[done]
+	build successfully !
+
+[2025-04-26 23:13:44]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 23:13:44]	[done]
+	build successfully !
+
+[2025-04-26 23:16:24]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 23:16:25]	[done]
+	build successfully !
+
+[2025-04-26 23:35:06]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 23:35:08]	[done]
+	build successfully !
+
+[2025-04-26 23:48:31]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 23:48:32]	[done]
+	build successfully !
+
+[2025-04-26 23:51:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 23:51:24]	[done]
+	build successfully !
+
+[2025-04-26 23:53:04]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 23:53:04]	[done]
+	build successfully !
+
+[2025-04-26 23:56:38]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 23:56:39]	[done]
+	build successfully !
+
