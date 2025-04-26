@@ -1,16 +1,16 @@
 // #include "stm32f4xx.h"
 #include ".\i2c\i2c_handle.h"
-#define data_size 256		 // 数据长度
+#define data_size 256 + 32	 // 数据长度
 #define Frame_header 0x55	 // 接收帧头
 #define SendFrameHeader 0xAA // 发送帧头
 typedef struct
 {
-	unsigned int flag;		   // 标志位
+	unsigned int flag; // 标志位
 	// unsigned int err;		   // 数据类型
 	unsigned int DataOverflow; // 数据溢出
 	unsigned int len;
-	uint8_t data[data_size];//接收数据
-	uint8_t SendData[data_size];//发送数据
+	uint8_t data[data_size];	 // 接收数据
+	uint8_t SendData[data_size]; // 发送数据
 
 } usart_data_typed;
 

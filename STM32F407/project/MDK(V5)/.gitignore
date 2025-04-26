@@ -10,6 +10,7 @@
  /Objects
 # /out
 
+*.o
 # eide template
 *.ept
 *.eide-template

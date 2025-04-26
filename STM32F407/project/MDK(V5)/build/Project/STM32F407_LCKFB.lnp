@@ -1,0 +1,1 @@
+--cpu Cortex-M4.fp --library_type=microlib --scatter "l:/STM32_Example/Github/STM32-Learn/STM32F407/project/MDK(V5)/build/Project/STM32F407_LCKFB.sct" --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols --info sizes --info totals --info unused --info veneers --list .\build\Project\STM32F407_LCKFB.map

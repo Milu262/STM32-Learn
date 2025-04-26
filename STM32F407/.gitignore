@@ -1,0 +1,7 @@
+# dot files
+
+
+*.o
+# eide template
+*.ept
+*.eide-template

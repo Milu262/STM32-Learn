@@ -1,5 +1,5 @@
 {
-    "name": "Project",
+    "name": "STM32F407_LCKFB",
     "target": "Project",
     "toolchain": "AC5",
     "toolchainLocation": "L:\\Keil\\Keil_v5\\ARM\\AC5",
@@ -27,9 +27,12 @@
         "../../bsp/SPI",
         "../../bsp/DMA",
         "../../bsp/NVIC",
-        "../../bsp/DCMI"
+        "../../bsp/DCMI",
+        "../../PeripheralModule"
     ],
-    "libDirs": [],
+    "libDirs": [
+        "../../PeripheralModule"
+    ],
     "defines": [
         "USE_STDPERIPH_DRIVER",
         "STM32F40_41xxx"
@@ -122,7 +125,7 @@
             "ro-base": "0x08000000",
             "rw-base": "0x20000000",
             "link-scatter": [
-                "\"l:/STM32_Example/Github/STM32-Learn/STM32F407/project/MDK(V5)/build/Project/Project.sct\""
+                "\"l:/STM32_Example/Github/STM32-Learn/STM32F407/project/MDK(V5)/build/Project/STM32F407_LCKFB.sct\""
             ]
         }
     },
@@ -133,10 +136,10 @@
         "OutDir": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32F407\\project\\MDK(V5)\\build\\Project",
         "OutDirRoot": "build",
         "OutDirBase": "build\\Project",
-        "ProjectName": "Project",
+        "ProjectName": "STM32F407_LCKFB",
         "ConfigName": "Project",
         "ProjectRoot": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32F407\\project\\MDK(V5)",
-        "ExecutableName": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32F407\\project\\MDK(V5)\\build\\Project\\Project",
+        "ExecutableName": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32F407\\project\\MDK(V5)\\build\\Project\\STM32F407_LCKFB",
         "ChipPackDir": "",
         "ChipName": "",
         "SYS_Platform": "win32",
