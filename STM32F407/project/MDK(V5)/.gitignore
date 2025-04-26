@@ -6,8 +6,8 @@
 
 # # project out
 # /build
-# /bin
-# /obj
+ /Listings
+ /Objects
 # /out
 
 # eide template
