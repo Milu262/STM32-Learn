@@ -1038,18 +1038,17 @@ FlagStatus DMA_GetFlagStatus(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_FLAG
 }
 
 /**
-  * @brief  Clears the DMAy Streamx's pending flags.
-  * @param  DMAy_Streamx: where y can be 1 or 2 to select the DMA and x can be 0
-  *          to 7 to select the DMA Stream.
-  * @param  DMA_FLAG: specifies the flag to clear.
-  *          This parameter can be any combination of the following values:
-  *            @arg DMA_FLAG_TCIFx:  Streamx transfer complete flag
-  *            @arg DMA_FLAG_HTIFx:  Streamx half transfer complete flag
-  *            @arg DMA_FLAG_TEIFx:  Streamx transfer error flag
-  *            @arg DMA_FLAG_DMEIFx: Streamx direct mode error flag
-  *            @arg DMA_FLAG_FEIFx:  Streamx FIFO error flag
-  *         Where x can be 0 to 7 to select the DMA Stream.   
-  * @retval None
+  * @brief  清除指定DMAy Streamx的挂起标志。
+  * @param  DMAy_Streamx: 选择DMA和DMA流，y可以是1或2以选择DMA，x可以是0到7以选择DMA流。
+  * @param  DMA_FLAG: 指定要清除的标志。
+  *          此参数可以是以下值的任意组合：
+  *            @arg DMA_FLAG_TCIFx: 流x传输完成标志
+  *            @arg DMA_FLAG_HTIFx: 流x半传输完成标志
+  *            @arg DMA_FLAG_TEIFx: 流x传输错误标志
+  *            @arg DMA_FLAG_DMEIFx: 流x直接模式错误标志
+  *            @arg DMA_FLAG_FEIFx: 流xFIFO错误标志
+  *         其中x可以是0到7以选择DMA流。
+  * @retval 无
   */
 void DMA_ClearFlag(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_FLAG)
 {
@@ -1085,18 +1084,17 @@ void DMA_ClearFlag(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_FLAG)
 }
 
 /**
-  * @brief  Enables or disables the specified DMAy Streamx interrupts.
-  * @param  DMAy_Streamx: where y can be 1 or 2 to select the DMA and x can be 0
-  *          to 7 to select the DMA Stream.
-  * @param DMA_IT: specifies the DMA interrupt sources to be enabled or disabled. 
-  *          This parameter can be any combination of the following values:
-  *            @arg DMA_IT_TC:  Transfer complete interrupt mask
-  *            @arg DMA_IT_HT:  Half transfer complete interrupt mask
-  *            @arg DMA_IT_TE:  Transfer error interrupt mask
-  *            @arg DMA_IT_FE:  FIFO error interrupt mask
-  * @param  NewState: new state of the specified DMA interrupts.
-  *          This parameter can be: ENABLE or DISABLE.
-  * @retval None
+  * @brief  使能或禁用指定DMAy Streamx的中断。
+  * @param  DMAy_Streamx: 选择DMA和DMA流，y可以是1或2以选择DMA，x可以是0到7以选择DMA流。
+  * @param  DMA_IT: 指定要使能或禁用的DMA中断源。
+  *          此参数可以是以下值的任意组合：
+  *            @arg DMA_IT_TC: 传输完成中断掩码
+  *            @arg DMA_IT_HT: 半传输完成中断掩码
+  *            @arg DMA_IT_TE: 传输错误中断掩码
+  *            @arg DMA_IT_FE: FIFO错误中断掩码
+  * @param  NewState: 指定DMA中断的新状态。
+  *          此参数可以是：ENABLE 或 DISABLE。
+  * @retval 无
   */
 void DMA_ITConfig(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_IT, FunctionalState NewState)
 {
@@ -1219,18 +1217,17 @@ ITStatus DMA_GetITStatus(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_IT)
 }
 
 /**
-  * @brief  Clears the DMAy Streamx's interrupt pending bits.
-  * @param  DMAy_Streamx: where y can be 1 or 2 to select the DMA and x can be 0
-  *          to 7 to select the DMA Stream.
-  * @param  DMA_IT: specifies the DMA interrupt pending bit to clear.
-  *          This parameter can be any combination of the following values:
-  *            @arg DMA_IT_TCIFx:  Streamx transfer complete interrupt
-  *            @arg DMA_IT_HTIFx:  Streamx half transfer complete interrupt
-  *            @arg DMA_IT_TEIFx:  Streamx transfer error interrupt
-  *            @arg DMA_IT_DMEIFx: Streamx direct mode error interrupt
-  *            @arg DMA_IT_FEIFx:  Streamx FIFO error interrupt
-  *         Where x can be 0 to 7 to select the DMA Stream.
-  * @retval None
+  * @brief  清除指定DMAy Streamx的中断挂起位。
+  * @param  DMAy_Streamx: 选择DMA和DMA流，y可以是1或2以选择DMA，x可以是0到7以选择DMA流。
+  * @param  DMA_IT: 指定要清除的DMA中断挂起位。
+  *          此参数可以是以下值的任意组合：
+  *            @arg DMA_IT_TCIFx: 流x传输完成中断
+  *            @arg DMA_IT_HTIFx: 流x半传输完成中断
+  *            @arg DMA_IT_TEIFx: 流x传输错误中断
+  *            @arg DMA_IT_DMEIFx: 流x直接模式错误中断
+  *            @arg DMA_IT_FEIFx: 流xFIFO错误中断
+  *         其中x可以是0到7以选择DMA流。
+  * @retval 无
   */
 void DMA_ClearITPendingBit(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_IT)
 {

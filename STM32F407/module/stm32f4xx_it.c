@@ -167,7 +167,7 @@ void USART1_IRQHandler(void)
     // usart_send_String_DMA(DMA_USART1_RX_BUF, usart1_rx_len); // 回显
     if (usart1_rx_len > data_size - 2)
     {
-      test_data.DataOverflow = 1;//接收数据溢出
+      test_data.DataOverflow = 1; // 接收数据溢出
     }
     // else
     // {
@@ -180,14 +180,22 @@ void USART1_IRQHandler(void)
     USART_ReceiveData(BSP_USART);                                      // 清除接收中断标志
   }
 
-  if (USART_GetFlagStatus(BSP_USART, USART_IT_TXE) == RESET) // 串口发送寄存器为空
+  if (USART_GetITStatus(BSP_USART, USART_IT_TC) != RESET) // 串口发送完成
   {
-    USART_ITConfig(USART1, USART_IT_TC, DISABLE); // 关闭发送完成中断
-    //usart1_rx_len = 0;                            // 清空接收数据长度
-    // printf("send ok\r\n");
+
+    USART_ClearITPendingBit(BSP_USART, USART_IT_TC); // 清除串口发送完成标志位
+    USART_ITConfig(USART1, USART_IT_TC, DISABLE);    // 关闭串口发送完成中断
+    // usart1_rx_len = 0;                            // 清空接收数据长度
+    //  printf("send ok\r\n");
   }
 }
-
+/**
+ * @brief  该函数处理DMA2 Stream7中断请求。
+ * @note   当USART1的DMA发送完成时触发此中断。中断处理程序会清除DMA中断标志，
+ *         禁用DMA发送流，并启用USART发送完成中断。
+ * @param  无
+ * @retval 无
+ */
 void DMA2_Stream7_IRQHandler(void)
 {
   if (DMA_GetITStatus(DEBUG_USART1_TX_DMA_STREAM, DMA_IT_TCIF7) != RESET) // 等待DMA发送完成中断
@@ -195,6 +203,44 @@ void DMA2_Stream7_IRQHandler(void)
     DMA_ClearITPendingBit(DEBUG_USART1_TX_DMA_STREAM, DMA_IT_TCIF7); // 清除DMA发送完成中断标志
     DMA_Cmd(DEBUG_USART1_TX_DMA_STREAM, DISABLE);                    // 关闭DMA发送
     USART_ITConfig(USART1, USART_IT_TC, ENABLE);                     // 使能串口发送完成中断
+  }
+}
+/**
+  * @brief  该函数处理 DCMI的DMA 传输中断请求。
+  * @note   当 DCMI的DMA 触发中断时，会调用此函数。通常用于处理行接收完成、
+  *         溢出、同步错误等事件。在中断服务程序中，需要检查具体的中断标志，
+  *         执行相应的处理逻辑，并清除对应的中断挂起位。
+  * @param  无
+  * @retval 无
+  */
+void DMA2_Stream1_IRQHandler(void)
+{
+  if (DMA_GetITStatus(DCMI_DMA_STREAM, DMA_IT_TCIF1) != RESET) // 等待DMA传输完成中断,表示摄像头的一行数据已经传输完成
+  {
+    DMA_ClearITPendingBit(DCMI_DMA_STREAM, DMA_IT_TCIF1); // 清除DMA接收完成中断标志
+
+    // 做自己的事
+  }
+}
+/**
+  * @brief  该函数处理 DCMI 中断请求。
+  * @note   当 DCMI 外设触发中断时，会调用此函数。通常用于处理帧捕获完成、
+  *         溢出、同步错误等事件。在中断服务程序中，需要检查具体的中断标志，
+  *         执行相应的处理逻辑，并清除对应的中断挂起位。
+  * @param  无
+  * @retval 无
+  */
+void DCMI_IRQHandler(void)
+{
+  if (DCMI_GetITStatus(DCMI_IT_FRAME) != RESET) // 触发帧中断
+  {
+    DCMI_ClearITPendingBit(DCMI_IT_FRAME); // 清除帧中断标志
+
+    // 做自己的事，例如让屏幕重新回到(0,0)位置
+
+    //以下为测试代码
+    //  DCMI_Cmd(DISABLE);                     // 关闭DCMI
+    //  DCMI_ClearFlag(DCMI_FLAG_FRAMERI);     // 清除帧标志
   }
 }
 

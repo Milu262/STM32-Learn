@@ -282,6 +282,7 @@ void DCMI_CaptureCmd(FunctionalState NewState);
 uint32_t DCMI_ReadData(void);
 
 /* Interrupts and flags management functions **********************************/
+
 void DCMI_ITConfig(uint16_t DCMI_IT, FunctionalState NewState);
 FlagStatus DCMI_GetFlagStatus(uint16_t DCMI_FLAG);
 void DCMI_ClearFlag(uint16_t DCMI_FLAG);

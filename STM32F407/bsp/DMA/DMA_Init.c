@@ -5,7 +5,7 @@ volatile uint16_t usart1_rx_len = 0; // 接收数据长度
 uint8_t DMA_USART1_RX_BUF[USART_MAX_LEN] = {0}; // DMA接收数据缓冲区
 uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN] = {0}; // DMA发送数据缓冲区
 
-uint8_t DCMI_DMA_Rx_Buf[DCMI_RX_BUF_SIZE] = {0}; // DCMI接收数据缓冲区
+uint32_t DCMI_DMA_Rx_Buf[DCMI_RX_BUF_SIZE] = {0}; // DCMI接收数据缓冲区
 void DMA_Uart1_Init_Config(void)
 {
     DMA_InitTypeDef DMA_InitStructure;
@@ -74,7 +74,7 @@ void DMA_DCMI_Init_Config(void)
     DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;        // 外设地址不递增
     DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;                 // 内存地址递增
     DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Word; // 外设数据宽度：字(32位)
-    DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;         // 内存数据宽度：字节(8位)  能否这样使用？
+    DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Word;         // 内存数据宽度：字节(8位)  能否这样使用？
     DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;                           // DMA模式：正常模式
     DMA_InitStructure.DMA_Priority = DMA_Priority_High;                     // DMA优先级：高
     DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Enable;                   // FIFO模式使用
@@ -87,6 +87,7 @@ void DMA_DCMI_Init_Config(void)
     while (DMA_GetCmdStatus(DCMI_DMA_STREAM) != ENABLE)
     {
     } // 等待DMA可以被设置
+    DMA_ITConfig(DCMI_DMA_STREAM, DMA_IT_TC, ENABLE);// 打开DCMI的DMA传输完成中断,发生中断说明一行的数据传输完成
 }
 
 void usart_send_String_DMA(uint8_t *ucstr, uint16_t len)

@@ -1,8 +1,11 @@
 #include "stm32f4xx.h"
 #include <stdio.h>
 #include "string.h"
-#define USART_MAX_LEN 400
-#define DCMI_RX_BUF_SIZE 240*480
+
+#define USART_MAX_LEN 256+32
+#define HS_LEN 280  //视频数据有多少行
+#define DCMI_RX_BUF_SIZE 240*2/4  //视频的一行大小，使用RGB565格式，数组为uint32_t类型
+
 // DMA
 //  定义调试串口数据寄存器基地址，USART1_BASE是USART1的基地址，0x04是数据寄存器相对于基地址的偏移量
 #define DEBUG_USART_DR_BASE (USART1_BASE + 0x04)
@@ -44,6 +47,8 @@ extern uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN];
  * 配置DMA初始化结构体以及启用DMA传输。
  */
 void DMA_Uart1_Init_Config(void);
+
+void DMA_DCMI_Init_Config(void);
 
 /**
  * @brief  通过UART的DMA方式发送字符串数据.

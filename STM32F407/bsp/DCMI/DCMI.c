@@ -1,6 +1,6 @@
 #include "DCMI.h"
 
-void DCMI_GPIO_Init(void)
+static void DCMI_GPIO_Init(void)
 {
     // 启用DCMI相关引脚的时钟
     RCC_AHB1PeriphClockCmd(DCMI_RST_GPIO_CLK | DCMI_PWDN_GPIO_CLK | DCMI_VSYNC_GPIO_CLK | DCMI_HSYNC_GPIO_CLK | DCMI_PIXCLK_GPIO_CLK |
@@ -81,7 +81,23 @@ void DCMI_GPIO_Init(void)
     // 控制DCMI复位引脚
     GPIO_SetBits(DCMI_RST_GPIO_PORT, DCMI_RST_GPIO_PIN);
 }
-
-void DCMI_Fuction_Init(void)
+static void DCMI_DCMI_Init(void)
 {
+    DCMI_InitTypeDef DCMI_InitStructure;
+    DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_Continuous;
+    DCMI_InitStructure.DCMI_SynchroMode = DCMI_SynchroMode_Hardware;
+    DCMI_InitStructure.DCMI_CaptureRate = DCMI_CaptureRate_All_Frame;
+    DCMI_InitStructure.DCMI_ExtendedDataMode = DCMI_ExtendedDataMode_8b;
+    DCMI_InitStructure.DCMI_PCKPolarity = DCMI_PCKPolarity_Rising;
+    DCMI_InitStructure.DCMI_VSPolarity = DCMI_VSPolarity_Low;
+    DCMI_InitStructure.DCMI_HSPolarity = DCMI_HSPolarity_Low;
+    DCMI_Init(&DCMI_InitStructure);
+    DCMI_Cmd(ENABLE);
+    // 使能DCMI中断
+    DCMI_ITConfig(DCMI_IT_FRAME, ENABLE);
+}
+void DCMI_Camera_Init(void)
+{
+    DCMI_GPIO_Init();
+    DCMI_DCMI_Init();
 }
