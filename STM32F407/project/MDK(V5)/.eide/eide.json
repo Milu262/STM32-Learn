@@ -1,5 +1,5 @@
 {
-  "name": "Project",
+  "name": "STM32F407_LCKFB",
   "type": "ARM",
   "dependenceList": [],
   "srcDirs": [],
@@ -259,6 +259,11 @@
         "name": "DOC",
         "files": [],
         "folders": []
+      },
+      {
+        "name": "PeripheralModule",
+        "files": [],
+        "folders": []
       }
     ]
   },
@@ -431,9 +436,12 @@
           "../../bsp/SPI",
           "../../bsp/DMA",
           "../../bsp/NVIC",
-          "../../bsp/DCMI"
+          "../../bsp/DCMI",
+          "../../PeripheralModule"
         ],
-        "libList": [],
+        "libList": [
+          "../../PeripheralModule"
+        ],
         "defineList": [
           "USE_STDPERIPH_DRIVER",
           "STM32F40_41xxx"

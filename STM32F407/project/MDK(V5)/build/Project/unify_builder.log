@@ -1636,3 +1636,23 @@ These source files will be recompiled
 [2025-04-26 19:23:31]	[done]
 	build successfully !
 
+[2025-04-26 20:10:59]	[info] incremental build: 7 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\NVIC\NVIC_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-26 20:11:01]	[done]
+	build successfully !
+
+[2025-04-26 20:12:00]	[done]
+	build successfully !
+
+[2025-04-26 20:14:09]	[done]
+	build successfully !
+
