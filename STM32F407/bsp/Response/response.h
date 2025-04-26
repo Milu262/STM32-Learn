@@ -1,6 +1,6 @@
 // #include "stm32f4xx.h"
 #include ".\i2c\i2c_handle.h"
-#define data_size 300		 // 数据长度
+#define data_size 256		 // 数据长度
 #define Frame_header 0x55	 // 接收帧头
 #define SendFrameHeader 0xAA // 发送帧头
 typedef struct

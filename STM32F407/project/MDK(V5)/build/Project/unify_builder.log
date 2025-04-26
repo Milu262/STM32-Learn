@@ -1268,3 +1268,371 @@ These source files will be recompiled
 [2025-04-22 21:20:51]	[done]
 	build successfully !
 
+[2025-04-26 00:28:47]	[done]
+	build successfully !
+
+[2025-04-26 16:41:32]	[info] incremental build: 5 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DCMI\DCMI.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 16:41:33]	[done]
+	build successfully !
+
+[2025-04-26 17:12:24]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 17:12:25]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6218E: Undefined symbol GPIO_PngAfConfig (referred from spi_init.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+
+
+[2025-04-26 17:14:23]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 17:14:24]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6218E: Undefined symbol GPIO_PngAfConfig (referred from spi_init.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+
+
+[2025-04-26 17:14:50]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 17:14:50]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6218E: Undefined symbol GPIO_PinAfConfig (referred from spi_init.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+
+
+[2025-04-26 17:14:59]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 17:15:00]	[done]
+	build successfully !
+
+[2025-04-26 17:18:01]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-26 17:18:02]	[done]
+	build successfully !
+
+[2025-04-26 17:19:02]	[done]
+	build successfully !
+
+[2025-04-26 17:19:41]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-26 17:19:42]	[done]
+	build successfully !
+
+[2025-04-26 17:31:38]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\NVIC\NVIC_Init.c': source file has been changed.
+
+[2025-04-26 17:31:39]	[done]
+	build successfully !
+
+[2025-04-26 17:32:08]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-26 17:32:09]	[done]
+	build successfully !
+
+[2025-04-26 17:33:43]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DCMI\DCMI.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': source file has been changed.
+
+[2025-04-26 17:33:44]	[done]
+	build successfully !
+
+[2025-04-26 17:34:43]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-26 17:34:45]	[done]
+	build successfully !
+
+[2025-04-26 17:38:05]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+
+[2025-04-26 17:38:06]	[done]
+	build successfully !
+
+[2025-04-26 17:38:30]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+
+[2025-04-26 17:38:32]	[done]
+	build successfully !
+
+[2025-04-26 17:39:01]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-26 17:39:02]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6406E: No space in execution regions with .ANY selector matching DMA_Init.o(.bss).
+Error: L6406E: No space in execution regions with .ANY selector matching startup_stm32f40xx.o(STACK).
+Error: L6406E: No space in execution regions with .ANY selector matching response.o(.bss).
+Error: L6406E: No space in execution regions with .ANY selector matching stm32f4xx_rcc.o(.data).
+Error: L6406E: No space in execution regions with .ANY selector matching stdout.o(.data).
+Error: L6406E: No space in execution regions with .ANY selector matching DMA_Init.o(.data).
+Error: L6407E: Sections of aggregate size 0x2157c bytes could not fit into .ANY selector(s).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 7 error messages.
+
+
+[2025-04-26 17:47:28]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+
+[2025-04-26 17:47:30]	[done]
+	build successfully !
+
+[2025-04-26 18:01:35]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\NVIC\NVIC_Init.c': source file has been changed.
+
+[2025-04-26 18:01:36]	[done]
+	build successfully !
+
+[2025-04-26 18:17:01]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\NVIC\NVIC_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+
+[2025-04-26 18:17:03]	[done]
+	build successfully !
+
+[2025-04-26 18:18:08]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-26 18:18:08]	[done]
+	build successfully !
+
+[2025-04-26 18:49:17]	[info] incremental build: 5 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-26 18:49:18]	[done]
+	build successfully !
+
+[2025-04-26 19:01:02]	[info] incremental build: 56 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\board\board.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\NVIC\NVIC_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\misc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-26 19:01:05]	[done]
+	build successfully !
+
+[2025-04-26 19:06:30]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-26 19:06:31]	[done]
+	build successfully !
+
+[2025-04-26 19:07:19]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-26 19:07:20]	[done]
+	build successfully !
+
+[2025-04-26 19:07:58]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': source file has been changed.
+
+[2025-04-26 19:07:59]	[done]
+	build successfully !
+
+[2025-04-26 19:23:28]	[info] incremental build: 56 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\board\board.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\NVIC\NVIC_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\misc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h' has been changed.
+
+[2025-04-26 19:23:31]	[done]
+	build successfully !
+

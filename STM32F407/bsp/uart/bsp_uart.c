@@ -4,7 +4,7 @@
 // #include "response.h"
 void uart1_init(uint32_t __Baud)
 {
-	USART_DeInit(BSP_USART); //复位串口1
+	USART_DeInit(BSP_USART); // 复位串口1
 	GPIO_InitTypeDef GPIO_InitStructure;
 	RCC_AHB1PeriphClockCmd(BSP_USART_TX_RCC, ENABLE);
 	RCC_APB2PeriphClockCmd(BSP_USART_RCC, ENABLE);
@@ -35,7 +35,7 @@ void uart1_init(uint32_t __Baud)
 	USART_DMACmd(BSP_USART, USART_DMAReq_Rx, ENABLE); // 使能串口1的DMA接收
 
 	// DMA_Uart1_Init_Config(); // DMA初始化
-	USART_Cmd(BSP_USART, ENABLE);					  // 使能串口1
+	USART_Cmd(BSP_USART, ENABLE); // 使能串口1
 }
 
 void usart_send_data(uint8_t ucch)
@@ -54,8 +54,6 @@ void usart_send_String(uint8_t *ucstr)
 		usart_send_data(*ucstr++);
 	}
 }
-
-
 
 #if !defined(__MICROLIB)
 
@@ -85,14 +83,14 @@ int fputc(int ch, FILE *f)
 	// }
 
 	// 以下为使用DMA传输
-	DMA_USART1_TX_BUF[0] =(uint8_t) ch;
-    while (DMA_GetCmdStatus(DEBUG_USART1_TX_DMA_STREAM) != DISABLE)
-        ;                                                    // 等待DMA可以被设置
-	//设置DMA传输模式
-	
-    DMA_SetCurrDataCounter(DEBUG_USART1_TX_DMA_STREAM, 1); // 设置当前DMA的传输数据量
+	DMA_USART1_TX_BUF[0] = (uint8_t)ch;
+	while (DMA_GetCmdStatus(DEBUG_USART1_TX_DMA_STREAM) != DISABLE) // 当DMA的命令为DISABLE时，跳出循环
+		;															// 等待DMA可以被设置
+																	// 设置DMA传输模式
 
-    DMA_Cmd(DEBUG_USART1_TX_DMA_STREAM, ENABLE); // 使能DMA传输
+	DMA_SetCurrDataCounter(DEBUG_USART1_TX_DMA_STREAM, 1); // 设置当前DMA的传输数据量
+
+	DMA_Cmd(DEBUG_USART1_TX_DMA_STREAM, ENABLE); // 使能DMA传输
 
 	return ch;
 }

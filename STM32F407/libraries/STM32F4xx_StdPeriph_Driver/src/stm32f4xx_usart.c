@@ -1204,22 +1204,21 @@ void USART_DMACmd(USART_TypeDef* USARTx, uint16_t USART_DMAReq, FunctionalState 
   */
 
 /**
-  * @brief  Enables or disables the specified USART interrupts.
-  * @param  USARTx: where x can be 1, 2, 3, 4, 5, 6, 7 or 8 to select the USART or 
-  *         UART peripheral.
-  * @param  USART_IT: specifies the USART interrupt sources to be enabled or disabled.
-  *          This parameter can be one of the following values:
-  *            @arg USART_IT_CTS:  CTS change interrupt
-  *            @arg USART_IT_LBD:  LIN Break detection interrupt
-  *            @arg USART_IT_TXE:  Transmit Data Register empty interrupt
-  *            @arg USART_IT_TC:   Transmission complete interrupt
-  *            @arg USART_IT_RXNE: Receive Data register not empty interrupt
-  *            @arg USART_IT_IDLE: Idle line detection interrupt
-  *            @arg USART_IT_PE:   Parity Error interrupt
-  *            @arg USART_IT_ERR:  Error interrupt(Frame error, noise error, overrun error)
-  * @param  NewState: new state of the specified USARTx interrupts.
-  *          This parameter can be: ENABLE or DISABLE.
-  * @retval None
+  * @brief  使能或禁用指定的USART中断。
+  * @param  USARTx: 选择USART或UART外设，x可以是1, 2, 3, 4, 5, 6, 7或8。
+  * @param  USART_IT: 指定要使能或禁用的USART中断源。
+  *          此参数可以是以下值之一：
+  *            @arg USART_IT_CTS:  CTS变化中断（UART4和UART5不可用）
+  *            @arg USART_IT_LBD:  LIN断开检测中断
+  *            @arg USART_IT_TXE:  发送数据寄存器为空中断
+  *            @arg USART_IT_TC:   传输完成中断
+  *            @arg USART_IT_RXNE: 接收数据寄存器非空中断
+  *            @arg USART_IT_IDLE: 空闲线检测中断
+  *            @arg USART_IT_PE:   奇偶校验错误中断
+  *            @arg USART_IT_ERR:  错误中断（帧错误、噪声错误、溢出错误）
+  * @param  NewState: 指定USART中断的新状态。
+  *          此参数可以是：ENABLE 或 DISABLE。
+  * @retval 无
   */
 void USART_ITConfig(USART_TypeDef* USARTx, uint16_t USART_IT, FunctionalState NewState)
 {

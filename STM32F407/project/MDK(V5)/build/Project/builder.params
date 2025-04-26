@@ -7,7 +7,7 @@
     "buildMode": "fast|multhread",
     "showRepathOnLog": true,
     "threadNum": 16,
-    "rootDir": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32调试工具\\STM32F407_ProjectTemplate\\project\\MDK(V5)",
+    "rootDir": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32F407\\project\\MDK(V5)",
     "dumpPath": "build\\Project",
     "outDir": "build\\Project",
     "ram": 131072,
@@ -122,21 +122,21 @@
             "ro-base": "0x08000000",
             "rw-base": "0x20000000",
             "link-scatter": [
-                "\"l:/STM32_Example/Github/STM32-Learn/STM32调试工具/STM32F407_ProjectTemplate/project/MDK(V5)/build/Project/Project.sct\""
+                "\"l:/STM32_Example/Github/STM32-Learn/STM32F407/project/MDK(V5)/build/Project/Project.sct\""
             ]
         }
     },
     "env": {
         "KEIL_OUTPUT_DIR": "Objects",
-        "workspaceFolder": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32调试工具\\STM32F407_ProjectTemplate\\project\\MDK(V5)",
+        "workspaceFolder": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32F407\\project\\MDK(V5)",
         "workspaceFolderBasename": "MDK(V5)",
-        "OutDir": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32调试工具\\STM32F407_ProjectTemplate\\project\\MDK(V5)\\build\\Project",
+        "OutDir": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32F407\\project\\MDK(V5)\\build\\Project",
         "OutDirRoot": "build",
         "OutDirBase": "build\\Project",
         "ProjectName": "Project",
         "ConfigName": "Project",
-        "ProjectRoot": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32调试工具\\STM32F407_ProjectTemplate\\project\\MDK(V5)",
-        "ExecutableName": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32调试工具\\STM32F407_ProjectTemplate\\project\\MDK(V5)\\build\\Project\\Project",
+        "ProjectRoot": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32F407\\project\\MDK(V5)",
+        "ExecutableName": "l:\\STM32_Example\\Github\\STM32-Learn\\STM32F407\\project\\MDK(V5)\\build\\Project\\Project",
         "ChipPackDir": "",
         "ChipName": "",
         "SYS_Platform": "win32",

@@ -355,17 +355,17 @@ uint32_t DCMI_ReadData(void)
   */
 
 /**
-  * @brief  Enables or disables the DCMI interface interrupts.
-  * @param  DCMI_IT: specifies the DCMI interrupt sources to be enabled or disabled. 
-  *          This parameter can be any combination of the following values:
-  *            @arg DCMI_IT_FRAME: Frame capture complete interrupt mask
-  *            @arg DCMI_IT_OVF: Overflow interrupt mask
-  *            @arg DCMI_IT_ERR: Synchronization error interrupt mask
-  *            @arg DCMI_IT_VSYNC: VSYNC interrupt mask
-  *            @arg DCMI_IT_LINE: Line interrupt mask
-  * @param  NewState: new state of the specified DCMI interrupts.
-  *          This parameter can be: ENABLE or DISABLE.
-  * @retval None
+  * @brief  使能或禁用 DCMI 接口的中断。
+  * @param  DCMI_IT: 指定要使能或禁用的 DCMI 中断源。
+  *         该参数可以是以下值的任意组合：
+  *            @arg DCMI_IT_FRAME: 帧捕获完成中断掩码
+  *            @arg DCMI_IT_OVF: 溢出中断掩码
+  *            @arg DCMI_IT_ERR: 同步错误中断掩码
+  *            @arg DCMI_IT_VSYNC: VSYNC 中断掩码
+  *            @arg DCMI_IT_LINE: 行中断掩码
+  * @param  NewState: 指定 DCMI 中断的新状态。
+  *         该参数可以是：ENABLE 或 DISABLE。
+  * @retval 无
   */
 void DCMI_ITConfig(uint16_t DCMI_IT, FunctionalState NewState)
 {
@@ -441,15 +441,15 @@ FlagStatus DCMI_GetFlagStatus(uint16_t DCMI_FLAG)
 }
 
 /**
-  * @brief  Clears the DCMI's pending flags.
-  * @param  DCMI_FLAG: specifies the flag to clear.
-  *          This parameter can be any combination of the following values:
-  *            @arg DCMI_FLAG_FRAMERI: Frame capture complete Raw flag mask
-  *            @arg DCMI_FLAG_OVFRI: Overflow Raw flag mask
-  *            @arg DCMI_FLAG_ERRRI: Synchronization error Raw flag mask
-  *            @arg DCMI_FLAG_VSYNCRI: VSYNC Raw flag mask
-  *            @arg DCMI_FLAG_LINERI: Line Raw flag mask
-  * @retval None
+  * @brief  清除 DCMI 的挂起标志。
+  * @param  DCMI_FLAG: 指定要清除的标志。
+  *         该参数可以是以下值的任意组合：
+  *            @arg DCMI_FLAG_FRAMERI: 帧捕获完成原始标志掩码
+  *            @arg DCMI_FLAG_OVFRI: 溢出原始标志掩码
+  *            @arg DCMI_FLAG_ERRRI: 同步错误原始标志掩码
+  *            @arg DCMI_FLAG_VSYNCRI: VSYNC 原始标志掩码
+  *            @arg DCMI_FLAG_LINERI: 行原始标志掩码
+  * @retval 无
   */
 void DCMI_ClearFlag(uint16_t DCMI_FLAG)
 {
@@ -495,15 +495,15 @@ ITStatus DCMI_GetITStatus(uint16_t DCMI_IT)
 }
 
 /**
-  * @brief  Clears the DCMI's interrupt pending bits.
-  * @param  DCMI_IT: specifies the DCMI interrupt pending bit to clear.
-  *          This parameter can be any combination of the following values:
-  *            @arg DCMI_IT_FRAME: Frame capture complete interrupt mask
-  *            @arg DCMI_IT_OVF: Overflow interrupt mask
-  *            @arg DCMI_IT_ERR: Synchronization error interrupt mask
-  *            @arg DCMI_IT_VSYNC: VSYNC interrupt mask
-  *            @arg DCMI_IT_LINE: Line interrupt mask
-  * @retval None
+  * @brief  清除 DCMI 的中断挂起位。
+  * @param  DCMI_IT: 指定要清除的 DCMI 中断挂起位。
+  *         该参数可以是以下值的任意组合：
+  *            @arg DCMI_IT_FRAME: 帧捕获完成中断掩码
+  *            @arg DCMI_IT_OVF: 溢出中断掩码
+  *            @arg DCMI_IT_ERR: 同步错误中断掩码
+  *            @arg DCMI_IT_VSYNC: VSYNC 中断掩码
+  *            @arg DCMI_IT_LINE: 行中断掩码
+  * @retval 无
   */
 void DCMI_ClearITPendingBit(uint16_t DCMI_IT)
 {

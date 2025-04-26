@@ -80,14 +80,16 @@
 #define DCMI_PIXCLK_AF			          GPIO_AF_DCMI
 
 // DCMI电源下电引脚配置
-#define DCMI_PWDN_GPIO_PORT        	GPIOC
-#define DCMI_PWDN_GPIO_CLK         	RCC_AHB1Periph_GPIOC
-#define DCMI_PWDN_GPIO_PIN         	GPIO_Pin_0
+#define DCMI_PWDN_GPIO_PORT        	GPIOE
+#define DCMI_PWDN_GPIO_CLK         	RCC_AHB1Periph_GPIOE
+#define DCMI_PWDN_GPIO_PIN         	GPIO_Pin_8
 
 // DCMI复位引脚配置
-#define DCMI_RST_GPIO_PORT        	GPIOF
-#define DCMI_RST_GPIO_CLK         	RCC_AHB1Periph_GPIOF
-#define DCMI_RST_GPIO_PIN         	GPIO_Pin_10
+#define DCMI_RST_GPIO_PORT        	GPIOE
+#define DCMI_RST_GPIO_CLK         	RCC_AHB1Periph_GPIOE
+#define DCMI_RST_GPIO_PIN         	GPIO_Pin_7
 
-void DCMI_GPIO_Init(void);
-void DCMI_Fuction_Init(void);
+static void DCMI_GPIO_Init(void);
+static void DCMI_DCMI_Init(void);
+
+void DCMI_Camera_Init(void);

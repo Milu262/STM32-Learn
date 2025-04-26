@@ -420,6 +420,7 @@ void USART_IrDACmd(USART_TypeDef* USARTx, FunctionalState NewState);
 void USART_DMACmd(USART_TypeDef* USARTx, uint16_t USART_DMAReq, FunctionalState NewState);
 
 /* Interrupts and flags management functions **********************************/
+
 void USART_ITConfig(USART_TypeDef* USARTx, uint16_t USART_IT, FunctionalState NewState);
 FlagStatus USART_GetFlagStatus(USART_TypeDef* USARTx, uint16_t USART_FLAG);
 void USART_ClearFlag(USART_TypeDef* USARTx, uint16_t USART_FLAG);
