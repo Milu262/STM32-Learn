@@ -5,7 +5,7 @@
 
 #define Dummy_Byte 0xFF
 #define SPIT_FLAG_TIMEOUT 0xffff
-#define FLASH_SPI SPI1
+#define FLASH_SPI SPI3
 #define SPI_FLASH_PerWritePageSize 256
 
 

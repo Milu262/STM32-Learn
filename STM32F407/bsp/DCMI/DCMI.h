@@ -1,6 +1,21 @@
 #include "stm32f4xx.h"
 
-
+// 摄像头引脚与STM32引脚对应关系
+// | 摄像头引脚 | STM32引脚 |
+// |------------|-----------|
+// | DCMI_D0    | PC6       |
+// | DCMI_D1    | PC7       |
+// | DCMI_D2    | PC8       |
+// | DCMI_D3    | PC9       |
+// | DCMI_D4    | PE4       |
+// | DCMI_D5    | PB6       |
+// | DCMI_D6    | PE5       |
+// | DCMI_D7    | PE6       |
+// | DCMI_HSYNC | PA4       |
+// | DCMI_VSYNC | PB7       |
+// | DCMI_PIXCLK| PA6       |
+// | DCMI_PWDN  | PE8       |
+// | DCMI_RST   | PE7       |
 
 // DCMI_D0引脚配置
 #define DCMI_D0_GPIO_PORT        	GPIOC

@@ -2,6 +2,12 @@
 
 // 以下是测试代码
 
+// 注意 ！！！！！！！！！！！！
+// 使用飞线FLASH时
+// 【重要提示】：当GPIO速率设置不同时会有显著影响！
+//              当SPI的引角GPIO速率设置大于等于GPIO_Speed_50MHz时，无法读写FLASH。
+//              必须将SPI的引角GPIO速率设置为GPIO_Speed_25MHz才能正常读写FLASH。
+// 注意 ！！！！！！！！！！！！
 
 int test_SPI_Flash(void)
 {
