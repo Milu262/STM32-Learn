@@ -1,5 +1,7 @@
 --cpu Cortex-M4.fp --library_type=microlib --scatter "l:/STM32_Example/Github/STM32-Learn/STM32F407/project/MDK(V5)/build/Project/STM32F407_LCKFB.sct" --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols --info sizes --info totals --info unused --info veneers
 --list .\build\Project\STM32F407_LCKFB.map
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o
+.\build\Project\.obj\__\__\PeripheralModule\SPI_Screen\SPI_Screen_init.o
 .\build\Project\.obj\__\__\app\main.o
 .\build\Project\.obj\__\__\board\board.o
 .\build\Project\.obj\__\__\bsp\DCMI\DCMI.o

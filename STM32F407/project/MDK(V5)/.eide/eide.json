@@ -263,7 +263,26 @@
       {
         "name": "PeripheralModule",
         "files": [],
-        "folders": []
+        "folders": [
+          {
+            "name": "OV2640",
+            "files": [
+              {
+                "path": "../../PeripheralModule/OV2640/OV2640_init.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "SPI_Screen",
+            "files": [
+              {
+                "path": "../../PeripheralModule/SPI_Screen/SPI_Screen_init.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
       }
     ]
   },
@@ -437,7 +456,7 @@
           "../../bsp/DMA",
           "../../bsp/NVIC",
           "../../bsp/DCMI",
-          "../../PeripheralModule"
+          "../../PeripheralModule/SPI_Screen"
         ],
         "libList": [
           "../../PeripheralModule"
