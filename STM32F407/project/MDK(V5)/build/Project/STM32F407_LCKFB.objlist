@@ -1,3 +1,5 @@
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o
+.\build\Project\.obj\__\__\PeripheralModule\SPI_Screen\SPI_Screen_init.o
 .\build\Project\.obj\__\__\app\main.o
 .\build\Project\.obj\__\__\board\board.o
 .\build\Project\.obj\__\__\bsp\DCMI\DCMI.o

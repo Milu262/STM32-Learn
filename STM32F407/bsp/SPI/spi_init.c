@@ -16,28 +16,28 @@ static void SPI_Screen_GPIO_Init(void)
   /*!< 配置 SPI2 引脚: SCK */
   GPIO_StructInit(&GPIO_InitStructure);
   GPIO_InitStructure.GPIO_Pin = SPI_SCK_PIN;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
   GPIO_Init(SPI_SCK_GPIO_PORT, &GPIO_InitStructure);
 
   /*!< 配置 SPI2 引脚: MOSI */
   GPIO_StructInit(&GPIO_InitStructure);
   GPIO_InitStructure.GPIO_Pin = SPI_MOSI_PIN;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
   GPIO_Init(SPI_MOSI_GPIO_PORT, &GPIO_InitStructure);
 
   /*!< 配置 SPI2 引脚: CS */
   GPIO_StructInit(&GPIO_InitStructure);
   GPIO_InitStructure.GPIO_Pin = CS_PIN;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
   GPIO_Init(CS_PIN_GPIO_PORT, &GPIO_InitStructure);
 
   /* 停止信号 Screen: CS 引脚高电平 */
@@ -55,7 +55,7 @@ static void SPI_Screen_Init(void)
 
   SPI_InitTypeDef SPI_InitStructure =
       {
-          .SPI_Direction = SPI_Direction_1Line_Tx,          // 设置SPI的数据方向为仅发送数据
+          .SPI_Direction = SPI_Direction_2Lines_FullDuplex,          // 设置SPI的数据方向为仅发送数据
           .SPI_Mode = SPI_Mode_Master,                      // 设置SPI模式为主模式
           .SPI_DataSize = SPI_DataSize_8b,                  // 设置数据大小为8位
           .SPI_CPOL = SPI_CPOL_High,                        // 设置时钟极性为高电平
@@ -79,7 +79,7 @@ static void SPI_FLASH_GPIO_Init(void)
   /*!< 配置 SPI_FLASH_SPI 引脚: SCK */
   GPIO_StructInit(&GPIO_InitStructure);
   GPIO_InitStructure.GPIO_Pin = SPI_FLASH_SCK_PIN;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_25MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_25MHz;   
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;

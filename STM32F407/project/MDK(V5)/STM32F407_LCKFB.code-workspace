@@ -22,7 +22,10 @@
             "test_code.h": "c",
             "stm32f4xx_it.h": "c",
             "dcmi.h": "c",
-            "string.h": "c"
+            "string.h": "c",
+            "ov2640_init.h": "c",
+            "spi_screen_init.h": "c",
+            "xutility": "c"
         },
         "Codegeex.RepoIndex": true
     },

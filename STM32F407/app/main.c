@@ -10,6 +10,7 @@
 #include "SPI_Control.h"
 #include "DMA_Init.h"
 #include "DCMI.h"
+#include "SPI_Screen_init.h"
 
 #include "Test_code.h"
 
@@ -17,6 +18,7 @@
 int main(void)
 {
 	uint8_t error = 0;
+	uint16_t color = 0;
 	board_init();			 // 板级初始化
 	NVIC_Configuration();	 // 中断优先级初始化
 	uart1_init(115200U);	 // 串口1初始化
@@ -26,7 +28,18 @@ int main(void)
 	User_I2C_Init();		 // I2C初始化
 	SPI_FLASH_BUS_Init();	 // SPI FLASH总线初始化
 	SPI_Screen_BUS_Init();	 // SPI屏幕总线初始化
-	test_SPI_Flash();		 // 测试SPI FLASH
+	// test_SPI_Flash();		 // 测试SPI FLASH
+
+	LCD_Screen_Init();
+
+	LCD_Fill(0,0,LCD_WIDTH,LCD_HIDTH,0);
+    while (color < 256)
+	{
+		color +=4;
+		LCD_Fill(0,0,LCD_WIDTH,LCD_HIDTH,color);
+		// delay_ms(10);
+	}
+	
 
 	while (1)
 	{

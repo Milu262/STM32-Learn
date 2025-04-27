@@ -28,7 +28,7 @@
         "../../bsp/DMA",
         "../../bsp/NVIC",
         "../../bsp/DCMI",
-        "../../PeripheralModule"
+        "../../PeripheralModule/SPI_Screen"
     ],
     "libDirs": [
         "../../PeripheralModule"
@@ -38,6 +38,8 @@
         "STM32F40_41xxx"
     ],
     "sourceList": [
+        "../../PeripheralModule/OV2640/OV2640_init.c",
+        "../../PeripheralModule/SPI_Screen/SPI_Screen_init.c",
         "../../app/main.c",
         "../../board/board.c",
         "../../bsp/DCMI/DCMI.c",
