@@ -456,7 +456,8 @@
           "../../bsp/DMA",
           "../../bsp/NVIC",
           "../../bsp/DCMI",
-          "../../PeripheralModule/SPI_Screen"
+          "../../PeripheralModule/SPI_Screen",
+          "../../PeripheralModule/OV2640"
         ],
         "libList": [
           "../../PeripheralModule"

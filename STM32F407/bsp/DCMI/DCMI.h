@@ -14,8 +14,8 @@
 // | DCMI_HSYNC | PA4       |
 // | DCMI_VSYNC | PB7       |
 // | DCMI_PIXCLK| PA6       |
-// | DCMI_PWDN  | PE8       |
-// | DCMI_RST   | PE7       |
+// | DCMI_PWDN  | PE7       |
+// | DCMI_RST   | PE8       |
 
 // DCMI_D0引脚配置
 #define DCMI_D0_GPIO_PORT        	GPIOC
@@ -97,12 +97,12 @@
 // DCMI电源下电引脚配置
 #define DCMI_PWDN_GPIO_PORT        	GPIOE
 #define DCMI_PWDN_GPIO_CLK         	RCC_AHB1Periph_GPIOE
-#define DCMI_PWDN_GPIO_PIN         	GPIO_Pin_8
+#define DCMI_PWDN_GPIO_PIN         	GPIO_Pin_7
 
 // DCMI复位引脚配置
 #define DCMI_RST_GPIO_PORT        	GPIOE
 #define DCMI_RST_GPIO_CLK         	RCC_AHB1Periph_GPIOE
-#define DCMI_RST_GPIO_PIN         	GPIO_Pin_7
+#define DCMI_RST_GPIO_PIN         	GPIO_Pin_8
 
 static void DCMI_GPIO_Init(void);
 static void DCMI_DCMI_Init(void);

@@ -11,6 +11,7 @@
 #include "DMA_Init.h"
 #include "DCMI.h"
 #include "SPI_Screen_init.h"
+#include "OV2640_init.h"
 
 #include "Test_code.h"
 
@@ -31,15 +32,38 @@ int main(void)
 	// test_SPI_Flash();		 // 测试SPI FLASH
 
 	LCD_Screen_Init();
+	// LCD_Pixel_Cycle();
+	LCD_Address_Set(0, 0, LCD_WIDTH - 1, LCD_HIDTH - 1); // 设置显示区
+	LCD_Fill(0, 0, LCD_WIDTH, LCD_HIDTH, 0x0000);		 //  清屏
 
-	LCD_Fill(0,0,LCD_WIDTH,LCD_HIDTH,0);
-    while (color < 256)
-	{
-		color +=4;
-		LCD_Fill(0,0,LCD_WIDTH,LCD_HIDTH,color);
-		// delay_ms(10);
-	}
-	
+	OV2640_Image_Config();
+
+	SPI_Cmd(LCD_SPI, DISABLE);
+	// 设置选择 16 位数据帧格式
+	SPI_DataSizeConfig(LCD_SPI, SPI_DataSize_16b);
+	SPI_Cmd(LCD_SPI, ENABLE);
+	LCD_SPI_CS_ON(0); // 使能SPI的数据传输
+
+	DMA_Cmd(DMA2_Stream1, ENABLE); // DMA2,Stream1
+	DCMI_Cmd(ENABLE);			   // DCMI²É¼¯Êý¾Ý
+	DCMI_CaptureCmd(ENABLE);	   // DCMI²¶»ñ
+
+	// for(int i = 0; i < 100; i++)
+	// {
+	// 	LCD_Fill(0,0,LCD_WIDTH,LCD_HIDTH,0x0000);
+	// 	LCD_Fill(0,0,LCD_WIDTH,LCD_HIDTH,0xffff);
+	// }
+	// LCD_Fill(0,0,LCD_WIDTH,LCD_HIDTH,0xf000);
+
+	// LCD_Pixel_Cycle();
+	// LCD_Fill(0,0,LCD_WIDTH,LCD_HIDTH,0xf000);
+
+	// while (color < 0xfff0)
+	// {
+	// 	color +=0x10;
+	// 	LCD_Fill(0,0,LCD_WIDTH,LCD_HIDTH,color);
+	// 	// delay_ms(10);
+	// }
 
 	while (1)
 	{

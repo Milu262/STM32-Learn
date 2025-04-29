@@ -213,15 +213,15 @@ void DMA2_Stream7_IRQHandler(void)
   * @param  无
   * @retval 无
   */
-void DMA2_Stream1_IRQHandler(void)
-{
-  if (DMA_GetITStatus(DCMI_DMA_STREAM, DMA_IT_TCIF1) != RESET) // 等待DMA传输完成中断,表示摄像头的一行数据已经传输完成
-  {
-    DMA_ClearITPendingBit(DCMI_DMA_STREAM, DMA_IT_TCIF1); // 清除DMA接收完成中断标志
+// void DMA2_Stream1_IRQHandler(void)
+// {
+//   if (DMA_GetITStatus(DCMI_DMA_STREAM, DMA_IT_TCIF1) != RESET) // 等待DMA传输完成中断,表示摄像头的一行数据已经传输完成
+//   {
+//     DMA_ClearITPendingBit(DCMI_DMA_STREAM, DMA_IT_TCIF1); // 清除DMA接收完成中断标志
 
-    // 做自己的事
-  }
-}
+//     // 做自己的事
+//   }
+// }
 /**
   * @brief  该函数处理 DCMI 中断请求。
   * @note   当 DCMI 外设触发中断时，会调用此函数。通常用于处理帧捕获完成、
@@ -230,19 +230,19 @@ void DMA2_Stream1_IRQHandler(void)
   * @param  无
   * @retval 无
   */
-void DCMI_IRQHandler(void)
-{
-  if (DCMI_GetITStatus(DCMI_IT_FRAME) != RESET) // 触发帧中断
-  {
-    DCMI_ClearITPendingBit(DCMI_IT_FRAME); // 清除帧中断标志
+// void DCMI_IRQHandler(void)
+// {
+//   if (DCMI_GetITStatus(DCMI_IT_FRAME) != RESET) // 触发帧中断
+//   {
+//     DCMI_ClearITPendingBit(DCMI_IT_FRAME); // 清除帧中断标志
 
-    // 做自己的事，例如让屏幕重新回到(0,0)位置
+//     // 做自己的事，例如让屏幕重新回到(0,0)位置
 
-    //以下为测试代码
-    //  DCMI_Cmd(DISABLE);                     // 关闭DCMI
-    //  DCMI_ClearFlag(DCMI_FLAG_FRAMERI);     // 清除帧标志
-  }
-}
+//     //以下为测试代码
+//     //  DCMI_Cmd(DISABLE);                     // 关闭DCMI
+//     //  DCMI_ClearFlag(DCMI_FLAG_FRAMERI);     // 清除帧标志
+//   }
+// }
 
 void SysTick_Handler(void)
 {

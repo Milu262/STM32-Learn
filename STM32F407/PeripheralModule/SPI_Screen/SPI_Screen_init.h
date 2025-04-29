@@ -1,32 +1,36 @@
 #include "SPI_Control.h"
-
+#include "SPI_init.h"
 // 屏幕的SPI接口定义在SPI_init.h中定义
 
-// 屏幕使用SPI2
+// 屏幕使用SPI1
 /**屏幕使用的管脚定义
- * - SCK:  PB10
- * - MOSI: PC3
+ * - SCK:  PA5
+ * - MOSI: PA7
  * - CS(NSS): PE9
- * - DC:  PD2
- * - RES: PD3
- * - BLK: PD1
+ * - DC:  PC4
+ * - RES: PA1
+ * - BLK: PA2
  */
 
-#define LCD_SPI SPI2
-#define LCD_SPI_CS_GPIO_PORT GPIOE
-#define LCD_SPI_CS_PIN GPIO_Pin_9
+// #define LCD_SPI SPI1
+// #define LCD_SPI_CS_GPIO_PORT GPIOE
+// #define LCD_SPI_CS_PIN GPIO_Pin_9
 
-#define LCD_BLK_GPIO_PORT GPIOD
-#define LCD_BLK_PIN GPIO_Pin_1
-#define LCD_BLK_GPIO_CLK RCC_AHB1Periph_GPIOD
+#define LCD_SPI SPIScreen
+#define LCD_SPI_CS_GPIO_PORT CS_PIN_GPIO_PORT
+#define LCD_SPI_CS_PIN CS_PIN
 
-#define LCD_DC_GPIO_PORT GPIOD
-#define LCD_DC_PIN GPIO_Pin_2
-#define LCD_DC_GPIO_CLK RCC_AHB1Periph_GPIOD
+#define LCD_BLK_GPIO_PORT GPIOA
+#define LCD_BLK_PIN GPIO_Pin_2
+#define LCD_BLK_GPIO_CLK RCC_AHB1Periph_GPIOA
 
-#define LCD_RES_GPIO_PORT GPIOD
-#define LCD_RES_PIN GPIO_Pin_3
-#define LCD_RES_GPIO_CLK RCC_AHB1Periph_GPIOD
+#define LCD_DC_GPIO_PORT GPIOC
+#define LCD_DC_PIN GPIO_Pin_4
+#define LCD_DC_GPIO_CLK RCC_AHB1Periph_GPIOC
+
+#define LCD_RES_GPIO_PORT GPIOA
+#define LCD_RES_PIN GPIO_Pin_1
+#define LCD_RES_GPIO_CLK RCC_AHB1Periph_GPIOA
 
 #define LCD_WIDTH 240
 #define LCD_HIDTH 280
@@ -74,3 +78,8 @@ void LCD_Address_Set(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
  * @return void 无返回值
  */
 void LCD_Fill(uint16_t xsta, uint16_t ysta, uint16_t xend, uint16_t yend, uint16_t color);
+
+uint8_t LCD_Pixel_Cycle(void);
+uint8_t LCD_Write_Data_FullDuplex(uint16_t *dat, uint16_t len);
+uint8_t LCD_Write_Data_1Line_Tx(uint16_t *dat, uint16_t len);
+void LCD_Write_Repeat_Data(uint16_t dat, uint32_t len);

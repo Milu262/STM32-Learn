@@ -36,6 +36,4 @@
 .\objects\dma_init.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 .\objects\dma_init.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
 .\objects\dma_init.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\stdio.h
-.\objects\dma_init.o: ..\..\bsp\Response\response.h
-.\objects\dma_init.o: ..\..\bsp\.\i2c\i2c_handle.h
-.\objects\dma_init.o: ..\..\board\board.h
+.\objects\dma_init.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\string.h

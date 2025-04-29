@@ -61,7 +61,7 @@ static void DCMI_GPIO_Init(void)
     GPIO_InitStructure.GPIO_Pin = DCMI_D7_GPIO_PIN;
     GPIO_Init(DCMI_D7_GPIO_PORT, &GPIO_InitStructure);
     GPIO_PinAFConfig(DCMI_D7_GPIO_PORT, DCMI_D7_PINSOURCE, DCMI_D7_AF);
-
+    
     // 配置DCMI电源下电引脚
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
@@ -83,7 +83,10 @@ static void DCMI_GPIO_Init(void)
 }
 static void DCMI_DCMI_Init(void)
 {
+    RCC_AHB2PeriphClockCmd(RCC_AHB2Periph_DCMI, ENABLE);
+
     DCMI_InitTypeDef DCMI_InitStructure;
+    DCMI_DeInit();//清除原来的配置
     DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_Continuous;
     DCMI_InitStructure.DCMI_SynchroMode = DCMI_SynchroMode_Hardware;
     DCMI_InitStructure.DCMI_CaptureRate = DCMI_CaptureRate_All_Frame;
@@ -94,7 +97,7 @@ static void DCMI_DCMI_Init(void)
     DCMI_Init(&DCMI_InitStructure);
     DCMI_Cmd(ENABLE);
     // 使能DCMI中断，帧中断
-    DCMI_ITConfig(DCMI_IT_FRAME, ENABLE);
+    // DCMI_ITConfig(DCMI_IT_FRAME, ENABLE);
 }
 void DCMI_Camera_Init(void)
 {

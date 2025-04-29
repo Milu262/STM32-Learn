@@ -2389,3 +2389,774 @@ These source files will be recompiled
 [2025-04-28 00:06:11]	[done]
 	build successfully !
 
+[2025-04-28 19:23:33]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-28 19:23:34]	[done]
+	build successfully !
+
+[2025-04-28 19:30:06]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+
+[2025-04-28 19:30:06]	[done]
+	build successfully !
+
+[2025-04-28 19:30:43]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 19:30:44]	[done]
+	build successfully !
+
+[2025-04-28 20:09:54]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 20:09:54]	[done]
+	build successfully !
+
+[2025-04-28 20:10:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 20:10:24]	[done]
+	build successfully !
+
+[2025-04-28 20:20:28]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-28 20:20:30]	[done]
+	build successfully !
+
+[2025-04-28 20:20:47]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 20:20:48]	[done]
+	build successfully !
+
+[2025-04-28 20:24:16]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 20:24:17]	[done]
+	build successfully !
+
+[2025-04-28 20:24:25]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 20:24:26]	[done]
+	build successfully !
+
+[2025-04-28 20:25:15]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 20:25:15]	[done]
+	build successfully !
+
+[2025-04-28 22:17:23]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-28 22:17:24]	[done]
+	build successfully !
+
+[2025-04-28 22:18:25]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 22:18:26]	[done]
+	build successfully !
+
+[2025-04-28 22:27:06]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 22:27:07]	[done]
+	build successfully !
+
+[2025-04-28 22:31:32]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 22:31:32]	[done]
+	build successfully !
+
+[2025-04-28 22:31:56]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 22:31:57]	[done]
+	build successfully !
+
+[2025-04-28 23:01:48]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 23:01:48]	[done]
+	build successfully !
+
+[2025-04-28 23:16:35]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-04-28 23:16:36]	[done]
+	build successfully !
+
+[2025-04-28 23:17:25]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 23:17:26]	[done]
+	build successfully !
+
+[2025-04-28 23:42:29]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 23:42:30]	[done]
+	build successfully !
+
+[2025-04-28 23:43:18]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 23:43:19]	[done]
+	build successfully !
+
+[2025-04-28 23:48:04]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 23:48:05]	[done]
+	build successfully !
+
+[2025-04-28 23:48:16]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 23:48:17]	[done]
+	build successfully !
+
+[2025-04-28 23:49:04]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 23:49:05]	[done]
+	build successfully !
+
+[2025-04-28 23:49:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 23:49:24]	[done]
+	build successfully !
+
+[2025-04-28 23:51:18]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 23:51:19]	[done]
+	build successfully !
+
+[2025-04-28 23:52:36]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-28 23:52:36]	[done]
+	build successfully !
+
+[2025-04-28 23:56:45]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 23:56:45]	[done]
+	build successfully !
+
+[2025-04-28 23:59:44]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-28 23:59:45]	[done]
+	build successfully !
+
+[2025-04-29 00:02:38]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-29 00:02:38]	[done]
+	build successfully !
+
+[2025-04-29 00:02:58]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': source file has been changed.
+
+[2025-04-29 00:02:59]	[done]
+	build successfully !
+
+[2025-04-29 18:33:39]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-29 18:33:41]	[done]
+	build successfully !
+
+[2025-04-29 18:34:09]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-29 18:34:10]	[done]
+	build successfully !
+
+[2025-04-29 18:41:36]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DCMI\DCMI.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DCMI\DCMI.h' has been changed.
+
+[2025-04-29 18:41:37]	[done]
+	build successfully !
+
+[2025-04-29 19:09:30]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DCMI\DCMI.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+
+[2025-04-29 19:09:32]	[done]
+	build successfully !
+
+[2025-04-29 19:14:50]	[info] incremental build: 5 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\SPI\spi_init.h' has been changed.
+
+[2025-04-29 19:14:52]	[done]
+	build successfully !
+
+[2025-04-29 19:19:20]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+
+[2025-04-29 19:19:21]	[done]
+	build successfully !
+
+[2025-04-29 19:20:15]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+
+[2025-04-29 19:20:16]	[done]
+	build successfully !
+
+[2025-04-29 19:20:38]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-29 19:20:38]	[done]
+	build successfully !
+
+[2025-04-29 19:23:06]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+
+[2025-04-29 19:23:07]	[done]
+	build successfully !
+
+[2025-04-29 19:23:17]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+
+[2025-04-29 19:23:17]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -I../../bsp/DCMI -I../../PeripheralModule/SPI_Screen -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\PeripheralModule\SPI_Screen\SPI_Screen_init.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\PeripheralModule\SPI_Screen\SPI_Screen_init.d .\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.c", line 35: Warning:  #223-D: function "delay_ms" declared implicitly
+      delay_ms(100);
+      ^
+".\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.c", line 90: Error:  #20: identifier "SPIT_FLAG_TIMEOUT" is undefined
+      uint16_t spiTimeoutCounter = SPIT_FLAG_TIMEOUT;
+                                   ^
+".\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.c", line 158: Error:  #20: identifier "SPIT_FLAG_TIMEOUT" is undefined
+      uint16_t spiTimeoutCounter = SPIT_FLAG_TIMEOUT;
+                                   ^
+".\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.c", line 186: Warning:  #223-D: function "delay_ms" declared implicitly
+      delay_ms(120);
+      ^
+.\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.c: 2 warnings, 2 errors
+
+[2025-04-29 19:23:37]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h' has been changed.
+
+[2025-04-29 19:23:38]	[done]
+	build successfully !
+
+[2025-04-29 20:48:53]	[info] incremental build: 59 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\board\board.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\NVIC\NVIC_Init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f40xx.s': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\misc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': compiler options has been changed.
+
+[2025-04-29 20:48:56]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol OV2640_UXGA multiply defined (by main.o and OV2640_init.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 1 error messages.
+
+
+[2025-04-29 20:50:39]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 20:50:40]	[done]
+	build successfully !
+
+[2025-04-29 20:53:59]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 20:54:00]	[done]
+	build successfully !
+
+[2025-04-29 20:55:09]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 20:55:10]	[done]
+	build successfully !
+
+[2025-04-29 20:56:10]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 20:56:10]	[done]
+	build successfully !
+
+[2025-04-29 21:03:00]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 21:03:01]	[done]
+	build successfully !
+
+[2025-04-29 21:24:52]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+
+[2025-04-29 21:24:54]	[done]
+	build successfully !
+
+[2025-04-29 21:45:23]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': source file has been changed.
+
+[2025-04-29 21:45:24]	[done]
+	build successfully !
+
+[2025-04-29 21:46:56]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 21:46:57]	[done]
+	build successfully !
+
+[2025-04-29 22:10:18]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-29 22:10:19]	[done]
+	build successfully !
+
+[2025-04-29 22:12:28]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': source file has been changed.
+
+[2025-04-29 22:12:28]	[done]
+	build successfully !
+
+[2025-04-29 22:20:03]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-29 22:20:04]	[done]
+	build successfully !
+
+[2025-04-29 22:22:55]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': source file has been changed.
+
+[2025-04-29 22:22:56]	[done]
+	build successfully !
+
+[2025-04-29 22:26:22]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-29 22:26:23]	[done]
+	build successfully !
+
+[2025-04-29 22:27:10]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-29 22:27:11]	[done]
+	build successfully !
+
+[2025-04-29 22:27:47]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 22:27:47]	[done]
+	build successfully !
+
+[2025-04-29 22:28:32]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-04-29 22:28:32]	[done]
+	build successfully !
+
+[2025-04-29 22:31:42]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 22:31:43]	[done]
+	build successfully !
+
+[2025-04-29 22:36:55]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 22:36:56]	[done]
+	build successfully !
+
+[2025-04-29 22:37:14]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 22:37:15]	[done]
+	build successfully !
+
+[2025-04-29 22:41:06]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:41:07]	[done]
+	build successfully !
+
+[2025-04-29 22:41:32]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 22:41:32]	[done]
+	build successfully !
+
+[2025-04-29 22:41:49]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:41:50]	[done]
+	build successfully !
+
+[2025-04-29 22:42:37]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:42:38]	[done]
+	build successfully !
+
+[2025-04-29 22:42:53]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:42:54]	[done]
+	build successfully !
+
+[2025-04-29 22:43:09]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:43:09]	[done]
+	build successfully !
+
+[2025-04-29 22:43:50]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:43:51]	[done]
+	build successfully !
+
+[2025-04-29 22:44:16]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:44:17]	[done]
+	build successfully !
+
+[2025-04-29 22:44:35]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:44:36]	[done]
+	build successfully !
+
+[2025-04-29 22:44:53]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:44:54]	[done]
+	build successfully !
+
+[2025-04-29 22:45:43]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 22:45:44]	[done]
+	build successfully !
+
+[2025-04-29 22:46:47]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:46:48]	[done]
+	build successfully !
+
+[2025-04-29 22:47:11]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:47:12]	[done]
+	build successfully !
+
+[2025-04-29 22:47:29]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:47:30]	[done]
+	build successfully !
+
+[2025-04-29 22:47:58]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:47:59]	[done]
+	build successfully !
+
+[2025-04-29 22:49:07]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 22:49:08]	[done]
+	build successfully !
+
+[2025-04-29 22:49:34]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+
+[2025-04-29 22:49:34]	[done]
+	build successfully !
+
+[2025-04-29 22:53:37]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:53:38]	[done]
+	build successfully !
+
+[2025-04-29 22:53:56]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-04-29 22:53:57]	[done]
+	build successfully !
+

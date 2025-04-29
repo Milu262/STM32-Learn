@@ -60,10 +60,96 @@ static uint8_t LCD_WR_DATA8(uint8_t data)
 
 static void LCD_WR_DATA(uint16_t dat)
 {
+    SPI_Cmd(LCD_SPI, DISABLE);
+    // 设置选择 16 位数据帧格式
+    SPI_DataSizeConfig(LCD_SPI, SPI_DataSize_16b);
+    SPI_Cmd(LCD_SPI, ENABLE);
+    LCD_SPI_CS_ON(0);
+    while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
+        ;
+    SPI_I2S_SendData(LCD_SPI, dat);
+    while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
+        ;
+    while (SET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_BSY))
+        ;
+    LCD_SPI_CS_ON(1);
 
-    LCD_Writ_Bus(dat >> 8);
-    LCD_Writ_Bus(dat);
+    SPI_Cmd(LCD_SPI, DISABLE);
+    // 设置选择 8 位数据帧格式
+    SPI_DataSizeConfig(LCD_SPI, SPI_DataSize_8b);
+    SPI_Cmd(LCD_SPI, ENABLE);
+    
+    // LCD_Writ_Bus(dat >> 8);
+    // LCD_Writ_Bus(dat);
     // printf("LCD Write Data: %04x\r\n", dat);
+}
+
+uint8_t LCD_Write_Data_FullDuplex(uint16_t *dat, uint16_t len)
+{
+    LCD_SPI_CS_ON(0);
+    uint16_t spiTimeoutCounter = SPIT_FLAG_TIMEOUT;
+    /* 等待发送缓冲区为空，TXE 事件 */
+    while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
+    {
+        if ((spiTimeoutCounter--) == 0)
+        {
+            printf("SPI Timeout\r\n");
+            LCD_SPI_CS_ON(1);
+            return 0;
+        }
+    }
+
+    while (len--)
+    {
+        SPI_I2S_SendData(LCD_SPI, *dat++);
+        /* 等待接收缓冲区不空，RNXE 事件 */
+        while (RESET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_RXNE))
+            ;
+        SPI_I2S_ReceiveData(SPI2);
+    }
+    LCD_SPI_CS_ON(1);
+    return 1;
+}
+
+uint8_t LCD_Write_Data_1Line_Tx(uint16_t *dat, uint16_t len)
+{
+    LCD_SPI_CS_ON(0);
+    while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
+        ;
+    while (len--)
+    {
+        SPI_I2S_SendData(LCD_SPI, *dat++);
+        while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
+            ;
+    }
+    while (SET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_BSY))
+        ;
+    LCD_SPI_CS_ON(1);
+    return 1;
+}
+
+void LCD_Write_Repeat_Data(uint16_t dat, uint32_t len)
+{
+    SPI_Cmd(LCD_SPI, DISABLE);
+    // 设置选择 16 位数据帧格式
+    SPI_DataSizeConfig(LCD_SPI, SPI_DataSize_16b);
+    SPI_Cmd(LCD_SPI, ENABLE);
+    LCD_SPI_CS_ON(0);
+    while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
+        ;
+    while (len--)
+    {
+        SPI_I2S_SendData(LCD_SPI, dat);
+        while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
+            ;
+    }
+    while (SET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_BSY))
+        ;
+    LCD_SPI_CS_ON(1);
+    SPI_Cmd(LCD_SPI, DISABLE);
+    // 设置选择 8 位数据帧格式
+    SPI_DataSizeConfig(LCD_SPI, SPI_DataSize_8b);
+    SPI_Cmd(LCD_SPI, ENABLE);
 }
 
 static uint8_t LCD_Writ_Bus(uint8_t dat)
@@ -81,11 +167,14 @@ static uint8_t LCD_Writ_Bus(uint8_t dat)
         }
     }
     SPI_I2S_SendData(LCD_SPI, dat);
-
-    /* 等待接收缓冲区不空，RNXE 事件 */
-    while (RESET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_RXNE))
+    while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
         ;
-    SPI_I2S_ReceiveData(SPI2);
+    while (SET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_BSY))
+        ;
+    // /* 等待接收缓冲区不空，RNXE 事件 */
+    // while (RESET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_RXNE))
+    //     ;
+    // SPI_I2S_ReceiveData(SPI2);
 
     LCD_SPI_CS_ON(1);
     return 1;
@@ -221,14 +310,46 @@ void LCD_Address_Set(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
 
 void LCD_Fill(uint16_t xsta, uint16_t ysta, uint16_t xend, uint16_t yend, uint16_t color)
 {
-    uint16_t i, j;
-    LCD_Address_Set(xsta, ysta, xend - 1, yend - 1); // 设置显示区
+    // uint16_t i, j;
+    // LCD_Address_Set(xsta, ysta, xend - 1, yend - 1); // 设置显示区
 
-	for(i=ysta;i<yend;i++)
-	{													   	 	
-		for(j=xsta;j<xend;j++)
-		{
-			LCD_WR_DATA(color);
-		}
-	} 	
+    LCD_Write_Repeat_Data(color,((yend-ysta)*(xend-xsta)));
+
+    // for (i = ysta; i < yend; i++)
+    // {
+    //     for (j = xsta; j < xend; j++)
+    //     {
+    //         LCD_WR_DATA(color);
+    //     }
+    // }
+}
+
+uint8_t LCD_Pixel_Cycle(void)
+{
+    uint16_t color = 0;
+    uint16_t len =0;
+    while (1)
+    {
+        // LCD_Address_Set(0, 0, 240 - 1, 280 - 1); // 设置显示区
+        len += 8;
+        color = len;
+        for (int i = 0; i < 280; i++)
+        {
+            // for (int j = 0; j < 240; j++)
+            // {
+            //     LCD_WR_DATA(color++);
+            //     if (color == 0xffff)
+            //         continue;
+            // }
+            LCD_Write_Repeat_Data(color++,240);
+
+        }
+        if (len > 0xfff0)
+        {
+            break;
+        }
+        
+        // delay_ms(1000);
+    }
+    return 0;
 }
