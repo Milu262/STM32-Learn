@@ -37,3 +37,4 @@
 .\objects\i2c_handle.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
 .\objects\i2c_handle.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 .\objects\i2c_handle.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
+.\objects\i2c_handle.o: ..\..\bsp\I2C\i2c_init.h

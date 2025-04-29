@@ -55,6 +55,9 @@
 ".\objects\test_code.o"
 ".\objects\dma_init.o"
 ".\objects\nvic_init.o"
+".\objects\spi_screen_init.o"
+".\objects\dcmi.o"
+".\objects\ov2640_init.o"
 --library_type=microlib --strict --scatter ".\Objects\Project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -37,3 +37,8 @@
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../bsp/I2C/i2c_init.h
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../PeripheralModule/SPI_Screen/SPI_Screen_init.h
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../bsp/SPI/SPI_Control.h
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../bsp/SPI/spi_init.h
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../bsp/SPI/SPI_init.h
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../bsp/DCMI/DCMI.h

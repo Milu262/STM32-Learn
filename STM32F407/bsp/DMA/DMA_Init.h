@@ -6,6 +6,9 @@
 #define HS_LEN 280  //视频数据有多少行
 #define DCMI_RX_BUF_SIZE 240*2/4  //视频的一行大小，使用RGB565格式，数组为uint32_t类型
 
+//定义SPI1的数据地址
+#define SPI1_DR_BASE (SPI1_BASE + 0x0C)
+
 // DMA
 //  定义调试串口数据寄存器基地址，USART1_BASE是USART1的基地址，0x04是数据寄存器相对于基地址的偏移量
 #define DEBUG_USART_DR_BASE (USART1_BASE + 0x04)

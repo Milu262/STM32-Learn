@@ -13,29 +13,29 @@
  */
 
  /**
- * @brief SPI2 使用的管脚定义
- * - SCK:  PB10
- * - MOSI: PC3
+ * @brief SPI1 使用的管脚定义
+ * - SCK:  PA5
+ * - MOSI: PA7
  * - CS(NSS): PE9
  */
 
 // SPI 屏幕号及时钟初始化函数
-#define SPIScreen SPI2
-#define SPI_Screen_CLK             RCC_APB1Periph_SPI2
+#define SPIScreen SPI1
+#define SPI_Screen_CLK             RCC_APB2Periph_SPI1
 
 // SCK 引脚
-#define SPI_SCK_GPIO_PORT   GPIOB
-#define SPI_SCK_GPIO_CLK    RCC_AHB1Periph_GPIOB
-#define SPI_SCK_PIN         GPIO_Pin_10
-#define SPI_SCK_PINSOURCE   GPIO_PinSource10
-#define SPI_SCK_GPIO_AF     GPIO_AF_SPI2
+#define SPI_SCK_GPIO_PORT   GPIOA
+#define SPI_SCK_GPIO_CLK    RCC_AHB1Periph_GPIOA
+#define SPI_SCK_PIN         GPIO_Pin_5
+#define SPI_SCK_PINSOURCE   GPIO_PinSource5
+#define SPI_SCK_GPIO_AF     GPIO_AF_SPI1
 
 // MOSI 引脚
-#define SPI_MOSI_GPIO_PORT  GPIOC
-#define SPI_MOSI_GPIO_CLK   RCC_AHB1Periph_GPIOC
-#define SPI_MOSI_PIN        GPIO_Pin_3
-#define SPI_MOSI_PINSOURCE  GPIO_PinSource3
-#define SPI_MOSI_GPIO_AF    GPIO_AF_SPI2
+#define SPI_MOSI_GPIO_PORT  GPIOA
+#define SPI_MOSI_GPIO_CLK   RCC_AHB1Periph_GPIOA
+#define SPI_MOSI_PIN        GPIO_Pin_7
+#define SPI_MOSI_PINSOURCE  GPIO_PinSource7
+#define SPI_MOSI_GPIO_AF    GPIO_AF_SPI1
 
 // CS(NSS) 引脚  PE9
 #define CS_PIN_GPIO_PORT    GPIOE
