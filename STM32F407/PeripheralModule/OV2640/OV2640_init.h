@@ -4,8 +4,8 @@
 
 #define OV2640_Device_Address 0x60
 
-#define OV2640_IMAGE_WIDTH  240*2
-#define OV2640_IMAGE_HEIGHT 280*2
+#define OV2640_IMAGE_WIDTH  240*4
+#define OV2640_IMAGE_HEIGHT 280
 
 
 

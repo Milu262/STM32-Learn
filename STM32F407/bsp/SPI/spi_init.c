@@ -64,6 +64,7 @@ static void SPI_Screen_Init(void)
           .SPI_NSS = SPI_NSS_Soft,                          // 设置NSS信号为软件管理
           .SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_2, // 设置波特率预分频值为2，即SPI时钟频率为主时钟频率的1/2
           .SPI_FirstBit = SPI_FirstBit_MSB,                 // 设置数据传输时先发送最高位
+          // .SPI_FirstBit = SPI_FirstBit_LSB,                 // 设置数据传输时先发送最高位
           .SPI_CRCPolynomial = 7};                          // 设置CRC多项式为7，用于CRC校验
   SPI_Init(SPIScreen, &SPI_InitStructure);
   SPI_Cmd(SPIScreen, ENABLE);

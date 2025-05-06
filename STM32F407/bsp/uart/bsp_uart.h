@@ -9,20 +9,35 @@
 #include "DMA_Init.h"
 // #include "response.h"
 
-#define BSP_USART_RCC RCC_APB2Periph_USART1
-#define BSP_USART_TX_RCC RCC_AHB1Periph_GPIOA
-#define BSP_USART_RX_RCC RCC_AHB1Periph_GPIOA
+// #define BSP_USART USART1
+// #define BSP_USART_RCC RCC_APB2Periph_USART1
 
-#define BSP_USART USART1
-#define BSP_USART_TX_PORT GPIOA
-#define BSP_USART_TX_PIN GPIO_Pin_9
+// #define BSP_USART_TX_RCC RCC_AHB1Periph_GPIOA
+// #define BSP_USART_RX_RCC RCC_AHB1Periph_GPIOA
+
+
+// #define BSP_USART_TX_PORT GPIOA
+// #define BSP_USART_TX_PIN GPIO_Pin_9
+// #define BSP_USART_RX_PORT GPIOA
+// #define BSP_USART_RX_PIN GPIO_Pin_10
+// #define BSP_USART_AF GPIO_AF_USART1
+// #define BSP_USART_TX_AF_PIN GPIO_PinSource9
+// #define BSP_USART_RX_AF_PIN GPIO_PinSource10
+
+//-------------串口2----------------
+#define BSP_USART USART2
+#define BSP_USART_RCC RCC_APB1Periph_USART2
+#define BSP_USART_AF GPIO_AF_USART2
+
+#define BSP_USART_TX_PORT GPIOD
+#define BSP_USART_TX_PIN GPIO_Pin_5
+#define BSP_USART_TX_AF_PIN GPIO_PinSource5
+#define BSP_USART_TX_RCC RCC_AHB1Periph_GPIOD
+
 #define BSP_USART_RX_PORT GPIOA
-#define BSP_USART_RX_PIN GPIO_Pin_10
-#define BSP_USART_AF GPIO_AF_USART1
-#define BSP_USART_TX_AF_PIN GPIO_PinSource9
-#define BSP_USART_RX_AF_PIN GPIO_PinSource10
-
-
+#define BSP_USART_RX_PIN GPIO_Pin_3
+#define BSP_USART_RX_AF_PIN GPIO_PinSource3
+#define BSP_USART_RX_RCC RCC_AHB1Periph_GPIOA
 
 
 //  extern uint8_t DMA_Uart_SendBuff[SENDBUFF_SIZE];	// 定义发送缓冲区，用于存储要发送的数据;//发送缓冲区

@@ -38,6 +38,10 @@ int main(void)
 
 	OV2640_Image_Config();
 
+	// GPIO_SetBits(DCMI_RST_GPIO_PORT, DCMI_RST_GPIO_PIN);
+	// // delay_ms(100);
+	// // GPIO_SetBits(DCMI_PWDN_GPIO_PORT, DCMI_PWDN_GPIO_PIN);
+
 	SPI_Cmd(LCD_SPI, DISABLE);
 	// 设置选择 16 位数据帧格式
 	SPI_DataSizeConfig(LCD_SPI, SPI_DataSize_16b);
