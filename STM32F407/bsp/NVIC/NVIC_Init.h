@@ -1,8 +1,13 @@
 #include "stm32f4xx.h"
 
-#define USART_IRQ USART1_IRQn              // 定义USART中断处理函数为USART1中断
-#define USART_DMA_RX_IRQ DMA2_Stream5_IRQn // 定义USART接收DMA中断处理函数为DMA2流5中断
-#define USART_DMA_TX_IRQ DMA2_Stream7_IRQn // 定义USART发送DMA中断处理函数为DMA2流7中断
+// #define USART_IRQ USART1_IRQn              // 定义USART中断处理函数为USART1中断
+// #define USART_DMA_RX_IRQ DMA2_Stream5_IRQn // 定义USART接收DMA中断处理函数为DMA2流5中断
+// #define USART_DMA_TX_IRQ DMA2_Stream7_IRQn // 定义USART发送DMA中断处理函数为DMA2流7中断
+
+#define USART_IRQ USART2_IRQn              // 定义USART中断处理函数为USART2中断
+#define USART_DMA_RX_IRQ DMA1_Stream5_IRQn // 定义USART接收DMA中断处理函数为DMA2流5中断
+#define USART_DMA_TX_IRQ DMA1_Stream6_IRQn // 定义USART发送DMA中断处理函数为DMA2流7中断
+
 #define DCMI_DMA_IRQ DMA2_Stream1_IRQn     // 定义DCMI接收DMA中断处理函数为DMA2流1中断
 #define DCMI_DCMI_IRQ DCMI_IRQn                 // 定义DCMI中断处理函数为DCMI中断
 

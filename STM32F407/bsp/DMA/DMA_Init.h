@@ -8,22 +8,43 @@
 
 //定义SPI1的数据地址
 #define SPI1_DR_BASE (SPI1_BASE + 0x0C)
+//---------------------串口1-------------------------------------------------------------------------
+// // DMA
+// //  定义调试串口数据寄存器基地址，USART1_BASE是USART1的基地址，0x04是数据寄存器相对于基地址的偏移量
+// #define DEBUG_USART_DR_BASE (USART1_BASE + 0x04)
 
+// // 定义调试串口DMA时钟，DMA2是STM32的DMA控制器2，用于管理DMA传输
+// #define DEBUG_USART_DMA_CLK RCC_AHB1Periph_DMA2
+
+// // 定义调试串口DMA通道，DMA_Channel_4是DMA控制器中的一个通道，用于特定的DMA传输
+// #define DEBUG_USART_DMA_CHANNEL DMA_Channel_4
+
+// // 定义USART1的发送数据使用的DMA流为DMA2的Stream7
+// #define DEBUG_USART_TX_DMA_STREAM DMA2_Stream7
+
+// // 定义USART1的接收数据使用的DMA流为DMA2的Stream5
+// #define DEBUG_USART_RX_DMA_STREAM DMA2_Stream5
+
+
+
+//-------------------串口2---------------------------------------------------------------------------
 // DMA
 //  定义调试串口数据寄存器基地址，USART1_BASE是USART1的基地址，0x04是数据寄存器相对于基地址的偏移量
-#define DEBUG_USART_DR_BASE (USART1_BASE + 0x04)
+#define DEBUG_USART_DR_BASE (USART2_BASE + 0x04)
 
-// 定义调试串口DMA时钟，DMA2是STM32的DMA控制器2，用于管理DMA传输
-#define DEBUG_USART_DMA_CLK RCC_AHB1Periph_DMA2
+// 定义调试串口DMA时钟，DMA1是STM32的DMA控制器1，用于管理DMA传输
+#define DEBUG_USART_DMA_CLK RCC_AHB1Periph_DMA1
 
 // 定义调试串口DMA通道，DMA_Channel_4是DMA控制器中的一个通道，用于特定的DMA传输
-#define DEBUG_USART1_DMA_CHANNEL DMA_Channel_4
+#define DEBUG_USART_DMA_CHANNEL DMA_Channel_4
 
-// 定义USART1的发送数据使用的DMA流为DMA2的Stream7
-#define DEBUG_USART1_TX_DMA_STREAM DMA2_Stream7
+// 定义USART2的发送数据使用的DMA流为DMA1的Stream6
+#define DEBUG_USART_TX_DMA_STREAM DMA1_Stream6
 
-// 定义USART1的接收数据使用的DMA流为DMA2的Stream5
-#define DEBUG_USART1_RX_DMA_STREAM DMA2_Stream5
+// 定义USART2的接收数据使用的DMA流为DMA1的Stream5
+#define DEBUG_USART_RX_DMA_STREAM DMA1_Stream5
+
+//-------------------DCMI---------------------------------------------------------------------------
 
 // 定义DCMI使用的DMA时钟，DMA2是STM32的DMA控制器2，用于管理DMA传输
 #define DCMI_DMA_CLK RCC_AHB1Periph_DMA2

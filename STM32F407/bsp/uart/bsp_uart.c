@@ -4,20 +4,39 @@
 // #include "response.h"
 void uart1_init(uint32_t __Baud)
 {
-	USART_DeInit(BSP_USART); // 复位串口1
+	USART_DeInit(BSP_USART); // 复位串口
 	GPIO_InitTypeDef GPIO_InitStructure;
+
+
+	// RCC_APB2PeriphClockCmd(BSP_USART_RCC, ENABLE);//串口1
+	RCC_APB1PeriphClockCmd(BSP_USART_RCC, ENABLE);//串口2
+
 	RCC_AHB1PeriphClockCmd(BSP_USART_TX_RCC, ENABLE);
-	RCC_APB2PeriphClockCmd(BSP_USART_RCC, ENABLE);
+	RCC_AHB1PeriphClockCmd(BSP_USART_RX_RCC, ENABLE);
+
 	GPIO_PinAFConfig(BSP_USART_TX_PORT, BSP_USART_TX_AF_PIN, BSP_USART_AF);
 	GPIO_PinAFConfig(BSP_USART_RX_PORT, BSP_USART_RX_AF_PIN, BSP_USART_AF);
-	// GPIO_StructInit(&GPIO_InitStructure);
-	GPIO_InitStructure.GPIO_Pin = BSP_USART_TX_PIN | BSP_USART_RX_PIN;
+
+	GPIO_StructInit(&GPIO_InitStructure);
+	GPIO_InitStructure.GPIO_Pin = BSP_USART_TX_PIN;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
+	GPIO_Init(BSP_USART_TX_PORT, &GPIO_InitStructure);
+
+	GPIO_StructInit(&GPIO_InitStructure);
+	GPIO_InitStructure.GPIO_Pin = BSP_USART_RX_PIN;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_Init(BSP_USART_RX_PORT, &GPIO_InitStructure);
+
+
 	USART_InitTypeDef USART_InitStructure;
+
+
 	// USART_DeInit(BSP_USART);
 	// USART_StructInit(&USART_InitStructure);
 	USART_InitStructure.USART_BaudRate = __Baud;
@@ -84,13 +103,13 @@ int fputc(int ch, FILE *f)
 
 	// 以下为使用DMA传输
 	DMA_USART1_TX_BUF[0] = (uint8_t)ch;
-	while (DMA_GetCmdStatus(DEBUG_USART1_TX_DMA_STREAM) != DISABLE) // 当DMA的命令为DISABLE时，跳出循环
+	while (DMA_GetCmdStatus(DEBUG_USART_TX_DMA_STREAM) != DISABLE) // 当DMA的命令为DISABLE时，跳出循环
 		;															// 等待DMA可以被设置
 																	// 设置DMA传输模式
 
-	DMA_SetCurrDataCounter(DEBUG_USART1_TX_DMA_STREAM, 1); // 设置当前DMA的传输数据量
+	DMA_SetCurrDataCounter(DEBUG_USART_TX_DMA_STREAM, 1); // 设置当前DMA的传输数据量
 
-	DMA_Cmd(DEBUG_USART1_TX_DMA_STREAM, ENABLE); // 使能DMA传输
+	DMA_Cmd(DEBUG_USART_TX_DMA_STREAM, ENABLE); // 使能DMA传输
 
 	return ch;
 }

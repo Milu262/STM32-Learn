@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build\Project\STM32F407_LCKFB.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\Project\STM32F407_LCKFB.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Apr 29 22:53:57 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon May 05 19:46:33 2025
 <BR><P>
 <H3>Maximum Stack Usage =        168 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -35,7 +35,7 @@ Function Pointers
  <LI><a href="#[18]">DMA1_Stream3_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[19]">DMA1_Stream4_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[1a]">DMA1_Stream5_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
- <LI><a href="#[1b]">DMA1_Stream6_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
+ <LI><a href="#[1b]">DMA1_Stream6_IRQHandler</a> from stm32f4xx_it.o(i.DMA1_Stream6_IRQHandler) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[39]">DMA1_Stream7_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[42]">DMA2_Stream0_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[43]">DMA2_Stream1_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
@@ -44,7 +44,7 @@ Function Pointers
  <LI><a href="#[46]">DMA2_Stream4_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[4e]">DMA2_Stream5_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[4f]">DMA2_Stream6_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
- <LI><a href="#[50]">DMA2_Stream7_IRQHandler</a> from stm32f4xx_it.o(i.DMA2_Stream7_IRQHandler) referenced from startup_stm32f40xx.o(RESET)
+ <LI><a href="#[50]">DMA2_Stream7_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[7]">DebugMon_Handler</a> from stm32f4xx_it.o(i.DebugMon_Handler) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[47]">ETH_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[48]">ETH_WKUP_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
@@ -104,8 +104,8 @@ Function Pointers
  <LI><a href="#[36]">TIM8_UP_TIM13_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[3e]">UART4_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[3f]">UART5_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
- <LI><a href="#[2f]">USART1_IRQHandler</a> from stm32f4xx_it.o(i.USART1_IRQHandler) referenced from startup_stm32f40xx.o(RESET)
- <LI><a href="#[30]">USART2_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
+ <LI><a href="#[2f]">USART1_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
+ <LI><a href="#[30]">USART2_IRQHandler</a> from stm32f4xx_it.o(i.USART2_IRQHandler) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[31]">USART3_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[51]">USART6_IRQHandler</a> from startup_stm32f40xx.o(.text) referenced from startup_stm32f40xx.o(RESET)
  <LI><a href="#[5]">UsageFault_Handler</a> from stm32f4xx_it.o(i.UsageFault_Handler) referenced from startup_stm32f40xx.o(RESET)
@@ -201,9 +201,6 @@ Global Symbols
 <P><STRONG><a name="[1a]"></a>DMA1_Stream5_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
 </UL>
-<P><STRONG><a name="[1b]"></a>DMA1_Stream6_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40xx.o(.text))
-<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
-</UL>
 <P><STRONG><a name="[39]"></a>DMA1_Stream7_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
 </UL>
@@ -226,6 +223,9 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
 </UL>
 <P><STRONG><a name="[4f]"></a>DMA2_Stream6_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
+</UL>
+<P><STRONG><a name="[50]"></a>DMA2_Stream7_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
 </UL>
 <P><STRONG><a name="[47]"></a>ETH_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40xx.o(.text))
@@ -378,7 +378,7 @@ Global Symbols
 <P><STRONG><a name="[3f]"></a>UART5_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
 </UL>
-<P><STRONG><a name="[30]"></a>USART2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40xx.o(.text))
+<P><STRONG><a name="[2f]"></a>USART1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
 </UL>
 <P><STRONG><a name="[31]"></a>USART3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40xx.o(.text))
@@ -457,8 +457,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCMI_DCMI_Init
 </UL>
 
-<P><STRONG><a name="[50]"></a>DMA2_Stream7_IRQHandler</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, stm32f4xx_it.o(i.DMA2_Stream7_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = DMA2_Stream7_IRQHandler &rArr; USART_ITConfig
+<P><STRONG><a name="[1b]"></a>DMA1_Stream6_IRQHandler</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, stm32f4xx_it.o(i.DMA1_Stream6_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = DMA1_Stream6_IRQHandler &rArr; USART_ITConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Cmd
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
@@ -468,11 +468,11 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
 </UL>
 <P><STRONG><a name="[bd]"></a>DMA_ClearFlag</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, stm32f4xx_dma.o(i.DMA_ClearFlag))
-<BR><BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
+<BR><BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
 
 <P><STRONG><a name="[73]"></a>DMA_ClearITPendingBit</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, stm32f4xx_dma.o(i.DMA_ClearITPendingBit))
-<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA2_Stream7_IRQHandler
+<BR><BR>[Called By]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Stream6_IRQHandler
 </UL>
 
 <P><STRONG><a name="[74]"></a>DMA_Cmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f4xx_dma.o(i.DMA_Cmd))
@@ -480,8 +480,8 @@ Global Symbols
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_DCMI_Init_Config
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
-<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA2_Stream7_IRQHandler
+<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Stream6_IRQHandler
 </UL>
 
 <P><STRONG><a name="[76]"></a>DMA_DCMI_Init_Config</STRONG> (Thumb, 126 bytes, Stack size 64 bytes, DMA_Init.o(i.DMA_DCMI_Init_Config))
@@ -508,13 +508,13 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[bc]"></a>DMA_GetCurrDataCounter</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f4xx_dma.o(i.DMA_GetCurrDataCounter))
-<BR><BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
+<BR><BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
 
 <P><STRONG><a name="[72]"></a>DMA_GetITStatus</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, stm32f4xx_dma.o(i.DMA_GetITStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DMA_GetITStatus
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA2_Stream7_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Stream6_IRQHandler
 </UL>
 
 <P><STRONG><a name="[7b]"></a>DMA_ITConfig</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, stm32f4xx_dma.o(i.DMA_ITConfig))
@@ -532,7 +532,7 @@ Global Symbols
 
 <P><STRONG><a name="[be]"></a>DMA_SetCurrDataCounter</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_dma.o(i.DMA_SetCurrDataCounter))
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
-<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
+<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
 
 <P><STRONG><a name="[7a]"></a>DMA_Uart1_Init_Config</STRONG> (Thumb, 204 bytes, Stack size 64 bytes, DMA_Init.o(i.DMA_Uart1_Init_Config))
@@ -594,6 +594,7 @@ Global Symbols
 
 <P><STRONG><a name="[96]"></a>GPIO_StructInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_StructInit))
 <BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_GPIO_Config
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GPIO_Init
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Screen_GPIO_Init
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_FLASH_GPIO_Init
@@ -970,6 +971,7 @@ Global Symbols
 
 <P><STRONG><a name="[95]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(i.RCC_APB1PeriphClockCmd))
 <BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_GPIO_Config
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_FLASH_Init
 </UL>
 
@@ -978,8 +980,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[b9]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(i.RCC_APB2PeriphClockCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Screen_Init
+<BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Screen_Init
 </UL>
 
 <P><STRONG><a name="[c2]"></a>RCC_APB2PeriphResetCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(i.RCC_APB2PeriphResetCmd))
@@ -1061,8 +1062,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(.text)
 </UL>
-<P><STRONG><a name="[2f]"></a>USART1_IRQHandler</STRONG> (Thumb, 126 bytes, Stack size 8 bytes, stm32f4xx_it.o(i.USART1_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = USART1_IRQHandler &rArr; USART_ITConfig
+<P><STRONG><a name="[30]"></a>USART2_IRQHandler</STRONG> (Thumb, 126 bytes, Stack size 8 bytes, stm32f4xx_it.o(i.USART2_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = USART2_IRQHandler &rArr; USART_ITConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_SetCurrDataCounter
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Cmd
@@ -1078,7 +1079,7 @@ Global Symbols
 <P><STRONG><a name="[c0]"></a>USART_ClearITPendingBit</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, stm32f4xx_usart.o(i.USART_ClearITPendingBit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = USART_ClearITPendingBit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
 
 <P><STRONG><a name="[d6]"></a>USART_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_usart.o(i.USART_Cmd))
@@ -1101,15 +1102,15 @@ Global Symbols
 <P><STRONG><a name="[bb]"></a>USART_GetITStatus</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32f4xx_usart.o(i.USART_GetITStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = USART_GetITStatus
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
 
 <P><STRONG><a name="[75]"></a>USART_ITConfig</STRONG> (Thumb, 74 bytes, Stack size 20 bytes, stm32f4xx_usart.o(i.USART_ITConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = USART_ITConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
-<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA2_Stream7_IRQHandler
+<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Stream6_IRQHandler
 </UL>
 
 <P><STRONG><a name="[c4]"></a>USART_Init</STRONG> (Thumb, 204 bytes, Stack size 48 bytes, stm32f4xx_usart.o(i.USART_Init))
@@ -1121,7 +1122,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[bf]"></a>USART_ReceiveData</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_usart.o(i.USART_ReceiveData))
-<BR><BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
+<BR><BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
 
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.UsageFault_Handler))
@@ -1235,18 +1236,19 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[d2]"></a>uart1_init</STRONG> (Thumb, 166 bytes, Stack size 32 bytes, bsp_uart.o(i.uart1_init))
+<P><STRONG><a name="[d2]"></a>uart1_init</STRONG> (Thumb, 220 bytes, Stack size 32 bytes, bsp_uart.o(i.uart1_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = uart1_init &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
+<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_StructInit
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_DeInit
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_DMACmd
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Cmd
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1254,7 +1256,7 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[b0]"></a>OV2640_OutSize_Set</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, OV2640_init.o(i.OV2640_OutSize_Set))
+<P><STRONG><a name="[b0]"></a>OV2640_OutSize_Set</STRONG> (Thumb, 136 bytes, Stack size 24 bytes, OV2640_init.o(i.OV2640_OutSize_Set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = OV2640_OutSize_Set &rArr; OV2640_WriteReg &rArr; I2C_ByteWrite &rArr; I2C_TIMEOUT_UserCallback &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OV2640_WriteReg

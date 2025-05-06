@@ -3,7 +3,7 @@
     "target": "Project",
     "toolchain": "AC5",
     "toolchainLocation": "L:\\Keil\\Keil_v5\\ARM\\AC5",
-    "toolchainCfgFile": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.21.1\\res\\data\\models\\win32/arm.v5.model.json",
+    "toolchainCfgFile": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.21.2\\res\\data\\models\\win32/arm.v5.model.json",
     "buildMode": "fast|multhread",
     "showRepathOnLog": true,
     "threadNum": 16,
@@ -99,6 +99,7 @@
         "../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_wwdg.c",
         "../../module/stm32f4xx_it.c"
     ],
+    "alwaysInBuildSources": [],
     "sourceParams": {},
     "options": {
         "version": 4,
@@ -151,7 +152,7 @@
         "SYS_PathSep": ";",
         "SYS_PathSeparator": ";",
         "SYS_EOL": "\r\n",
-        "EIDE_BUILDER_DIR": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.21.1\\res\\tools\\win32\\unify_builder",
+        "EIDE_BUILDER_DIR": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.21.2\\res\\tools\\win32\\unify_builder",
         "EIDE_BINARIES_VER": "12.0.1",
         "EIDE_MSYS": "C:\\Users\\Ankesiqi\\.eide\\bin\\builder\\msys\\bin",
         "ToolchainRoot": "L:\\Keil\\Keil_v5\\ARM\\AC5"
