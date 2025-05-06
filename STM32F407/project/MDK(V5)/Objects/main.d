@@ -51,7 +51,6 @@
 .\objects\main.o: ..\..\bsp\SPI\SPI_Control.h
 .\objects\main.o: ..\..\bsp\SPI\spi_init.h
 .\objects\main.o: ..\..\bsp\DMA\DMA_Init.h
-.\objects\main.o: ..\..\bsp\DCMI\DCMI.h
 .\objects\main.o: ..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h
 .\objects\main.o: ..\..\bsp\SPI\SPI_Control.h
 .\objects\main.o: ..\..\bsp\SPI\spi_init.h
@@ -59,11 +58,6 @@
 .\objects\main.o: ..\..\PeripheralModule\OV2640\OV2640_init.h
 .\objects\main.o: ..\..\bsp\I2C\i2c_handle.h
 .\objects\main.o: ..\..\bsp\I2C\i2c_init.h
-.\objects\main.o: ..\..\PeripheralModule\SPI_Screen\SPI_Screen_init.h
-.\objects\main.o: ..\..\bsp\SPI\SPI_Control.h
-.\objects\main.o: ..\..\bsp\SPI\spi_init.h
-.\objects\main.o: ..\..\bsp\SPI\SPI_init.h
-.\objects\main.o: ..\..\bsp\DCMI\DCMI.h
 .\objects\main.o: ..\..\bsp\SPI\Test_code.h
 .\objects\main.o: ..\..\bsp\SPI\SPI_Control.h
 .\objects\main.o: ..\..\bsp\SPI\spi_init.h

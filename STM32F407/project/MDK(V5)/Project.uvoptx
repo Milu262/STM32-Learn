@@ -171,7 +171,7 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\bsp\DCMI\DCMI.c</Filename>
+          <Filename>L:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DCMI\DCMI.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\Project\../../bsp/DCMI/DCMI.c\95</Expression>
         </Bp>
@@ -1067,8 +1067,8 @@
   </Group>
 
   <Group>
-    <GroupName>DCMI</GroupName>
-    <tvExp>0</tvExp>
+    <GroupName>OV2640</GroupName>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1079,28 +1079,32 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\bsp\DCMI\DCMI.c</PathWithFileName>
-      <FilenameWithoutPath>DCMI.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\PeripheralModule\OV2640\OV2640_init.c</PathWithFileName>
+      <FilenameWithoutPath>OV2640_init.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
-  </Group>
-
-  <Group>
-    <GroupName>OV2640</GroupName>
-    <tvExp>0</tvExp>
-    <tvExpOptDlg>0</tvExpOptDlg>
-    <cbSel>0</cbSel>
-    <RteFlg>0</RteFlg>
     <File>
-      <GroupNumber>15</GroupNumber>
+      <GroupNumber>14</GroupNumber>
       <FileNumber>60</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\PeripheralModule\OV2640\OV2640_init.c</PathWithFileName>
-      <FilenameWithoutPath>OV2640_init.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\PeripheralModule\OV2640\OV2640_DCMI_Init.c</PathWithFileName>
+      <FilenameWithoutPath>OV2640_DCMI_Init.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>14</GroupNumber>
+      <FileNumber>61</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\PeripheralModule\OV2640\OV2640_DMA_Init.c</PathWithFileName>
+      <FilenameWithoutPath>OV2640_DMA_Init.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
