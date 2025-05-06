@@ -3,8 +3,7 @@
 #include "string.h"
 
 #define USART_MAX_LEN 256+32
-#define HS_LEN 280  //视频数据有多少行
-#define DCMI_RX_BUF_SIZE 240*2/4  //视频的一行大小，使用RGB565格式，数组为uint32_t类型
+
 
 //定义SPI1的数据地址
 #define SPI1_DR_BASE (SPI1_BASE + 0x0C)
@@ -44,20 +43,6 @@
 // 定义USART2的接收数据使用的DMA流为DMA1的Stream5
 #define DEBUG_USART_RX_DMA_STREAM DMA1_Stream5
 
-//-------------------DCMI---------------------------------------------------------------------------
-
-// 定义DCMI使用的DMA时钟，DMA2是STM32的DMA控制器2，用于管理DMA传输
-#define DCMI_DMA_CLK RCC_AHB1Periph_DMA2
-
-// 定义DCMI使用的DMA通道，DMA_Channel_1是DMA控制器中的一个通道，用于特定的DMA传输
-#define DCMI_DMA_CHANNEL DMA_Channel_1
-
-// 定义DCMI使用的DMA流，DMA2_Stream1是DMA控制器中的一个流，用于特定的DMA传输
-#define DCMI_DMA_STREAM DMA2_Stream1
-
-// DCMI数据寄存器地址
-#define DCMI_DR_ADDRESS (uint32_t)&DCMI->DR 
-
 
 extern volatile uint16_t usart1_rx_len;
 extern volatile uint16_t usart1_tx_len;
@@ -72,7 +57,6 @@ extern uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN];
  */
 void DMA_Uart1_Init_Config(void);
 
-void DMA_DCMI_Init_Config(void);
 
 /**
  * @brief  通过UART的DMA方式发送字符串数据.

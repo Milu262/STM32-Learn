@@ -97,15 +97,6 @@
               }
             ],
             "folders": []
-          },
-          {
-            "name": "DCMI",
-            "files": [
-              {
-                "path": "../../bsp/DCMI/DCMI.c"
-              }
-            ],
-            "folders": []
           }
         ]
       },
@@ -269,6 +260,12 @@
             "files": [
               {
                 "path": "../../PeripheralModule/OV2640/OV2640_init.c"
+              },
+              {
+                "path": "../../PeripheralModule/OV2640/OV2640_DMA_Init.c"
+              },
+              {
+                "path": "../../PeripheralModule/OV2640/OV2640_DCMI_Init.c"
               }
             ],
             "folders": []
@@ -297,7 +294,8 @@
       "excludeList": [
         "<virtual_root>/BSP/SPI/bsp_spi_flash.c",
         "<virtual_root>/Test_code.c",
-        "<virtual_root>/APP/Test_code.c"
+        "<virtual_root>/APP/Test_code.c",
+        "<virtual_root>/BSP/DCMI"
       ],
       "toolchain": "AC5",
       "compileConfig": {

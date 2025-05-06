@@ -48,7 +48,6 @@
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/SPI_Control.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/spi_init.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/DMA/DMA_Init.h
-.\build\Project\.obj\__\__\app\main.o: ../../bsp/DCMI/DCMI.h
 .\build\Project\.obj\__\__\app\main.o: ../../PeripheralModule/SPI_Screen/SPI_Screen_init.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/SPI_Control.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/spi_init.h
@@ -56,11 +55,6 @@
 .\build\Project\.obj\__\__\app\main.o: ../../PeripheralModule/OV2640/OV2640_init.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/I2C/i2c_handle.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/I2C/i2c_init.h
-.\build\Project\.obj\__\__\app\main.o: ../../PeripheralModule/SPI_Screen/SPI_Screen_init.h
-.\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/SPI_Control.h
-.\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/spi_init.h
-.\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/SPI_init.h
-.\build\Project\.obj\__\__\app\main.o: ../../bsp/DCMI/DCMI.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/Test_code.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/SPI_Control.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/spi_init.h

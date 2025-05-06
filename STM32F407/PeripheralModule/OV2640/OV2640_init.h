@@ -1,6 +1,8 @@
 #include "i2c_handle.h"
-#include "SPI_Screen_init.h"
-#include "DCMI.h"
+// #include "SPI_Screen_init.h"
+
+// #include "DCMI.h"
+
 
 #define OV2640_Device_Address 0x60
 
@@ -30,3 +32,5 @@ static uint8_t OV2640_OutSize_Set(uint16_t width, uint16_t height);
  uint8_t OV2640_Image_Config(void);
 
  uint8_t OV2640_ImageSize_Set(uint16_t width,uint16_t height);
+
+ uint8_t OV2640_Hardware_Init(void);

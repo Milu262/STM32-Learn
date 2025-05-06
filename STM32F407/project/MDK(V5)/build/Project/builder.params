@@ -39,11 +39,12 @@
         "STM32F40_41xxx"
     ],
     "sourceList": [
+        "../../PeripheralModule/OV2640/OV2640_DCMI_Init.c",
+        "../../PeripheralModule/OV2640/OV2640_DMA_Init.c",
         "../../PeripheralModule/OV2640/OV2640_init.c",
         "../../PeripheralModule/SPI_Screen/SPI_Screen_init.c",
         "../../app/main.c",
         "../../board/board.c",
-        "../../bsp/DCMI/DCMI.c",
         "../../bsp/DMA/DMA_Init.c",
         "../../bsp/I2C/i2c_handle.c",
         "../../bsp/I2C/i2c_init.c",
