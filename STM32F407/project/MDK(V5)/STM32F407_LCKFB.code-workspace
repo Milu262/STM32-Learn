@@ -25,7 +25,10 @@
             "string.h": "c",
             "ov2640_init.h": "c",
             "spi_screen_init.h": "c",
-            "xutility": "c"
+            "xutility": "c",
+            "ov2640_reg.h": "c",
+            "ov2640_dma_init.h": "c",
+            "ov2640_dcmi_init.h": "c"
         },
         "Codegeex.RepoIndex": true
     },

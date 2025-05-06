@@ -1,8 +1,9 @@
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_DCMI_Init.o
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_DMA_Init.o
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o
 .\build\Project\.obj\__\__\PeripheralModule\SPI_Screen\SPI_Screen_init.o
 .\build\Project\.obj\__\__\app\main.o
 .\build\Project\.obj\__\__\board\board.o
-.\build\Project\.obj\__\__\bsp\DCMI\DCMI.o
 .\build\Project\.obj\__\__\bsp\DMA\DMA_Init.o
 .\build\Project\.obj\__\__\bsp\I2C\i2c_handle.o
 .\build\Project\.obj\__\__\bsp\I2C\i2c_init.o
