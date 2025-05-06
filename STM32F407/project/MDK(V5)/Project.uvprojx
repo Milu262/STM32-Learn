@@ -736,22 +736,22 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>DCMI</GroupName>
-          <Files>
-            <File>
-              <FileName>DCMI.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\bsp\DCMI\DCMI.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>OV2640</GroupName>
           <Files>
             <File>
               <FileName>OV2640_init.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\PeripheralModule\OV2640\OV2640_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>OV2640_DCMI_Init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\PeripheralModule\OV2640\OV2640_DCMI_Init.c</FilePath>
+            </File>
+            <File>
+              <FileName>OV2640_DMA_Init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\PeripheralModule\OV2640\OV2640_DMA_Init.c</FilePath>
             </File>
           </Files>
         </Group>
