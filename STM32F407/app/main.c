@@ -15,6 +15,8 @@
 #include "Test_code.h"
 
 // #define SHT30_SENSOR_ADDR 0x44 /*!< Slave address of the SHT30 sensor */
+
+
 int main(void)
 {
 	uint8_t error = 0;
@@ -47,7 +49,6 @@ int main(void)
 
 	while (1)
 	{
-
 		if (test_data.flag == 1)
 		{
 			if (test_data.DataOverflow == 1)
@@ -68,3 +69,5 @@ int main(void)
 		}
 	}
 }
+
+

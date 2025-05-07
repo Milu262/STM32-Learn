@@ -140,3 +140,92 @@ These source files will be recompiled
 [2025-05-06 22:08:29]	[done]
 	build successfully !
 
+[2025-05-07 22:47:46]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-05-07 22:47:48]	[done]
+	build successfully !
+
+[2025-05-07 22:50:04]	[done]
+	build successfully !
+
+[2025-05-07 23:08:10]	[done]
+	build successfully !
+
+[2025-05-07 23:20:22]	[done]
+	build successfully !
+
+[2025-05-07 23:22:25]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-05-07 23:22:26]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -I../../bsp/DCMI -I../../PeripheralModule/SPI_Screen -I../../PeripheralModule/OV2640 -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\app\main.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\app\main.d .\..\..\app\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\app\main.c", line 50: Warning:  #223-D: function "Uart_Fuction_My" declared implicitly
+  		Uart_Fuction_My();
+  		^
+".\..\..\app\main.c", line 21: Warning:  #177-D: variable "color"  was declared but never referenced
+  	uint16_t color = 0;
+  	         ^
+".\..\..\app\main.c", line 54: Warning:  #159-D: declaration is incompatible with previous "Uart_Fuction_My"  (declared at line 50)
+  void Uart_Fuction_My(void)
+       ^
+".\..\..\app\main.c", line 64: Error:  #115: a continue statement may only be used within a loop
+  			continue;
+  			^
+.\..\..\app\main.c: 3 warnings, 1 error
+
+[2025-05-07 23:23:06]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-05-07 23:23:07]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -I../../bsp/DCMI -I../../PeripheralModule/SPI_Screen -I../../PeripheralModule/OV2640 -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\app\main.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\app\main.d .\..\..\app\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\app\main.c", line 29: Error:  #115: a continue statement may only be used within a loop
+  			continue;
+  			^
+".\..\..\app\main.c", line 44: Warning:  #177-D: variable "color"  was declared but never referenced
+  	uint16_t color = 0;
+  	         ^
+.\..\..\app\main.c: 1 warning, 1 error
+
+[2025-05-07 23:23:33]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-05-07 23:23:34]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -I../../bsp/DCMI -I../../PeripheralModule/SPI_Screen -I../../PeripheralModule/OV2640 -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\app\main.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\app\main.d .\..\..\app\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\app\main.c", line 29: Error:  #115: a continue statement may only be used within a loop
+  			continue;
+  			^
+".\..\..\app\main.c", line 44: Warning:  #177-D: variable "color"  was declared but never referenced
+  	uint16_t color = 0;
+  	         ^
+.\..\..\app\main.c: 1 warning, 1 error
+
+[2025-05-07 23:24:11]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-05-07 23:24:12]	[done]
+	build successfully !
+
+[2025-05-07 23:26:29]	[done]
+	build successfully !
+
