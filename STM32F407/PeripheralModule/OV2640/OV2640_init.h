@@ -1,8 +1,4 @@
 #include "i2c_handle.h"
-// #include "SPI_Screen_init.h"
-
-// #include "DCMI.h"
-
 
 #define OV2640_Device_Address 0x60
 

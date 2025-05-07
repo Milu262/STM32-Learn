@@ -4,7 +4,6 @@
 #include "OV2640_DCMI_Init.h"
 static uint8_t OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer)
 {
-    // printf("WriteReg:0x%02x,0x%02x\r\n", WriteAddr, pBuffer);
     return I2C_ByteWrite(OV2640_Device_Address, WriteAddr, pBuffer);
 }
 
@@ -117,6 +116,5 @@ uint8_t OV2640_Hardware_Init(void)
     uint8_t err;
     DCMI_Camera_Init();
     DMA_DCMI_Init_Config();
-    // OV2640_Image_Config();
     return 1;
 }

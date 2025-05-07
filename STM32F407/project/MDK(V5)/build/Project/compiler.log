@@ -1,15 +1,5 @@
 >>> cc
 
-".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 117: Warning:  #177-D: variable "err"  was declared but never referenced
-      uint8_t err;
-              ^
-.\..\..\PeripheralModule\OV2640\OV2640_init.c: 1 warning, 0 errors
-".\..\..\app\main.c", line 21: Warning:  #177-D: variable "color"  was declared but never referenced
-  	uint16_t color = 0;
-  	         ^
-.\..\..\app\main.c: 1 warning, 0 errors
-
-
 
 
 >>> ld
