@@ -3,6 +3,12 @@
 #define data_size 256 + 32	 // 数据长度
 #define Frame_header 0x55	 // 接收帧头
 #define SendFrameHeader 0xAA // 发送帧头
+
+#define MODE_UART 0x01
+#define MODE_I2C_8BIT_ADDR 0x02
+#define MODE_I2C_16BIT_ADDR 0x03
+#define MODE_SPI 0x04
+
 typedef struct
 {
 	unsigned int flag; // 标志位

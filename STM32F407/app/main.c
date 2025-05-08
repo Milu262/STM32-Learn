@@ -15,7 +15,24 @@
 #include "Test_code.h"
 
 // #define SHT30_SENSOR_ADDR 0x44 /*!< Slave address of the SHT30 sensor */
+/**
+ * @brief  配置SPI数据传输顺序：MSB First 或 LSB First
+ * @param  SPIx: SPI实例，如SPI1、SPI2等
+ * @param  SPI_FirstBit: SPI_FirstBit_MSB 或 SPI_FirstBit_LSB
+ * @retval None
+ */
+void SPI_FirstBitConfig(SPI_TypeDef* SPIx, uint16_t SPI_FirstBit)
+{
+    /* 检查参数是否合法 */
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+    assert_param(IS_SPI_FIRST_BIT(SPI_FirstBit));
 
+    /* 清除当前LSBFIRST位的设置 */
+    SPIx->CR1 &= ~SPI_CR1_LSBFIRST;
+
+    /* 设置新的LSBFIRST位 */
+    SPIx->CR1 |= SPI_FirstBit;
+}
 
 int main(void)
 {
@@ -40,6 +57,10 @@ int main(void)
 	SPI_Cmd(LCD_SPI, DISABLE); // 设置前先关闭SPI
 	// 设置选择 16 位数据帧格式
 	SPI_DataSizeConfig(LCD_SPI, SPI_DataSize_16b);
+
+	// //设置数据传输时先发送最低位
+	// SPI_FirstBitConfig(LCD_SPI, SPI_FirstBit_LSB);
+
 	SPI_Cmd(LCD_SPI, ENABLE);
 	LCD_SPI_CS_ON(0); // 使能SPI的数据传输
 
@@ -69,5 +90,6 @@ int main(void)
 		}
 	}
 }
+
 
 
