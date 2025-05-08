@@ -17,16 +17,16 @@ uint8_t do_process(usart_data_typed *udata)
     }
     switch (mode_sel)
     {
-    case 0x01:
+    case MODE_UART:
         do_uart(udata->data);
         break;
-    case 0x02:
+    case MODE_I2C_8BIT_ADDR:
         do_i2c_8RegisterAddr(udata->data);
         break;
-    case 0x03:
+    case MODE_I2C_16BIT_ADDR:
         do_i2c_16RegisterAddr(udata->data);
         break;
-    case 0x04:
+    case MODE_SPI:
         do_spi(udata->data);
         break;
     default:
