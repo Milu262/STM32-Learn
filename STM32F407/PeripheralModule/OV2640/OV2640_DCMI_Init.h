@@ -17,6 +17,7 @@
 // | DCMI_PWDN  | PE7       |
 // | DCMI_RST   | PE8       |
 
+
 // DCMI_D0引脚配置
 #define DCMI_D0_GPIO_PORT        	GPIOC
 #define DCMI_D0_GPIO_CLK         	RCC_AHB1Periph_GPIOC

@@ -97,7 +97,7 @@ static void DCMI_DCMI_Init(void)
     DCMI_Init(&DCMI_InitStructure);
     DCMI_Cmd(ENABLE);
     // 使能DCMI中断，帧中断
-    // DCMI_ITConfig(DCMI_IT_FRAME, ENABLE);
+    DCMI_ITConfig(DCMI_IT_FRAME, ENABLE);
 }
 void DCMI_Camera_Init(void)
 {

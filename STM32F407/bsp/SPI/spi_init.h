@@ -83,3 +83,5 @@ void SPI_Screen_BUS_Init(void);
 static void SPI_FLASH_GPIO_Init(void);
 static void SPI_FLASH_Init(void);
 void SPI_FLASH_BUS_Init(void);
+
+void SPI_FirstBitConfig(SPI_TypeDef* SPIx, uint16_t SPI_FirstBit);

@@ -148,3 +148,22 @@ void SPI_Screen_BUS_Init(void)
   SPI_Screen_GPIO_Init();
   SPI_Screen_Init();
 }
+
+/**
+ * @brief  配置SPI数据传输顺序：MSB First 或 LSB First
+ * @param  SPIx: SPI实例，如SPI1、SPI2等
+ * @param  SPI_FirstBit: SPI_FirstBit_MSB 或 SPI_FirstBit_LSB
+ * @retval None
+ */
+void SPI_FirstBitConfig(SPI_TypeDef* SPIx, uint16_t SPI_FirstBit)
+{
+    /* 检查参数是否合法 */
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+    assert_param(IS_SPI_FIRST_BIT(SPI_FirstBit));
+
+    /* 清除当前LSBFIRST位的设置 */
+    SPIx->CR1 &= ~SPI_CR1_LSBFIRST;
+
+    /* 设置新的LSBFIRST位 */
+    SPIx->CR1 |= SPI_FirstBit;
+}
