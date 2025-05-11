@@ -49,6 +49,8 @@ extern volatile uint16_t usart1_tx_len;
 extern uint8_t DMA_USART1_RX_BUF[USART_MAX_LEN];
 extern uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN];
 
+
+
 /**
  * @brief 初始化DMA（直接存储器访问）配置
  *

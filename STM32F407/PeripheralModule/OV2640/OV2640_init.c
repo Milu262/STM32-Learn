@@ -19,9 +19,11 @@ static uint8_t OV2640_OutSize_Set(uint16_t width, uint16_t height)
     outw = width / 4;
     outh = height / 4;
 
+
+
     OV2640_WriteReg(0XFF, 0X00);
     OV2640_WriteReg(0XE0, 0X04);
-    // OV2640_WriteReg(0X50, outw & 0X00); // 设置v divider hdivider
+    OV2640_WriteReg(0X50, outw & 0X00); // 设置v divider hdivider
     OV2640_WriteReg(0X5A, outw & 0XFF); // 设置OUTW的低八位
     OV2640_WriteReg(0X5B, outh & 0XFF); // 设置OUTH的低八位
     temp = (outw >> 8) & 0X03;
@@ -95,7 +97,7 @@ uint8_t OV2640_Image_Config(void)
     }
     printf("OV2640 Image Config OK!!\r\n");
 
-    // OV2640_ImageSize_Set(1600, 1200);
+    // OV2640_ImageSize_Set(280, 240);
 
     // OV2640_ImageWin_Set(4, 0, OV2640_IMAGE_WIDTH, OV2640_IMAGE_HEIGHT);
 

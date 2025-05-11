@@ -28,7 +28,8 @@
             "xutility": "c",
             "ov2640_reg.h": "c",
             "ov2640_dma_init.h": "c",
-            "ov2640_dcmi_init.h": "c"
+            "ov2640_dcmi_init.h": "c",
+            "stdint.h": "c"
         },
         "Codegeex.RepoIndex": true
     },

@@ -1,9 +1,13 @@
 #include "i2c_handle.h"
 
 #define OV2640_Device_Address 0x60
-
+//竖屏---------------------------
 #define OV2640_IMAGE_WIDTH  240*4
 #define OV2640_IMAGE_HEIGHT 280
+
+//横屏---------------------------
+// #define OV2640_IMAGE_WIDTH  280
+// #define OV2640_IMAGE_HEIGHT 240
 
 
 

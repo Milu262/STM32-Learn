@@ -32,12 +32,17 @@
 #define LCD_RES_PIN GPIO_Pin_1
 #define LCD_RES_GPIO_CLK RCC_AHB1Periph_GPIOA
 
+//竖屏--------------
 #define LCD_WIDTH 240
 #define LCD_HIDTH 280
 
+//横屏--------------
+// #define LCD_WIDTH 280
+// #define LCD_HIDTH 240
+
 #define COLOR_WHITE 0xFFFF
 
-#define USE_HORIZONTAL 0 // 设置屏幕方向，0或1为竖屏，2或3为横屏
+#define USE_HORIZONTAL 1 // 设置屏幕方向，0或1为竖屏，2或3为横屏
 
 #define LCD_SPI_CS_ON(x) GPIO_WriteBit(LCD_SPI_CS_GPIO_PORT, LCD_SPI_CS_PIN, x ? Bit_SET : Bit_RESET)
 

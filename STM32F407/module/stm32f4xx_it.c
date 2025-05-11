@@ -275,19 +275,21 @@ void DMA1_Stream6_IRQHandler(void)
   * @param  无
   * @retval 无
   */
-// void DCMI_IRQHandler(void)
-// {
-//   if (DCMI_GetITStatus(DCMI_IT_FRAME) != RESET) // 触发帧中断
-//   {
-//     DCMI_ClearITPendingBit(DCMI_IT_FRAME); // 清除帧中断标志
+void DCMI_IRQHandler(void)
+{
+  if (DCMI_GetITStatus(DCMI_IT_FRAME) != RESET) // 触发帧中断
+  {
+    DCMI_ClearITPendingBit(DCMI_IT_FRAME); // 清除帧中断标志
 
-//     // 做自己的事，例如让屏幕重新回到(0,0)位置
+    // 做自己的事，例如让屏幕重新回到(0,0)位置
 
-//     //以下为测试代码
-//     //  DCMI_Cmd(DISABLE);                     // 关闭DCMI
-//     //  DCMI_ClearFlag(DCMI_FLAG_FRAMERI);     // 清除帧标志
-//   }
-// }
+    Frame_it = 1;
+
+    //以下为测试代码
+    //  DCMI_Cmd(DISABLE);                     // 关闭DCMI
+    //  DCMI_ClearFlag(DCMI_FLAG_FRAMERI);     // 清除帧标志
+  }
+}
 
 void SysTick_Handler(void)
 {

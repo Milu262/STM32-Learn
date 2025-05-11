@@ -1,10 +1,7 @@
 >>> cc
 
-".\..\..\app\main.c", line 40: Warning:  #177-D: variable "color"  was declared but never referenced
-  	uint16_t color = 0;
-  	         ^
-.\..\..\app\main.c: 1 warning, 0 errors
+
 
 >>> ld
 
-Program Size: Code=12872 RO-data=1148 RW-data=44 ZI-data=2188  
+Program Size: Code=13012 RO-data=1100 RW-data=44 ZI-data=2188  

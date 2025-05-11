@@ -625,6 +625,7 @@ void Find_i2c_device(void)
             printf("find i2c device address: 0x%x(Write address 8bit)\r\n", i << 1);
             i2c_device++;
         }
+        // delay_ms(10);//延时
     }
     if (!i2c_device)
     {
