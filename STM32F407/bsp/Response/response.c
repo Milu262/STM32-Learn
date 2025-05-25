@@ -76,10 +76,10 @@ static void do_i2c_8RegisterAddr(uint8_t *data)
     uint8_t RegisterAddr = data[5];
     uint8_t *Value = &data[6];
 
-    if (NumByteToProsess == 0xff)
-    {
-        NumByteToProsess++;
-    }
+    // if (NumByteToProsess == 0xff)
+    // {
+    //     NumByteToProsess++;
+    // }
 
     switch (i2c_mode_sel)
     {
@@ -98,7 +98,7 @@ static void do_i2c_8RegisterAddr(uint8_t *data)
         err = I2C_BufferRead(slave_adress, RegisterAddr, Value, NumByteToProsess);
         if (err)
         {
-            for (size_t i = 0; i < NumByteToProsess; i++)
+            for (uint16_t i = 0; i < NumByteToProsess; i++)
             {
                 printf("RegisterAddr : 0x%02x Return Value : 0x%02x \r\n", RegisterAddr + i, Value[i]);
             }
@@ -110,6 +110,29 @@ static void do_i2c_8RegisterAddr(uint8_t *data)
     case 0x06: // EEPROM按页写入
         if (I2C_EE_8Addr_PageWrite(slave_adress, RegisterAddr, Value, NumByteToProsess))
             printf("EEPROM Page Write Success! \r\n");
+        break;
+    case 0x07: // EEPROM按页读
+        err = I2C_BufferRead(slave_adress, RegisterAddr, Value, NumByteToProsess+1);//需要读取256个字节
+        if (err)
+        {
+            test_data.SendData[0] = SendFrameHeader; // 发送帧头
+            for (uint8_t i = 1; i < 6; i++)          // 返回帧结构
+            {
+                test_data.SendData[i] = data[i];
+            }
+            for (uint16_t i = 0; i < NumByteToProsess+1; i++) // 读到的数据,NumByteToProsess+1 = 256
+            {
+                test_data.SendData[i + 6] = Value[i];
+                // printf("RegisterAddr : 0x%02x Return Value : 0x%02x \r\n", RegisterAddr + i,test_data.SendData[i + 6]);//测试打印数据
+            }
+            for(uint16_t i = 0; i < NumByteToProsess+6+1; i++)
+            {
+                usart_send_data(test_data.SendData[i]);
+
+            }
+            // test_data.SendData[6 + NumByteToProsess] = '\0';
+            // usart_send_String(test_data.SendData); // 串口发送数据
+        }
         break;
     default:
         printf("Use 8bit RegisterAddr mode Error! \r\n");

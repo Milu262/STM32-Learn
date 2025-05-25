@@ -13,7 +13,7 @@ static void SPI_Screen_GPIO_Init(void)
   // GPIO_PinAFConfig(GPIO_PORT, SPI_MISO_PINSOURCE, GPIO_AF);
   GPIO_PinAFConfig(SPI_MOSI_GPIO_PORT, SPI_MOSI_PINSOURCE, SPI_MOSI_GPIO_AF);
 
-  /*!< 配置 SPI2 引脚: SCK */
+  /*!< 配置 SPI1 引脚: SCK */
   GPIO_StructInit(&GPIO_InitStructure);
   GPIO_InitStructure.GPIO_Pin = SPI_SCK_PIN;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
@@ -22,7 +22,7 @@ static void SPI_Screen_GPIO_Init(void)
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
   GPIO_Init(SPI_SCK_GPIO_PORT, &GPIO_InitStructure);
 
-  /*!< 配置 SPI2 引脚: MOSI */
+  /*!< 配置 SPI1 引脚: MOSI */
   GPIO_StructInit(&GPIO_InitStructure);
   GPIO_InitStructure.GPIO_Pin = SPI_MOSI_PIN;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
@@ -31,7 +31,7 @@ static void SPI_Screen_GPIO_Init(void)
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
   GPIO_Init(SPI_MOSI_GPIO_PORT, &GPIO_InitStructure);
 
-  /*!< 配置 SPI2 引脚: CS */
+  /*!< 配置 SPI1 引脚: CS */
   GPIO_StructInit(&GPIO_InitStructure);
   GPIO_InitStructure.GPIO_Pin = CS_PIN;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;

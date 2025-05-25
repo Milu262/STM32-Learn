@@ -3,7 +3,7 @@
     "target": "Project",
     "toolchain": "AC5",
     "toolchainLocation": "L:\\Keil\\Keil_v5\\ARM\\AC5",
-    "toolchainCfgFile": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.21.2\\res\\data\\models\\win32/arm.v5.model.json",
+    "toolchainCfgFile": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.21.3\\res\\data\\models\\win32/arm.v5.model.json",
     "buildMode": "fast|multhread",
     "showRepathOnLog": true,
     "threadNum": 16,
@@ -130,7 +130,7 @@
             "ro-base": "0x08000000",
             "rw-base": "0x20000000",
             "link-scatter": [
-                "\"l:/STM32_Example/Github/STM32-Learn/STM32F407/project/MDK(V5)/build/Project/STM32F407_LCKFB.sct\""
+                "l:/STM32_Example/Github/STM32-Learn/STM32F407/project/MDK(V5)/build/Project/STM32F407_LCKFB.sct"
             ]
         }
     },
@@ -153,7 +153,7 @@
         "SYS_PathSep": ";",
         "SYS_PathSeparator": ";",
         "SYS_EOL": "\r\n",
-        "EIDE_BUILDER_DIR": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.21.2\\res\\tools\\win32\\unify_builder",
+        "EIDE_BUILDER_DIR": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.21.3\\res\\tools\\win32\\unify_builder",
         "EIDE_BINARIES_VER": "12.0.1",
         "EIDE_MSYS": "C:\\Users\\Ankesiqi\\.eide\\bin\\builder\\msys\\bin",
         "ToolchainRoot": "L:\\Keil\\Keil_v5\\ARM\\AC5"

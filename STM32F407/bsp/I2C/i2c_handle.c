@@ -194,16 +194,15 @@ uint32_t I2C_BufferRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer
             if ((I2CTimeout--) == 0)
                 return I2C_TIMEOUT_UserCallback(5);
         }
-        {
-            /* Read a byte from the device */
-            *pBuffer = I2C_ReceiveData(I2C1);
 
-            /* Point to the next location where the byte read will be saved */
-            pBuffer++;
+        /* Read a byte from the device */
+        *pBuffer = I2C_ReceiveData(I2C1);
 
-            /* Decrement the read bytes counter */
-            NumByteToRead--;
-        }
+        /* Point to the next location where the byte read will be saved */
+        pBuffer++;
+
+        /* Decrement the read bytes counter */
+        NumByteToRead--;
     }
 
     /* Enable Acknowledgement to be ready for another reception */
@@ -676,8 +675,6 @@ static void I2C_EE_WaitEepromStandbyState(uint8_t EEPROM_ADDRESS)
         /* Send EEPROM address for write */
         I2C_Send7bitAddress(I2C1, EEPROM_ADDRESS, I2C_Direction_Transmitter);
     } while (!(I2C_ReadRegister(I2C1, I2C_Register_SR1) & 0x0002));
-
-
 
     /* Clear AF flag */
     I2C_ClearFlag(I2C1, I2C_FLAG_AF);
