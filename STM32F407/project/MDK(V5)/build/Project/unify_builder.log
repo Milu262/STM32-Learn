@@ -1954,3 +1954,277 @@ These source files will be recompiled
 [2025-05-11 20:16:51]	[done]
 	build successfully !
 
+[2025-05-11 20:26:17]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_reg.h' has been changed.
+
+[2025-05-11 20:26:18]	[done]
+	build successfully !
+
+[2025-05-11 20:27:20]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_reg.h' has been changed.
+
+[2025-05-11 20:27:21]	[done]
+	build successfully !
+
+[2025-05-11 20:27:45]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_reg.h' has been changed.
+
+[2025-05-11 20:27:46]	[done]
+	build successfully !
+
+[2025-05-11 20:28:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_reg.h' has been changed.
+
+[2025-05-11 20:28:24]	[done]
+	build successfully !
+
+[2025-05-11 21:53:22]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': source file has been changed.
+
+[2025-05-11 21:53:23]	[done]
+	build successfully !
+
+[2025-05-11 21:53:42]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_DMA_Init.c': source file has been changed.
+
+[2025-05-11 21:53:42]	[done]
+	build successfully !
+
+[2025-05-11 21:54:32]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-05-11 21:54:33]	[done]
+	build successfully !
+
+[2025-05-11 21:54:54]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-05-11 21:54:55]	[done]
+	build successfully !
+
+[2025-05-11 21:55:15]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_DMA_Init.c': source file has been changed.
+
+[2025-05-11 21:55:15]	[done]
+	build successfully !
+
+[2025-05-11 21:59:00]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_DMA_Init.c': source file has been changed.
+
+[2025-05-11 21:59:01]	[done]
+	build successfully !
+
+[2025-05-11 22:01:03]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-05-11 22:01:04]	[done]
+	build successfully !
+
+[2025-05-11 22:02:09]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_DMA_Init.c': source file has been changed.
+
+[2025-05-11 22:02:10]	[done]
+	build successfully !
+
+[2025-05-11 22:02:33]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_DMA_Init.c': source file has been changed.
+
+[2025-05-11 22:02:33]	[done]
+	build successfully !
+
+[2025-05-11 22:02:46]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\PeripheralModule\OV2640\OV2640_init.h' has been changed.
+
+[2025-05-11 22:02:47]	[done]
+	build successfully !
+
+[2025-05-21 21:50:03]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 21:50:05]	[done]
+	build successfully !
+
+[2025-05-21 21:50:47]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+
+[2025-05-21 21:50:48]	[done]
+	build successfully !
+
+[2025-05-21 21:50:58]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-05-21 21:50:59]	[done]
+	build successfully !
+
+[2025-05-21 21:52:52]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+
+[2025-05-21 21:52:53]	[done]
+	build successfully !
+
+[2025-05-21 22:00:27]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+
+[2025-05-21 22:00:28]	[done]
+	build successfully !
+
+[2025-05-21 22:01:50]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 22:01:51]	[done]
+	build successfully !
+
+[2025-05-21 22:09:45]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 22:09:45]	[done]
+	build successfully !
+
+[2025-05-21 22:10:59]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 22:11:00]	[done]
+	build successfully !
+
+[2025-05-21 22:14:43]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 22:14:44]	[done]
+	build successfully !
+
+[2025-05-21 22:22:22]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 22:22:23]	[done]
+	build successfully !
+
+[2025-05-21 22:23:05]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 22:23:06]	[done]
+	build successfully !
+
+[2025-05-21 22:48:26]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 22:48:27]	[done]
+	build successfully !
+
+[2025-05-21 22:52:31]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 22:52:32]	[done]
+	build successfully !
+
+[2025-05-21 22:54:09]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 22:54:10]	[done]
+	build successfully !
+
+[2025-05-21 22:54:48]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 22:54:48]	[done]
+	build successfully !
+
+[2025-05-21 22:59:14]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+
+[2025-05-21 22:59:15]	[done]
+	build successfully !
+
+[2025-05-21 23:01:46]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 23:01:47]	[done]
+	build successfully !
+
+[2025-05-21 23:03:26]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 23:03:27]	[done]
+	build successfully !
+
+[2025-05-21 23:04:28]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-05-21 23:04:28]	[done]
+	build successfully !
+

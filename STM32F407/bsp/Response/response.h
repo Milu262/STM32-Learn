@@ -1,5 +1,7 @@
 // #include "stm32f4xx.h"
 #include ".\i2c\i2c_handle.h"
+#include "bsp_uart.h"
+
 #define data_size 256 + 32	 // 数据长度
 #define Frame_header 0x55	 // 接收帧头
 #define SendFrameHeader 0xAA // 发送帧头

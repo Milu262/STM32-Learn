@@ -33,8 +33,9 @@ void DMA_DCMI_Init_Config(void)
     DMA_InitStructure.DMA_Priority = DMA_Priority_High;           // DMA优先级：高
     DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Enable;         // FIFO模式使用
     DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_Full; // FIFO阈值：满
-    DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_INC8;     // 内存突发传输：8次
-    // DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_INC8;      //为什么使用这个？
+    // DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_HalfFull; // FIFO阈值：半满
+    // DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_INC4;     // 内存突发传输：8次
+    DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_INC8;      //为什么使用这个？
     DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single; // 外设突发传输：单次
     DMA_Init(DCMI_DMA_STREAM, &DMA_InitStructure);
     DMA_Cmd(DCMI_DMA_STREAM, ENABLE);

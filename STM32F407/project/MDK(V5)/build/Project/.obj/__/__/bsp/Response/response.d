@@ -37,3 +37,6 @@
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/.\i2c\i2c_init.h
+.\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/uart/bsp_uart.h
+.\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/NVIC/NVIC_Init.h
+.\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/DMA/DMA_Init.h

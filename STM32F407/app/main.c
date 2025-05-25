@@ -19,14 +19,14 @@
 int main(void)
 {
 	uint8_t error = 0;
-	uint16_t color = 0;
+	// uint16_t color = 0;
 	board_init();			 // 板级初始化
 	NVIC_Configuration();	 // 中断优先级初始化
 	uart1_init(115200U);	 // 串口1初始化
 	DMA_Uart1_Init_Config(); // DMA串口1初始化
 	User_I2C_Init();		 // I2C初始化
-	// SPI_FLASH_BUS_Init();	 // SPI FLASH总线初始化
-	// test_SPI_Flash();		 // 测试SPI FLASH
+	// SPI_FLASH_BUS_Init();	 // FLASH总线初始化
+	// test_SPI_Flash();		 // 测试FLASH
 	SPI_Screen_BUS_Init(); // SPI屏幕总线初始化
 
 	OV2640_Hardware_Init();
@@ -42,9 +42,6 @@ int main(void)
 	// 设置选择 16 位数据帧格式
 	SPI_DataSizeConfig(LCD_SPI, SPI_DataSize_16b);
 
-	// //设置数据传输时先发送最低位
-	// SPI_FirstBitConfig(LCD_SPI, SPI_FirstBit_LSB);
-
 	SPI_Cmd(LCD_SPI, ENABLE);
 	LCD_SPI_CS_ON(0); // 使能SPI的数据传输
 
@@ -54,6 +51,25 @@ int main(void)
 
 	while (1)
 	{
-		response_handle(error, DMA_USART1_RX_BUF,usart1_rx_len);
+		// response_handle(error, DMA_USART1_RX_BUF, usart1_rx_len);//串口接收数据处理
+
+		if (test_data.flag == 1)
+		{
+			if (test_data.DataOverflow == 1)
+			{
+				printf("Recive Data Too Much!\r\n");
+				test_data.DataOverflow = 0; // 清空数据溢出标志位
+				test_data.flag = 0;			// 清空接收标志位
+				break;
+			}
+			memcpy(test_data.data, DMA_USART1_RX_BUF, usart1_rx_len); // 将接收到的数据复制到test_data.data
+			test_data.data[usart1_rx_len] = '\0';
+			error = do_process(&test_data);
+			if (!error)
+			{
+				printf("Do process Error!\r\n");
+				error = 0;
+			}
+		}
 	}
 }
