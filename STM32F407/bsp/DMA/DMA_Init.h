@@ -2,7 +2,14 @@
 #include <stdio.h>
 #include "string.h"
 
-#define USART_MAX_LEN 256+32
+/**
+ * 最坏情况：payload 中全是 0x7E 或 0x7D，每个字节变成 2 字节（转义），256 字节 → 512 字节！
+
+但通常不会这么极端。若你控制 PC 端不发送大量转义字符，300 足够。
+
+若需绝对安全，可设为 520（256×2 + 8），但占用 RAM 多。
+ */
+#define USART_MAX_LEN 520
 
 
 //定义SPI1的数据地址

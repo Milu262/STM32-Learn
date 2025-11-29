@@ -1,6 +1,6 @@
 .\build\Project\.obj\__\__\bsp\Response\response.o: .\..\..\bsp\Response\response.c
 .\build\Project\.obj\__\__\bsp\Response\response.o: .\..\..\bsp\Response\response.h
-.\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/.\i2c\i2c_handle.h
+.\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/I2C/i2c_handle.h
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../board/board.h
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../libraries/CMSIS/Include/core_cm4.h
@@ -36,7 +36,7 @@
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h
-.\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/.\i2c\i2c_init.h
+.\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/I2C/i2c_init.h
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/uart/bsp_uart.h
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/NVIC/NVIC_Init.h
 .\build\Project\.obj\__\__\bsp\Response\response.o: ../../bsp/DMA/DMA_Init.h

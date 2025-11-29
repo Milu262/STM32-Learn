@@ -42,6 +42,6 @@
 .\objects\stm32f4xx_it.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\string.h
 .\objects\stm32f4xx_it.o: ..\..\bsp\DMA\DMA_Init.h
 .\objects\stm32f4xx_it.o: ..\..\bsp\Response\response.h
-.\objects\stm32f4xx_it.o: ..\..\bsp\.\i2c\i2c_handle.h
+.\objects\stm32f4xx_it.o: ..\..\bsp\I2C\i2c_handle.h
 .\objects\stm32f4xx_it.o: ..\..\board\board.h
-.\objects\stm32f4xx_it.o: ..\..\bsp\.\i2c\i2c_init.h
+.\objects\stm32f4xx_it.o: ..\..\bsp\I2C\i2c_init.h

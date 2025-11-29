@@ -59,4 +59,8 @@
 .\build\Project\.obj\__\__\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.o
 .\build\Project\.obj\__\__\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.o
 .\build\Project\.obj\__\__\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.o
-.\build\Project\.obj\__\__\module\stm32f4xx_it.o -o .\build\Project\STM32F407_LCKFB.axf
+.\build\Project\.obj\__\__\module\stm32f4xx_it.o
+.\build\Project\.obj\__\__\protocol\MY_your_driver.o
+.\build\Project\.obj\__\__\protocol\cmd_handlers.o
+.\build\Project\.obj\__\__\protocol\crc16.o
+.\build\Project\.obj\__\__\protocol\hdlc_core.o -o .\build\Project\STM32F407_LCKFB.axf

@@ -3,7 +3,7 @@
     "target": "Project",
     "toolchain": "AC5",
     "toolchainLocation": "L:\\Keil\\Keil_v5\\ARM\\AC5",
-    "toolchainCfgFile": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.21.3\\res\\data\\models\\win32/arm.v5.model.json",
+    "toolchainCfgFile": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.26.1\\res\\data\\models/arm.v5.model.json",
     "buildMode": "fast|multhread",
     "showRepathOnLog": true,
     "threadNum": 16,
@@ -29,7 +29,8 @@
         "../../bsp/NVIC",
         "../../bsp/DCMI",
         "../../PeripheralModule/SPI_Screen",
-        "../../PeripheralModule/OV2640"
+        "../../PeripheralModule/OV2640",
+        "../../protocol"
     ],
     "libDirs": [
         "../../PeripheralModule"
@@ -98,37 +99,43 @@
         "../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.c",
         "../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c",
         "../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_wwdg.c",
-        "../../module/stm32f4xx_it.c"
+        "../../module/stm32f4xx_it.c",
+        "../../protocol/MY_your_driver.c",
+        "../../protocol/cmd_handlers.c",
+        "../../protocol/crc16.c",
+        "../../protocol/hdlc_core.c"
     ],
     "alwaysInBuildSources": [],
     "sourceParams": {},
     "options": {
         "version": 4,
-        "beforeBuildTasks": [],
         "afterBuildTasks": [],
+        "asm-compiler": {},
+        "beforeBuildTasks": [],
+        "c/cpp-compiler": {
+            "CXX_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "C_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "c99-mode": true,
+            "gnu-extensions": true,
+            "one-elf-section-per-function": true,
+            "optimization": "level-0",
+            "warnings": "all-warnings"
+        },
         "global": {
-            "use-microLIB": true,
             "output-debug-info": "enable",
+            "use-microLIB": true,
             "microcontroller-cpu": "cortex-m4-sp",
             "microcontroller-fpu": "cortex-m4-sp",
             "microcontroller-float": "cortex-m4-sp",
-            "target": "cortex-m4-sp"
+            "$arch-extensions": "",
+            "$clang-arch-extensions": "",
+            "$armlink-arch-extensions": ""
         },
-        "c/cpp-compiler": {
-            "optimization": "level-0",
-            "one-elf-section-per-function": true,
-            "c99-mode": true,
-            "C_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
-            "CXX_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
-            "warnings": "all-warnings",
-            "gnu-extensions": true
-        },
-        "asm-compiler": {},
         "linker": {
             "output-format": "elf",
-            "xo-base": "",
             "ro-base": "0x08000000",
             "rw-base": "0x20000000",
+            "xo-base": "",
             "link-scatter": [
                 "l:/STM32_Example/Github/STM32-Learn/STM32F407/project/MDK(V5)/build/Project/STM32F407_LCKFB.sct"
             ]
@@ -153,9 +160,10 @@
         "SYS_PathSep": ";",
         "SYS_PathSeparator": ";",
         "SYS_EOL": "\r\n",
-        "EIDE_BUILDER_DIR": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.21.3\\res\\tools\\win32\\unify_builder",
-        "EIDE_BINARIES_VER": "12.0.1",
+        "EIDE_BUILDER_DIR": "c:\\Users\\Ankesiqi\\.vscode\\extensions\\cl.eide-3.26.1\\res\\tools\\win32\\unify_builder",
+        "EIDE_BINARIES_VER": "12.1.1",
         "EIDE_MSYS": "C:\\Users\\Ankesiqi\\.eide\\bin\\builder\\msys\\bin",
+        "EIDE_PY3_CMD": "C:\\Users\\Ankesiqi\\.eide\\bin\\python36\\python3.exe",
         "ToolchainRoot": "L:\\Keil\\Keil_v5\\ARM\\AC5"
     },
     "sysPaths": []

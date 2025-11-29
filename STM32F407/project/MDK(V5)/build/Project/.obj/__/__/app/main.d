@@ -42,8 +42,8 @@
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/I2C/i2c_handle.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/I2C/i2c_init.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/Response/response.h
-.\build\Project\.obj\__\__\app\main.o: ../../bsp/.\i2c\i2c_handle.h
-.\build\Project\.obj\__\__\app\main.o: ../../bsp/.\i2c\i2c_init.h
+.\build\Project\.obj\__\__\app\main.o: ../../bsp/I2C/i2c_handle.h
+.\build\Project\.obj\__\__\app\main.o: ../../bsp/I2C/i2c_init.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/spi_init.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/SPI_Control.h
 .\build\Project\.obj\__\__\app\main.o: ../../bsp/SPI/spi_init.h

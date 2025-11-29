@@ -1,0 +1,284 @@
+version: "4.1"
+name: STM32F407_LCKFB
+type: ARM
+deviceName: null
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: APP
+      files:
+        - path: ../../libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+        - path: ../../app/main.c
+        - path: ../../module/stm32f4xx_it.c
+      folders: []
+    - name: STARTUP
+      files:
+        - path: ../../libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f40xx.s
+      folders: []
+    - name: BSP
+      files: []
+      folders:
+        - name: I2C
+          files:
+            - path: ../../bsp/I2C/i2c_init.c
+            - path: ../../bsp/I2C/i2c_handle.c
+          folders: []
+        - name: Response
+          files:
+            - path: ../../bsp/Response/response.c
+          folders: []
+        - name: SPI
+          files:
+            - path: ../../bsp/SPI/SPI_Control.c
+            - path: ../../bsp/SPI/spi_init.c
+            - path: ../../bsp/SPI/Test_code.c
+          folders: []
+        - name: Uart
+          files:
+            - path: ../../bsp/uart/bsp_uart.c
+          folders: []
+        - name: DMA
+          files:
+            - path: ../../bsp/DMA/DMA_Init.c
+          folders: []
+        - name: NVIC
+          files:
+            - path: ../../bsp/NVIC/NVIC_Init.c
+          folders: []
+    - name: Board
+      files:
+        - path: ../../board/board.c
+      folders: []
+    - name: Driver
+      files:
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/misc.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_can.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cec.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_crc.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_aes.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_des.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dbgmcu.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dcmi.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dfsdm.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma2d.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dsi.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_flash.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fmpi2c.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fsmc.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash_md5.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash_sha1.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_iwdg.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_lptim.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_ltdc.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_qspi.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rng.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_sai.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_sdio.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spdifrx.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c
+        - path: ../../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_wwdg.c
+      folders: []
+    - name: MODULE
+      files: []
+      folders: []
+    - name: DOC
+      files: []
+      folders: []
+    - name: PeripheralModule
+      files: []
+      folders:
+        - name: OV2640
+          files:
+            - path: ../../PeripheralModule/OV2640/OV2640_init.c
+            - path: ../../PeripheralModule/OV2640/OV2640_DMA_Init.c
+            - path: ../../PeripheralModule/OV2640/OV2640_DCMI_Init.c
+          folders: []
+        - name: SPI_Screen
+          files:
+            - path: ../../PeripheralModule/SPI_Screen/SPI_Screen_init.c
+          folders: []
+    - name: protocol
+      files:
+        - path: ../../protocol/hdlc_core.c
+        - path: ../../protocol/MY_your_driver.c
+        - path: ../../protocol/crc16.c
+        - path: ../../protocol/cmd_handlers.c
+      folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: 0379c9042094568cff74c4083d68ed9b
+targets:
+  Project:
+    cppPreprocessAttrs:
+      defineList:
+        - USE_STDPERIPH_DRIVER
+        - STM32F40_41xxx
+      incList:
+        - ../../app
+        - ../../board
+        - ../../bsp
+        - ../../libraries/CMSIS/Include
+        - ../../libraries/CMSIS/Device/ST/STM32F4xx/Include
+        - ../../libraries/STM32F4xx_StdPeriph_Driver/inc
+        - ../../module
+        - ../../bsp/uart
+        - ../../bsp/I2C
+        - RTE/_Project
+        - ../../bsp/Response
+        - ../../bsp/SPI
+        - ../../bsp/DMA
+        - ../../bsp/NVIC
+        - ../../bsp/DCMI
+        - ../../PeripheralModule/SPI_Screen
+        - ../../PeripheralModule/OV2640
+        - ../../protocol
+      libList:
+        - ../../PeripheralModule
+    excludeList:
+      - <virtual_root>/BSP/SPI/bsp_spi_flash.c
+      - <virtual_root>/Test_code.c
+      - <virtual_root>/APP/Test_code.c
+      - <virtual_root>/BSP/DCMI
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 4
+          afterBuildTasks: []
+          asm-compiler: {}
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            c99-mode: true
+            gnu-extensions: true
+            one-elf-section-per-function: true
+            optimization: level-0
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+            use-microLIB: true
+          linker:
+            output-format: elf
+            ro-base: "0x08000000"
+            rw-base: "0x20000000"
+            xo-base: ""
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x20000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x10000"
+                startAddr: "0x10000000"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x80000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: "null"
+          vendor: "null"
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+      STLink:
+        address: "0x8000000"
+        bin: ""
+        elFile: None
+        optionBytes: .eide/project.st.option.bytes.ini
+        otherCmds: ""
+        proType: SWD
+        resetMode: default
+        runAfterProgram: true
+        speed: 4000
+    uploader: STLink

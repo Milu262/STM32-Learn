@@ -45,8 +45,8 @@
 .\objects\main.o: ..\..\bsp\I2C\i2c_handle.h
 .\objects\main.o: ..\..\bsp\I2C\i2c_init.h
 .\objects\main.o: ..\..\bsp\Response\response.h
-.\objects\main.o: ..\..\bsp\.\i2c\i2c_handle.h
-.\objects\main.o: ..\..\bsp\.\i2c\i2c_init.h
+.\objects\main.o: ..\..\bsp\I2C\i2c_handle.h
+.\objects\main.o: ..\..\bsp\I2C\i2c_init.h
 .\objects\main.o: ..\..\bsp\SPI\spi_init.h
 .\objects\main.o: ..\..\bsp\SPI\SPI_Control.h
 .\objects\main.o: ..\..\bsp\SPI\spi_init.h
