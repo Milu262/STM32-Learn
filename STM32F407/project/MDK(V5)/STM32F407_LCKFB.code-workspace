@@ -29,7 +29,10 @@
             "ov2640_reg.h": "c",
             "ov2640_dma_init.h": "c",
             "ov2640_dcmi_init.h": "c",
-            "stdint.h": "c"
+            "stdint.h": "c",
+            "crc16.h": "c",
+            "cmd_handlers.h": "c",
+            "my_your_driver.h": "c"
         },
         "Codegeex.RepoIndex": true
     },

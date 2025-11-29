@@ -1,10 +1,15 @@
 // #include "stm32f4xx.h"
-#include ".\i2c\i2c_handle.h"
+#include "i2c_handle.h"
 #include "bsp_uart.h"
+
+#ifndef __RESPONSE_H__
+#define __RESPONSE_H__
+// 定义最大数据长度
+#define MaxDataSize 256
 
 #define data_size 256 + 32	 // 数据长度
 #define Frame_header 0x55	 // 接收帧头
-#define SendFrameHeader 0xAA // 发送帧头
+#define SendFrameHeader 0xFA // 发送帧头
 
 #define MODE_UART 0x01
 #define MODE_I2C_8BIT_ADDR 0x02
@@ -22,15 +27,53 @@ typedef struct
 
 } usart_data_typed;
 
+typedef enum
+{
+	ReceiveHeader = Frame_header, // 接收帧头
+	SendHeader = SendFrameHeader, // 发送帧头
+} header_typed;
+
+/**
+ * @brief 通信模式枚举类型
+ * @details 定义了系统支持的不同通信接口模式
+ */
+typedef enum
+{
+	UartMode,			 // UART串口通信模式
+	I2C_8BIT_ADDR_Mode,	 // I2C通信模式，8位地址
+	I2C_16BIT_ADDR_Mode, // I2C通信模式，16位地址
+	SPI_Mode,			 // SPI通信模式
+} usart_mode_typed;		 // 通信模式枚举类型名
+
+// 定义一个结构体，用于存储串口接收的数据帧,包含帧头、模式、长度、校验和、数据
+typedef struct
+{
+	header_typed header;
+	usart_mode_typed mode;
+	uint8_t len;
+	uint8_t data[MaxDataSize];
+	uint8_t checksum;
+
+} usart_frame_typed;
+
 // 声明一个外部变量 test_data，其类型为 usart_data_typed
 // 这意味着 test_data 变量定义在别的源文件中，但在此文件中可以访问和使用
 extern usart_data_typed test_data;
 extern uint8_t Frame_it;
 
+/**
+ * @brief 处理接收到的数据
+ * @param udata 指向包含接收数据的结构体的指针
+ * @return uint8_t 处理结果，0表示失败，1表示成功
+ */
 uint8_t do_process(usart_data_typed *udata);
-static void do_uart(uint8_t *data);
-static void do_i2c_8RegisterAddr(uint8_t *data);
-static void do_i2c_16RegisterAddr(uint8_t *data);
-static void do_spi(uint8_t *data);
 
-uint8_t response_handle(uint8_t error,uint8_t *UartRxBuf,uint16_t UartRxLen);
+/**
+ * @brief 处理串口接收数据
+ * @param error 错误状态标志位，用于指示是否有错误发生
+ * @param UartRxBuf 指向接收数据缓冲区的指针
+ * @param UartRxLen 接收数据的长度
+ * @return uint8_t 处理结果，0表示失败，1表示成功
+ */
+uint8_t response_handle(uint8_t error, uint8_t *UartRxBuf, uint16_t UartRxLen);
+#endif

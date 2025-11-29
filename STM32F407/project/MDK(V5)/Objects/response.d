@@ -1,6 +1,6 @@
 .\objects\response.o: ..\..\bsp\Response\response.c
 .\objects\response.o: ..\..\bsp\Response\response.h
-.\objects\response.o: ..\..\bsp\.\i2c\i2c_handle.h
+.\objects\response.o: ..\..\bsp\I2C\i2c_handle.h
 .\objects\response.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\stdio.h
 .\objects\response.o: ..\..\board\board.h
 .\objects\response.o: ..\..\libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
@@ -38,4 +38,8 @@
 .\objects\response.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
 .\objects\response.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 .\objects\response.o: ..\..\libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
-.\objects\response.o: ..\..\bsp\.\i2c\i2c_init.h
+.\objects\response.o: ..\..\bsp\I2C\i2c_init.h
+.\objects\response.o: ..\..\bsp\uart\bsp_uart.h
+.\objects\response.o: ..\..\bsp\NVIC\NVIC_Init.h
+.\objects\response.o: ..\..\bsp\DMA\DMA_Init.h
+.\objects\response.o: L:\Keil\Keil_v5\ARM\AC5\Bin\..\include\string.h

@@ -1,3 +1,6 @@
 tool: AC5
-fileName: STM32F407_LCKFB.map
-elfName: STM32F407_LCKFB.axf
+fileName: 'STM32F407_LCKFB.map'
+elfName: 'STM32F407_LCKFB.axf'
+compilerName: 'ARM Compiler'
+compilerFullName: 'Component: ARM Compiler 5.06 update 7 (build 960)'
+compilerPath: 'L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe'
