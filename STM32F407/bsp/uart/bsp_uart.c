@@ -2,6 +2,7 @@
 
 #include "bsp_uart.h"
 // #include "response.h"
+ #include <stdio.h>
 void uart1_init(uint32_t __Baud)
 {
 	USART_DeInit(BSP_USART); // 复位串口

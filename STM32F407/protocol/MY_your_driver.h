@@ -1,6 +1,7 @@
 #ifndef MY_YOUR_DRIVER_H
 #define MY_YOUR_DRIVER_H
 
+#include <stdint.h>
 // ====== 【你必须实现的底层驱动接口】======
 // 放在 your_driver.c 中实现
 

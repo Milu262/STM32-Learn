@@ -1,8 +1,10 @@
+#include <stdio.h>
+#include <string.h>
 
 #include "board.h"
 #include "bsp_uart.h"
 #include "NVIC_Init.h"
-#include <stdio.h>
+
 #include "i2c_init.h"
 #include "i2c_handle.h"
 #include "response.h"

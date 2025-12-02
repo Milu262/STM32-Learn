@@ -1,5 +1,5 @@
 #include "SPI_Control.h"
-#include "SPI_init.h"
+// #include "spi_init.h"
 // 屏幕的SPI接口定义在SPI_init.h中定义
 
 // 屏幕使用SPI1
@@ -54,11 +54,11 @@
 // 屏幕的复位控制
 #define LCD_RES_ON(x) GPIO_WriteBit(LCD_RES_GPIO_PORT, LCD_RES_PIN, x ? Bit_SET : Bit_RESET)
 
-static void LCD_GPIO_Init(void);
-static uint8_t LCD_WR_REG(uint8_t reg);
-static uint8_t LCD_WR_DATA8(uint8_t data);
-static void LCD_WR_DATA(uint16_t dat);
-static uint8_t LCD_Writ_Bus(uint8_t dat);
+// static void LCD_GPIO_Init(void);
+// static uint8_t LCD_WR_REG(uint8_t reg);
+// static uint8_t LCD_WR_DATA8(uint8_t data);
+// static void LCD_WR_DATA(uint16_t dat);
+// static uint8_t LCD_Writ_Bus(uint8_t dat);
 void LCD_Screen_Init(void);
 
 /**

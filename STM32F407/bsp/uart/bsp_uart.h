@@ -4,7 +4,7 @@
 #define __BSP_UART_H__
 // #include "DMA_Init.h"
 #include "stm32f4xx.h"
-#include "stdio.h"
+// #include <stdio.h>
 #include "NVIC_Init.h"
 #include "DMA_Init.h"
 // #include "response.h"
@@ -60,5 +60,11 @@ void usart_send_data(uint8_t ucch);
  * @retval None
  */
 void usart_send_String(uint8_t *ucstr);
+
+// struct __FILE;
+// typedef struct __FILE FILE;
+
+// int fputc(int ch, FILE *f);
+// int fgetc(FILE *f);
 
 #endif

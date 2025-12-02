@@ -135,6 +135,7 @@ class FlashToolApp:
         self.serial_mgr = SerialManager(self._log_to_queue)
         if self.serial_mgr.open(port):
             self._enable_buttons()
+            #打开串口按钮也无法点击
             self._log_to_queue(f"Serial opened: {port}")
         else:
             self.serial_mgr = None

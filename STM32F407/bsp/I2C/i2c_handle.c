@@ -1,4 +1,6 @@
 #include "i2c_handle.h"
+#include "board.h"
+#include <stdio.h>
 
 static const Error_Code i2c_Errors[] = {
     {0, "I2C start signal transmission failed!\r\n"},
@@ -13,6 +15,15 @@ static const Error_Code i2c_Errors[] = {
 // 定义错误信息数组的大小
 #define I2C_ERROR_COUNT (sizeof(i2c_Errors) / sizeof(i2c_Errors[0]))
 
+/**
+ * @brief User callback function for I2C timeout.
+ *
+ * This function is called when an I2C operation times out. It prints an error message
+ * based on the provided error code and generates a STOP condition on the I2C bus.
+ *
+ * @param errorCode The error code indicating the reason for the timeout.
+ * @return 0 to indicate a timeout occurred.
+ */
 static uint32_t I2C_TIMEOUT_UserCallback(uint8_t errorCode)
 {
     /* 使用串口 printf 输出错误信息，方便调试 */
@@ -89,6 +100,9 @@ uint32_t I2C_BufferWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t *pBuff
 {
     uint16_t i;
     uint8_t res;
+
+    if(NumByteToWrite == 0)
+        return 0;
 
     /* 每写一个字节调用一次 I2C_EE_ByteWrite 函数 */
     for (i = 0; i < NumByteToWrite; i++)
@@ -482,6 +496,8 @@ uint32_t I2C_BufferWrite_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_
 {
     uint16_t i;
     uint8_t res;
+    if(NumByteToWrite == 0)
+        return 0;
 
     /* 每写一个字节调用一次 I2C_EE_ByteWrite 函数 */
     for (i = 0; i < NumByteToWrite; i++)
@@ -613,25 +629,6 @@ uint32_t I2C_BufferRead_16addr(uint8_t slave_adress, uint16_t ReadAddr, uint8_t 
     return 1;
 }
 
-void Find_i2c_device(void)
-{
-    uint8_t i2c_device = 0;
-
-    for (uint8_t i = 0x01; i < 0x80; i++)
-    {
-        if (i2c_device_adress_find(i << 1))
-        {
-            printf("find i2c device address: 0x%x(Write address 8bit)\r\n", i << 1);
-            i2c_device++;
-        }
-        // delay_ms(10);//延时
-    }
-    if (!i2c_device)
-    {
-        printf("No device is connected to the I2C bus!\r\n");
-    }
-}
-
 static uint8_t i2c_device_adress_find(uint8_t slave_adress)
 {
     uint32_t I2CTimeout;
@@ -661,7 +658,35 @@ static uint8_t i2c_device_adress_find(uint8_t slave_adress)
     I2C_GenerateSTOP(I2C1, ENABLE);
     return 1;
 }
+void Find_i2c_device(void)
+{
+    uint8_t i2c_device = 0;
 
+    for (uint8_t i = 0x01; i < 0x80; i++)
+    {
+        if (i2c_device_adress_find(i << 1))
+        {
+            printf("find i2c device address: 0x%x(Write address 8bit)\r\n", i << 1);
+            i2c_device++;
+        }
+        // delay_ms(10);//延时
+    }
+    if (!i2c_device)
+    {
+        printf("No device is connected to the I2C bus!\r\n");
+    }
+}
+
+
+/**
+ * @brief  等待EEPROM准备好状态。
+ *
+ * 该函数用于等待EEPROM设备进入准备好状态，通常在写入操作后调用。
+ * 通过发送START条件并尝试写入设备地址来检测EEPROM是否准备好。
+ *
+ * @param  EEPROM_ADDRESS: EEPROM设备的7位地址。
+ * @retval 无
+ */
 static void I2C_EE_WaitEepromStandbyState(uint8_t EEPROM_ADDRESS)
 {
     vu16 SR1_Tmp = 0;

@@ -1,4 +1,6 @@
-#include "i2c_handle.h"
+// #include "i2c_handle.h"
+
+#include <stdint.h>
 
 #define OV2640_Device_Address 0x60
 //竖屏---------------------------
@@ -18,7 +20,7 @@
   * @param       pBuffer:   要写入的数据
   * @retval      返回I2C写入操作的结果，1表示成功，其他值表示失败
   */
-static uint8_t OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer);
+// static uint8_t OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer);
 
 /**
   * @brief       设置OV2640摄像头输出图像的尺寸
@@ -26,7 +28,7 @@ static uint8_t OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer);
   * @param       height: 输出图像的高度（必须是4的倍数）
   * @retval      返回设置结果，0表示成功，1表示宽度不是4的倍数，2表示高度不是4的倍数
   */
-static uint8_t OV2640_OutSize_Set(uint16_t width, uint16_t height);
+// static uint8_t OV2640_OutSize_Set(uint16_t width, uint16_t height);
 
 
  uint8_t OV2640_Image_Config(void);

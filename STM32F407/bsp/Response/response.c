@@ -1,5 +1,8 @@
 #include "response.h"
 #include <string.h>
+#include <stdio.h>
+#include "i2c_handle.h"
+#include "bsp_uart.h"
 // #include "DMA_Init.h"
 usart_data_typed test_data;
 uint8_t Frame_it;

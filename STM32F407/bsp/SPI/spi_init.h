@@ -1,6 +1,6 @@
 
 #include "stm32f4xx.h"
-#include <stdio.h>
+// #include <stdio.h>
 
 //SPI1有许多管脚与DCMI复用，所以不使用SPI1
 
@@ -77,11 +77,11 @@
 #define SPI_CS_ON(x) GPIO_WriteBit(SPI_FLASH_CS_GPIO_PORT, SPI_FLASH_CS_PIN, x ? Bit_SET : Bit_RESET)
 #define SPI2_Screen_CS_ON(x) GPIO_WriteBit(CS_PIN_GPIO_PORT, CS_PIN, x ? Bit_SET : Bit_RESET)
 
-static void SPI_Screen_GPIO_Init(void);
-static void SPI_Screen_Init(void);
+// static void SPI_Screen_GPIO_Init(void);
+// static void SPI_Screen_Init(void);
 void SPI_Screen_BUS_Init(void);
-static void SPI_FLASH_GPIO_Init(void);
-static void SPI_FLASH_Init(void);
+// static void SPI_FLASH_GPIO_Init(void);
+// static void SPI_FLASH_Init(void);
 void SPI_FLASH_BUS_Init(void);
 
 void SPI_FirstBitConfig(SPI_TypeDef* SPIx, uint16_t SPI_FirstBit);

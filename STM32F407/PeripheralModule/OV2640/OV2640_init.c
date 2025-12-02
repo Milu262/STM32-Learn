@@ -2,11 +2,26 @@
 #include "OV2640_reg.h"
 #include "OV2640_DMA_Init.h"
 #include "OV2640_DCMI_Init.h"
+#include "i2c_handle.h"
+#include <stdio.h>
+
+/**
+ * @brief  OV2640_WriteReg
+ * @param  WriteAddr: OV2640寄存器地址
+ * @param  pBuffer: 数据
+ * @retval None
+ */
 static uint8_t OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer)
 {
     return I2C_ByteWrite(OV2640_Device_Address, WriteAddr, pBuffer);
 }
 
+/**
+ * @brief  OV2640_OutSize_Set
+ * @param  width: 输出宽度
+ * @param  height: 输出高度
+ * @retval None
+ */
 static uint8_t OV2640_OutSize_Set(uint16_t width, uint16_t height)
 {
     uint16_t outh;
@@ -18,9 +33,6 @@ static uint8_t OV2640_OutSize_Set(uint16_t width, uint16_t height)
         return 2;
     outw = width / 4;
     outh = height / 4;
-
-
-
     OV2640_WriteReg(0XFF, 0X00);
     OV2640_WriteReg(0XE0, 0X04);
     OV2640_WriteReg(0X50, outw & 0X00); // 设置v divider hdivider
@@ -61,16 +73,16 @@ u8 OV2640_ImageWin_Set(u16 offx, u16 offy, u16 width, u16 height)
     vsize = height / 4;
     OV2640_WriteReg(0XFF, 0X00);
     OV2640_WriteReg(0XE0, 0X04);
-    OV2640_WriteReg(0X51, hsize & 0XFF); // ÉèÖÃH_SIZEµÄµÍ°ËÎ»
-    OV2640_WriteReg(0X52, vsize & 0XFF); // ÉèÖÃV_SIZEµÄµÍ°ËÎ»
-    OV2640_WriteReg(0X53, offx & 0XFF);  // ÉèÖÃoffxµÄµÍ°ËÎ»
-    OV2640_WriteReg(0X54, offy & 0XFF);  // ÉèÖÃoffyµÄµÍ°ËÎ»
+    OV2640_WriteReg(0X51, hsize & 0XFF); 
+    OV2640_WriteReg(0X52, vsize & 0XFF); 
+    OV2640_WriteReg(0X53, offx & 0XFF); 
+    OV2640_WriteReg(0X54, offy & 0XFF);  
     temp = (vsize >> 1) & 0X80;
     temp |= (offy >> 4) & 0X70;
     temp |= (hsize >> 5) & 0X08;
     temp |= (offx >> 8) & 0X07;
-    OV2640_WriteReg(0X55, temp);                // ÉèÖÃH_SIZE/V_SIZE/OFFX,OFFYµÄ¸ßÎ»
-    OV2640_WriteReg(0X57, (hsize >> 2) & 0X80); // ÉèÖÃH_SIZE/V_SIZE/OFFX,OFFYµÄ¸ßÎ»
+    OV2640_WriteReg(0X55, temp);                
+    OV2640_WriteReg(0X57, (hsize >> 2) & 0X80); 
     OV2640_WriteReg(0XE0, 0X00);
     return 0;
 }
@@ -115,7 +127,7 @@ uint8_t OV2640_Image_Config(void)
 
 uint8_t OV2640_Hardware_Init(void)
 {
-    uint8_t err;
+    // uint8_t err;
     DCMI_Camera_Init();
     DMA_DCMI_Init_Config();
     return 1;

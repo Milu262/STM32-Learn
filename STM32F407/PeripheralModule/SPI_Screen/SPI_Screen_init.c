@@ -1,5 +1,6 @@
 #include "SPI_Screen_init.h"
-
+#include "board.h"
+#include <stdio.h>
 static void LCD_GPIO_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -40,6 +41,33 @@ static void LCD_GPIO_Init(void)
     delay_ms(100);
 }
 
+static uint8_t LCD_Writ_Bus(uint8_t dat)
+{
+    LCD_SPI_CS_ON(0);
+    uint16_t spiTimeoutCounter = SPIT_FLAG_TIMEOUT;
+    /* 等待发送缓冲区为空，TXE 事件 */
+    while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
+    {
+        if ((spiTimeoutCounter--) == 0)
+        {
+            printf("SPI Timeout\r\n");
+            LCD_SPI_CS_ON(1);
+            return 0;
+        }
+    }
+    SPI_I2S_SendData(LCD_SPI, dat);
+    while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
+        ;
+    while (SET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_BSY))
+        ;
+    // /* 等待接收缓冲区不空，RNXE 事件 */
+    // while (RESET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_RXNE))
+    //     ;
+    // SPI_I2S_ReceiveData(SPI2);
+
+    LCD_SPI_CS_ON(1);
+    return 1;
+}
 static uint8_t LCD_WR_REG(uint8_t reg)
 {
     uint8_t err = 0;
@@ -152,33 +180,7 @@ void LCD_Write_Repeat_Data(uint16_t dat, uint32_t len)
     SPI_Cmd(LCD_SPI, ENABLE);
 }
 
-static uint8_t LCD_Writ_Bus(uint8_t dat)
-{
-    LCD_SPI_CS_ON(0);
-    uint16_t spiTimeoutCounter = SPIT_FLAG_TIMEOUT;
-    /* 等待发送缓冲区为空，TXE 事件 */
-    while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
-    {
-        if ((spiTimeoutCounter--) == 0)
-        {
-            printf("SPI Timeout\r\n");
-            LCD_SPI_CS_ON(1);
-            return 0;
-        }
-    }
-    SPI_I2S_SendData(LCD_SPI, dat);
-    while (SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_TXE) == RESET)
-        ;
-    while (SET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_BSY))
-        ;
-    // /* 等待接收缓冲区不空，RNXE 事件 */
-    // while (RESET == SPI_I2S_GetFlagStatus(LCD_SPI, SPI_I2S_FLAG_RXNE))
-    //     ;
-    // SPI_I2S_ReceiveData(SPI2);
 
-    LCD_SPI_CS_ON(1);
-    return 1;
-}
 void LCD_Screen_Init(void)
 {
     LCD_GPIO_Init();

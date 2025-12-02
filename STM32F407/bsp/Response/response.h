@@ -1,9 +1,10 @@
 // #include "stm32f4xx.h"
-#include "i2c_handle.h"
-#include "bsp_uart.h"
+// #include "i2c_handle.h"
+// #include "bsp_uart.h"
 
 #ifndef __RESPONSE_H__
 #define __RESPONSE_H__
+#include <stdint.h>
 // 定义最大数据长度
 #define MaxDataSize 256
 

@@ -105,7 +105,7 @@
 #define DCMI_RST_GPIO_CLK         	RCC_AHB1Periph_GPIOE
 #define DCMI_RST_GPIO_PIN         	GPIO_Pin_8
 
-static void DCMI_GPIO_Init(void);
-static void DCMI_DCMI_Init(void);
+// static void DCMI_GPIO_Init(void);
+// static void DCMI_DCMI_Init(void);
 
 void DCMI_Camera_Init(void);

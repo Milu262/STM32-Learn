@@ -29,6 +29,6 @@
 //     };
 
 
-static void I2C_GPIO_Config(void);
-static void I2C_Mode_Config(void);
+// static void I2C_GPIO_Config(void);
+// static void I2C_Mode_Config(void);
 void User_I2C_Init(void);

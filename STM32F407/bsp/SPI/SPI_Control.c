@@ -1,4 +1,8 @@
 #include "SPI_Control.h"
+#include "board.h"
+#include <stddef.h>
+#include <stdio.h>
+#include <sys/cdefs.h>
 
 // 定义一个静态常量数组spiErrors，用于存储所有可能的SPI错误及其对应的错误信息
 static const Error_Code spiErrors[] =
@@ -15,7 +19,7 @@ static const Error_Code spiErrors[] =
 static uint8_t SPI_TIMEOUT_UserCallback(uint8_t errorCode)
 {
   // 查找并打印错误信息（如果找到）
-  for (int i = 0; i < SPI_ERROR_COUNT; i++)
+  for (size_t i = 0; i < SPI_ERROR_COUNT; i++)
   {
     if (spiErrors[i].errorCode == errorCode)
     {

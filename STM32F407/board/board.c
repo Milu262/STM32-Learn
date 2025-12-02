@@ -1,5 +1,6 @@
 
 #include <board.h>
+#include "stm32f4xx.h"
 
 static __IO uint32_t g_system_tick = 0;
 
