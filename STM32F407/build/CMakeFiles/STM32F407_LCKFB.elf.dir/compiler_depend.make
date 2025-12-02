@@ -2558,14 +2558,15 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/module/stm32f4xx_it.c.o: ../module/stm32f4xx_
   ../bsp/Response/response.h
 
 CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/MY_your_driver.c.o: ../protocol/MY_your_driver.c \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stdarg.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h \
+  ../protocol/MY_your_driver.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdint.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/features.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  ../protocol/MY_your_driver.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stdarg.h \
   ../bsp/I2C/i2c_handle.h \
   ../bsp/I2C/i2c_init.h \
   ../libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
@@ -2605,6 +2606,60 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/MY_your_driver.c.o: ../protocol/MY_y
   ../bsp/SPI/spi_init.h \
   ../bsp/DMA/DMA_Init.h
 
+CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/cmd_handlers.c.o: ../protocol/cmd_handlers.c \
+  ../protocol/cmd_handlers.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdint.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  ../protocol/hdlc_core.h \
+  ../protocol/crc16.h \
+  ../protocol/MY_your_driver.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h
+
+CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/crc16.c.o: ../protocol/crc16.c \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdint.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  ../protocol/crc16.h
+
+CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core.c \
+  ../protocol/hdlc_core.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdint.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  ../protocol/crc16.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/string.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/newlib.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/config.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stdarg.h \
+  ../protocol/cmd_handlers.h \
+  ../protocol/MY_your_driver.h
+
+
+../protocol/hdlc_core.c:
+
+../protocol/crc16.c:
+
+../protocol/cmd_handlers.c:
 
 ../protocol/MY_your_driver.h:
 
@@ -2638,6 +2693,8 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/MY_your_driver.c.o: ../protocol/MY_y
 
 ../PeripheralModule/OV2640/OV2640_reg.h:
 
+../protocol/cmd_handlers.h:
+
 ../module/stm32f4xx_it.c:
 
 /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h:
@@ -2651,6 +2708,8 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/MY_your_driver.c.o: ../protocol/MY_y
 /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdio.h:
 
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h:
+
+../protocol/hdlc_core.h:
 
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_hash.h:
 
@@ -2837,6 +2896,8 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/MY_your_driver.c.o: ../protocol/MY_y
 ../bsp/DMA/DMA_Init.c:
 
 ../bsp/Response/response.c:
+
+../protocol/crc16.h:
 
 /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h:
 
