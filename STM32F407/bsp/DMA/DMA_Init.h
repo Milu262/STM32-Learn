@@ -61,12 +61,22 @@ extern uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN];
  * 该函数用于配置和初始化DMA传输参数，包括DMA时钟使能、DMA流重置、
  * 配置DMA初始化结构体以及启用DMA传输。
  */
-void DMA_Uart1_Init_Config(void);
+void DMA_Uart_Init_Config(void);
 
 /**
- * @brief  通过UART的DMA方式发送字符串数据.
- * @param  ucstr: 要发送的字符串指针.
- * @param  len: 要发送的数据长度.
- * @retval None
+ * @brief  通过 UART 的 DMA 方式发送一段数据。
+ *         该函数将数据拷贝到内部 DMA 发送缓冲区，并启动 DMA 传输。
+ *         若 DMA 正在忙，会等待其释放（带超时防止死锁）。
+ *         为避免缓冲区溢出，发送长度不会超过内部缓冲区大小。
+ *
+ * @param  ucstr: 指向要发送数据的指针（不可为 NULL）。
+ * @param  len:   要发送的数据字节数（若为 0 则直接返回失败）。
+ *
+ * @retval >0:    成功发送的字节数（≤ 内部缓冲区大小）。
+ * @retval -1:    参数错误（ucstr 为 NULL 或 len 为 0）。
+ * @retval -2:    DMA 超时（上一次传输未在限定时间内完成）。
+ *
+ * @note   本函数为阻塞式调用，直到 DMA 启动成功或超时。
+ *         不应在中断服务程序（ISR）中调用，除非确保无重入风险。
  */
-void usart_send_String_DMA(uint8_t *ucstr, uint16_t len);
+int usart_send_String_DMA(const uint8_t *ucstr, uint16_t len);

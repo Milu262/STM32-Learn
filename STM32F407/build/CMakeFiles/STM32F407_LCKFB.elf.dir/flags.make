@@ -3,13 +3,13 @@
 
 # compile ASM with arm-none-eabi-gcc
 # compile C with arm-none-eabi-gcc
-ASM_DEFINES = -DHSE_VALUE=25000000 -DSTM32F40XX -DUSE_STDPERIPH_DRIVER
+ASM_DEFINES = -DHSE_VALUE=25000000 -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER
 
 ASM_INCLUDES = -I/home/ankesiqi/File/STM32-Learn/STM32F407/app -I/home/ankesiqi/File/STM32-Learn/STM32F407/board -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/uart -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/I2C -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/Response -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/DMA -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/NVIC -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/DCMI -I/home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Include -I/home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Device/ST/STM32F4xx/Include -I/home/ankesiqi/File/STM32-Learn/STM32F407/libraries/STM32F4xx_StdPeriph_Driver/inc -I/home/ankesiqi/File/STM32-Learn/STM32F407/module -I/home/ankesiqi/File/STM32-Learn/STM32F407/PeripheralModule/SPI_Screen -I/home/ankesiqi/File/STM32-Learn/STM32F407/PeripheralModule/OV2640 -I/home/ankesiqi/File/STM32-Learn/STM32F407/protocol -isystem /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/include
 
 ASM_FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -x assembler-with-cpp -g3
 
-C_DEFINES = -DHSE_VALUE=25000000 -DSTM32F40XX -DUSE_STDPERIPH_DRIVER
+C_DEFINES = -DHSE_VALUE=25000000 -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER
 
 C_INCLUDES = -I/home/ankesiqi/File/STM32-Learn/STM32F407/app -I/home/ankesiqi/File/STM32-Learn/STM32F407/board -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/uart -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/I2C -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/Response -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/DMA -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/NVIC -I/home/ankesiqi/File/STM32-Learn/STM32F407/bsp/DCMI -I/home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Include -I/home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Device/ST/STM32F4xx/Include -I/home/ankesiqi/File/STM32-Learn/STM32F407/libraries/STM32F4xx_StdPeriph_Driver/inc -I/home/ankesiqi/File/STM32-Learn/STM32F407/module -I/home/ankesiqi/File/STM32-Learn/STM32F407/PeripheralModule/SPI_Screen -I/home/ankesiqi/File/STM32-Learn/STM32F407/PeripheralModule/OV2640 -I/home/ankesiqi/File/STM32-Learn/STM32F407/protocol -isystem /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/include
 

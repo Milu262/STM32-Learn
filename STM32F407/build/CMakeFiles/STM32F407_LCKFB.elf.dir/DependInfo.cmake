@@ -15,7 +15,7 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
   "HSE_VALUE=25000000"
-  "STM32F40XX"
+  "STM32F40_41xxx"
   "USE_STDPERIPH_DRIVER"
   )
 

@@ -47,7 +47,7 @@
  * @param  __Baud: The baud rate to be set for UART1.
  * @retval None
  */
-void uart1_init(uint32_t __Baud);
+void uart_init(uint32_t __Baud);
 /**
  * @brief  Sends a single data byte through UART.
  * @param  ucch: The data byte to be sent.

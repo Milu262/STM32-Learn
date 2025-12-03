@@ -1,4 +1,4 @@
-#include <stdint.h>
+// #include <stdint.h>
 #include "crc16.h"
 // CRC-16/CCITT table (poly=0x1021, init=0xFFFF)
 static const uint16_t CRC16_TABLE[256] = {

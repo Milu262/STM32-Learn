@@ -30,8 +30,9 @@ void debug_printf(const char* fmt, ...);
  * @param addr 读取地址
  * @param buf 存储读取数据指针
  * @param len 读取数据长度
+ * @return int 0 成功，-1 失败
  */
-void flash_read(uint32_t addr, uint8_t* buf, uint16_t len);
+int flash_read(uint32_t addr, uint8_t* buf, uint16_t len);
 
 /**
  * @brief I2C 读寄存器（7-bit 地址）

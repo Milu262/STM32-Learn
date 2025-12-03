@@ -96,9 +96,10 @@ message(STATUS "Source files:")
 foreach(src ${SRC_FILES})
     message(STATUS "  ${src}")
 endforeach()
+
 # 宏定义
 target_compile_definitions(${PROJECT_NAME}.elf PRIVATE
-  STM32F40XX
+  STM32F40_41xxx
   USE_STDPERIPH_DRIVER
   HSE_VALUE=25000000
 )

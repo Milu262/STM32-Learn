@@ -18,11 +18,11 @@
 
 int main(void) {
   uint8_t error = 0;
-  board_init();            // 板级初始化
-  NVIC_Configuration();    // 中断优先级初始化
-  uart1_init(115200U);     // 串口1初始化
-  DMA_Uart1_Init_Config(); // DMA串口1初始化
-  User_I2C_Init();         // I2C初始化
+  board_init();           // 板级初始化
+  NVIC_Configuration();   // 中断优先级初始化
+  uart_init(115200U);     // 串口初始化
+  DMA_Uart_Init_Config(); // DMA串口初始化
+  User_I2C_Init();        // I2C初始化
   // SPI_FLASH_BUS_Init();	 // FLASH总线初始化
   // test_SPI_Flash();		 // 测试FLASH
   SPI_Screen_BUS_Init(); // SPI屏幕总线初始化
@@ -46,11 +46,25 @@ int main(void) {
   DMA_Cmd(DMA2_Stream1, ENABLE); // DMA2,Stream1
   DCMI_Cmd(ENABLE);              // DCMI启动
   DCMI_CaptureCmd(ENABLE);       // DCMI采集启动
+  printf("hello World\n");
+
+  GPIO_InitTypeDef GPIO_InitStructure;
+  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_Init(GPIOB, &GPIO_InitStructure);
 
   while (1) {
     // response_handle(error, DMA_USART1_RX_BUF,
     // usart1_rx_len);//串口接收数据处理
-
+    GPIO_SetBits(GPIOB, GPIO_Pin_2);
+    delay_1ms(1000);
+    GPIO_ResetBits(GPIOB, GPIO_Pin_2);
+    delay_1ms(1000);
     if (test_data.flag != 1) {
       continue;
     }
