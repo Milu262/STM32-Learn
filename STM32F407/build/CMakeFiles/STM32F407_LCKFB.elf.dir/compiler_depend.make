@@ -144,7 +144,11 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/PeripheralModule/OV2640/OV2640_init.c.o: ../P
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
+  ../bsp/SPI/spi_init.h \
+  ../PeripheralModule/SPI_Screen/SPI_Screen_init.h \
+  ../bsp/SPI/SPI_Control.h \
+  ../bsp/SPI/spi_init.h
 
 CMakeFiles/STM32F407_LCKFB.elf.dir/PeripheralModule/SPI_Screen/SPI_Screen_init.c.o: ../PeripheralModule/SPI_Screen/SPI_Screen_init.c \
   ../PeripheralModule/SPI_Screen/SPI_Screen_init.h \
@@ -267,16 +271,12 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/app/main.c.o: ../app/main.c \
   ../bsp/uart/bsp_uart.h \
   ../bsp/DMA/DMA_Init.h \
   ../PeripheralModule/OV2640/OV2640_init.h \
-  ../bsp/SPI/SPI_Control.h \
-  ../bsp/SPI/spi_init.h \
-  ../PeripheralModule/SPI_Screen/SPI_Screen_init.h \
-  ../bsp/I2C/i2c_handle.h \
-  ../bsp/I2C/i2c_init.h \
   ../bsp/I2C/i2c_init.h \
   ../bsp/Response/response.h \
   ../bsp/SPI/spi_init.h \
   ../bsp/SPI/Test_code.h \
-  ../bsp/SPI/SPI_Control.h
+  ../bsp/SPI/SPI_Control.h \
+  ../bsp/SPI/spi_init.h
 
 CMakeFiles/STM32F407_LCKFB.elf.dir/board/board.c.o: ../board/board.c \
   ../board/board.h \
@@ -2875,6 +2875,12 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 
 ../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.c:
 
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/config.h:
+
+../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h:
+
+../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_can.c:
+
 ../module/stm32f4xx_it.h:
 
 ../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fmpi2c.c:
@@ -2884,12 +2890,6 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 ../PeripheralModule/SPI_Screen/SPI_Screen_init.c:
 
 ../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash.c:
-
-/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/config.h:
-
-../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h:
-
-../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_can.c:
 
 ../board/board.h:
 

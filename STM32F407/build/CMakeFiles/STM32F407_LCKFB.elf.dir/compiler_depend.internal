@@ -148,6 +148,10 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/PeripheralModule/OV2640/OV2640_init.c.o
  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h
  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/lock.h
  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h
+ /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI/spi_init.h
+ /home/ankesiqi/File/STM32-Learn/STM32F407/PeripheralModule/SPI_Screen/SPI_Screen_init.h
+ /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI/SPI_Control.h
+ /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI/spi_init.h
 
 CMakeFiles/STM32F407_LCKFB.elf.dir/PeripheralModule/SPI_Screen/SPI_Screen_init.c.o
  /home/ankesiqi/File/STM32-Learn/STM32F407/PeripheralModule/SPI_Screen/SPI_Screen_init.c
@@ -272,16 +276,12 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/app/main.c.o
  /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/uart/bsp_uart.h
  /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/DMA/DMA_Init.h
  /home/ankesiqi/File/STM32-Learn/STM32F407/PeripheralModule/OV2640/OV2640_init.h
- /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI/SPI_Control.h
- /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI/spi_init.h
- /home/ankesiqi/File/STM32-Learn/STM32F407/PeripheralModule/SPI_Screen/SPI_Screen_init.h
- /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/I2C/i2c_handle.h
- /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/I2C/i2c_init.h
  /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/I2C/i2c_init.h
  /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/Response/response.h
  /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI/spi_init.h
  /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI/Test_code.h
  /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI/SPI_Control.h
+ /home/ankesiqi/File/STM32-Learn/STM32F407/bsp/SPI/spi_init.h
 
 CMakeFiles/STM32F407_LCKFB.elf.dir/board/board.c.o
  /home/ankesiqi/File/STM32-Learn/STM32F407/board/board.c
