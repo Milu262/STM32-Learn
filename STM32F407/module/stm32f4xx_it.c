@@ -227,7 +227,13 @@ void USART2_IRQHandler(void) {
 //   }
 // }
 
-
+/**
+ * @brief  该函数处理DMA1 Stream6中断请求。
+ * @note   当USART2的DMA发送完成时触发此中断。中断处理程序会清除DMA中断标志，
+ *         并可选择禁用DMA发送流或执行其他操作。
+ * @param  无
+ * @retval 无
+ */
 void DMA1_Stream6_IRQHandler(void) {
   if (DMA_GetITStatus(DEBUG_USART_TX_DMA_STREAM, DMA_IT_TCIF6) !=
       RESET) // 等待DMA发送完成中断

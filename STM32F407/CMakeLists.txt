@@ -14,8 +14,8 @@ set(CMAKE_SIZE arm-none-eabi-size)
 
 # CPU 和编译选项
 set(CPU_FLAGS "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
-set(CMAKE_C_FLAGS "${CPU_FLAGS} -Wall -Wextra -Os -g3 -std=c99 -ffunction-sections -fdata-sections")
-set(CMAKE_CXX_FLAGS "${CPU_FLAGS} -Wall -Wextra -Os -g3 -fno-exceptions -ffunction-sections -fdata-sections")
+set(CMAKE_C_FLAGS "${CPU_FLAGS} -Wall -Wextra -O0 -g3 -std=c99 -ffunction-sections -fdata-sections -fno-builtin")
+set(CMAKE_CXX_FLAGS "${CPU_FLAGS} -Wall -Wextra -O0 -g3 -fno-exceptions -ffunction-sections -fdata-sections -fno-builtin")
 set(CMAKE_ASM_FLAGS "${CPU_FLAGS} -x assembler-with-cpp -g3")
 
 # 链接脚本

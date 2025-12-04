@@ -32,7 +32,7 @@ static uint32_t I2C_TIMEOUT_UserCallback(uint8_t errorCode)
     {
         if (i2c_Errors[i].errorCode == errorCode)
         {
-            printf("%s", i2c_Errors[i].errorMessage);
+            // printf("%s", i2c_Errors[i].errorMessage);
             break;
         }
     }

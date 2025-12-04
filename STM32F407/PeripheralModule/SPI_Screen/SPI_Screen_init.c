@@ -263,7 +263,7 @@ void LCD_Screen_Init(void)
     LCD_WR_REG(0x21);
 
     LCD_WR_REG(0x29);
-    printf("LCD Screen Init Over\r\n");
+    // printf("LCD Screen Init Over\r\n");
 }
 
 void LCD_Address_Set(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)

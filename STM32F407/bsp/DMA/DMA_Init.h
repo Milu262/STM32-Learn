@@ -1,6 +1,8 @@
+#ifndef __DMA_Init_H
+#define __DMA_Init_H
+
 #include "stm32f4xx.h"
-// #include <stdio.h>
-// #include <string.h>
+
 
 /**
  * 最坏情况：payload 中全是 0x7E 或 0x7D，每个字节变成 2 字节（转义），256 字节
@@ -51,9 +53,6 @@
 #define DEBUG_USART_RX_DMA_STREAM DMA1_Stream5
 
 extern volatile uint16_t usart1_rx_len;
-extern volatile uint16_t usart1_tx_len;
-extern uint8_t DMA_USART1_RX_BUF[USART_MAX_LEN];
-extern uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN];
 
 /**
  * @brief 初始化DMA（直接存储器访问）配置
@@ -62,6 +61,21 @@ extern uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN];
  * 配置DMA初始化结构体以及启用DMA传输。
  */
 void DMA_Uart_Init_Config(void);
+
+/**
+ * @brief  将接收到的 UART 数据复制到指定缓冲区。
+ *         该函数从内部 DMA 接收缓冲区复制数据到用户提供的缓冲区，
+ *         并返回实际复制的字节数。
+ *
+ * @param  buf:      指向用户缓冲区的指针（不可为 NULL）。
+ * @param  buf_size: 用户缓冲区的大小（以字节为单位）。
+ *
+ * @retval >=0:      成功复制的字节数（≤ buf_size）。
+ * @retval -1:       参数错误（buf 为 NULL 或 buf_size 为 0）。
+ *
+ * @note   本函数不会修改 DMA 的状态，仅进行数据复制操作。
+ */
+int uart_copy_receive_data(uint8_t *buf, uint16_t buf_size);
 
 /**
  * @brief  通过 UART 的 DMA 方式发送一段数据。
@@ -80,3 +94,4 @@ void DMA_Uart_Init_Config(void);
  *         不应在中断服务程序（ISR）中调用，除非确保无重入风险。
  */
 int usart_send_String_DMA(const uint8_t *ucstr, uint16_t len);
+#endif

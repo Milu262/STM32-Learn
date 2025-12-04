@@ -1,8 +1,8 @@
 #include "bsp_uart.h"
 #include <stdio.h>
+#include <sys/errno.h>
 #include <sys/stat.h>
 #include <sys/times.h>
-#include <sys/errno.h>
 #include <unistd.h>
 void uart_init(uint32_t __Baud) {
   USART_DeInit(BSP_USART); // 复位串口
@@ -115,21 +115,26 @@ void usart_send_String(uint8_t *ucstr) {
 
 // 用于 DMA 发送单字节（复用你的逻辑）
 
-//在linux的环境下，使用GCC + newlib 编译时，printf 调用的是 _write()，而不是 fputc
+// 在linux的环境下，使用GCC + newlib 编译时，printf 调用的是 _write()，而不是
+// fputc
 
-//该函数是用于判断 stdout 是否是终端（用于决定是否自动 flush）（非必须实现）
-int _isatty(int fd)
-{
-    return (fd == STDIN_FILENO || fd == STDOUT_FILENO || fd == STDERR_FILENO) ? 1 : 0;
+// 该函数是用于判断 stdout 是否是终端（用于决定是否自动 flush）（非必须实现）
+int _isatty(int fd) {
+  return (fd == STDIN_FILENO || fd == STDOUT_FILENO || fd == STDERR_FILENO) ? 1
+                                                                            : 0;
 }
 
 // newlib 重定向：printf -> usart_send_String_DMA
-int _write(int fd, const char *ptr, int len)
-{
-    if (fd == STDOUT_FILENO || fd == STDERR_FILENO) {
-        usart_send_String_DMA((const uint8_t *)ptr, (uint16_t)len);
-        return len; // 忽略底层错误，保持 printf 简单
-    }
-    errno = EBADF;
-    return -1;
+int _write(int fd, const char *ptr, int len) {
+  if (fd == STDOUT_FILENO || fd == STDERR_FILENO) {
+    // 先发送固定测试数据，绕过 ptr
+    // static const uint8_t test[] = "OK\n";
+    // usart_send_String_DMA(test, 3);
+    usart_send_String_DMA((const uint8_t *)ptr, len);
+    while (DMA_GetCmdStatus(DEBUG_USART_TX_DMA_STREAM) != DISABLE)
+      ; // 等待完成
+    return len;
+  }
+  errno = EBADF;
+  return -1;
 }
