@@ -1,0 +1,118 @@
+{
+  "editor.semanticHighlighting": true,
+  "github.copilot.enable": {
+    "*": false
+  },
+
+  // ┌──────────────────────────────────────────────────────────────┐
+  // │                 自定义语义高亮颜色规则                        │
+  // │  基于 clangd 提供的 Semantic Token Types                     │
+  // │  颜色参考 Dracula 官方调色板：https://draculatheme.com/contribute   │
+  // └──────────────────────────────────────────────────────────────┘
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      // ──────────────── 变量类 ────────────────
+      // 普通变量（局部/全局），如：int count; struct Config cfg;
+      "variable": {
+        "foreground": "#4EC9B0",  // Dracula 青绿色（原用于类型）
+        "fontStyle": ""
+      },
+      // 函数参数，如：void foo(int param)
+      "parameter": {
+        "foreground": "#9CDCFE",  // Dracula 淡蓝色（参数专用）
+        "fontStyle": "italic"
+      },
+      // 局部变量（部分语言服务器会区分，clangd 通常归为 variable）
+      "variable.local": {
+        "foreground": "#4EC9B0",
+        "fontStyle": ""
+      },
+
+      // ──────────────── 成员访问 ────────────────
+      // 结构体/联合体成员，如：obj.field、reg->CR
+      "member": {
+        "foreground": "#FF70A8",  // 洋红色，突出成员访问
+        "fontStyle": ""
+      },
+
+      // ──────────────── 常量与宏 ────────────────
+      // #define 宏，如：#define BUFFER_SIZE 256
+      "macro": {
+        "foreground": "#DCDCAA",  // Dracula 默认常量黄色
+        "fontStyle": ""
+      },
+      // 枚举值，如：enum { RED, GREEN };
+      "enumMember": {
+        "foreground": "#DCDCAA",
+        "fontStyle": ""
+      },
+      // 编译期常量（C++ constexpr，C 中较少）
+      "constant": {
+        "foreground": "#CE9178",  // 橙色，区别于宏
+        "fontStyle": ""
+      },
+
+      // ──────────────── 函数与方法 ────────────────
+      // C 中的函数（clangd 通常标记为 function）
+      "function": {
+        "foreground": "#DCDCAA",  // 保持黄色，符合 Dracula 习惯
+        "fontStyle": ""
+      },
+      // C++ 方法（method），在纯 C 项目中很少出现
+      "method": {
+        "foreground": "#DCDCAA",
+        "fontStyle": ""
+      },
+
+      // ──────────────── 类型相关 ────────────────
+      // 类型名（struct/union/typedef），如：GPIO_InitTypeDef
+      "type": {
+        "foreground": "#4EC9B0",  // 青绿色，与变量统一或可改为蓝色 #569CD6
+        "fontStyle": ""
+      },
+      // 类（C++），C 项目中无
+      "class": {
+        "foreground": "#4EC9B0",
+        "fontStyle": ""
+      },
+      // 结构体关键字（struct），但通常不单独高亮
+      // 注意：关键字本身由 TextMate 控制，不在语义高亮范围内
+
+      // ──────────────── 其他 ────────────────
+      // 命名空间（C++）
+      "namespace": {
+        "foreground": "#C586C0",  // 紫色
+        "fontStyle": ""
+      },
+      // 标签（goto label），极少用
+      "label": {
+        "foreground": "#D7BA7D",
+        "fontStyle": "italic"
+      }
+    }
+  },
+
+  // ┌──────────────────────────────────────┐
+  // │       （可选）补充 TextMate 高亮       │
+  // │  当语义高亮未覆盖时作为后备（如宏）     │
+  // └──────────────────────────────────────┘
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        // 确保 .field 成员即使在语义高亮失效时也高亮
+        "scope": "variable.other.member.c",
+        "settings": {
+          "foreground": "#FF70A8"
+        }
+      },
+      {
+        // C 宏（#define）的 TextMate scope
+        "scope": "constant.other.c",
+        "settings": {
+          "foreground": "#DCDCAA"
+        }
+      }
+    ]
+  }
+}

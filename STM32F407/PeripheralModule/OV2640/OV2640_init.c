@@ -4,7 +4,8 @@
 #include "OV2640_reg.h"
 #include "i2c_handle.h"
 #include <stdio.h>
-
+#include "../../bsp/SPI/spi_init.h"
+#include "../SPI_Screen/SPI_Screen_init.h"
 /**
  * @brief  OV2640_WriteReg
  * @param  WriteAddr: OV2640寄存器地址
@@ -123,4 +124,31 @@ uint8_t OV2640_Hardware_Init(void) {
   DCMI_Camera_Init();
   DMA_DCMI_Init_Config();
   return 1;
+}
+
+int Ov2640PlayVideo(void)
+{
+  int error;
+    SPI_Screen_BUS_Init(); // SPI屏幕总线初始化
+
+  OV2640_Hardware_Init();
+  LCD_Screen_Init(); // LCD屏幕初始化
+
+  LCD_Address_Set(0, 0, LCD_WIDTH - 1, LCD_HIDTH - 1); // 设置显示区
+  LCD_Fill(0, 0, LCD_WIDTH, LCD_HIDTH, 0x0000);        //  清屏
+
+  error = OV2640_Image_Config(); // OV2640图像配置
+
+  SPI_Cmd(LCD_SPI, DISABLE); // 设置前先关闭SPI
+  // 设置选择 16 位数据帧格式
+  SPI_DataSizeConfig(LCD_SPI, SPI_DataSize_16b);
+
+  SPI_Cmd(LCD_SPI, ENABLE);
+  LCD_SPI_CS_ON(0); // 使能SPI的数据传输
+
+  DMA_Cmd(DMA2_Stream1, ENABLE); // DMA2,Stream1
+  DCMI_Cmd(ENABLE);              // DCMI启动
+
+  DCMI_CaptureCmd(ENABLE); // DCMI采集启动
+  return 0;
 }
