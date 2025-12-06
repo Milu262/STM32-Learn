@@ -9,7 +9,13 @@ typedef struct
     const char *errorMessage; // 错误信息，是一个指向字符数组的指针，用于存储错误的描述文本
 } Error_Code;                 // 定义一个结构体Error_Code，用于存储错误的代码和对应的错误信息
 
-void board_init(void);
+/**
+ * @brief 硬件初始化
+ *
+ * @return int 0表示成功，其他表示失败
+ */
+int hardware_init(void);
+
 void delay_us(uint32_t _us);
 void delay_ms(uint32_t _ms);
 void delay_1ms(uint32_t ms);
