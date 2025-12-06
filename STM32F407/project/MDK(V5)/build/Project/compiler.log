@@ -1,5 +1,10 @@
 >>> cc
 
+".\..\..\app\main.c", line 67: Warning:  #223-D: function "memcpy" declared implicitly
+  		memcpy(test_data.data, DMA_USART1_RX_BUF, usart1_rx_len); // 将接收到的数据复制到test_data.data
+  		^
+.\..\..\app\main.c: 1 warning, 0 errors
+
 
 
 >>> ld

@@ -1,6 +1,5 @@
 #include "stm32f4xx.h"
-#include <stdio.h>
-#include "string.h"
+
 
 /**
  * 最坏情况：payload 中全是 0x7E 或 0x7D，每个字节变成 2 字节（转义），256 字节 → 512 字节！

@@ -1,5 +1,11 @@
 #include "i2c_init.h"
 
+/**
+ * @brief I2C GPIO 配置函数
+ * @note 配置 I2C 引脚为复用功能，包括 SCL 和 SDA 引脚
+ * @param 无
+ * @retval 无
+ */
 static void I2C_GPIO_Config(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -35,6 +41,12 @@ static void I2C_GPIO_Config(void)
     GPIO_Init(I2C_SDA_GPIO_PORT, &GPIO_InitStructure);
 }
 
+/**
+ * @brief I2C 模式配置函数
+ * @note 配置 I2C 工作模式，包括 I2C 模式、占空比、主机地址、ACK 功能等
+ * @param 无
+ * @retval 无
+ */
 static void I2C_Mode_Config(void)
 {
     I2C_InitTypeDef I2C_InitStructure = {

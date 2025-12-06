@@ -1,5 +1,6 @@
 #include "DMA_Init.h"
-
+#include <stdio.h>
+#include "string.h"
 volatile uint16_t usart1_rx_len = 0; // 接收数据长度
 // volatile uint16_t usart1_tx_len = 0;            // 发送数据长度
 uint8_t DMA_USART1_RX_BUF[USART_MAX_LEN] = {0}; // DMA接收数据缓冲区

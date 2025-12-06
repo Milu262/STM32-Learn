@@ -2,7 +2,10 @@
 #include "OV2640_reg.h"
 #include "OV2640_DMA_Init.h"
 #include "OV2640_DCMI_Init.h"
-static uint8_t OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer)
+#include <stdint.h>
+#include <stdio.h>
+
+static int OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer)
 {
     return I2C_ByteWrite(OV2640_Device_Address, WriteAddr, pBuffer);
 }
@@ -78,7 +81,7 @@ u8 OV2640_ImageWin_Set(u16 offx, u16 offy, u16 width, u16 height)
 uint8_t OV2640_Image_Config(void)
 {
     uint32_t i;
-    uint8_t err;
+    int err;
     // 控制DCMI复位引脚
     //  复位
     // GPIO_ResetBits(DCMI_RST_GPIO_PORT, DCMI_RST_GPIO_PIN);
@@ -89,7 +92,7 @@ uint8_t OV2640_Image_Config(void)
     {
         err = OV2640_WriteReg(OV2640_UXGA[i][0], OV2640_UXGA[i][1]);
         // delay_ms(1);
-        if (!err)
+        if (err==-1)
         {
             printf("OV2640 Image Config error!!\r\n");
             return 0;
@@ -115,7 +118,7 @@ uint8_t OV2640_Image_Config(void)
 
 uint8_t OV2640_Hardware_Init(void)
 {
-    uint8_t err;
+    int err;
     DCMI_Camera_Init();
     DMA_DCMI_Init_Config();
     return 1;

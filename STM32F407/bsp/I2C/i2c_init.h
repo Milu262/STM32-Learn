@@ -1,4 +1,5 @@
-
+#ifndef __I2C_INIT_H__
+#define __I2C_INIT_H__
 #include "stm32f4xx.h"
 
 /* STM32 I2C 速率 */
@@ -23,12 +24,11 @@
 #define I2C_SDA_SOURCE      GPIO_PinSource9
 #define I2C_SDA_AF          GPIO_AF_I2C1
 
-
-// enum i2c_sda_pin{
-//     sda_pin_A = GPIO_Pin_7,
-//     };
-
-
-static void I2C_GPIO_Config(void);
-static void I2C_Mode_Config(void);
+/**
+ * @brief 用户 I2C 初始化函数
+ * @note 初始化 I2C 接口，包括 GPIO 配置、I2C 模式配置、I2C 时钟使能
+ * @param 无
+ * @retval 无
+ */
 void User_I2C_Init(void);
+#endif

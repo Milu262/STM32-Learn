@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build\Project\STM32F407_LCKFB.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\Project\STM32F407_LCKFB.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Nov 29 17:03:30 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Dec 06 23:36:01 2025
 <BR><P>
 <H3>Maximum Stack Usage =        176 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -958,7 +958,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b2]"></a>OV2640_Image_Config</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, OV2640_init.o(i.OV2640_Image_Config))
+<P><STRONG><a name="[b2]"></a>OV2640_Image_Config</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, OV2640_init.o(i.OV2640_Image_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = OV2640_Image_Config &rArr; OV2640_OutSize_Set &rArr; OV2640_WriteReg &rArr; I2C_ByteWrite &rArr; I2C_TIMEOUT_UserCallback &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OV2640_WriteReg
@@ -1308,7 +1308,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OV2640_Image_Config
 </UL>
 
-<P><STRONG><a name="[b3]"></a>OV2640_WriteReg</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, OV2640_init.o(i.OV2640_WriteReg))
+<P><STRONG><a name="[b3]"></a>OV2640_WriteReg</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, OV2640_init.o(i.OV2640_WriteReg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = OV2640_WriteReg &rArr; I2C_ByteWrite &rArr; I2C_TIMEOUT_UserCallback &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_ByteWrite
@@ -1383,7 +1383,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_EE_8Addr_PageWrite
 </UL>
 
-<P><STRONG><a name="[83]"></a>I2C_TIMEOUT_UserCallback</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, i2c_handle.o(i.I2C_TIMEOUT_UserCallback))
+<P><STRONG><a name="[83]"></a>I2C_TIMEOUT_UserCallback</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, i2c_handle.o(i.I2C_TIMEOUT_UserCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = I2C_TIMEOUT_UserCallback &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_GenerateSTOP

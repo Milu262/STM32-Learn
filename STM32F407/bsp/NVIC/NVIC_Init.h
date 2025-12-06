@@ -1,3 +1,5 @@
+#ifndef __NVIC_INIT_H
+#define __NVIC_INIT_H
 #include "stm32f4xx.h"
 
 // #define USART_IRQ USART1_IRQn              // 定义USART中断处理函数为USART1中断
@@ -18,3 +20,4 @@
  * 具体配置包括设置中断优先级和使能中断。
  */
 void NVIC_Configuration(void);
+#endif

@@ -1,6 +1,6 @@
 # dot files
 
-
+# Compiled object files
 *.o
 # eide template
 *.ept

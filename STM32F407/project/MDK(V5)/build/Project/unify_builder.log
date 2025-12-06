@@ -167,3 +167,478 @@ These source files will be recompiled
 [2025-11-29 17:03:30]	[done]
 	build successfully !
 
+[2025-12-04 23:20:46]	[info] incremental build: 64 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\PeripheralModule\OV2640\OV2640_DCMI_Init.c': object (.o) file not exist
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\PeripheralModule\OV2640\OV2640_DMA_Init.c': object (.o) file not exist
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\PeripheralModule\OV2640\OV2640_init.c': object (.o) file not exist
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': object (.o) file not exist
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\app\main.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\board\board.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\bsp\DMA\DMA_Init.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\bsp\I2C\i2c_handle.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\bsp\I2C\i2c_init.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\bsp\NVIC\NVIC_Init.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\bsp\Response\response.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\bsp\SPI\SPI_Control.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\bsp\SPI\Test_code.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\bsp\SPI\spi_init.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\bsp\uart\bsp_uart.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f40xx.s': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\misc.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\module\stm32f4xx_it.c': compiler options has been changed.
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\protocol\MY_your_driver.c': object (.o) file not exist
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\protocol\cmd_handlers.c': object (.o) file not exist
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\protocol\crc16.c': object (.o) file not exist
+'l:\STM32_Example\MY_WorkSpace\STM32-Learn-main\STM32F407\protocol\hdlc_core.c': object (.o) file not exist
+
+[2025-12-04 23:20:49]	[done]
+	build successfully !
+
+[2025-12-06 23:05:27]	[info] incremental build: 64 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_DCMI_Init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_DMA_Init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\SPI_Screen\SPI_Screen_init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\board\board.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\NVIC\NVIC_Init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\SPI_Control.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\Test_code.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\SPI\spi_init.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f40xx.s': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\misc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\cmd_handlers.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\crc16.c': compiler options has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\hdlc_core.c': compiler options has been changed.
+
+[2025-12-06 23:05:35]	[done]
+	build successfully !
+
+[2025-12-06 23:07:26]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\DMA\DMA_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\bsp\DMA\DMA_Init.h' has been changed.
+
+[2025-12-06 23:07:27]	[done]
+	build successfully !
+
+[2025-12-06 23:08:55]	[info] incremental build: 8 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\BSP\I2C\i2c_init.h' has been changed.
+
+[2025-12-06 23:08:55]	[done]
+	build successfully !
+
+[2025-12-06 23:12:04]	[info] incremental build: 7 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\BSP\I2C\i2c_handle.h' has been changed.
+
+[2025-12-06 23:12:04]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -I../../bsp/DCMI -I../../PeripheralModule/SPI_Screen -I../../PeripheralModule/OV2640 -I../../protocol -D"USE_STDPERIPH_DRIVER" -D"STM32F40_41xxx" --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.d .\..\..\PeripheralModule\OV2640\OV2640_init.c
+   at unify_builder.Program.Main(String[] args_)
+---
+"../../bsp/I2C/i2c_handle.h", line 33: Error:  #20: identifier "uint32_t" is undefined
+  uint32_t I2C_ByteWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t pBuffer);
+  ^
+"../../bsp/I2C/i2c_handle.h", line 33: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_ByteWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t pBuffer);
+                         ^
+"../../bsp/I2C/i2c_handle.h", line 33: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_ByteWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t pBuffer);
+                                               ^
+"../../bsp/I2C/i2c_handle.h", line 33: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_ByteWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t pBuffer);
+                                                                  ^
+"../../bsp/I2C/i2c_handle.h", line 47: Error:  #20: identifier "uint32_t" is undefined
+  uint32_t I2C_BufferWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
+  ^
+"../../bsp/I2C/i2c_handle.h", line 47: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_BufferWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
+                           ^
+"../../bsp/I2C/i2c_handle.h", line 47: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_BufferWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
+                                                 ^
+"../../bsp/I2C/i2c_handle.h", line 47: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_BufferWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
+                                                                    ^
+"../../bsp/I2C/i2c_handle.h", line 47: Error:  #20: identifier "uint16_t" is undefined
+  uint32_t I2C_BufferWrite(uint8_t slave_adress, uint8_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
+                                                                                      ^
+"../../bsp/I2C/i2c_handle.h", line 59: Error:  #20: identifier "uint32_t" is undefined
+  uint32_t I2C_byteRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer);
+  ^
+"../../bsp/I2C/i2c_handle.h", line 59: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_byteRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer);
+                        ^
+"../../bsp/I2C/i2c_handle.h", line 59: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_byteRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer);
+                                              ^
+"../../bsp/I2C/i2c_handle.h", line 59: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_byteRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer);
+                                                                ^
+"../../bsp/I2C/i2c_handle.h", line 72: Error:  #20: identifier "uint32_t" is undefined
+  uint32_t I2C_BufferRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer, uint16_t NumByteToRead);
+  ^
+"../../bsp/I2C/i2c_handle.h", line 72: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_BufferRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer, uint16_t NumByteToRead);
+                          ^
+"../../bsp/I2C/i2c_handle.h", line 72: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_BufferRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer, uint16_t NumByteToRead);
+                                                ^
+"../../bsp/I2C/i2c_handle.h", line 72: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_BufferRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer, uint16_t NumByteToRead);
+                                                                  ^
+"../../bsp/I2C/i2c_handle.h", line 72: Error:  #20: identifier "uint16_t" is undefined
+  uint32_t I2C_BufferRead(uint8_t slave_adress, uint8_t ReadAddr, uint8_t *pBuffer, uint16_t NumByteToRead);
+                                                                                    ^
+"../../bsp/I2C/i2c_handle.h", line 84: Error:  #20: identifier "uint32_t" is undefined
+  uint32_t I2C_Write_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t pBuffer);
+  ^
+"../../bsp/I2C/i2c_handle.h", line 84: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_Write_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t pBuffer);
+                            ^
+"../../bsp/I2C/i2c_handle.h", line 84: Error:  #20: identifier "uint16_t" is undefined
+  uint32_t I2C_Write_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t pBuffer);
+                                                  ^
+"../../bsp/I2C/i2c_handle.h", line 84: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_Write_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t pBuffer);
+                                                                      ^
+"../../bsp/I2C/i2c_handle.h", line 96: Error:  #20: identifier "uint32_t" is undefined
+  uint32_t I2C_Read16addr(uint8_t slave_adress, uint16_t ReadAddr, uint8_t *pBuffer);
+  ^
+"../../bsp/I2C/i2c_handle.h", line 96: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_Read16addr(uint8_t slave_adress, uint16_t ReadAddr, uint8_t *pBuffer);
+                          ^
+"../../bsp/I2C/i2c_handle.h", line 96: Error:  #20: identifier "uint16_t" is undefined
+  uint32_t I2C_Read16addr(uint8_t slave_adress, uint16_t ReadAddr, uint8_t *pBuffer);
+                                                ^
+"../../bsp/I2C/i2c_handle.h", line 96: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_Read16addr(uint8_t slave_adress, uint16_t ReadAddr, uint8_t *pBuffer);
+                                                                   ^
+"../../bsp/I2C/i2c_handle.h", line 109: Error:  #20: identifier "uint32_t" is undefined
+  uint32_t I2C_BufferWrite_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
+  ^
+"../../bsp/I2C/i2c_handle.h", line 109: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_BufferWrite_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
+                                  ^
+"../../bsp/I2C/i2c_handle.h", line 109: Error:  #20: identifier "uint16_t" is undefined
+  uint32_t I2C_BufferWrite_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
+                                                        ^
+"../../bsp/I2C/i2c_handle.h", line 109: Error:  #20: identifier "uint8_t" is undefined
+  uint32_t I2C_BufferWrite_16addr(uint8_t slave_adress, uint16_t WriteAddr, uint8_t *pBuffer, uint16_t NumByteToWrite);
+                                                                            ^
+.\..\..\PeripheralModule\OV2640\OV2640_init.c: 0 warnings, 30 errors
+
+[2025-12-06 23:12:50]	[info] incremental build: 7 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\BSP\I2C\i2c_handle.h' has been changed.
+
+[2025-12-06 23:12:50]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -I../../bsp/DCMI -I../../PeripheralModule/SPI_Screen -I../../PeripheralModule/OV2640 -I../../protocol -D"USE_STDPERIPH_DRIVER" -D"STM32F40_41xxx" --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\bsp\I2C\i2c_handle.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\bsp\I2C\i2c_handle.d .\..\..\bsp\I2C\i2c_handle.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\bsp\I2C\i2c_handle.c", line 21: Error:  #20: identifier "size_t" is undefined
+      for (size_t i = 0; i < I2C_ERROR_COUNT; i++)
+           ^
+".\..\..\bsp\I2C\i2c_handle.c", line 25: Warning:  #223-D: function "printf" declared implicitly
+              printf("%s", i2c_Errors[i].errorMessage);
+              ^
+".\..\..\bsp\I2C\i2c_handle.c", line 103: Warning:  #223-D: function "printf" declared implicitly
+              printf("I2C 8bit Register Address Buffer write error!\r\n");
+              ^
+".\..\..\bsp\I2C\i2c_handle.c", line 496: Warning:  #223-D: function "printf" declared implicitly
+              printf("I2C 16bit Register Address Buffer write error!\r\n");
+              ^
+".\..\..\bsp\I2C\i2c_handle.c", line 625: Warning:  #223-D: function "printf" declared implicitly
+              printf("find i2c device address: 0x%x(Write address 8bit)\r\n", i << 1);
+              ^
+".\..\..\bsp\I2C\i2c_handle.c", line 632: Warning:  #223-D: function "printf" declared implicitly
+          printf("No device is connected to the I2C bus!\r\n");
+          ^
+.\..\..\bsp\I2C\i2c_handle.c: 5 warnings, 1 error
+
+[2025-12-06 23:13:36]	[info] incremental build: 5 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\BSP\I2C\i2c_handle.h' has been changed.
+
+[2025-12-06 23:13:37]	[done]
+	build successfully !
+
+[2025-12-06 23:22:26]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\BSP\I2C\i2c_handle.h' has been changed.
+
+[2025-12-06 23:22:26]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -I../../bsp/DCMI -I../../PeripheralModule/SPI_Screen -I../../PeripheralModule/OV2640 -I../../protocol -D"USE_STDPERIPH_DRIVER" -D"STM32F40_41xxx" --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.d .\..\..\PeripheralModule\OV2640\OV2640_init.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 5: Error:  #147: declaration is incompatible with "uint8_t OV2640_WriteReg(uint8_t, uint8_t)"  (declared at line 21 of ".\..\..\PeripheralModule\OV2640\OV2640_init.h")
+  static int OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer)
+             ^
+".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 92: Warning:  #514-D: pointless comparison of unsigned integer with a negative constant
+          if (err==-1)
+                 ^
+".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 94: Warning:  #223-D: function "printf" declared implicitly
+              printf("OV2640 Image Config error!!\r\n");
+              ^
+".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 98: Warning:  #223-D: function "printf" declared implicitly
+      printf("OV2640 Image Config OK!!\r\n");
+      ^
+".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 118: Warning:  #177-D: variable "err"  was declared but never referenced
+      uint8_t err;
+              ^
+.\..\..\PeripheralModule\OV2640\OV2640_init.c: 4 warnings, 1 error
+
+[2025-12-06 23:23:40]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\BSP\I2C\i2c_handle.h' has been changed.
+
+[2025-12-06 23:23:40]	compilation failed at : "l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c", exit code: 1
+command: 
+  "L:\Keil\Keil_v5\ARM\AC5\bin\armcc.exe" -c --apcs=interwork -I../../app -I../../board -I../../bsp -I../../libraries/CMSIS/Include -I../../libraries/CMSIS/Device/ST/STM32F4xx/Include -I../../libraries/STM32F4xx_StdPeriph_Driver/inc -I../../module -I../../bsp/uart -I../../bsp/I2C -IRTE/_Project -I../../bsp/Response -I../../bsp/SPI -I../../bsp/DMA -I../../bsp/NVIC -I../../bsp/DCMI -I../../PeripheralModule/SPI_Screen -I../../PeripheralModule/OV2640 -I../../protocol -D"USE_STDPERIPH_DRIVER" -D"STM32F40_41xxx" --cpu Cortex-M4.fp --li --c99 -D__MICROLIB -O0 --split_sections --gnu --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o --no_depend_system_headers --depend .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.d .\..\..\PeripheralModule\OV2640\OV2640_init.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 6: Error:  #147: declaration is incompatible with "uint8_t OV2640_WriteReg(uint8_t, uint8_t)"  (declared at line 21 of ".\..\..\PeripheralModule\OV2640\OV2640_init.h")
+  static int OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer)
+             ^
+".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 93: Warning:  #514-D: pointless comparison of unsigned integer with a negative constant
+          if (err==-1)
+                 ^
+".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 95: Warning:  #223-D: function "printf" declared implicitly
+              printf("OV2640 Image Config error!!\r\n");
+              ^
+".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 99: Warning:  #223-D: function "printf" declared implicitly
+      printf("OV2640 Image Config OK!!\r\n");
+      ^
+".\..\..\PeripheralModule\OV2640\OV2640_init.c", line 119: Warning:  #177-D: variable "err"  was declared but never referenced
+      uint8_t err;
+              ^
+.\..\..\PeripheralModule\OV2640\OV2640_init.c: 4 warnings, 1 error
+
+[2025-12-06 23:24:39]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\BSP\I2C\i2c_handle.h' has been changed.
+
+[2025-12-06 23:24:40]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6218E: Undefined symbol i2c_device_adress_find (referred from i2c_handle.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+
+
+[2025-12-06 23:25:35]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+
+[2025-12-06 23:25:36]	[done]
+	build successfully !
+
+[2025-12-06 23:25:58]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\BSP\I2C\i2c_handle.h' has been changed.
+
+[2025-12-06 23:25:59]	[done]
+	build successfully !
+
+[2025-12-06 23:27:33]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\I2C\i2c_handle.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\BSP\I2C\i2c_handle.h' has been changed.
+
+[2025-12-06 23:27:34]	[done]
+	build successfully !
+
+[2025-12-06 23:34:33]	[info] incremental build: 8 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\PeripheralModule\OV2640\OV2640_init.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\I2C\i2c_handle.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\NVIC\NVIC_Init.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\uart\bsp_uart.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\NVIC\NVIC_Init.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\protocol\MY_your_driver.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\protocol\..\BSP\I2C\i2c_handle.h' has been changed.
+
+[2025-12-06 23:34:34]	[done]
+	build successfully !
+
+[2025-12-06 23:34:48]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+
+[2025-12-06 23:34:49]	[done]
+	build successfully !
+
+[2025-12-06 23:36:00]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\app\main.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\Response\response.c': source file has been changed.
+'l:\STM32_Example\Github\STM32-Learn\STM32F407\module\stm32f4xx_it.c': dependence 'l:\STM32_Example\Github\STM32-Learn\STM32F407\project\MDK(V5)\..\..\bsp\Response\response.h' has been changed.
+
+[2025-12-06 23:36:01]	[done]
+	build successfully !
+

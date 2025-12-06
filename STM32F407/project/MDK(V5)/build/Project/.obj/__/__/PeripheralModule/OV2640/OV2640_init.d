@@ -1,7 +1,8 @@
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: .\..\..\PeripheralModule\OV2640\OV2640_init.c
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: .\..\..\PeripheralModule\OV2640\OV2640_init.h
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../bsp/I2C/i2c_handle.h
-.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../board/board.h
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: .\..\..\PeripheralModule\OV2640\OV2640_reg.h
+.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: .\..\..\PeripheralModule\OV2640\OV2640_DMA_Init.h
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../libraries/CMSIS/Include/core_cm4.h
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../libraries/CMSIS/Include/core_cmInstr.h
@@ -36,7 +37,4 @@
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h
-.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: ../../bsp/I2C/i2c_init.h
-.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: .\..\..\PeripheralModule\OV2640\OV2640_reg.h
-.\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: .\..\..\PeripheralModule\OV2640\OV2640_DMA_Init.h
 .\build\Project\.obj\__\__\PeripheralModule\OV2640\OV2640_init.o: .\..\..\PeripheralModule\OV2640\OV2640_DCMI_Init.h
