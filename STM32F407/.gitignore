@@ -1,4 +1,6 @@
-# dot files
+#修改了gitignore文件，需要移除以前的缓存
+#git rm -r --cached .
+
 
 # Compiled object files
 *.o
