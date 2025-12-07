@@ -1,4 +1,5 @@
 #include "Test_code.h"
+#include "SPI_Control.h"
 
 // 以下是测试代码
 

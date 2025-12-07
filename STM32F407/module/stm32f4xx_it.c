@@ -215,14 +215,14 @@ void USART2_IRQHandler(void)
     USART_ReceiveData(BSP_USART);                                      // 清除接收中断标志
   }
 
-  if (USART_GetITStatus(BSP_USART, USART_IT_TC) != RESET) // 串口发送完成
-  {
+  // if (USART_GetITStatus(BSP_USART, USART_IT_TC) != RESET) // 串口发送完成
+  // {
 
-    USART_ClearITPendingBit(BSP_USART, USART_IT_TC); // 清除串口发送完成标志位
-    USART_ITConfig(BSP_USART, USART_IT_TC, DISABLE);    // 关闭串口发送完成中断
-    // usart1_rx_len = 0;                            // 清空接收数据长度
-    //  printf("send ok\r\n");
-  }
+  //   USART_ClearITPendingBit(BSP_USART, USART_IT_TC); // 清除串口发送完成标志位
+  //   USART_ITConfig(BSP_USART, USART_IT_TC, DISABLE);    // 关闭串口发送完成中断
+  //   // usart1_rx_len = 0;                            // 清空接收数据长度
+  //   //  printf("send ok\r\n");
+  // }
 }
 /**
  * @brief  该函数处理DMA2 Stream7中断请求。
@@ -246,8 +246,8 @@ void DMA1_Stream6_IRQHandler(void)
   if (DMA_GetITStatus(DEBUG_USART_TX_DMA_STREAM, DMA_IT_TCIF6) != RESET) // 等待DMA发送完成中断
   {
     DMA_ClearITPendingBit(DEBUG_USART_TX_DMA_STREAM, DMA_IT_TCIF6); // 清除DMA发送完成中断标志
-    DMA_Cmd(DEBUG_USART_TX_DMA_STREAM, DISABLE);                    // 关闭DMA发送
-    USART_ITConfig(BSP_USART, USART_IT_TC, ENABLE);                     // 使能串口发送完成中断
+    // DMA_Cmd(DEBUG_USART_TX_DMA_STREAM, DISABLE);                    // 关闭DMA发送
+    // USART_ITConfig(BSP_USART, USART_IT_TC, ENABLE);                     // 使能串口发送完成中断
   }
 }
 /**

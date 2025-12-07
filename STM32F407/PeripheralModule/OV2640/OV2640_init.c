@@ -2,8 +2,9 @@
 #include "OV2640_reg.h"
 #include "OV2640_DMA_Init.h"
 #include "OV2640_DCMI_Init.h"
-#include <stdint.h>
+// #include <stdint.h>
 #include <stdio.h>
+#include "i2c_handle.h"
 
 static int OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer)
 {

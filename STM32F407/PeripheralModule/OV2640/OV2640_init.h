@@ -1,5 +1,7 @@
-#include "i2c_handle.h"
+#ifndef __OV2640_INIT_H__
+#define __OV2640_INIT_H__
 
+#include "stdint.h"
 #define OV2640_Device_Address 0x60
 //竖屏---------------------------
 #define OV2640_IMAGE_WIDTH  240*4
@@ -34,3 +36,4 @@ static uint8_t OV2640_OutSize_Set(uint16_t width, uint16_t height);
  uint8_t OV2640_ImageSize_Set(uint16_t width,uint16_t height);
 
  uint8_t OV2640_Hardware_Init(void);
+ #endif

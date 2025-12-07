@@ -1,7 +1,6 @@
-
-#include "board.h"
-// #include <stdio.h>
-#include "spi_init.h"
+#ifndef __SPI_CONTROL_H__
+#define __SPI_CONTROL_H__
+#include <stdint.h>
 
 #define Dummy_Byte 0xFF
 #define SPIT_FLAG_TIMEOUT 0xffff
@@ -144,3 +143,4 @@ void SPI_FLASH_BufferWrite(uint8_t *pBuffer, uint32_t WriteAddr, uint16_t NumByt
  * @param [in] NumByteToRead 要读取的字节数
  */
 void SPI_FLASH_BufferRead(uint8_t *pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead);
+#endif

@@ -1,6 +1,9 @@
 
 
 #include "bsp_uart.h"
+#include "stdio.h"
+#include "NVIC_Init.h"
+#include "DMA_Init.h"
 // #include "response.h"
 void uart1_init(uint32_t __Baud)
 {
@@ -102,14 +105,16 @@ int fputc(int ch, FILE *f)
 	// }
 
 	// 以下为使用DMA传输
-	DMA_USART1_TX_BUF[0] = (uint8_t)ch;
-	while (DMA_GetCmdStatus(DEBUG_USART_TX_DMA_STREAM) != DISABLE) // 当DMA的命令为DISABLE时，跳出循环
-		;															// 等待DMA可以被设置
-																	// 设置DMA传输模式
+	// DMA_USART1_TX_BUF[0] = (uint8_t)ch;
+	// while (DMA_GetCmdStatus(DEBUG_USART_TX_DMA_STREAM) != DISABLE) // 当DMA的命令为DISABLE时，跳出循环
+	// 	;															// 等待DMA可以被设置
+	// 																// 设置DMA传输模式
 
-	DMA_SetCurrDataCounter(DEBUG_USART_TX_DMA_STREAM, 1); // 设置当前DMA的传输数据量
+	// DMA_SetCurrDataCounter(DEBUG_USART_TX_DMA_STREAM, 1); // 设置当前DMA的传输数据量
 
-	DMA_Cmd(DEBUG_USART_TX_DMA_STREAM, ENABLE); // 使能DMA传输
+	// DMA_Cmd(DEBUG_USART_TX_DMA_STREAM, ENABLE); // 使能DMA传输
+
+	usart_send_String_DMA((uint8_t *)&ch, 1); // 使用DMA发送单个字符
 
 	return ch;
 }

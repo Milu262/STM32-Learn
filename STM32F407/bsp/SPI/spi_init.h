@@ -1,6 +1,7 @@
-
+#ifndef __SPI_INIT_H__
+#define __SPI_INIT_H__
 #include "stm32f4xx.h"
-#include <stdio.h>
+// #include <stdio.h>
 
 //SPI1有许多管脚与DCMI复用，所以不使用SPI1
 
@@ -77,11 +78,25 @@
 #define SPI_CS_ON(x) GPIO_WriteBit(SPI_FLASH_CS_GPIO_PORT, SPI_FLASH_CS_PIN, x ? Bit_SET : Bit_RESET)
 #define SPI2_Screen_CS_ON(x) GPIO_WriteBit(CS_PIN_GPIO_PORT, CS_PIN, x ? Bit_SET : Bit_RESET)
 
-static void SPI_Screen_GPIO_Init(void);
-static void SPI_Screen_Init(void);
+/**
+ * @brief 初始化SPI屏幕总线
+ * 
+ * 配置SPI屏幕的引脚和时钟，设置为主模式，8位数据帧格式，CPOL=0, CPHA=0, 波特率=fAPB2/2=24MHz
+ */
 void SPI_Screen_BUS_Init(void);
-static void SPI_FLASH_GPIO_Init(void);
-static void SPI_FLASH_Init(void);
+
+/**
+ * @brief 初始化SPI FLASH总线
+ * 
+ * 配置SPI FLASH的引脚和时钟，设置为主模式，8位数据帧格式，CPOL=0, CPHA=0, 波特率=fAPB1/2=12MHz
+ */
 void SPI_FLASH_BUS_Init(void);
 
+/**
+ * @brief 配置SPI数据传输的第一个位
+ * 
+ * @param SPIx SPI实例，例如SPI1, SPI2, SPI3
+ * @param SPI_FirstBit 第一个位，例如SPI_FirstBit_MSBFirst, SPI_FirstBit_LSBFirst
+ */
 void SPI_FirstBitConfig(SPI_TypeDef* SPIx, uint16_t SPI_FirstBit);
+#endif

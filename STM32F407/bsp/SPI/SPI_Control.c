@@ -1,5 +1,8 @@
 #include "SPI_Control.h"
-
+#include "board.h"
+#include "spi_init.h"
+#include "stdio.h"
+#include "string.h"
 // 定义一个静态常量数组spiErrors，用于存储所有可能的SPI错误及其对应的错误信息
 static const Error_Code spiErrors[] =
     {

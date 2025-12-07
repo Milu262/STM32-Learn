@@ -51,9 +51,9 @@
 
 
 extern volatile uint16_t usart1_rx_len;
-extern volatile uint16_t usart1_tx_len;
-extern uint8_t DMA_USART1_RX_BUF[USART_MAX_LEN];
-extern uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN];
+// extern volatile uint16_t usart1_tx_len;
+// extern uint8_t DMA_USART1_RX_BUF[USART_MAX_LEN];
+// extern uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN];
 
 
 
@@ -65,11 +65,18 @@ extern uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN];
  */
 void DMA_Uart1_Init_Config(void);
 
+/**
+ * @brief 通过UART的DMA方式接收字符串数据.
+ * @param  ucstr: 接收到的字符串指针.
+ * @param  len: 要接收的数据长度.
+ * @retval 复制的字节数，出错返回 -1.
+ */
+int usart_copy_String_DMA(uint8_t *ucstr, uint16_t len);
 
 /**
  * @brief  通过UART的DMA方式发送字符串数据.
  * @param  ucstr: 要发送的字符串指针.
  * @param  len: 要发送的数据长度.
- * @retval None
+ * @retval 发送的字节数，出错返回 -1.
  */
-void usart_send_String_DMA(uint8_t *ucstr, uint16_t len);
+int usart_send_String_DMA(uint8_t *ucstr, uint16_t len);

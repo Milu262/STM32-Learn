@@ -4,9 +4,7 @@
 #define __BSP_UART_H__
 // #include "DMA_Init.h"
 #include "stm32f4xx.h"
-#include "stdio.h"
-#include "NVIC_Init.h"
-#include "DMA_Init.h"
+
 // #include "response.h"
 
 // #define BSP_USART USART1

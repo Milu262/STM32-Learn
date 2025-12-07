@@ -3,8 +3,8 @@
 #include "string.h"
 volatile uint16_t usart1_rx_len = 0; // 接收数据长度
 // volatile uint16_t usart1_tx_len = 0;            // 发送数据长度
-uint8_t DMA_USART1_RX_BUF[USART_MAX_LEN] = {0}; // DMA接收数据缓冲区
-uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN] = {0}; // DMA发送数据缓冲区
+__attribute__((aligned(4))) static uint8_t DMA_USART1_RX_BUF[USART_MAX_LEN] = {0}; // DMA接收数据缓冲区
+__attribute__((aligned(4))) static uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN] = {0}; // DMA发送数据缓冲区
 
 // uint32_t DCMI_DMA_Rx_Buf[DCMI_RX_BUF_SIZE] = {0}; // DCMI接收数据缓冲区
 void DMA_Uart1_Init_Config(void)
@@ -103,12 +103,43 @@ void DMA_Uart1_Init_Config(void)
 //     // DMA_ITConfig(DCMI_DMA_STREAM, DMA_IT_TC, ENABLE);// 打开DCMI的DMA传输完成中断,发生中断说明一行的数据传输完成
 // }
 
-void usart_send_String_DMA(uint8_t *ucstr, uint16_t len)
-{
-    memcpy(DMA_USART1_TX_BUF, ucstr, len);                          // 将数据拷贝到DMA发送缓冲区
-    while (DMA_GetCmdStatus(DEBUG_USART_TX_DMA_STREAM) != DISABLE) // 等待DMA可以被设置
-        ;
-    DMA_SetCurrDataCounter(DEBUG_USART_TX_DMA_STREAM, len); // 设置当前DMA的传输数据量
+int usart_copy_String_DMA(uint8_t *ucstr, uint16_t len)
+{ 
+    if (ucstr == NULL || len == 0)
+    return -1;
+    if (len > sizeof(DMA_USART1_RX_BUF)) {
+        len = sizeof(DMA_USART1_RX_BUF);
+    }
+    // memcpy(DMA_USART1_RX_BUF, ucstr, len);
+    memcpy(ucstr, DMA_USART1_RX_BUF, len);
+    return (int)len;
+}
 
-    DMA_Cmd(DEBUG_USART_TX_DMA_STREAM, ENABLE); // 使能DMA传输
+int usart_send_String_DMA(uint8_t *ucstr, uint16_t len)
+{
+  if (ucstr == NULL || len == 0)
+    return -1;
+
+  if (len > sizeof(DMA_USART1_TX_BUF)) {
+    len = sizeof(DMA_USART1_TX_BUF);
+  }
+
+  memcpy(DMA_USART1_TX_BUF, ucstr, len);
+
+  // 超时等待 DMA 释放
+  uint32_t timeout = SystemCoreClock / 100;
+  while (DMA_GetCmdStatus(DEBUG_USART_TX_DMA_STREAM) != DISABLE) {
+    if (--timeout == 0) {
+      return -2; // 超时
+    }
+  }
+
+  // 关键：重载内存地址（即使相同，也显式设置）
+  DMA_MemoryTargetConfig(DEBUG_USART_TX_DMA_STREAM, (uint32_t)DMA_USART1_TX_BUF,
+                         DMA_Memory_0);
+
+  DMA_SetCurrDataCounter(DEBUG_USART_TX_DMA_STREAM, len);
+  DMA_Cmd(DEBUG_USART_TX_DMA_STREAM, ENABLE);
+
+  return (int)len;
 }
