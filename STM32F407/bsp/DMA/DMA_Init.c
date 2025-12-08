@@ -107,11 +107,10 @@ int usart_send_String_DMA(const uint8_t *ucstr, uint16_t len) {
   }
 
   // 关键：重载内存地址（即使相同，也显式设置）
-  DMA_MemoryTargetConfig(DEBUG_USART_TX_DMA_STREAM, (uint32_t)DMA_USART_TX_BUF,
-                         DMA_Memory_0);
+  // DMA_MemoryTargetConfig(DEBUG_USART_TX_DMA_STREAM, (uint32_t)DMA_USART_TX_BUF,
+  //                        DMA_Memory_0);
 
   DMA_SetCurrDataCounter(DEBUG_USART_TX_DMA_STREAM, len);
-  //   DMA_SetCurrDataCounter(DEBUG_USART_TX_DMA_STREAM, 3);
 
   DMA_Cmd(DEBUG_USART_TX_DMA_STREAM, ENABLE);
 

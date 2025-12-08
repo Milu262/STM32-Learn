@@ -14,12 +14,16 @@ set(CMAKE_SIZE arm-none-eabi-size)
 
 # CPU 和编译选项
 set(CPU_FLAGS "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
-set(CMAKE_C_FLAGS "${CPU_FLAGS} -Wall -Wextra -O0 -g3 -std=c99 -ffunction-sections -fdata-sections -fno-builtin")
+# debug 模式
+# set(CMAKE_C_FLAGS "${CPU_FLAGS} -Wall -Wextra -O0 -g3 -std=c99 -ffunction-sections -fdata-sections -fno-builtin")
+# release 模式
+set(CMAKE_C_FLAGS "${CPU_FLAGS} -Wall -Wextra -Os -g3 -std=c99 -ffunction-sections -fdata-sections -fno-builtin")
+
 set(CMAKE_CXX_FLAGS "${CPU_FLAGS} -Wall -Wextra -O0 -g3 -fno-exceptions -ffunction-sections -fdata-sections -fno-builtin")
 set(CMAKE_ASM_FLAGS "${CPU_FLAGS} -x assembler-with-cpp -g3")
 
 # 链接脚本
-set(LINKER_SCRIPT "${CMAKE_SOURCE_DIR}/stm32f407vetx_flash.ld")
+set(LINKER_SCRIPT "${CMAKE_SOURCE_DIR}/STM32F407XX_FLASH.ld")
 set(CMAKE_EXE_LINKER_FLAGS "-T ${LINKER_SCRIPT} -Wl,--gc-sections -Wl,-Map=${PROJECT_NAME}.map")
 
 # 源文件收集（必须在 add_executable 之前）
@@ -40,7 +44,9 @@ file(GLOB_RECURSE SRC_FILES
 )
 
 # 启动文件
-set(STARTUP_FILE ${CMAKE_SOURCE_DIR}/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s)
+# set(STARTUP_FILE ${CMAKE_SOURCE_DIR}/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s)
+set(STARTUP_FILE ${CMAKE_SOURCE_DIR}/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s)
+# set(STARTUP_FILE ${CMAKE_SOURCE_DIR}/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f40xx.s)
 list(APPEND SRC_FILES ${STARTUP_FILE})
 
 # 排除不需要的文件
@@ -101,7 +107,7 @@ endforeach()
 target_compile_definitions(${PROJECT_NAME}.elf PRIVATE
   STM32F40_41xxx
   USE_STDPERIPH_DRIVER
-  HSE_VALUE=25000000
+  # HSE_VALUE=25000000
 )
 
 target_link_options(${PROJECT_NAME}.elf PRIVATE

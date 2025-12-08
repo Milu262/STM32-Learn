@@ -114,5 +114,6 @@
         }
       }
     ]
-  }
+  },
+  "cmake.sourceDirectory": "/home/ankesiqi/File/STM32-Learn/STM32F407"
 }

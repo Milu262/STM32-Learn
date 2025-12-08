@@ -126,15 +126,8 @@ int _isatty(int fd) {
 
 // newlib 重定向：printf -> usart_send_String_DMA
 int _write(int fd, const char *ptr, int len) {
-  if (fd == STDOUT_FILENO || fd == STDERR_FILENO) {
-    // 先发送固定测试数据，绕过 ptr
-    // static const uint8_t test[] = "OK\n";
-    // usart_send_String_DMA(test, 3);
-    usart_send_String_DMA((const uint8_t *)ptr, len);
-    while (DMA_GetCmdStatus(DEBUG_USART_TX_DMA_STREAM) != DISABLE)
-      ; // 等待完成
-    return len;
-  }
+  if (fd == STDOUT_FILENO || fd == STDERR_FILENO)
+    return usart_send_String_DMA((const uint8_t *)ptr, len);
   errno = EBADF;
   return -1;
 }

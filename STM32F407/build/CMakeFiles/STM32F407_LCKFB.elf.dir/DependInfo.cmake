@@ -8,13 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s" "/home/ankesiqi/File/STM32-Learn/STM32F407/build/CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o"
+  "/home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s" "/home/ankesiqi/File/STM32-Learn/STM32F407/build/CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
-  "HSE_VALUE=25000000"
   "STM32F40_41xxx"
   "USE_STDPERIPH_DRIVER"
   )

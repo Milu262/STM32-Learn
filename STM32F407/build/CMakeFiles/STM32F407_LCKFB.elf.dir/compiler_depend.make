@@ -93,7 +93,7 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/PeripheralModule/OV2640/OV2640_init.c.o: ../P
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  ../PeripheralModule/OV2640/OV2640_DCMI_Init.h \
+  ../bsp/SPI/spi_init.h \
   ../libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
   ../libraries/CMSIS/Include/core_cm4.h \
   ../libraries/CMSIS/Include/core_cmInstr.h \
@@ -127,6 +127,10 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/PeripheralModule/OV2640/OV2640_init.c.o: ../P
   ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h \
   ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h \
   ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h \
+  ../PeripheralModule/SPI_Screen/SPI_Screen_init.h \
+  ../bsp/SPI/SPI_Control.h \
+  ../bsp/SPI/spi_init.h \
+  ../PeripheralModule/OV2640/OV2640_DCMI_Init.h \
   ../PeripheralModule/OV2640/OV2640_DMA_Init.h \
   ../PeripheralModule/OV2640/OV2640_reg.h \
   ../bsp/I2C/i2c_handle.h \
@@ -144,11 +148,7 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/PeripheralModule/OV2640/OV2640_init.c.o: ../P
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  ../bsp/SPI/spi_init.h \
-  ../PeripheralModule/SPI_Screen/SPI_Screen_init.h \
-  ../bsp/SPI/SPI_Control.h \
-  ../bsp/SPI/spi_init.h
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h
 
 CMakeFiles/STM32F407_LCKFB.elf.dir/PeripheralModule/SPI_Screen/SPI_Screen_init.c.o: ../PeripheralModule/SPI_Screen/SPI_Screen_init.c \
   ../PeripheralModule/SPI_Screen/SPI_Screen_init.h \
@@ -230,8 +230,6 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/app/main.c.o: ../app/main.c \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/string.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/string.h \
   ../protocol/MY_your_driver.h \
   ../bsp/NVIC/NVIC_Init.h \
   ../libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
@@ -2753,19 +2751,9 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 
 ../bsp/SPI/spi_init.h:
 
-../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rng.c:
-
-/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_types.h:
-
-/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h:
-
-/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h:
-
 ../libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 
 ../bsp/I2C/i2c_handle.c:
-
-/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h:
 
 /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h:
 
@@ -2803,8 +2791,6 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h:
 
-/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/reent.h:
-
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h:
 
 ../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dcmi.c:
@@ -2823,13 +2809,13 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 
 /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h:
 
-../PeripheralModule/OV2640/OV2640_init.c:
-
-../libraries/CMSIS/Include/core_cmSimd.h:
-
-../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dsi.c:
-
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fmpi2c.h:
+
+../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_can.c:
+
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/config.h:
+
+../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h:
 
 /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/unistd.h:
 
@@ -2841,11 +2827,27 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 
 /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h:
 
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h:
+
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h:
+
+../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rng.c:
+
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_types.h:
+
 ../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_crc.c:
 
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma.h:
 
 ../bsp/I2C/i2c_init.c:
+
+../PeripheralModule/OV2640/OV2640_init.c:
+
+../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dsi.c:
+
+../libraries/CMSIS/Include/core_cmSimd.h:
+
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/reent.h:
 
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash.h:
 
@@ -2875,17 +2877,13 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 
 ../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.c:
 
-/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/config.h:
-
-../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h:
-
-../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_can.c:
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h:
 
 ../module/stm32f4xx_it.h:
 
-../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fmpi2c.c:
-
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash_ramfunc.h:
+
+../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fmpi2c.c:
 
 ../PeripheralModule/SPI_Screen/SPI_Screen_init.c:
 
@@ -2893,23 +2891,23 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 
 ../board/board.h:
 
-/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/string.h:
-
-../bsp/Response/response.h:
-
-/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/string.h:
-
 ../bsp/uart/bsp_uart.h:
 
 ../libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.c:
 
 ../bsp/DMA/DMA_Init.h:
 
+../bsp/Response/response.h:
+
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/string.h:
+
 ../bsp/SPI/Test_code.h:
 
 ../board/board.c:
 
 ../bsp/DMA/DMA_Init.c:
+
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/string.h:
 
 ../bsp/Response/response.c:
 

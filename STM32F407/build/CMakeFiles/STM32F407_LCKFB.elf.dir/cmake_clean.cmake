@@ -27,7 +27,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/STM32F407_LCKFB.elf.dir/bsp/SPI/spi_init.c.o.d"
   "CMakeFiles/STM32F407_LCKFB.elf.dir/bsp/uart/bsp_uart.c.o"
   "CMakeFiles/STM32F407_LCKFB.elf.dir/bsp/uart/bsp_uart.c.o.d"
-  "CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o"
+  "CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o"
   "CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.o"
   "CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.o.d"
   "CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/STM32F4xx_StdPeriph_Driver/src/misc.c.o"

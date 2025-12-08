@@ -1,11 +1,11 @@
 #include "OV2640_init.h"
+#include "../../bsp/SPI/spi_init.h"
+#include "../SPI_Screen/SPI_Screen_init.h"
 #include "OV2640_DCMI_Init.h"
 #include "OV2640_DMA_Init.h"
 #include "OV2640_reg.h"
 #include "i2c_handle.h"
 #include <stdio.h>
-#include "../../bsp/SPI/spi_init.h"
-#include "../SPI_Screen/SPI_Screen_init.h"
 /**
  * @brief  OV2640_WriteReg
  * @param  WriteAddr: OV2640寄存器地址
@@ -96,15 +96,14 @@ uint8_t OV2640_Image_Config(void) {
   for (i = 0; i < (sizeof(OV2640_UXGA) / 2); i++) {
     err = OV2640_WriteReg(OV2640_UXGA[i][0], OV2640_UXGA[i][1]);
     // delay_ms(1);
-    if (err==0) {
-      GPIO_SetBits(GPIOB, GPIO_Pin_2);
+    if (err == 0) {
 
-      //   printf("OV2640 Image Config error!!\r\n");
+      printf("OV2640 Image Config error!!\r\n");
       return 0;
     }
   }
 
-  // printf("OV2640 Image Config OK!!\r\n");
+  printf("OV2640 Image Config OK!!\r\n");
 
   // OV2640_ImageSize_Set(280, 240);
 
@@ -115,7 +114,7 @@ uint8_t OV2640_Image_Config(void) {
     printf("OV2640 OutSize Set error!!\r\n");
     return 0;
   }
-
+  printf("OV2640 OutSize Set OK!!\r\n");
   return 1;
 }
 
@@ -126,10 +125,9 @@ uint8_t OV2640_Hardware_Init(void) {
   return 1;
 }
 
-int Ov2640PlayVideo(void)
-{
+int Ov2640PlayVideo(void) {
   int error;
-    SPI_Screen_BUS_Init(); // SPI屏幕总线初始化
+  SPI_Screen_BUS_Init(); // SPI屏幕总线初始化
 
   OV2640_Hardware_Init();
   LCD_Screen_Init(); // LCD屏幕初始化

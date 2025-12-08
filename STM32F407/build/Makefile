@@ -465,13 +465,13 @@ bsp/uart/bsp_uart.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32F407_LCKFB.elf.dir/build.make CMakeFiles/STM32F407_LCKFB.elf.dir/bsp/uart/bsp_uart.c.s
 .PHONY : bsp/uart/bsp_uart.c.s
 
-libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.o: libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o
-.PHONY : libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.o
+libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.o: libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o
+.PHONY : libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.o
 
 # target to build an object file
-libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32F407_LCKFB.elf.dir/build.make CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o
-.PHONY : libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o
+libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32F407_LCKFB.elf.dir/build.make CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o
+.PHONY : libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o
 
 libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o: libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.o
 .PHONY : libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
@@ -1676,7 +1676,7 @@ help:
 	@echo "... bsp/uart/bsp_uart.o"
 	@echo "... bsp/uart/bsp_uart.i"
 	@echo "... bsp/uart/bsp_uart.s"
-	@echo "... libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.o"
+	@echo "... libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.o"
 	@echo "... libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o"
 	@echo "... libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.i"
 	@echo "... libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.s"

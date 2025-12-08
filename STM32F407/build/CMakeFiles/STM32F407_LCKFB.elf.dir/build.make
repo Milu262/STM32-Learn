@@ -937,18 +937,18 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.s"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ankesiqi/File/STM32-Learn/STM32F407/protocol/hdlc_core.c -o CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.s
 
-CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o: CMakeFiles/STM32F407_LCKFB.elf.dir/flags.make
-CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o: ../libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ankesiqi/File/STM32-Learn/STM32F407/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building ASM object CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o"
-	arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o -c /home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o: CMakeFiles/STM32F407_LCKFB.elf.dir/flags.make
+CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o: ../libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ankesiqi/File/STM32-Learn/STM32F407/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building ASM object CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o"
+	arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o -c /home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s
 
-CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.i"
-	arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s > CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.i
+CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.i"
+	arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s > CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.i
 
-CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.s"
-	arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s -o CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.s
+CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.s"
+	arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/ankesiqi/File/STM32-Learn/STM32F407/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s -o CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.s
 
 # Object files for target STM32F407_LCKFB.elf
 STM32F407_LCKFB_elf_OBJECTS = \
@@ -1014,7 +1014,7 @@ STM32F407_LCKFB_elf_OBJECTS = \
 "CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/cmd_handlers.c.o" \
 "CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/crc16.c.o" \
 "CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o" \
-"CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o"
+"CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o"
 
 # External object files for target STM32F407_LCKFB.elf
 STM32F407_LCKFB_elf_EXTERNAL_OBJECTS =
@@ -1081,7 +1081,7 @@ STM32F407_LCKFB.elf: CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/MY_your_driver.
 STM32F407_LCKFB.elf: CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/cmd_handlers.c.o
 STM32F407_LCKFB.elf: CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/crc16.c.o
 STM32F407_LCKFB.elf: CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o
-STM32F407_LCKFB.elf: CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s.o
+STM32F407_LCKFB.elf: CMakeFiles/STM32F407_LCKFB.elf.dir/libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/SW4STM32/startup_stm32f40_41xxx.s.o
 STM32F407_LCKFB.elf: CMakeFiles/STM32F407_LCKFB.elf.dir/build.make
 STM32F407_LCKFB.elf: CMakeFiles/STM32F407_LCKFB.elf.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ankesiqi/File/STM32-Learn/STM32F407/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Linking C executable STM32F407_LCKFB.elf"
