@@ -50,15 +50,9 @@ source ~/.bashrc
 
 ```
 
-> [!💡 说明：]
-> 
-> 
->   
-> 
-```
-> ~/.bashrc 适用于 Bash 用户（大多数 Linux 默认 shell）。
-> 如果你使用 Zsh，请将命令中的 ~/.bashrc 替换为 ~/.zshrc。
-```
+> [!warning] 说明
+> `~/.bashrc` 适用于 Bash 用户（大多数 Linux 默认 shell）
+> 如果你使用 Zsh，请将命令中的 `~/.bashrc` 替换为 `~/.zshrc`
 
   
 
