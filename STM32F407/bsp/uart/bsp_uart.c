@@ -127,3 +127,20 @@ int fgetc(FILE *f)
 
 	return (int)USART_ReceiveData(BSP_USART);
 }
+
+static volatile RxState _RxStatus = RX_STATE_IDLE;
+
+void enter_rx_Receive(void) {
+  _RxStatus = RX_STATE_RECEIVING;
+}
+
+void enter_rx_IDLE(void) {
+  _RxStatus = RX_STATE_IDLE;
+}
+
+void enter_rx_Overflow(void) {
+  _RxStatus = RX_STATE_OVERFLOW;
+}
+RxState get_rx_status(void) {
+  return _RxStatus;
+}

@@ -43,6 +43,14 @@ void SVC_Handler(void);
 void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
+
+/**
+ * @brief 处理USART2全局中断请求。
+ * 当USART2接收到数据或发生错误时，会触发此中断。
+ * 该函数检查中断状态，并在接收到空闲中断时处理接收的数据。
+ */
+void USART2_IRQHandler(void);
+
 /**
  * @brief  处理DMA2 Stream7全局中断请求。
  *
@@ -50,6 +58,14 @@ void SysTick_Handler(void);
  * 该函数清除中断标志并在传输完成后禁用DMA流。
  */
 void DMA2_Stream7_IRQHandler(void);
+
+/**
+ * @brief  处理DMA1 Stream6全局中断请求。
+ *
+ * 当DMA1 Stream6传输完成时，会触发此中断。
+ * 该函数清除中断标志。
+ */
+void DMA1_Stream6_IRQHandler(void);
 
 #ifdef __cplusplus
 }

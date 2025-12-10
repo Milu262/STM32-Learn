@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include "string.h"
 volatile uint16_t usart1_rx_len = 0; // 接收数据长度
+static volatile uint16_t UsartRxCount = 0;
 // volatile uint16_t usart1_tx_len = 0;            // 发送数据长度
-__attribute__((aligned(4))) static uint8_t DMA_USART1_RX_BUF[USART_MAX_LEN] = {0}; // DMA接收数据缓冲区
-__attribute__((aligned(4))) static uint8_t DMA_USART1_TX_BUF[USART_MAX_LEN] = {0}; // DMA发送数据缓冲区
+__attribute__((aligned(4))) static uint8_t DmaUsartRxBuffer[USART_MAX_LEN] = {0}; // DMA接收数据缓冲区
+__attribute__((aligned(4))) static uint8_t DmaUsartTxBuffer[USART_MAX_LEN] = {0}; // DMA发送数据缓冲区
 
 // uint32_t DCMI_DMA_Rx_Buf[DCMI_RX_BUF_SIZE] = {0}; // DCMI接收数据缓冲区
 void DMA_Uart1_Init_Config(void)
@@ -18,7 +19,7 @@ void DMA_Uart1_Init_Config(void)
     }
     DMA_InitStructure.DMA_Channel = DEBUG_USART_DMA_CHANNEL;                 // DMA通道
     DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)DEBUG_USART_DR_BASE; // 外设基地址
-    DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t)DMA_USART1_RX_BUF;      // 内存基地址
+    DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t)DmaUsartRxBuffer;      // 内存基地址
     DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;                   // 数据传输方向：外设到内存    ！！！一定注意方向！！！
     DMA_InitStructure.DMA_BufferSize = USART_MAX_LEN;                         // DMA缓冲区大小
     DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;          // 外设地址不递增
@@ -39,7 +40,7 @@ void DMA_Uart1_Init_Config(void)
 
     DMA_InitStructure.DMA_Channel = DEBUG_USART_DMA_CHANNEL;                 // DMA通道
     DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)DEBUG_USART_DR_BASE; // 外设基地址
-    DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t)DMA_USART1_TX_BUF;      // 内存基地址
+    DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t)DmaUsartTxBuffer;      // 内存基地址
     DMA_InitStructure.DMA_DIR = DMA_DIR_MemoryToPeripheral;                   // 数据传输方向：内存到外设  ！！！一定注意方向！！！
     DMA_InitStructure.DMA_BufferSize = USART_MAX_LEN;                         // DMA缓冲区大小
     DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;          // 外设地址不递增
@@ -103,15 +104,15 @@ void DMA_Uart1_Init_Config(void)
 //     // DMA_ITConfig(DCMI_DMA_STREAM, DMA_IT_TC, ENABLE);// 打开DCMI的DMA传输完成中断,发生中断说明一行的数据传输完成
 // }
 
-int usart_copy_String_DMA(uint8_t *ucstr, uint16_t len)
+int uart_copy_receive_data(uint8_t *ucstr, uint16_t len)
 { 
     if (ucstr == NULL || len == 0)
     return -1;
-    if (len > sizeof(DMA_USART1_RX_BUF)) {
-        len = sizeof(DMA_USART1_RX_BUF);
+    if (len > sizeof(DmaUsartRxBuffer)) {
+        len = sizeof(DmaUsartRxBuffer);
     }
-    // memcpy(DMA_USART1_RX_BUF, ucstr, len);
-    memcpy(ucstr, DMA_USART1_RX_BUF, len);
+    // memcpy(DmaUsartRxBuffer, ucstr, len);
+    memcpy(ucstr, DmaUsartRxBuffer, len);
     return (int)len;
 }
 
@@ -120,11 +121,11 @@ int usart_send_String_DMA(uint8_t *ucstr, uint16_t len)
   if (ucstr == NULL || len == 0)
     return -1;
 
-  if (len > sizeof(DMA_USART1_TX_BUF)) {
-    len = sizeof(DMA_USART1_TX_BUF);
+  if (len > sizeof(DmaUsartTxBuffer)) {
+    len = sizeof(DmaUsartTxBuffer);
   }
 
-  memcpy(DMA_USART1_TX_BUF, ucstr, len);
+  memcpy(DmaUsartTxBuffer, ucstr, len);
 
   // 超时等待 DMA 释放
   uint32_t timeout = SystemCoreClock / 100;
@@ -135,11 +136,30 @@ int usart_send_String_DMA(uint8_t *ucstr, uint16_t len)
   }
 
   // 关键：重载内存地址（即使相同，也显式设置）
-  DMA_MemoryTargetConfig(DEBUG_USART_TX_DMA_STREAM, (uint32_t)DMA_USART1_TX_BUF,
+  DMA_MemoryTargetConfig(DEBUG_USART_TX_DMA_STREAM, (uint32_t)DmaUsartTxBuffer,
                          DMA_Memory_0);
 
   DMA_SetCurrDataCounter(DEBUG_USART_TX_DMA_STREAM, len);
   DMA_Cmd(DEBUG_USART_TX_DMA_STREAM, ENABLE);
 
   return (int)len;
+}
+
+uint16_t SetUsartRxCount(uint16_t count)
+{
+  if (count > sizeof(DmaUsartRxBuffer)) {
+    count = sizeof(DmaUsartRxBuffer);
+  }
+  UsartRxCount = count;
+  return count;
+}
+
+uint16_t GetUsartRxCount(void)
+{
+  return UsartRxCount;
+}
+
+void ClearUsartRxCount(void)
+{
+  UsartRxCount = 0;
 }

@@ -1,3 +1,5 @@
+#ifndef __OV2640_DMA_INIT_H
+#define __OV2640_DMA_INIT_H
 #include "stm32f4xx.h"
 
 //-------------------DCMI---------------------------------------------------------------------------
@@ -17,4 +19,9 @@
 //定义SPI1的数据地址
 #define SPI1_DR_BASE (SPI1_BASE + 0x0C)
 
+/**
+  * @brief       初始化DCMI的DMA配置
+  * @retval      无
+  */
 void DMA_DCMI_Init_Config(void);
+#endif

@@ -37,6 +37,12 @@
 #define BSP_USART_RX_AF_PIN GPIO_PinSource3
 #define BSP_USART_RX_RCC RCC_AHB1Periph_GPIOA
 
+typedef enum {
+  RX_STATE_IDLE = 0,      // 接收状态为空闲
+  RX_STATE_RECEIVING = 1, // 接收状态为已接收
+  RX_STATE_OVERFLOW = 2   // 接收状态为溢出
+} RxState;                // 接收状态
+
 
 //  extern uint8_t DMA_Uart_SendBuff[SENDBUFF_SIZE];	// 定义发送缓冲区，用于存储要发送的数据;//发送缓冲区
 
@@ -59,4 +65,25 @@ void usart_send_data(uint8_t ucch);
  */
 void usart_send_String(uint8_t *ucstr);
 
+/**
+ * @brief  设置接收数据状态为已接收.
+ */
+void enter_rx_Receive(void);
+
+/**
+ * @brief  设置接收数据状态为IDLE.
+ */
+void enter_rx_IDLE(void);
+
+/**
+ * @brief  设置接收数据状态为Overflow.
+ */
+void enter_rx_Overflow(void);
+
+/**
+ * @brief  获取串口接收数据状态.
+ * @param  None
+ * @retval The current state of the receive buffer.
+ */
+RxState get_rx_status(void);
 #endif

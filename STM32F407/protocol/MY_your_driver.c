@@ -40,11 +40,13 @@ void uart_send_buffer_DMA(const uint8_t *buf, uint16_t len)
 }
 
 // 调试信息输出（非 HDLC 数据，如 printf）
+
+#ifndef debug_printf
 void debug_printf(const char *fmt, ...)
 {
     // 在此实现你的调试输出代码（如通过串口打印）
 }
-
+#endif
 // Flash 读取（addr 对齐要求由你保证）
 void flash_read(uint32_t addr, uint8_t *buf, uint16_t len)
 {

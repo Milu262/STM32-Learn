@@ -1,4 +1,6 @@
 #include <board.h>
+
+#include "../libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
 #include "bsp_uart.h"
 #include "NVIC_Init.h"
 

@@ -1,3 +1,11 @@
+/*
+ * @Author: Ankesiqi 1261807915@qq.com
+ * @Date: 2025-12-06 23:04:09
+ * @LastEditors: Ankesiqi 1261807915@qq.com
+ * @LastEditTime: 2025-12-08 23:43:27
+ * @FilePath: \MDK(V5)l:\STM32_Example\Github\STM32-Learn\STM32F407\bsp\DMA\DMA_Init.h
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 #include "stm32f4xx.h"
 
 
@@ -66,12 +74,12 @@ extern volatile uint16_t usart1_rx_len;
 void DMA_Uart1_Init_Config(void);
 
 /**
- * @brief 通过UART的DMA方式接收字符串数据.
- * @param  ucstr: 接收到的字符串指针.
+ * @brief 通过UART的DMA方式接收字符串数据，将接收到的数据拷贝到指定的缓存中.
+ * @param  ucstr: 指向接收数组的指针.
  * @param  len: 要接收的数据长度.
  * @retval 复制的字节数，出错返回 -1.
  */
-int usart_copy_String_DMA(uint8_t *ucstr, uint16_t len);
+int uart_copy_receive_data(uint8_t *ucstr, uint16_t len);
 
 /**
  * @brief  通过UART的DMA方式发送字符串数据.
@@ -80,3 +88,21 @@ int usart_copy_String_DMA(uint8_t *ucstr, uint16_t len);
  * @retval 发送的字节数，出错返回 -1.
  */
 int usart_send_String_DMA(uint8_t *ucstr, uint16_t len);
+
+/**
+ * @brief 设置串口接收数据长度.
+ * @param  count: 要设置的数据长度.
+ * @retval 返回设置的数据长度
+ */
+uint16_t SetUsartRxCount(uint16_t count);
+
+/**
+ * @brief 获取串口接收数据长度.
+ * @retval 返回接收的数据长度
+ */
+uint16_t GetUsartRxCount(void);
+
+/**
+ * @brief 清空串口接收数据长度.
+ */
+void ClearUsartRxCount(void);

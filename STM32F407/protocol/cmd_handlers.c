@@ -34,7 +34,11 @@ void handle_i2c_read_reg(const uint8_t *payload, uint16_t len)
     uint8_t reg_addr = payload[1];
     uint8_t value;
     int ok = (i2c_read_reg(dev_addr, reg_addr, &value) == 0);
-    hdlc_send_frame(CMD_I2C_READ_RESULT, ok ? &value : NULL, ok ? 1 : 0);
+
+    if(ok !=0)
+        return;
+    hdlc_send_frame(CMD_I2C_READ_RESULT, &value, 1);//TODO 确认为何I2c 设备地址没找到
+    // hdlc_send_frame(CMD_I2C_READ_RESULT, ok ? &value : NULL, ok ? 1 : 0);
 }
 
 // ──────────────── I2C WRITE ────────────────

@@ -6,11 +6,23 @@
 #include <stdio.h>
 #include "i2c_handle.h"
 
+/**
+ * @brief       向OV2640摄像头模块的指定寄存器写入一个字节的数据
+ * @param       WriteAddr: 要写入的寄存器地址
+ * @param       pBuffer:   要写入的数据
+ * @retval      返回I2C写入操作的结果，0表示成功，其他值表示失败
+ */
 static int OV2640_WriteReg(uint8_t WriteAddr, uint8_t pBuffer)
 {
     return I2C_ByteWrite(OV2640_Device_Address, WriteAddr, pBuffer);
 }
 
+/**
+ * @brief       设置OV2640摄像头输出图像的尺寸
+ * @param       width:  输出图像的宽度（必须是4的倍数）
+ * @param       height: 输出图像的高度（必须是4的倍数）
+ * @retval      返回设置结果，0表示成功，1表示宽度不是4的倍数，2表示高度不是4的倍数
+ */
 static uint8_t OV2640_OutSize_Set(uint16_t width, uint16_t height)
 {
     uint16_t outh;
@@ -22,8 +34,6 @@ static uint8_t OV2640_OutSize_Set(uint16_t width, uint16_t height)
         return 2;
     outw = width / 4;
     outh = height / 4;
-
-
 
     OV2640_WriteReg(0XFF, 0X00);
     OV2640_WriteReg(0XE0, 0X04);
@@ -42,8 +52,8 @@ uint8_t OV2640_ImageSize_Set(uint16_t width, uint16_t height)
     uint8_t temp;
     OV2640_WriteReg(0XFF, 0X00);
     OV2640_WriteReg(0XE0, 0X04);
-    OV2640_WriteReg(0XC0, (width) >> 3 & 0XFF);  
-    OV2640_WriteReg(0XC1, (height) >> 3 & 0XFF); 
+    OV2640_WriteReg(0XC0, (width) >> 3 & 0XFF);
+    OV2640_WriteReg(0XC1, (height) >> 3 & 0XFF);
     temp = (width & 0X07) << 3;
     temp |= height & 0X07;
     temp |= (width >> 4) & 0X80;
@@ -93,7 +103,7 @@ uint8_t OV2640_Image_Config(void)
     {
         err = OV2640_WriteReg(OV2640_UXGA[i][0], OV2640_UXGA[i][1]);
         // delay_ms(1);
-        if (err==-1)
+        if (err == -1)
         {
             printf("OV2640 Image Config error!!\r\n");
             return 0;
@@ -122,5 +132,5 @@ uint8_t OV2640_Hardware_Init(void)
     int err;
     DCMI_Camera_Init();
     DMA_DCMI_Init_Config();
-    return 1;
+    return 0;
 }

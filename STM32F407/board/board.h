@@ -1,7 +1,6 @@
 #ifndef __BOARD_H__
 #define __BOARD_H__
-
-#include "stm32f4xx.h"
+#include <stdint.h>
 
 typedef struct
 {

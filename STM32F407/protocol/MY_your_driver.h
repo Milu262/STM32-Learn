@@ -1,6 +1,9 @@
 #ifndef MY_YOUR_DRIVER_H
 #define MY_YOUR_DRIVER_H
 
+#include "stdint.h"
+#include <stdio.h>
+#define debug_printf printf
 // ====== 【你必须实现的底层驱动接口】======
 // 放在 your_driver.c 中实现
 
@@ -17,12 +20,16 @@
  */
 void uart_send_buffer_DMA(const uint8_t* buf, uint16_t len);
 
+#ifndef debug_printf
 /**
  * @brief 调试信息输出（非 HDLC 数据，如 printf）
  * @param fmt 格式化字符串
  * @param ... 可变参数
  */
 void debug_printf(const char* fmt, ...);
+
+#endif
+
 
 /**
  * @brief Flash 读取（addr 对齐要求由你保证）

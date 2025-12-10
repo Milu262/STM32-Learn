@@ -1,3 +1,5 @@
+#ifndef __OV2640_DCMI_INIT_H
+#define __OV2640_DCMI_INIT_H
 #include "stm32f4xx.h"
 
 // 摄像头引脚与STM32引脚对应关系
@@ -105,7 +107,10 @@
 #define DCMI_RST_GPIO_CLK         	RCC_AHB1Periph_GPIOE
 #define DCMI_RST_GPIO_PIN         	GPIO_Pin_8
 
-static void DCMI_GPIO_Init(void);
-static void DCMI_DCMI_Init(void);
 
+/**
+  * @brief       初始化配置DCMI的引脚和DCMI的寄存器
+  * @retval      无
+  */
 void DCMI_Camera_Init(void);
+#endif

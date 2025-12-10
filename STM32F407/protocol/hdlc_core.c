@@ -3,15 +3,16 @@
 #include <stdarg.h>
 #include "cmd_handlers.h"
 #include "MY_your_driver.h" // 包含你自己实现的底层驱动接口
+#include "DMA_Init.h"
 
 #define FRAME_BUF_SIZE 260
 #define TX_BUF_SIZE 256
 // 假设最大有效载荷为 520 字节（根据你的协议设计）
 #define HDLC_MAX_PAYLOAD_LEN 520
 
-static uint8_t rx_buffer[FRAME_BUF_SIZE];
-static uint16_t rx_index = 0;
-static uint8_t escaped = 0;
+// static uint8_t rx_buffer[FRAME_BUF_SIZE];
+// static uint16_t rx_index = 0;
+// static uint8_t escaped = 0;
 
 // 命令分发表（按 CMD_ID 排序，支持二分查找；但这里用线性足够）
 typedef struct
@@ -206,6 +207,7 @@ void hdlc_send_frame(uint16_t cmd_id, const uint8_t *payload, uint16_t payload_l
 
     // Step 2: HDLC 转义（加 FLAG、CRC、字节填充）
     uint16_t frame_len = hdlc_escape_frame(raw_buf, raw_len, tx_frame_buf, TX_FRAME_BUF_SIZE);
+    printf("[HDLC] Sending frame (%d bytes)\n", frame_len);
     if (frame_len == 0)
     {
         return;
@@ -265,6 +267,8 @@ static void hdlc_handle_frame_end(void)
 
     if (recv_crc == calc_crc)
     {
+        //CRC通过
+        // uart_send_buffer_DMA(hdlc_frame_buf, payload_with_cmd_len);//测试CRC是否通过数据
         hdlc_process_frame(hdlc_frame_buf, payload_with_cmd_len);
     }
     else
@@ -284,6 +288,11 @@ void hdlc_process_stream(const uint8_t *data, uint16_t len)
             if (hdlc_in_frame)
             {
                 hdlc_handle_frame_end(); // 处理完整帧
+
+                //解包数据正常
+                // usart_send_String_DMA(hdlc_frame_buf,hdlc_frame_index);//测试数据
+                hdlc_in_frame = 0;
+                return;
             }
             // 开始新帧（即使刚结束，也重置状态）
             hdlc_in_frame = 1;

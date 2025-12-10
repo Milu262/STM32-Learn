@@ -67,10 +67,8 @@ uint8_t do_process(usart_data_typed *udata);
 
 /**
  * @brief 处理串口接收数据
- * @param error 错误状态标志位，用于指示是否有错误发生
- * @param UartRxBuf 指向接收数据缓冲区的指针
- * @param UartRxLen 接收数据的长度
- * @return uint8_t 处理结果，0表示失败，1表示成功
+ * @param RxCount 接收数据的长度
+ * @return int 处理结果，0表示成功，-1表示失败，-2表示数据溢出
  */
-uint8_t response_handle(uint8_t error, uint8_t *UartRxBuf, uint16_t UartRxLen);
+int response_handle(uint16_t RxCount);
 #endif

@@ -1,5 +1,9 @@
 #include "OV2640_DCMI_Init.h"
 
+/**
+  * @brief       初始化配置DCMI的GPIO引脚
+  * @retval      无
+  */
 static void DCMI_GPIO_Init(void)
 {
     // 启用DCMI相关引脚的时钟
@@ -81,6 +85,11 @@ static void DCMI_GPIO_Init(void)
     // 控制DCMI复位引脚
     GPIO_SetBits(DCMI_RST_GPIO_PORT, DCMI_RST_GPIO_PIN);
 }
+
+/**
+  * @brief       初始化配置DCMI的寄存器
+  * @retval      无
+  */
 static void DCMI_DCMI_Init(void)
 {
     RCC_AHB2PeriphClockCmd(RCC_AHB2Periph_DCMI, ENABLE);

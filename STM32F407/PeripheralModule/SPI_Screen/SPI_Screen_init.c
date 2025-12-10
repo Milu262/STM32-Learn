@@ -41,6 +41,12 @@ static void LCD_GPIO_Init(void)
     LCD_BLK_ON(1); // 打开LCD背光
     delay_ms(100);
 }
+
+/**
+  * @brief       向LCD屏幕写入一个字节数据
+  * @param       dat: 要写入的字节数据
+  * @retval      返回写入结果，1表示失败，0表示成功
+  */
 static uint8_t LCD_Writ_Bus(uint8_t dat)
 {
     LCD_SPI_CS_ON(0);
@@ -52,7 +58,7 @@ static uint8_t LCD_Writ_Bus(uint8_t dat)
         {
             printf("SPI Timeout\r\n");
             LCD_SPI_CS_ON(1);
-            return 0;
+            return 1;
         }
     }
     SPI_I2S_SendData(LCD_SPI, dat);
@@ -66,8 +72,14 @@ static uint8_t LCD_Writ_Bus(uint8_t dat)
     // SPI_I2S_ReceiveData(SPI2);
 
     LCD_SPI_CS_ON(1);
-    return 1;
+    return 0;
 }
+
+/**
+  * @brief       向LCD屏幕写入一个字节命令
+  * @param       reg: 要写入的命令
+  * @retval      返回写入结果，1表示失败，0表示成功
+  */
 static uint8_t LCD_WR_REG(uint8_t reg)
 {
     uint8_t err = 0;
@@ -78,6 +90,11 @@ static uint8_t LCD_WR_REG(uint8_t reg)
     return err;
 }
 
+/**
+  * @brief       向LCD屏幕写入一个字节数据
+  * @param       data: 要写入的字节数据
+  * @retval      返回写入结果，1表示失败，0表示成功
+  */
 static uint8_t LCD_WR_DATA8(uint8_t data)
 {
     uint8_t err = 0;
@@ -86,6 +103,11 @@ static uint8_t LCD_WR_DATA8(uint8_t data)
     return err;
 }
 
+/**
+  * @brief       向LCD屏幕写入一个16位数据
+  * @param       dat: 要写入的16位数据
+  * @retval      无返回值
+  */
 static void LCD_WR_DATA(uint16_t dat)
 {
     SPI_Cmd(LCD_SPI, DISABLE);
