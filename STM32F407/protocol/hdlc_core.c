@@ -10,9 +10,9 @@
 // 假设最大有效载荷为 520 字节（根据你的协议设计）
 #define HDLC_MAX_PAYLOAD_LEN 520
 
-static uint8_t rx_buffer[FRAME_BUF_SIZE];
-static uint16_t rx_index = 0;
-static uint8_t escaped = 0;
+// static uint8_t rx_buffer[FRAME_BUF_SIZE];
+// static uint16_t rx_index = 0;
+// static uint8_t escaped = 0;
 
 // 命令分发表（按 CMD_ID 排序，支持二分查找；但这里用线性足够）
 typedef struct {

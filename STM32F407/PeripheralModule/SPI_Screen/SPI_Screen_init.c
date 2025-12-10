@@ -1,6 +1,12 @@
 #include "SPI_Screen_init.h"
 #include "board.h"
 #include <stdio.h>
+
+/**
+ * @brief  LCD GPIO初始化
+ * @param  None
+ * @retval None
+ */
 static void LCD_GPIO_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -41,6 +47,11 @@ static void LCD_GPIO_Init(void)
     delay_ms(100);
 }
 
+/**
+ * @brief  LCD SPI数据写入
+ * @param  dat: 数据
+ * @retval 0 成功，非0失败
+ */
 static uint8_t LCD_Writ_Bus(uint8_t dat)
 {
     LCD_SPI_CS_ON(0);
@@ -52,7 +63,7 @@ static uint8_t LCD_Writ_Bus(uint8_t dat)
         {
             printf("SPI Timeout\r\n");
             LCD_SPI_CS_ON(1);
-            return 0;
+            return 1;
         }
     }
     SPI_I2S_SendData(LCD_SPI, dat);
@@ -66,26 +77,40 @@ static uint8_t LCD_Writ_Bus(uint8_t dat)
     // SPI_I2S_ReceiveData(SPI2);
 
     LCD_SPI_CS_ON(1);
-    return 1;
+    return 0;
 }
+
+/**
+ * @brief  LCD 寄存器写入
+ * @param  reg: 寄存器
+ * @retval 0 成功，非0失败
+ */
 static uint8_t LCD_WR_REG(uint8_t reg)
 {
     uint8_t err = 0;
     LCD_DC_ON(0); // DC=0表示写入命令
     err = LCD_Writ_Bus(reg);
-    // printf("LCD Write reg: 0x%02x\r\n", reg);
     LCD_DC_ON(1); // DC=1表示写入数据
     return err;
 }
 
+/**
+ * @brief  LCD 数据写入
+ * @param  dat: 数据
+ * @retval 0 成功，非0失败
+ */
 static uint8_t LCD_WR_DATA8(uint8_t data)
 {
     uint8_t err = 0;
     err = LCD_Writ_Bus(data);
-    // printf("LCD Write Data: 0x%02x\r\n", data);
     return err;
 }
 
+/**
+ * @brief  LCD 数据写入
+ * @param  dat: 数据
+ * @retval None
+ */
 static void LCD_WR_DATA(uint16_t dat)
 {
     SPI_Cmd(LCD_SPI, DISABLE);
@@ -261,7 +286,6 @@ void LCD_Screen_Init(void)
     LCD_WR_DATA8(0x31);
     LCD_WR_DATA8(0x34);
     LCD_WR_REG(0x21);
-
     LCD_WR_REG(0x29);
     printf("LCD Screen Init Over\r\n");
 }

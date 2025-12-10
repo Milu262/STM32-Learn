@@ -6,13 +6,6 @@
 #include <stdarg.h>
 #include <stddef.h>
 // ====== 【你必须实现的底层驱动接口】======
-// 放在 your_driver.c 中实现
-
-// // 串口输出单字节（用于发送 HDLC 响应）
-// void uart_putc(uint8_t ch)
-// {
-//     // 在此实现你的串口发送代码
-// }
 
 void uart_send_buffer_DMA(const uint8_t *buf, uint16_t len) {
   if (buf == NULL && len > 0)
@@ -28,10 +21,12 @@ void uart_send_buffer_DMA(const uint8_t *buf, uint16_t len) {
   usart_send_String_DMA(buf, len);
 }
 
+#ifndef debug_printf
 // 调试信息输出（非 HDLC 数据，如 printf）
 void debug_printf(const char *fmt, ...) {
   // 在此实现你的调试输出代码（如通过串口打印）
 }
+#endif
 
 int flash_read(uint32_t addr, uint8_t *buf, uint16_t len) {
   if (buf == NULL)

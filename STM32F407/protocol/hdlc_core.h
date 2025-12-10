@@ -25,7 +25,14 @@ typedef void (*cmd_handler_t)(const uint8_t *payload, uint16_t payload_len);
 
 // ====== 【主入口函数】======
 // 在你的 USART 接收中断中调用此函数处理每个字节
-void hdlc_rx_byte(uint8_t byte);
+
+/**
+ * @brief 处理 HDLC 流数据
+ * @param data 流数据
+ * @param len 流数据长度
+ */
+void hdlc_process_stream(const uint8_t *data, uint16_t len);
+
 /**
  * @brief 发送 HDLC 帧（CMD_ID + Payload）
  * @param cmd_id 命令 ID

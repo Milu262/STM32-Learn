@@ -6,7 +6,7 @@
 #include "stm32f4xx.h"
 // #include <stdio.h>
 #include "NVIC_Init.h"
-#include "DMA_Init.h"
+
 // #include "response.h"
 
 // #define BSP_USART USART1
@@ -14,7 +14,6 @@
 
 // #define BSP_USART_TX_RCC RCC_AHB1Periph_GPIOA
 // #define BSP_USART_RX_RCC RCC_AHB1Periph_GPIOA
-
 
 // #define BSP_USART_TX_PORT GPIOA
 // #define BSP_USART_TX_PIN GPIO_Pin_9
@@ -39,8 +38,14 @@
 #define BSP_USART_RX_AF_PIN GPIO_PinSource3
 #define BSP_USART_RX_RCC RCC_AHB1Periph_GPIOA
 
+typedef enum {
+  RX_STATE_IDLE = 0,      // 接收状态为空闲
+  RX_STATE_RECEIVING = 1, // 接收状态为已接收
+  RX_STATE_OVERFLOW = 2   // 接收状态为溢出
+} RxState;                // 接收状态
 
-//  extern uint8_t DMA_Uart_SendBuff[SENDBUFF_SIZE];	// 定义发送缓冲区，用于存储要发送的数据;//发送缓冲区
+//  extern uint8_t DMA_Uart_SendBuff[SENDBUFF_SIZE];	//
+//  定义发送缓冲区，用于存储要发送的数据;//发送缓冲区
 
 /**
  * @brief  Initializes the UART1 peripheral with the specified baud rate.
@@ -66,5 +71,48 @@ void usart_send_String(uint8_t *ucstr);
 
 // int fputc(int ch, FILE *f);
 // int fgetc(FILE *f);
+
+/**
+ * @brief  设置串口接收数据长度.
+ * @param  count: 要设置的长度.
+ * @retval None
+ */
+uint16_t usart_set_rx_count(uint16_t count);
+
+/**
+ * @brief  获取串口接收数据长度.
+ * @param  None
+ * @retval The length of the received data.
+ */
+uint16_t usart_get_rx_count(void);
+
+/**
+ * @brief  清除串口接收数据长度.
+ * @param  None
+ * @retval None
+ */
+void usart_clear_rx_count(void);
+
+/**
+ * @brief  设置接收数据状态为已接收.
+ */
+void enter_rx_Receive(void);
+
+/**
+ * @brief  设置接收数据状态为IDLE.
+ */
+void enter_rx_IDLE(void);
+
+/**
+ * @brief  设置接收数据状态为Overflow.
+ */
+void enter_rx_Overflow(void);
+
+/**
+ * @brief  获取串口接收数据状态.
+ * @param  None
+ * @retval The current state of the receive buffer.
+ */
+RxState get_rx_status(void);
 
 #endif

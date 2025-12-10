@@ -182,16 +182,19 @@ void USART2_IRQHandler(void) {
   if (USART_GetITStatus(BSP_USART, USART_IT_IDLE) != RESET) // 触发空闲中断
   {
     test_data.flag = 1; // 接收完成标志
+    enter_rx_Receive();
     DMA_Cmd(DEBUG_USART_RX_DMA_STREAM,
             DISABLE); // 暂时关闭接收串口的DMA，数据待处理
-    usart1_rx_len =
+    uint16_t RxCount =
         USART_MAX_LEN - DMA_GetCurrDataCounter(
                             DEBUG_USART_RX_DMA_STREAM); // 计算接收到的数据长度
+    usart_set_rx_count(RxCount);
+
     DMA_ClearFlag(DEBUG_USART_RX_DMA_STREAM,
                   DMA_FLAG_TCIF5); // 清除接收完成标志
     // 做自己的事,例如将接收到的数据回显
     // usart_send_String_DMA(DMA_USART1_RX_BUF, usart1_rx_len); // 回显
-    if (usart1_rx_len > data_size - 2) {
+    if (RxCount > data_size - 2) {
       test_data.DataOverflow = 1; // 接收数据溢出
     }
 

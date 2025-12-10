@@ -1,8 +1,10 @@
 #include "response.h"
-#include <string.h>
+// #include <string.h>
+#include <stdint.h>
 #include <stdio.h>
 #include "i2c_handle.h"
 #include "bsp_uart.h"
+#include "DMA_Init.h"
 // #include "DMA_Init.h"
 usart_data_typed test_data;
 uint8_t Frame_it;
@@ -192,25 +194,23 @@ uint8_t do_process(usart_data_typed *udata)
     udata->len = 0;
     return 1;
 }
-uint8_t response_handle(uint8_t error, uint8_t *UartRxBuf, uint16_t UartRxLen)
+int response_handle(uint16_t RxCount)
 {
-    if (test_data.flag == 1)
-    {
-        if (test_data.DataOverflow == 1)
-        {
-            printf("Recive Data Too Much!\r\n");
-            test_data.DataOverflow = 0; // 清空数据溢出标志位
-            test_data.flag = 0;         // 清空接收标志位
-            return 0;
-        }
-        memcpy(test_data.data, UartRxBuf, UartRxLen); // 将接收到的数据复制到test_data.data
-        test_data.data[UartRxLen] = '\0';
-        error = do_process(&test_data);
-        if (!error)
-        {
-            printf("Do process Error!\r\n");
-            error = 0;
-        }
+    if (test_data.flag != 1) {
+      return -1;
     }
-    return 1;
+    if (test_data.DataOverflow == 1) {
+      printf("Recive Data Too Much!\r\n");
+      test_data.DataOverflow = 0; // 清空数据溢出标志位
+      test_data.flag = 0;         // 清空接收标志位
+      return -2;
+    }
+    uart_copy_receive_data(test_data.data, RxCount);
+    test_data.data[RxCount] = '\0';
+    uint8_t error = do_process(&test_data);
+    if (!error) {
+      printf("Do process Error!\r\n");
+      error = 0;
+    }
+    return 0;
 }

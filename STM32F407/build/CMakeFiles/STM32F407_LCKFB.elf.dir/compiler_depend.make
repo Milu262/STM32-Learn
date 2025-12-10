@@ -230,7 +230,6 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/app/main.c.o: ../app/main.c \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  ../protocol/MY_your_driver.h \
   ../bsp/NVIC/NVIC_Init.h \
   ../libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
   ../libraries/CMSIS/Include/core_cm4.h \
@@ -274,7 +273,8 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/app/main.c.o: ../app/main.c \
   ../bsp/SPI/spi_init.h \
   ../bsp/SPI/Test_code.h \
   ../bsp/SPI/SPI_Control.h \
-  ../bsp/SPI/spi_init.h
+  ../bsp/SPI/spi_init.h \
+  ../protocol/hdlc_core.h
 
 CMakeFiles/STM32F407_LCKFB.elf.dir/board/board.c.o: ../board/board.c \
   ../board/board.h \
@@ -575,8 +575,7 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/bsp/Response/response.c.o: ../bsp/Response/re
   ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h \
   ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h \
   ../bsp/uart/bsp_uart.h \
-  ../bsp/NVIC/NVIC_Init.h \
-  ../bsp/DMA/DMA_Init.h
+  ../bsp/NVIC/NVIC_Init.h
 
 CMakeFiles/STM32F407_LCKFB.elf.dir/bsp/SPI/SPI_Control.c.o: ../bsp/SPI/SPI_Control.c \
   ../bsp/SPI/SPI_Control.h \
@@ -2576,6 +2575,20 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/MY_your_driver.c.o: ../protocol/MY_y
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdio.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/newlib.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/config.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stdarg.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
   ../bsp/DMA/DMA_Init.h \
   ../libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
   ../libraries/CMSIS/Include/core_cm4.h \
@@ -2613,9 +2626,7 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/MY_your_driver.c.o: ../protocol/MY_y
   ../bsp/I2C/i2c_handle.h \
   ../bsp/I2C/i2c_init.h \
   ../bsp/SPI/SPI_Control.h \
-  ../bsp/SPI/spi_init.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stdarg.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h
+  ../bsp/SPI/spi_init.h
 
 CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/cmd_handlers.c.o: ../protocol/cmd_handlers.c \
   ../protocol/cmd_handlers.h \
@@ -2627,7 +2638,20 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/cmd_handlers.c.o: ../protocol/cmd_ha
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
   ../protocol/hdlc_core.h \
   ../protocol/MY_your_driver.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdio.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/newlib.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/config.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stdarg.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h
 
 CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/crc16.c.o: ../protocol/crc16.c \
   ../protocol/crc16.h \
@@ -2647,21 +2671,23 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
   ../protocol/MY_your_driver.h \
-  ../protocol/cmd_handlers.h \
-  ../protocol/crc16.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stdarg.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/string.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdio.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_ansi.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/newlib.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/config.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stdarg.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h \
-  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
+  ../protocol/cmd_handlers.h \
+  ../protocol/crc16.h \
+  /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/string.h \
   /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/string.h
 
 
@@ -2670,6 +2696,8 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 ../protocol/crc16.c:
 
 ../protocol/cmd_handlers.c:
+
+../protocol/MY_your_driver.h:
 
 ../protocol/MY_your_driver.c:
 
@@ -2735,10 +2763,6 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h:
 
-../protocol/hdlc_core.h:
-
-../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_hash.h:
-
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h:
 
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h:
@@ -2782,8 +2806,6 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 ../libraries/CMSIS/Include/core_cmFunc.h:
 
 ../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h:
-
-../protocol/MY_your_driver.h:
 
 ../bsp/uart/bsp_uart.c:
 
@@ -2902,6 +2924,10 @@ CMakeFiles/STM32F407_LCKFB.elf.dir/protocol/hdlc_core.c.o: ../protocol/hdlc_core
 /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/string.h:
 
 ../bsp/SPI/Test_code.h:
+
+../libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_hash.h:
+
+../protocol/hdlc_core.h:
 
 ../board/board.c:
 

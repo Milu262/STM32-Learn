@@ -1,4 +1,5 @@
 #include "bsp_uart.h"
+#include "DMA_Init.h"
 #include <stdio.h>
 #include <sys/errno.h>
 #include <sys/stat.h>
@@ -131,3 +132,39 @@ int _write(int fd, const char *ptr, int len) {
   errno = EBADF;
   return -1;
 }
+
+static volatile uint16_t _usartRxCount = 0;
+
+uint16_t usart_set_rx_count(uint16_t count) {
+  if (count > USART_MAX_LEN)
+    count = USART_MAX_LEN;
+  _usartRxCount = count;
+  return _usartRxCount;
+}
+
+uint16_t usart_get_rx_count(void) {
+  return _usartRxCount;
+}
+
+void usart_clear_rx_count(void) {
+  _usartRxCount = 0;
+}
+
+
+static volatile RxState _RxStatus = RX_STATE_IDLE;
+
+void enter_rx_Receive(void) {
+  _RxStatus = RX_STATE_RECEIVING;
+}
+
+void enter_rx_IDLE(void) {
+  _RxStatus = RX_STATE_IDLE;
+}
+
+void enter_rx_Overflow(void) {
+  _RxStatus = RX_STATE_OVERFLOW;
+}
+RxState get_rx_status(void) {
+  return _RxStatus;
+}
+
