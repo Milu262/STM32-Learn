@@ -83,10 +83,7 @@ int i2c_read_reg_16(uint8_t dev_addr, uint16_t reg_addr, uint8_t *value)
 int i2c_write_reg(uint8_t dev_addr, uint8_t reg_addr, uint8_t value)
 {
     // 调用底层驱动
-    uint32_t result = I2C_ByteWrite(dev_addr, reg_addr, value);
-
-    // I2C_ByteWrite 成功返回 1 → 我们返回 0
-    return (result == 1) ? 0 : -1;
+    return I2C_ByteWrite(dev_addr, reg_addr, value);
 }
 
 int i2c_write_reg_16(uint8_t dev_addr, uint16_t reg_addr, uint8_t value)
