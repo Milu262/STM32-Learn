@@ -19,11 +19,12 @@ class FlashToolApp:
     CMD_LED_CONTROL = 0x2001
 
     CMD_I2C_READ_REG = 0x0201
-    CMD_I2C_16READ_REG = 0x0205
-    CMD_I2C_READ_RESULT = 0x0203
+    CMD_I2C_16READ_REG = 0x0202
+    CMD_I2C_READ_RESULT = 0x0210
 
-    CMD_I2C_WRITE_REG = 0x0202
-    CMD_I2C_WRITE_ACK = 0x0204
+    CMD_I2C_WRITE_REG = 0x0221
+    CMD_I2C_16WRITE_REG = 0x0222
+    CMD_I2C_WRITE_ACK = 0x0230
 
     CMD_SPI_READ_REG = 0x2004
     CMD_SPI_READ_RESULT = 0x2005
@@ -214,16 +215,16 @@ class FlashToolApp:
     # ========================
     def handle_device_disconnect(self):
         self.is_sending = False
-        if self.serial_mgr:
-            self.serial_mgr.shutdown()
-            self.serial_mgr = None
-        self.root.after(0, self._disable_buttons)
-        self.root.after(0, lambda: messagebox.showwarning(
-            "Device Disconnected",
-            "No response from device after 3 retries.\n"
-            "Please check connection and reopen serial port."
-        ))
-        self._log_to_queue("⚠️ Device disconnected: no ACK received.")
+        # if self.serial_mgr:
+        #     self.serial_mgr.shutdown()
+        #     self.serial_mgr = None
+        # self.root.after(0, self._disable_buttons)
+        # self.root.after(0, lambda: messagebox.showwarning(
+        #     "Device Disconnected",
+        #     "No response from device after 3 retries.\n"
+        #     "Please check connection and reopen serial port."
+        # ))
+        self._log_to_queue("⚠️ Device disconnected or No ACK received.")
 
     def send_with_retry(self, cmd_id: int, payload: bytes, expected_response_cmd: int = None, ack_required=True) -> Optional[bytes]:
         if not self.serial_mgr or not self.serial_mgr.is_open():
@@ -383,28 +384,16 @@ class FlashToolApp:
         self._log_to_queue("Sent LED ON command")
 
     def i2c_read(self):
-        if self.i2c_addr_size.get() == "8":
-            # 检查I2C地址是否为空
-            if not self.i2c_addr.get():
-                messagebox.showerror("Error", "I2C address is empty")
-                return
-            try:
-                dev_addr = int(self.i2c_addr.get(), 16)
-                reg_addr = int(self.i2c_reg.get(), 16)
-            except Exception as e:
-                messagebox.showerror("Error", f"Invalid I2C address: {e}")
-                return
-        else:
-            # 检查I2C地址是否为空
-            if not self.i2c_addr.get():
-                messagebox.showerror("Error", "I2C address is empty")
-                return
-            try:
-                dev_addr = int(self.i2c_addr.get(), 16)
-                reg_addr = int(self.i2c_reg.get(), 32)
-            except Exception as e:
-                messagebox.showerror("Error", f"Invalid I2C address: {e}")
-                return
+        # 检查I2C地址是否为空
+        if not self.i2c_addr.get():
+            messagebox.showerror("Error", "I2C address is empty")
+            return
+        try:
+            dev_addr = int(self.i2c_addr.get(), 16)
+            reg_addr = int(self.i2c_reg.get(), 16)
+        except Exception as e:
+            messagebox.showerror("Error", f"Invalid I2C address: {e}")
+            return
         # # 检查I2C地址是否为空
         # if not self.i2c_addr.get():
         #     messagebox.showerror("Error", "I2C address is empty")

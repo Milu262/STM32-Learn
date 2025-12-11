@@ -27,6 +27,7 @@ static const cmd_entry_t cmd_table[] = {
     {CMD_I2C_READ_REG, handle_i2c_read_reg, 2},
     {CMD_I2C_WRITE_REG, handle_i2c_write_reg, 3},
     {CMD_I2C_16READ_REG, handle_i2c_read_reg_16, 3},
+    {CMD_I2C_16WRITE_REG, handle_i2c_write_reg_16, 4},
     {CMD_SPI_READ_REG, handle_spi_read_reg, 1},
     {CMD_SPI_WRITE_REG, handle_spi_write_reg, 2},
     // 新命令在这里追加 ↓
@@ -268,8 +269,8 @@ static void hdlc_handle_frame_end(void)
 
     if (recv_crc == calc_crc)
     {
-        //CRC通过
-        // uart_send_buffer_DMA(hdlc_frame_buf, payload_with_cmd_len);//测试CRC是否通过数据
+        // CRC通过
+        //  uart_send_buffer_DMA(hdlc_frame_buf, payload_with_cmd_len);//测试CRC是否通过数据
         hdlc_process_frame(hdlc_frame_buf, payload_with_cmd_len);
     }
     else
@@ -290,8 +291,8 @@ void hdlc_process_stream(const uint8_t *data, uint16_t len)
             {
                 hdlc_handle_frame_end(); // 处理完整帧
 
-                //解包数据正常
-                // usart_send_String_DMA(hdlc_frame_buf,hdlc_frame_index);//测试数据
+                // 解包数据正常
+                //  usart_send_String_DMA(hdlc_frame_buf,hdlc_frame_index);//测试数据
                 hdlc_in_frame = 0;
                 return;
             }

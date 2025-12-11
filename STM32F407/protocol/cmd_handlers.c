@@ -62,10 +62,24 @@ void handle_i2c_write_reg(const uint8_t *payload, uint16_t len)
     uint8_t dev_addr = payload[0];
     uint8_t reg_addr = payload[1];
     uint8_t value = payload[2];
-    i2c_write_reg(dev_addr, reg_addr, value);
+    int ok = i2c_write_reg(dev_addr, reg_addr, value);
+    if (ok != 0)
+        return;
     hdlc_send_frame(CMD_I2C_WRITE_ACK, NULL, 0);
 }
 
+void handle_i2c_write_reg_16(const uint8_t *payload, uint16_t len)
+{ 
+    if (len != 4)
+        return;
+    uint8_t dev_addr = payload[0];
+    uint16_t reg_addr = ((uint16_t)payload[1] << 8) | payload[2];
+    uint8_t value = payload[3];
+    int ok = i2c_write_reg_16(dev_addr, reg_addr, value);
+    if (ok != 0)
+        return;
+    hdlc_send_frame(CMD_I2C_WRITE_ACK, NULL, 0);
+}
 // ──────────────── SPI READ ────────────────
 void handle_spi_read_reg(const uint8_t *payload, uint16_t len)
 {
