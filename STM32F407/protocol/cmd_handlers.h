@@ -39,4 +39,11 @@ void handle_spi_read_reg(const uint8_t* payload, uint16_t len);
  */
 void handle_spi_write_reg(const uint8_t* payload, uint16_t len);
 
+/**
+ * @brief 处理数据重传命令
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ */
+void handle_Retransmission(const uint8_t* payload, uint16_t len);
+
 #endif // CMD_HANDLERS_H

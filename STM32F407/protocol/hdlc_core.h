@@ -20,7 +20,15 @@
 #define CMD_SPI_WRITE_REG 0x0302
 #define CMD_SPI_WRITE_ACK 0x0304
 
+#define CMD_Retransmission 0xFFFF
+
 // 命令处理函数原型
+
+/**
+ * @brief 命令处理函数
+ * @param payload 负载数据
+ * @param payload_len 负载长度(可选)
+ */
 typedef void (*cmd_handler_t)(const uint8_t *payload, uint16_t payload_len);
 
 // ====== 【主入口函数】======

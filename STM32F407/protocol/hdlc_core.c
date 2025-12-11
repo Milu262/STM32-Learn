@@ -27,8 +27,10 @@ static const cmd_entry_t cmd_table[] = {
     {CMD_I2C_WRITE_REG, handle_i2c_write_reg, 3},
     {CMD_SPI_READ_REG, handle_spi_read_reg, 1},
     {CMD_SPI_WRITE_REG, handle_spi_write_reg, 2},
-    // 新命令在这里追加 ↓
-    // { CMD_NEW_CMD,         handle_new_cmd,         4 },
+
+    
+    //在上面添加新的命令
+    {CMD_Retransmission,handle_Retransmission,0}
 };
 
 #define CMD_TABLE_SIZE (sizeof(cmd_table) / sizeof(cmd_table[0]))
@@ -196,6 +198,12 @@ void hdlc_send_frame(uint16_t cmd_id, const uint8_t *payload,
   uart_send_buffer_DMA(tx_frame_buf, frame_len);
 }
 
+/**
+ * @brief 处理 HDLC 帧（接收）
+ * @param frame 帧数据
+ * @param len 帧长度
+ * @return void
+ */
 static void hdlc_process_frame(const uint8_t *frame, uint16_t len) {
   if (len < 2)
     return;
@@ -222,10 +230,13 @@ static void hdlc_process_frame(const uint8_t *frame, uint16_t len) {
 }
 
 static uint8_t hdlc_frame_buf[FRAME_BUF_SIZE];
-static uint16_t hdlc_frame_index = 0;
-static uint8_t hdlc_escaped = 0;
-static uint8_t hdlc_in_frame = 0; // 新增：是否正在接收 HDLC 帧
+static uint16_t hdlc_frame_index = 0; // 帧索引
+static uint8_t hdlc_escaped = 0;      // 是否处于转义状态
+static uint8_t hdlc_in_frame = 0;     // 新增：是否正在接收 HDLC 帧
 
+/**
+ * @brief 处理 HDLC 帧结束（FLAG 后）
+ */
 static void hdlc_handle_frame_end(void) {
   // 最小有效帧：CMD(2) + CRC(2) = 4 字节
   if (hdlc_frame_index < 4) {
@@ -252,6 +263,8 @@ void hdlc_process_stream(const uint8_t *data, uint16_t len) {
     if (byte == HDLC_FLAG) {
       if (hdlc_in_frame) {
         hdlc_handle_frame_end(); // 处理完整帧
+        hdlc_in_frame = 0;
+        return;
       }
       // 开始新帧（即使刚结束，也重置状态）
       hdlc_in_frame = 1;

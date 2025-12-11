@@ -49,6 +49,8 @@ int main(void) {
     enter_rx_IDLE();
     RxCount = usart_get_rx_count();
     uart_copy_receive_data(RxBuffer, RxCount);
+
+    //以下为自己的处理函数
     hdlc_process_stream(RxBuffer, RxCount);
   }
 }
