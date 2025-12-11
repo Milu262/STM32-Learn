@@ -26,6 +26,7 @@ static const cmd_entry_t cmd_table[] = {
     {CMD_FLASH_READ, handle_flash_read, 6},
     {CMD_I2C_READ_REG, handle_i2c_read_reg, 2},
     {CMD_I2C_WRITE_REG, handle_i2c_write_reg, 3},
+    {CMD_I2C_16READ_REG, handle_i2c_read_reg_16, 3},
     {CMD_SPI_READ_REG, handle_spi_read_reg, 1},
     {CMD_SPI_WRITE_REG, handle_spi_write_reg, 2},
     // 新命令在这里追加 ↓
@@ -207,7 +208,7 @@ void hdlc_send_frame(uint16_t cmd_id, const uint8_t *payload, uint16_t payload_l
 
     // Step 2: HDLC 转义（加 FLAG、CRC、字节填充）
     uint16_t frame_len = hdlc_escape_frame(raw_buf, raw_len, tx_frame_buf, TX_FRAME_BUF_SIZE);
-    printf("[HDLC] Sending frame (%d bytes)\n", frame_len);
+    // printf("[HDLC] Sending frame (%d bytes)\n", frame_len);
     if (frame_len == 0)
     {
         return;

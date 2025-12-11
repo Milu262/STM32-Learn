@@ -17,6 +17,7 @@
 #define CMD_FLASH_READ          0x0101
 #define CMD_FLASH_READ_RESULT   0x0102
 #define CMD_I2C_READ_REG        0x0201
+#define CMD_I2C_16READ_REG      0x0205
 #define CMD_I2C_READ_RESULT     0x0203
 #define CMD_I2C_WRITE_REG       0x0202
 #define CMD_I2C_WRITE_ACK       0x0204

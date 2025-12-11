@@ -38,6 +38,7 @@ int main(void)
 		enter_rx_IDLE();
 		RxCount = GetUsartRxCount();
 
+		// response_handle(RxCount);
 		uart_copy_receive_data(ReceiveData, RxCount);
 		// usart_send_String_DMA(ReceiveData,RxCount);//接收正常
 		hdlc_process_stream(ReceiveData, RxCount);

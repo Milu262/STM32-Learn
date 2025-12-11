@@ -17,8 +17,14 @@ class FlashToolApp:
     CMD_READ_FLASH_REQUEST = 0x1002
     CMD_READ_FLASH_RESPONSE = 0x1003
     CMD_LED_CONTROL = 0x2001
+
     CMD_I2C_READ_REG = 0x0201
+    CMD_I2C_16READ_REG = 0x0205
     CMD_I2C_READ_RESULT = 0x0203
+
+    CMD_I2C_WRITE_REG = 0x0202
+    CMD_I2C_WRITE_ACK = 0x0204
+
     CMD_SPI_READ_REG = 0x2004
     CMD_SPI_READ_RESULT = 0x2005
 
@@ -53,9 +59,12 @@ class FlashToolApp:
         self.port_var = tk.StringVar()
         self.port_combo = ttk.Combobox(top_frame, textvariable=self.port_var, width=12)
         self.port_combo.grid(row=0, column=1, padx=2)
-        ttk.Button(top_frame, text="Refresh", command=self.update_ports).grid(row=0, column=2, padx=2)
-        ttk.Button(top_frame, text="Open", command=self.open_serial).grid(row=0, column=3, padx=2)
-        ttk.Button(top_frame, text="Close", command=self.close_serial).grid(row=0, column=4, padx=2)
+        self.refresh_btn = ttk.Button(top_frame, text="Refresh", command=self.update_ports)
+        self.refresh_btn.grid(row=0, column=2, padx=2)
+        self.open_btn = ttk.Button(top_frame, text="Open", command=self.open_serial)
+        self.open_btn.grid(row=0, column=3, padx=2)
+        self.close_btn = ttk.Button(top_frame, text="Close", command=self.close_serial)
+        self.close_btn.grid(row=0, column=4, padx=2)
 
         ttk.Label(top_frame, text="BIN File:").grid(row=1, column=0, sticky='w', pady=(5,0))
         self.file_path = tk.StringVar()
@@ -88,16 +97,36 @@ class FlashToolApp:
 
         i2c_frame = ttk.LabelFrame(self.periph_tab, text="I2C Register Read")
         i2c_frame.pack(pady=10, padx=10, fill='x')
+
+        #创建I2C设备地址的框
         ttk.Label(i2c_frame, text="Device Addr (0x):").grid(row=0, column=0, sticky='w')
-        self.i2c_addr = tk.StringVar(value="48")
+        self.i2c_addr = tk.StringVar(value="A0")
         ttk.Entry(i2c_frame, textvariable=self.i2c_addr, width=10).grid(row=0, column=1, padx=5)
+
+        #创建I2C寄存器地址的框
         ttk.Label(i2c_frame, text="Reg Addr (0x):").grid(row=0, column=2, sticky='w')
         self.i2c_reg = tk.StringVar(value="00")
         ttk.Entry(i2c_frame, textvariable=self.i2c_reg, width=10).grid(row=0, column=3, padx=5)
+
+        #创建I2C写数据的框
+        ttk.Label(i2c_frame, text="Write Data (0x):").grid(row=0, column=4, sticky='w')
+        self.i2c_write_data = tk.StringVar(value="00")
+        ttk.Entry(i2c_frame, textvariable=self.i2c_write_data, width=10).grid(row=0, column=5, padx=5)
+        #创建I2C读取按钮的框
         self.i2c_read_btn = ttk.Button(i2c_frame, text="Read", command=self.i2c_read, state='disabled')
-        self.i2c_read_btn.grid(row=0, column=4, padx=5)
-        self.i2c_result = tk.StringVar()
-        ttk.Label(i2c_frame, textvariable=self.i2c_result, foreground='blue').grid(row=0, column=5, padx=5)
+        self.i2c_read_btn.grid(row=0, column=6, padx=5)
+
+        #创建I2C写按钮的框
+        self.i2c_write_btn = ttk.Button(i2c_frame, text="Write", command=self.i2c_write, state='disabled')
+        self.i2c_write_btn.grid(row=0, column=7, padx=5)
+
+        #创建I2C 8位或是16位寄存器地址选择
+        self.i2c_addr_size = tk.StringVar(value="8")
+        ttk.Radiobutton(i2c_frame, text="8-bit", variable=self.i2c_addr_size, value="8").grid(row=0, column=8, sticky='w')
+        ttk.Radiobutton(i2c_frame, text="16-bit", variable=self.i2c_addr_size, value="16").grid(row=0, column=9, sticky='w')
+
+        # self.i2c_result = tk.StringVar()
+        # ttk.Label(i2c_frame, textvariable=self.i2c_result, foreground='blue').grid(row=0, column=8, padx=5)
 
         spi_frame = ttk.LabelFrame(self.periph_tab, text="SPI Register Read")
         spi_frame.pack(pady=10, padx=10, fill='x')
@@ -153,6 +182,9 @@ class FlashToolApp:
         self.i2c_read_btn.config(state='normal')
         self.spi_read_btn.config(state='normal')
         self.led_btn.config(state='normal')
+        self.i2c_write_btn.config(state='normal')
+        self.open_btn.config(state='disabled')
+        self.close_btn.config(state='normal')
 
     def _disable_buttons(self):
         self.send_btn.config(state='disabled')
@@ -160,6 +192,9 @@ class FlashToolApp:
         self.i2c_read_btn.config(state='disabled')
         self.spi_read_btn.config(state='disabled')
         self.led_btn.config(state='disabled')
+        self.i2c_write_btn.config(state='disabled')
+        self.open_btn.config(state='normal')
+        self.close_btn.config(state='disabled')
 
     def browse_file(self):
         path = filedialog.askopenfilename(filetypes=[("Binary files", "*.bin"), ("All files", "*.*")])
@@ -348,27 +383,66 @@ class FlashToolApp:
         self._log_to_queue("Sent LED ON command")
 
     def i2c_read(self):
-        try:
-            dev_addr = int(self.i2c_addr.get(), 16)
-            reg_addr = int(self.i2c_reg.get(), 16)
-        except Exception as e:
-            messagebox.showerror("Error", f"Invalid I2C address: {e}")
-            return
+        if self.i2c_addr_size.get() == "8":
+            # 检查I2C地址是否为空
+            if not self.i2c_addr.get():
+                messagebox.showerror("Error", "I2C address is empty")
+                return
+            try:
+                dev_addr = int(self.i2c_addr.get(), 16)
+                reg_addr = int(self.i2c_reg.get(), 16)
+            except Exception as e:
+                messagebox.showerror("Error", f"Invalid I2C address: {e}")
+                return
+        else:
+            # 检查I2C地址是否为空
+            if not self.i2c_addr.get():
+                messagebox.showerror("Error", "I2C address is empty")
+                return
+            try:
+                dev_addr = int(self.i2c_addr.get(), 16)
+                reg_addr = int(self.i2c_reg.get(), 32)
+            except Exception as e:
+                messagebox.showerror("Error", f"Invalid I2C address: {e}")
+                return
+        # # 检查I2C地址是否为空
+        # if not self.i2c_addr.get():
+        #     messagebox.showerror("Error", "I2C address is empty")
+        #     return
+        # try:
+        #     dev_addr = int(self.i2c_addr.get(), 16)
+        #     reg_addr = int(self.i2c_reg.get(), 16)
+        # except Exception as e:
+        #     messagebox.showerror("Error", f"Invalid I2C address: {e}")
+        #     return
 
         # 禁用按钮防止重复点击
         self.i2c_read_btn.config(state='disabled')
-        self._log_to_queue(f"I2C Read: Dev=0x{dev_addr:02X}, Reg=0x{reg_addr:02X}")
+        if self.i2c_addr_size.get() == "8":
+            self._log_to_queue(f"I2C Read: Dev=0x{dev_addr:02X}, Reg=0x{reg_addr:02X}")
+        else:
+            self._log_to_queue(f"I2C Read: Dev=0x{dev_addr:02X}, Reg=0x{reg_addr:04X}")
 
         # 启动后台线程
         threading.Thread(target=self._i2c_read_worker, args=(dev_addr, reg_addr), daemon=True).start()
 
     def _i2c_read_worker(self, dev_addr: int, reg_addr: int):
-        payload = bytes([dev_addr, reg_addr])
-        resp = self.send_with_retry(
-            self.CMD_I2C_READ_REG,
-            payload,
-            expected_response_cmd=self.CMD_I2C_READ_RESULT
-        )
+        if self.i2c_addr_size.get() == "8":
+            payload = bytes([dev_addr, reg_addr])
+        else:
+            payload = bytes([dev_addr, reg_addr >> 8, reg_addr & 0xFF])
+        if self.i2c_addr_size.get() == "8":
+            resp = self.send_with_retry(
+                self.CMD_I2C_READ_REG,
+                payload,
+                expected_response_cmd=self.CMD_I2C_READ_RESULT
+            )
+        else:
+            resp = self.send_with_retry(
+                self.CMD_I2C_16READ_REG,
+                payload,
+                expected_response_cmd=self.CMD_I2C_READ_RESULT
+            )
         # 回到主线程更新 UI
         self.root.after(0, self._on_i2c_read_complete, resp, dev_addr, reg_addr)
 
@@ -376,11 +450,46 @@ class FlashToolApp:
         self.i2c_read_btn.config(state='normal')  # 恢复按钮
         if resp is not None and len(resp) >= 1:
             value = resp[0]
-            self.i2c_result.set(f"0x{value:02X} ({value})")
+            self.i2c_write_data.set(f"0x{value:02X}")
+            # self.i2c_result.set(f"0x{value:02X} ({value})")
             self._log_to_queue(f"I2C Read OK: 0x{value:02X}")
         else:
-            self.i2c_result.set("Timeout")
+            #弹出窗口提示I2C读取超时
+            messagebox.showerror("Error", f"I2C Read Timeout")
+
+            # self.i2c_result.set("Timeout")
             # 注意：device disconnect 已在 send_with_retry 中处理，这里无需重复弹窗
+
+    def i2c_write(self):
+        try:
+            dev_addr = int(self.i2c_addr.get(), 16)
+            reg_addr = int(self.i2c_reg.get(), 16)
+            write_data = int(self.i2c_write_data.get(), 16)
+        except Exception as e:
+            messagebox.showerror("Error", f"Invalid I2C address or write data: {e}")
+            return
+
+        self.i2c_write_btn.config(state='disabled')
+        self._log_to_queue(f"I2C Write: Dev=0x{dev_addr:02X}, Reg=0x{reg_addr:02X}, Data=0x{write_data:02X}")
+         # 启动后台线程
+        threading.Thread(target=self._i2c_write_worker, args=(dev_addr, reg_addr, write_data), daemon=True).start()
+
+    def _i2c_write_worker(self, dev_addr: int, reg_addr: int, write_data: int):
+        payload = bytes([dev_addr, reg_addr, write_data])
+        resp = self.send_with_retry(
+            self.CMD_I2C_WRITE_REG,
+            payload,
+            expected_response_cmd=self.CMD_I2C_WRITE_ACK
+        )
+        # 回到主线程更新 UI
+        self.root.after(0, self._on_i2c_write_complete, resp, dev_addr, reg_addr, write_data)
+
+    def _on_i2c_write_complete(self, resp, dev_addr, reg_addr, write_data):
+        self.i2c_write_btn.config(state='normal')
+        if resp is not None:
+            self._log_to_queue(f"I2C Write OK: Dev=0x{dev_addr:02X}, Reg=0x{reg_addr:02X}, Data=0x{write_data:02X}")
+        else:
+            self._log_to_queue(f"I2C Write Failed: Dev=0x{dev_addr:02X}, Reg=0x{reg_addr:02X}, Data=0x{write_data:02X}")
 
     def spi_read(self):
         try:

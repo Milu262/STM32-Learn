@@ -1,7 +1,7 @@
 #include "cmd_handlers.h"
-#include "hdlc_core.h" // 用于 hdlc_send_frame 和 CMD_XXX 定义
+#include "hdlc_core.h"      // 用于 hdlc_send_frame 和 CMD_XXX 定义
 #include "MY_your_driver.h" // 包含你实现的底层驱动接口
-#include <stddef.h> // 包含 NULL 定义
+#include <stddef.h>         // 包含 NULL 定义
 
 // #include "flash.h"          // 假设你的 flash_read 在 flash.h 中声明
 // #include "i2c_driver.h"     // 假设 i2c_read_reg / i2c_write_reg 在此
@@ -33,12 +33,25 @@ void handle_i2c_read_reg(const uint8_t *payload, uint16_t len)
     uint8_t dev_addr = payload[0];
     uint8_t reg_addr = payload[1];
     uint8_t value;
-    int ok = (i2c_read_reg(dev_addr, reg_addr, &value) == 0);
+    int ok = i2c_read_reg(dev_addr, reg_addr, &value);
 
-    if(ok !=0)
+    if (ok != 0)
         return;
-    hdlc_send_frame(CMD_I2C_READ_RESULT, &value, 1);//TODO 确认为何I2c 设备地址没找到
+    hdlc_send_frame(CMD_I2C_READ_RESULT, &value, 1);
     // hdlc_send_frame(CMD_I2C_READ_RESULT, ok ? &value : NULL, ok ? 1 : 0);
+}
+
+void handle_i2c_read_reg_16(const uint8_t *payload, uint16_t len)
+{
+    if (len != 3)
+        return;
+    uint8_t dev_addr = payload[0];
+    uint16_t reg_addr = ((uint16_t)payload[1] << 8) | payload[2];
+    uint8_t value;
+    int ok = i2c_read_reg_16(dev_addr, reg_addr, &value);
+    if (ok != 0)
+        return;
+    hdlc_send_frame(CMD_I2C_READ_RESULT, &value, 1);
 }
 
 // ──────────────── I2C WRITE ────────────────

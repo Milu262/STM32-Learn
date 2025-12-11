@@ -20,6 +20,13 @@ void handle_flash_read(const uint8_t* payload, uint16_t len);
  * @param len: 负载长度（字节）
  */
 void handle_i2c_read_reg(const uint8_t* payload, uint16_t len);
+
+/**
+ * @brief 处理 I2C 读取16位寄存器命令
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ */
+void handle_i2c_read_reg_16(const uint8_t *payload, uint16_t len);
 /**
  * @brief 处理 I2C 写入寄存器命令
  * @param payload: 命令负载指针
