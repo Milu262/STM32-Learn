@@ -5,7 +5,7 @@
 #include "MY_your_driver.h" // 包含你自己实现的底层驱动接口
 #include "DMA_Init.h"
 
-#define FRAME_BUF_SIZE 260
+#define FRAME_BUF_SIZE 520
 #define TX_BUF_SIZE 256
 // 假设最大有效载荷为 520 字节（根据你的协议设计）
 #define HDLC_MAX_PAYLOAD_LEN 520
@@ -24,6 +24,7 @@ typedef struct
 
 static const cmd_entry_t cmd_table[] = {
     {CMD_FLASH_READ, handle_flash_read, 6},
+    {CMD_WRITE_FLASH_BLOCK, handle_flash_write, 6},
     {CMD_I2C_READ_REG, handle_i2c_read_reg, 2},
     {CMD_I2C_WRITE_REG, handle_i2c_write_reg, 3},
     {CMD_I2C_16READ_REG, handle_i2c_read_reg_16, 3},

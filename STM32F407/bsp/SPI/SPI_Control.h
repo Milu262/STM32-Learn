@@ -105,6 +105,7 @@ void SPI_FLASH_WriteEnable(void);
  * @retval 无
  */
 void SPI_FLASH_WaitForWriteEnd(void);
+
 /**
  * @brief  擦除SPI Flash的一个扇区
  * @param  SectorAddr: 要擦除的扇区地址

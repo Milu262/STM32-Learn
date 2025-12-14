@@ -12,7 +12,7 @@ class SerialManager:
     def __init__(self, log_callback: Callable[[str], None]):
         self.serial_port = None
         self.log = log_callback
-        self.last_response = None
+        self.last_response = None # 数据格式为（cmd_id: int, payload: bytes）
         self.is_running = True
         self._response_lock = threading.Lock()
         self._response_event = threading.Event()

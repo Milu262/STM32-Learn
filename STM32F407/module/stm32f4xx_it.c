@@ -207,7 +207,7 @@ void USART2_IRQHandler(void)
   // 做自己的事,例如将接收到的数据回显
   // usart_send_String_DMA(DMA_USART1_RX_BUF, usart1_rx_len); // 回显
   // if (usart1_rx_len > data_size - 2)
-  if (RxCount > data_size - 2)
+  if (RxCount > USART_MAX_LEN)
   {
     enter_rx_Overflow();
     // test_data.DataOverflow = 1; // 接收数据溢出

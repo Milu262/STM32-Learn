@@ -25,6 +25,22 @@ void handle_flash_read(const uint8_t *payload, uint16_t len)
     hdlc_send_frame(CMD_FLASH_READ_RESULT, buf, length);
 }
 
+void handle_flash_write(const uint8_t *payload, uint16_t len)
+{ 
+    if (len < 6)
+        return;
+    uint32_t addr = ((uint32_t)payload[0] << 24) |
+                    ((uint32_t)payload[1] << 16) |
+                    ((uint32_t)payload[2] << 8) |
+                    (uint32_t)payload[3];
+    uint16_t length = (payload[4] << 8) | payload[5];
+    if (length > 256 )
+        length = 256;
+
+    flash_write(addr, payload + 6, length);
+    hdlc_send_frame(CMD_WRITE_FLASH_ACK, NULL, 0);
+}
+
 // ──────────────── I2C READ ────────────────
 void handle_i2c_read_reg(const uint8_t *payload, uint16_t len)
 {

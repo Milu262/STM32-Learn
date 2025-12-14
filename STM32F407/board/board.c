@@ -47,7 +47,7 @@ int hardware_init(void)
     uart1_init(115200U);     // 串口1初始化
     DMA_Uart1_Init_Config(); // DMA串口1初始化
     User_I2C_Init();         // I2C初始化
-    // SPI_FLASH_BUS_Init();	 // FLASH总线初始化
+    SPI_FLASH_BUS_Init();	 // FLASH总线初始化
     // test_SPI_Flash();		 // 测试FLASH
     SPI_Screen_BUS_Init(); // SPI屏幕总线初始化
 

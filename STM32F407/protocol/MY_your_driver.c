@@ -50,7 +50,22 @@ void debug_printf(const char *fmt, ...)
 // Flash 读取（addr 对齐要求由你保证）
 void flash_read(uint32_t addr, uint8_t *buf, uint16_t len)
 {
-    // 在此实现你的 Flash 读取代码
+    if(buf == NULL || len == 0)
+    {
+        return; // 无效调用
+    }
+    SPI_FLASH_BufferRead(buf, addr, len);
+}
+
+void flash_write(uint32_t addr, uint8_t *buf, uint16_t len)
+{
+    if(buf == NULL || len == 0)
+    {
+        return; // 无效调用
+    }
+
+
+    SPI_FLASH_BufferWrite(buf, addr, len);
 }
 
 int i2c_read_reg(uint8_t dev_addr, uint8_t reg_addr, uint8_t *value)

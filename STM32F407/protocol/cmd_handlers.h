@@ -14,6 +14,14 @@ typedef void (*cmd_handler_t)(const uint8_t* payload, uint16_t payload_len);
  * @param len: 负载长度（字节）
  */
 void handle_flash_read(const uint8_t* payload, uint16_t len);
+
+/**
+ * @brief 处理 FLASH 写入命令
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ */
+void handle_flash_write(const uint8_t* payload, uint16_t len);
+
 /**
  * @brief 处理 I2C 读取寄存器命令
  * @param payload: 命令负载指针

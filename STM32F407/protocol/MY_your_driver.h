@@ -40,6 +40,14 @@ void debug_printf(const char* fmt, ...);
 void flash_read(uint32_t addr, uint8_t* buf, uint16_t len);
 
 /**
+ * @brief Flash 写（addr 对齐要求由你保证）
+ * @param addr 写入地址
+ * @param buf 待写入数据指针
+ * @param len 写入数据长度
+ */
+void flash_write(uint32_t addr, uint8_t *buf, uint16_t len);
+
+/**
  * @brief I2C 读寄存器（7-bit 地址）
  * @param dev_addr 设备地址
  * @param reg_addr 寄存器地址
