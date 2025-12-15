@@ -2,17 +2,12 @@
 #include <string.h>
 #include <stdarg.h>
 #include "cmd_handlers.h"
-#include "MY_your_driver.h" // 包含你自己实现的底层驱动接口
-#include "DMA_Init.h"
+#include "./protocol_driver/uart_driver.h"
 
-#define FRAME_BUF_SIZE 520
+#define FRAME_BUF_SIZE 266
 #define TX_BUF_SIZE 256
 // 假设最大有效载荷为 520 字节（根据你的协议设计）
 #define HDLC_MAX_PAYLOAD_LEN 520
-
-// static uint8_t rx_buffer[FRAME_BUF_SIZE];
-// static uint16_t rx_index = 0;
-// static uint8_t escaped = 0;
 
 // 命令分发表（按 CMD_ID 排序，支持二分查找；但这里用线性足够）
 typedef struct
@@ -25,6 +20,10 @@ typedef struct
 static const cmd_entry_t cmd_table[] = {
     {CMD_FLASH_READ, handle_flash_read, 6},
     {CMD_WRITE_FLASH_BLOCK, handle_flash_write, 6},
+    {CMD_FLASH_SECTOR_ERASE,handle_flash_SectionErase,4},
+    {CMD_FLASH_BLOCK_ERASE32,handle_flash_BlockErase32,4},
+    {CMD_FLASH_BLOCK_ERASE64,handle_flash_BlockErase64,4},
+    {CMAD_FLASH_CHIP_ERASE,handle_flash_ChipErase,0},
     {CMD_I2C_READ_REG, handle_i2c_read_reg, 2},
     {CMD_I2C_WRITE_REG, handle_i2c_write_reg, 3},
     {CMD_I2C_16READ_REG, handle_i2c_read_reg_16, 3},
@@ -220,6 +219,11 @@ void hdlc_send_frame(uint16_t cmd_id, const uint8_t *payload, uint16_t payload_l
     uart_send_buffer_DMA(tx_frame_buf, frame_len);
 }
 
+/**
+ * @brief 处理 HDLC 帧
+ * @param frame 帧数据
+ * @param len 帧长度
+ */
 static void hdlc_process_frame(const uint8_t *frame, uint16_t len)
 {
     if (len < 2)

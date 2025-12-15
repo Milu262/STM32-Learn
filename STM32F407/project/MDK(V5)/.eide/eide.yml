@@ -119,10 +119,15 @@ virtualFolder:
     - name: protocol
       files:
         - path: ../../protocol/hdlc_core.c
-        - path: ../../protocol/MY_your_driver.c
         - path: ../../protocol/crc16.c
         - path: ../../protocol/cmd_handlers.c
-      folders: []
+      folders:
+        - name: protocol_driver
+          files:
+            - path: ../../protocol/protocol_driver/spi_driver.c
+            - path: ../../protocol/protocol_driver/i2c_driver.c
+            - path: ../../protocol/protocol_driver/uart_driver.c
+          folders: []
 dependenceList: []
 outDir: build
 miscInfo:
@@ -133,6 +138,7 @@ targets:
       defineList:
         - USE_STDPERIPH_DRIVER
         - STM32F40_41xxx
+        - USE_Keil
       incList:
         - ../../app
         - ../../board
@@ -159,6 +165,7 @@ targets:
       - <virtual_root>/Test_code.c
       - <virtual_root>/APP/Test_code.c
       - <virtual_root>/BSP/DCMI
+      - <virtual_root>/protocol/MY_your_driver.c
     toolchain: AC5
     toolchainConfigMap:
       AC5:

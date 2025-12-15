@@ -131,6 +131,42 @@ void SPI_FLASH_SectorErase(uint32_t SectorAddr)
   SPI_FLASH_WaitForWriteEnd();
 }
 
+void SPI_FLASH_BlockErase32(uint32_t BlockAddr)
+{
+  SPI_FLASH_WriteEnable();
+  SPI_FLASH_WaitForWriteEnd();
+  SPI_CS_ON(0);
+  SPI_Send_receive_Byte(W25X_BlockErase32K, NULL);
+  SPI_Send_receive_Byte((BlockAddr & 0xFF0000) >> 16, NULL);
+  SPI_Send_receive_Byte((BlockAddr & 0xFF00) >> 8, NULL);
+  SPI_Send_receive_Byte(BlockAddr & 0xFF, NULL);
+  SPI_CS_ON(1);
+  SPI_FLASH_WaitForWriteEnd();
+}
+
+void SPI_FLASH_BlockErase64(uint32_t BlockAddr)
+{
+  SPI_FLASH_WriteEnable();
+  SPI_FLASH_WaitForWriteEnd();
+  SPI_CS_ON(0);
+  SPI_Send_receive_Byte(W25X_BlockErase64K, NULL);
+  SPI_Send_receive_Byte((BlockAddr & 0xFF0000) >> 16, NULL);
+  SPI_Send_receive_Byte((BlockAddr & 0xFF00) >> 8, NULL);
+  SPI_Send_receive_Byte(BlockAddr & 0xFF, NULL);
+  SPI_CS_ON(1);
+  SPI_FLASH_WaitForWriteEnd();
+}
+
+void SPI_FLASH_ChipErase(void)
+{ 
+  SPI_FLASH_WriteEnable();
+  SPI_FLASH_WaitForWriteEnd();
+  SPI_CS_ON(0);
+  SPI_Send_receive_Byte(W25X_ChipErase, NULL);
+  SPI_CS_ON(1);
+  SPI_FLASH_WaitForWriteEnd();
+}
+
 void SPI_FLASH_PageWrite(uint8_t *pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
 {
   uint8_t err = 0;

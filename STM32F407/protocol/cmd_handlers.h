@@ -23,6 +23,34 @@ void handle_flash_read(const uint8_t* payload, uint16_t len);
 void handle_flash_write(const uint8_t* payload, uint16_t len);
 
 /**
+ * @brief 处理 FLASH 扇区擦除命令
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ */
+void handle_flash_SectionErase(const uint8_t *payload, uint16_t len);
+
+/**
+ * @brief 处理 FLASH 块擦除命令(32K)
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ */
+void handle_flash_BlockErase32(const uint8_t *payload, uint16_t len);
+
+/**
+ * @brief 处理 FLASH 块擦除命令(64K)
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ */
+void handle_flash_BlockErase64(const uint8_t *payload, uint16_t len);
+
+/**
+ * @brief 处理 FLASH 芯片擦除命令
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ */
+void handle_flash_ChipErase(const uint8_t *payload, uint16_t len);
+
+/**
  * @brief 处理 I2C 读取寄存器命令
  * @param payload: 命令负载指针
  * @param len: 负载长度（字节）

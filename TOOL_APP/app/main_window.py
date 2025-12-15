@@ -93,12 +93,12 @@ class FlashToolApp:
         #创建I2C设备地址的框
         ttk.Label(i2c_frame, text="Device Addr (0x):").grid(row=0, column=0, sticky='w')
         self.i2c_addr = tk.StringVar(value="A0")
-        ttk.Entry(i2c_frame, textvariable=self.i2c_addr, width=6).grid(row=0, column=1, padx=5)
+        ttk.Entry(i2c_frame, textvariable=self.i2c_addr, width=5).grid(row=0, column=1, padx=(0, 1)) # 左边5，右边1
 
         #创建I2C寄存器地址的框
         ttk.Label(i2c_frame, text="Reg Addr (0x):").grid(row=0, column=2, sticky='w')
         self.i2c_reg = tk.StringVar(value="00")
-        ttk.Entry(i2c_frame, textvariable=self.i2c_reg, width=8).grid(row=0, column=3, padx=5)
+        ttk.Entry(i2c_frame, textvariable=self.i2c_reg, width=6).grid(row=0, column=3, padx=(0, 1)) # 左边5，右边1
 
         #创建I2C写数据的框
         ttk.Label(i2c_frame, text="Write Data (0x):").grid(row=0, column=4, sticky='w')
@@ -328,6 +328,16 @@ class FlashToolApp:
         threading.Thread(target=self._send_bin_worker, daemon=True).start()
 
     def _send_bin_worker(self):
+        '''
+        在单独线程中执行二进制数据发送任务
+        
+        该方法负责执行完整的Flash编程流程，包括：
+        1. 根据数据大小选择合适的擦除方式（扇区擦除、块擦除或全片擦除）
+        2. 按块发送二进制数据到设备
+        3. 实时更新传输进度和速度信息
+        
+        :param self: MainWindow类实例，包含bin_data等必要属性和send_with_retry等方法
+        '''
         block_size = 256
         total_size = len(self.bin_data)
         total_blocks = (total_size + block_size - 1) // block_size  # 向上取整除法
@@ -335,12 +345,106 @@ class FlashToolApp:
 
         self._log_to_queue(f"Writing {total_size} bytes to Flash...")
 
+        # --- FLASH 写入之前需要进行擦除 ---
+        sector_size = 4 * 1024      # 4KB
+        block32_size = 32 * 1024    # 32KB
+        block64_size = 64 * 1024    # 64KB
+        # max_sector_erase = 4        # 最多擦除4个扇区
+
+        erase_cmd = None
+        erase_payload = b'' # 擦除命令可能需要地址等参数，根据协议确定
+
+        if total_size == 0:
+             self._log_to_queue("⚠️ No data to write.")
+             self.is_sending = False
+             self.root.after(0, lambda: self.send_btn.config(state='normal'))
+             return
+
+        if total_size <= 4 * sector_size:  # <= 16KB
+            # 使用扇区擦除 (Sector Erase)
+            num_sectors = (total_size + sector_size - 1) // sector_size # 向上取整计算所需扇区数
+            self._log_to_queue(f"...Erasing {num_sectors} sector(s) (4KB each)...")
+            # 通常扇区擦除需要提供起始地址
+            # 假设从地址 0 开始擦除
+            start_erase_address = 0
+            for i in range(num_sectors):
+                 if not self.is_sending:
+                      return # 用户取消
+                 current_sector_address = start_erase_address + i * sector_size
+                 # 假设擦除命令 payload 是起始地址 (大端 uint32)
+                 erase_payload = struct.pack('>I', current_sector_address)
+                 erase_cmd = CMD.CMD_FLASH_SECTOR_ERASE
+                 ack = self.send_with_retry(
+                      erase_cmd,
+                      erase_payload,
+                      expected_response_cmd=CMD.CMD_FLASH_ERASE_ACK
+                 )
+                 if ack is None:
+                      self._log_to_queue("❌ Sector erase failed or timed out.")
+                      return # 失败则停止
+                 else:
+                      self._log_to_queue(f"...Sector at 0x{current_sector_address:08X} erased.")
+
+        elif total_size <= block32_size: # <= 32KB
+            # 使用 32KB 块擦除
+            self._log_to_queue("...Erasing 1 block (32KB)...")
+            # 假设块擦除也需要起始地址，通常也是 0
+            erase_payload = struct.pack('>I', 0) # 起始地址 0
+            erase_cmd = CMD.CMD_FLASH_BLOCK_ERASE32
+            ack = self.send_with_retry(
+                 erase_cmd,
+                 erase_payload,
+                 expected_response_cmd=CMD.CMD_FLASH_ERASE_ACK
+            )
+            if ack is None:
+                 self._log_to_queue("❌ 32KB Block erase failed or timed out.")
+                 return
+            else:
+                 self._log_to_queue("...32KB Block erased.")
+
+        elif total_size <= block64_size: # <= 64KB
+            # 使用 64KB 块擦除
+            self._log_to_queue("...Erasing 1 block (64KB)...")
+            erase_payload = struct.pack('>I', 0) # 起始地址 0
+            erase_cmd = CMD.CMD_FLASH_BLOCK_ERASE64
+            ack = self.send_with_retry(
+                 erase_cmd,
+                 erase_payload,
+                 expected_response_cmd=CMD.CMD_FLASH_ERASE_ACK
+            )
+            if ack is None:
+                 self._log_to_queue("❌ 64KB Block erase failed or timed out.")
+                 return
+            else:
+                 self._log_to_queue("...64KB Block erased.")
+
+        else: # > 64KB
+            # 使用全片擦除
+            self._log_to_queue("...Erasing entire chip...")
+            # 全片擦除通常不需要 payload 或 payload 很简单
+            erase_payload = b'' # 根据你的协议调整
+            erase_cmd = CMD.CMAD_FLASH_CHIP_ERASE # 注意常量名拼写
+            ack = self.send_with_retry(
+                 erase_cmd,
+                 erase_payload,
+                 expected_response_cmd=CMD.CMD_FLASH_ERASE_ACK
+            )
+            if ack is None:
+                 self._log_to_queue("❌ Chip erase failed or timed out.")
+                 return
+            else:
+                 self._log_to_queue("...Chip erased.")
+
+
+        # --- 擦除完成后，开始写入数据块 ---
+        self._log_to_queue("Starting data write...")
         for i in range(total_blocks):
             if not self.is_sending:
                 break
             start = i * block_size
             end = min(start + block_size, total_size)
             block = self.bin_data[start:end]
+            # Payload: Start Address (uint32 BE), Length (uint16 BE), Data
             payload = struct.pack('>IH', start, len(block)) + block
 
             ack = self.send_with_retry(
@@ -349,21 +453,30 @@ class FlashToolApp:
                 expected_response_cmd=CMD.CMD_WRITE_FLASH_ACK
             )
             if ack is None:
-                return
+                self._log_to_queue(f"❌ Write failed or timed out at block {i+1}/{total_blocks}.")
+                return # 失败则停止
 
+            # 更新进度和速度
             progress = (end / total_size) * 100
             elapsed = time.time() - start_time
             speed = end / elapsed / 1024 if elapsed > 0 else 0
-            self.root.after(0, lambda p=progress, s=speed: (
-                self.progress.config(value=p),
-                self.speed_label.config(text=f"{s:.1f} KB/s")
-            ))
+            # 使用默认参数捕获变量值
+            self.root.after(0, self._update_progress_ui, progress, speed)
 
+        # 写入完成
         self.is_sending = False
-        self.root.after(0, lambda: self.send_btn.config(state='normal'))
+        self.root.after(0, self._on_send_complete)
+
+    def _update_progress_ui(self, progress, speed):
+        """在主线程中安全地更新UI进度"""
+        self.progress.config(value=progress)
+        self.speed_label.config(text=f"{speed:.1f} KB/s")
+
+    def _on_send_complete(self):
+        """在主线程中处理发送完成后的UI更新"""
+        self.send_btn.config(state='normal')
         self._log_to_queue("✅ Write complete!")
 
-        #TODO 添加处理扇区擦除等操作
 
     def read_flash(self):
         if not self.serial_mgr or not self.serial_mgr.is_open():

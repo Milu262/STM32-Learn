@@ -1,11 +1,13 @@
 #include "cmd_handlers.h"
 #include "hdlc_core.h"      // 用于 hdlc_send_frame 和 CMD_XXX 定义
-#include "MY_your_driver.h" // 包含你实现的底层驱动接口
+// #include "MY_your_driver.h" // 包含你实现的底层驱动接口
 #include <stddef.h>         // 包含 NULL 定义
 
-// #include "flash.h"          // 假设你的 flash_read 在 flash.h 中声明
-// #include "i2c_driver.h"     // 假设 i2c_read_reg / i2c_write_reg 在此
-// #include "spi_driver.h"     // 假设 spi_read_reg / spi_write_reg 在此
+// 包含你的协议驱动接口
+#include "./protocol_driver/spi_driver.h"
+#include "./protocol_driver/i2c_driver.h"
+#include "./protocol_driver/uart_driver.h"
+
 
 // ──────────────── FLASH ────────────────
 void handle_flash_read(const uint8_t *payload, uint16_t len)
@@ -37,8 +39,51 @@ void handle_flash_write(const uint8_t *payload, uint16_t len)
     if (length > 256 )
         length = 256;
 
-    flash_write(addr, payload + 6, length);
+    flash_write(addr, (uint8_t *)(payload + 6), length);
     hdlc_send_frame(CMD_WRITE_FLASH_ACK, NULL, 0);
+}
+
+void handle_flash_SectionErase(const uint8_t *payload, uint16_t len)
+{
+    if (len != 4)
+        return;
+    uint32_t addr = ((uint32_t)payload[0] << 24) |
+                    ((uint32_t)payload[1] << 16) |
+                    ((uint32_t)payload[2] << 8) |
+                    (uint32_t)payload[3];
+    flash_Sector_erase(addr);
+    hdlc_send_frame(CMD_FLASH_ERASE_ACK, NULL, 0);
+}
+
+void handle_flash_BlockErase32(const uint8_t *payload, uint16_t len)
+{
+    if (len != 4)
+        return;
+    uint32_t addr = ((uint32_t)payload[0] << 24) |
+                    ((uint32_t)payload[1] << 16) |
+                    ((uint32_t)payload[2] << 8) |
+                    (uint32_t)payload[3];
+    flash_Block_erase32(addr);
+    hdlc_send_frame(CMD_FLASH_ERASE_ACK, NULL, 0);
+
+}
+
+void handle_flash_BlockErase64(const uint8_t *payload, uint16_t len)
+{
+    if (len != 4)
+        return;
+    uint32_t addr = ((uint32_t)payload[0] << 24) |
+                    ((uint32_t)payload[1] << 16) |
+                    ((uint32_t)payload[2] << 8) |
+                    (uint32_t)payload[3];
+    flash_Block_erase64(addr);
+    hdlc_send_frame(CMD_FLASH_ERASE_ACK, NULL, 0);
+}
+
+void handle_flash_ChipErase(const uint8_t *payload, uint16_t len)
+{
+    flash_Chip_erase();
+    hdlc_send_frame(CMD_FLASH_ERASE_ACK, NULL, 0);
 }
 
 // ──────────────── I2C READ ────────────────

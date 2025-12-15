@@ -44,11 +44,12 @@
 /* 页编程命令 */
 #define W25X_PageProgram         0x02  // 通过此命令可以将数据写入 Flash 的指定页
 
+#define W25X_BlockErase32K        0x52  // 通过此命令可以擦除 Flash 的指定块(32K)
 /* 块擦除命令 */
-#define W25X_BlockErase          0xD8  // 通过此命令可以擦除 Flash 的指定块
+#define W25X_BlockErase64K          0xD8  // 通过此命令可以擦除 Flash 的指定块(64K)
 
 /* 扇区擦除命令 */
-#define W25X_SectorErase         0x20  // 通过此命令可以擦除 Flash 的指定扇区
+#define W25X_SectorErase         0x20  // 通过此命令可以擦除 Flash 的指定扇区(4K)
 
 /* 芯片擦除命令 */
 #define W25X_ChipErase           0xC7  // 通过此命令可以擦除整个 Flash 芯片
@@ -112,6 +113,26 @@ void SPI_FLASH_WaitForWriteEnd(void);
  * @retval 无
  */
 void SPI_FLASH_SectorErase(uint32_t SectorAddr);
+
+/**
+ * @brief  擦除SPI Flash的一个块(32K)
+ * @param  BlockAddr: 要擦除的块地址
+ * @retval 无
+ */
+void SPI_FLASH_BlockErase32(uint32_t BlockAddr);
+
+/**
+ * @brief  擦除SPI Flash的一个块(64K)
+ * @param  BlockAddr: 要擦除的块地址
+ * @retval 无
+ */
+void SPI_FLASH_BlockErase64(uint32_t BlockAddr);
+
+/**
+ * @brief  擦除整个FLASH
+ * @param  无
+ */
+void SPI_FLASH_ChipErase(void);
 
 /**
  * @brief  向SPI Flash的一个页写入数据
