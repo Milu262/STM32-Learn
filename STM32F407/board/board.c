@@ -40,11 +40,12 @@ static void board_init(void)
     //	RCC_GetClocksFreq(&rcc);//��ȡϵͳʱ��Ƶ��
 }
 
+#define usart_baud_rate 2000000
 int hardware_init(void)
 {
     board_init();            // 板级初始化
     NVIC_Configuration();    // 中断优先级初始化
-    uart1_init(115200U);     // 串口1初始化
+    uart1_init(usart_baud_rate);     // 串口1初始化
     DMA_Uart1_Init_Config(); // DMA串口1初始化
     User_I2C_Init();         // I2C初始化
     SPI_FLASH_BUS_Init();	 // FLASH总线初始化

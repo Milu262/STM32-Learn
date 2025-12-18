@@ -78,6 +78,51 @@ void handle_i2c_write_reg(const uint8_t* payload, uint16_t len);
 void handle_i2c_write_reg_16(const uint8_t *payload, uint16_t len);
 
 /**
+ * @brief I2C读多个数据
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ * @return 0: 成功,-1: 失败
+ */
+int handle_i2c_read_buffer_reg(const uint8_t *payload, uint16_t len);
+
+/**
+ * @brief I2C 写多个数据
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ * @return 0: 成功,-1: 失败
+ */
+int handle_i2c_write_buffer_reg(const uint8_t *payload, uint16_t len);
+
+/**
+ * @brief I2C 读多个数据（16-bit 地址）
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ * @return 0: 成功,-1: 失败
+ */
+int handle_i2c_read_buffer_reg_16(const uint8_t *payload, uint16_t len);
+
+/**
+ * @brief I2C 写多个数据（16-bit 地址）
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ * @return 0: 成功,-1: 失败
+ */
+int handle_i2c_write_buffer_reg_16(const uint8_t *payload, uint16_t len);
+
+/**
+ * @brief 寻找I2C设备
+ * @param payload: 命令负载指针
+ * @param len: 负载长度（字节）
+ * @return 0: 找到,-1: 未找到
+ */
+int handle_i2c_address_find(const uint8_t *payload, uint16_t len);
+
+
+
+
+/****************SPI 命令处理函数（供 hdlc_core.c 使用） ***************** */
+
+/**
  * @brief 处理 SPI 读取寄存器命令
  * @param payload: 命令负载指针
  * @param len: 负载长度（字节）

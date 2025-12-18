@@ -20,7 +20,7 @@ class SerialManager:
         self._reader_thread = threading.Thread(target=self._read_loop, daemon=True)
         self._reader_thread.start()
 
-    def open(self, port: str, baudrate=115200) -> bool:
+    def open(self, port: str, baudrate=2000000) -> bool:
         try:
             self.serial_port = serial.Serial(port, baudrate, timeout=0.01)
             return True

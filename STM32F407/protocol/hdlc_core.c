@@ -20,14 +20,21 @@ typedef struct
 static const cmd_entry_t cmd_table[] = {
     {CMD_FLASH_READ, handle_flash_read, 6},
     {CMD_WRITE_FLASH_BLOCK, handle_flash_write, 6},
-    {CMD_FLASH_SECTOR_ERASE,handle_flash_SectionErase,4},
-    {CMD_FLASH_BLOCK_ERASE32,handle_flash_BlockErase32,4},
-    {CMD_FLASH_BLOCK_ERASE64,handle_flash_BlockErase64,4},
-    {CMAD_FLASH_CHIP_ERASE,handle_flash_ChipErase,0},
+    {CMD_FLASH_SECTOR_ERASE, handle_flash_SectionErase, 4},
+    {CMD_FLASH_BLOCK_ERASE32, handle_flash_BlockErase32, 4},
+    {CMD_FLASH_BLOCK_ERASE64, handle_flash_BlockErase64, 4},
+    {CMAD_FLASH_CHIP_ERASE, handle_flash_ChipErase, 0},
     {CMD_I2C_READ_REG, handle_i2c_read_reg, 2},
     {CMD_I2C_WRITE_REG, handle_i2c_write_reg, 3},
     {CMD_I2C_16READ_REG, handle_i2c_read_reg_16, 3},
     {CMD_I2C_16WRITE_REG, handle_i2c_write_reg_16, 4},
+    {CMD_I2C_READ_BUFFER_REG, handle_i2c_read_buffer_reg, 4},
+    // 注意 write buffer不需要payload里包含需要读的字节数,可以根据payload_len计算得到
+    {CMD_I2C_WRITE_BUFFER_REG, handle_i2c_write_buffer_reg, 3},
+    {CMD_I2C_16READ_BUFFER_REG, handle_i2c_read_buffer_reg_16, 5},
+    // 注意 write buffer不需要payload里包含需要读的字节数
+    {CMD_I2C_16WRITE_BUFFER_REG, handle_i2c_write_buffer_reg_16, 4},
+    {CMD_I2C_ADDRESS_FIND, handle_i2c_address_find, 0},
     {CMD_SPI_READ_REG, handle_spi_read_reg, 1},
     {CMD_SPI_WRITE_REG, handle_spi_write_reg, 2},
     // 新命令在这里追加 ↓
@@ -245,6 +252,8 @@ static void hdlc_process_frame(const uint8_t *frame, uint16_t len)
                 return;
             }
             cmd_table[i].handler(payload, payload_len);
+            // TODO 每个handler必须有返回值，且函数返回值必须为0表示正常，其他错误码表示出错
+            // TODO 如果函数正常调用没有出错就在下面调用hdlc_send_frame返回ACK帧
             return;
         }
     }
@@ -274,8 +283,6 @@ static void hdlc_handle_frame_end(void)
 
     if (recv_crc == calc_crc)
     {
-        // CRC通过
-        //  uart_send_buffer_DMA(hdlc_frame_buf, payload_with_cmd_len);//测试CRC是否通过数据
         hdlc_process_frame(hdlc_frame_buf, payload_with_cmd_len);
     }
     else
